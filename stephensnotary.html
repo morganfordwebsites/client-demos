@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stephen's Notary — Licensed Notary Public, Riverdale · Bronx, NY</title>
+<meta name="description" content="Stephen's Notary — traditional in-person notary service in Riverdale, the Bronx. Licensed NY notary since 2006. Appointments by phone: (917) 576-7942. Drive-thru, hospital visits & limited online PDF service available.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e1a30; --navy2:#1c3c6f; --navy3:#16294a;
+  --gold:#c9a227; --gold2:#e5c158; --goldsoft:#f3e3b3;
+  --cream:#f4efe4; --paper:#faf8f2; --ink:#1a2233; --mut:#5b6577;
+  --line:rgba(28,60,111,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque',sans-serif;line-height:1.08;letter-spacing:-.01em}
+.gold{color:var(--gold2)}
+.banner{background:linear-gradient(90deg,#1a2f52,#254a86);color:#fff;text-align:center;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;padding:9px 12px;font-weight:600}
+.banner b{color:var(--gold2)}
+header{position:sticky;top:0;z-index:50;background:rgba(14,26,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.sealmk{width:38px;height:38px;flex:0 0 38px}
+.brand .nm{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px;line-height:1}
+.brand .sub{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#9fb2d4;margin-top:3px}
+nav.links{display:flex;gap:26px;align-items:center}
+nav.links a{color:#c8d4ec;font-size:14.5px;font-weight:500;transition:color .2s}
+nav.links a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),#b08a1e);color:#17203a;font-weight:700;padding:12px 22px;border-radius:10px;box-shadow:0 8px 22px rgba(201,162,39,.35);transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(201,162,39,.45)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff;box-shadow:none}
+.btn.ghost:hover{border-color:var(--gold2);color:var(--gold2)}
+.hero{position:relative;background:radial-gradient(1100px 600px at 80% -10%,#2c5aa0 0%,transparent 55%),radial-gradient(800px 500px at -10% 110%,#254a86 0%,transparent 50%),linear-gradient(160deg,var(--navy) 0%,#132744 60%,#0b1530 100%);color:#fff;overflow:hidden;padding:88px 0 96px}
+.hero .wm{position:absolute;right:-40px;top:10px;font-family:'Bricolage Grotesque';font-weight:800;font-size:min(26vw,300px);line-height:.8;color:rgba(255,255,255,.025);pointer-events:none;user-select:none}
+.hero .glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.16),transparent 65%);top:-80px;left:-120px;pointer-events:none}
+.hgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);font-weight:600;margin-bottom:20px}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--gold2);box-shadow:0 0 12px var(--gold2)}
+.hero h1{font-size:clamp(40px,5.4vw,62px);font-weight:800}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.55)}
+.hero p.lede{margin:22px 0 30px;font-size:18px;color:#c4d1ea;max-width:520px;font-weight:300}
+.hero p.leade b{color:#fff}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:30px 30px 26px;backdrop-filter:blur(8px);box-shadow:0 24px 60px rgba(3,8,20,.45);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hcard .ring{width:66px;height:66px;margin:0 auto 18px}
+.hcard h3{font-size:20px;text-align:center;margin-bottom:4px}
+.hcard .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);text-align:center;margin-bottom:18px}
+.hcard a.tel{display:block;text-align:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:30px;color:#fff;letter-spacing:.01em;transition:color .2s}
+.hcard a.tel:hover{color:var(--gold2)}
+.hcard .telsub{text-align:center;color:#9fb2d4;font-size:13.5px;margin-top:8px}
+.hcard .hrs{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:13px;color:#c4d1ea}
+.hcard .hrs b{color:#fff;font-weight:600}
+.strip{background:var(--navy2);color:#dbe5f7;border-top:1px solid rgba(255,255,255,.08)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{padding:26px 18px;text-align:center;border-left:1px solid rgba(255,255,255,.09)}
+.stat:first-child{border-left:none}
+.stat .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:27px;color:#fff}
+.stat .n em{font-style:normal;color:var(--gold2)}
+.stat .l{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#9fb2d4;margin-top:4px}
+section{padding:84px 0}
+.sec-kicker{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px}
+.sec-title{font-size:clamp(30px,3.6vw,42px);font-weight:800;max-width:640px}
+.sec-sub{margin-top:14px;color:var(--mut);max-width:560px;font-size:16.5px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(20,40,80,.13)}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.card:hover::before{transform:scaleX(1)}
+.card .ic{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,#eef2fa,#e2e9f7);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--navy2)}
+.card h3{font-size:20.5px;margin-bottom:9px}
+.card p{font-size:15px;color:var(--mut)}
+.card .price{display:inline-block;margin-top:14px;font-weight:700;color:var(--gold);font-size:14.5px;background:#fdf6e0;border:1px solid #f0e2b0;padding:5px 12px;border-radius:99px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px;position:relative}
+.step{position:relative;padding:34px 26px 28px;background:#fff;border:1px solid var(--line);border-radius:16px}
+.step .num{position:absolute;top:-24px;left:24px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--navy2),var(--navy));color:var(--gold2);font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(14,26,48,.3)}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{color:var(--mut);font-size:15px}
+.docs{background:linear-gradient(170deg,#f2eee1,#faf8f2);border-top:1px solid #ece5d0;border-bottom:1px solid #ece5d0}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:99px;padding:11px 20px;font-weight:600;font-size:14.5px;color:var(--navy2);transition:all .2s;box-shadow:0 2px 8px rgba(20,40,80,.05)}
+.chip:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 18px rgba(201,162,39,.16)}
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:44px}
+.prow{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:13px 4px;border-bottom:1px dashed var(--line)}
+.prow .d{font-weight:500;font-size:15.5px}
+.prow .p{font-family:'Bricolage Grotesque';font-weight:800;color:var(--navy2);white-space:nowrap}
+.pay{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 24px}
+.pay .lbl{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.pay span.mth{background:#f1f4fa;border-radius:8px;padding:6px 13px;font-weight:600;font-size:14px;color:var(--navy2)}
+.pnote{margin-top:16px;color:var(--mut);font-size:13.5px;font-style:italic}
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.photocard{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(14,26,48,.28);border:6px solid #fff;background:#fff}
+.photocard img{width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:top}
+.photocard .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(14,26,48,.92));color:#fff;padding:44px 22px 16px;text-align:center}
+.photocard .cap b{font-family:'Bricolage Grotesque';font-size:17px}
+.photocard .cap span{display:block;font-size:12.5px;color:var(--gold2);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
+.quote{border-left:3px solid var(--gold);padding:6px 0 6px 22px;margin:26px 0;font-family:'Bricolage Grotesque';font-size:20px;font-weight:600;color:var(--navy2);line-height:1.45}
+.quote small{display:block;font-family:'Figtree';font-weight:500;font-size:13px;color:var(--mut);margin-top:8px}
+.about ul{list-style:none;margin-top:20px;display:grid;gap:11px}
+.about li{display:flex;gap:11px;font-size:15.5px;color:#333d4f}
+.about li .tick{color:var(--gold);font-weight:800}
+.badges{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:48px}
+.badge{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 12px;text-align:center;transition:transform .2s,box-shadow .2s}
+.badge:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,40,80,.12)}
+.badge .bic{color:var(--navy2);margin:0 auto 10px;width:34px}
+.badge b{display:block;font-size:13px;line-height:1.3}
+.badge span{font-size:11.5px;color:var(--mut);display:block;margin-top:3px}
+.faq{max-width:820px;margin:44px auto 0}
+.q{background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:12px;overflow:hidden;transition:box-shadow .2s}
+.q.open{box-shadow:0 12px 28px rgba(20,40,80,.1)}
+.q button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:19px 22px;background:none;border:none;font:600 16px 'Figtree';color:var(--ink);cursor:pointer;text-align:left}
+.q .plus{flex:0 0 22px;color:var(--gold);font-weight:800;transition:transform .3s;font-size:20px;line-height:1}
+.q.open .plus{transform:rotate(45deg)}
+.q .a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mut);font-size:15px}
+.q .a div{padding:0 22px 20px}
+.cta2{background:radial-gradient(900px 400px at 70% 0%,#2c5aa0 0%,transparent 60%),linear-gradient(150deg,var(--navy),#132744);border-radius:26px;color:#fff;padding:64px 56px;text-align:center;position:relative;overflow:hidden}
+.cta2 h2{font-size:clamp(28px,3.4vw,40px);font-weight:800}
+.cta2 p{color:#c4d1ea;margin:14px auto 30px;max-width:520px}
+.cta2 .bigtel{display:inline-block;font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(28px,3.4vw,40px);color:#fff;transition:color .2s}
+.cta2 .bigtel:hover{color:var(--gold2)}
+.cta2 .addr{margin-top:18px;color:#9fb2d4;font-size:14.5px}
+.cta2 .addr b{color:#dbe5f7}
+footer{background:var(--navy);color:#b9c7e2;padding:64px 0 0;margin-top:84px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px}
+footer h4{color:#fff;font-family:'Bricolage Grotesque';font-size:15.5px;margin-bottom:16px}
+footer a.fl{display:block;padding:5px 0;font-size:14.5px;color:#b9c7e2;transition:color .2s}
+footer a.fl:hover{color:var(--gold2)}
+footer .blurb{font-size:14.5px;margin-top:14px;max-width:300px}
+footer .socials{display:flex;gap:10px;margin-top:18px}
+footer .socials a{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#cfe0ff;transition:all .2s}
+footer .socials a:hover{background:var(--gold);color:#17203a;transform:translateY(-2px)}
+.fbot{border-top:1px solid rgba(255,255,255,.09);padding:20px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;color:#8fa2c4}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:920px){
+  nav.links{display:none}
+  .hgrid,.about,.pricing{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:none}
+  .svc,.steps{grid-template-columns:1fr 1fr}
+  .badges{grid-template-columns:1fr 1fr 1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .svc,.steps{grid-template-columns:1fr}
+  .step .num{left:50%;transform:translateX(-50%)}
+  .cta2{padding:48px 24px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Website concept preview — <b>Stephen's Notary</b> · Riverdale, Bronx</div>
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <svg class="sealmk" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="21" stroke="#c9a227" stroke-width="2.4"/>
+        <circle cx="24" cy="24" r="16.5" stroke="#c9a227" stroke-width="1" stroke-dasharray="2.6 2.6"/>
+        <path d="M24 10l3.6 6.8 7.5 1.4-5.2 5.6 1 7.6L24 28.2l-6.9 3.2 1-7.6-5.2-5.6 7.5-1.4L24 10z" fill="#c9a227" opacity=".92"/>
+        <text x="24" y="42" text-anchor="middle" font-size="6.2" fill="#e5c158" font-family="Georgia" letter-spacing="1">NY</text>
+      </svg>
+      <span><span class="nm">Stephen's Notary</span><span class="sub">Riverdale · Bronx, NY</span></span>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="tel:+19175767942">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="currentColor"/></svg>
+      (917) 576-7942
+    </a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wm">NOTARY</div><div class="glow"></div>
+  <div class="wrap hgrid">
+    <div>
+      <span class="kicker"><span class="dot"></span> Licensed New York Notary Public since 2006</span>
+      <h1>The notary who answers<br>his <span class="stroke">own phone.</span></h1>
+      <p class="lede">Traditional, in-person notary service in Riverdale — appointments by phone, drive-thru from your car, and careful, unhurried attention to every signature. <b>Appointments required: call (917) 576-7942.</b></p>
+      <div class="ctas">
+        <a class="btn" href="tel:+19175767942">Call to book an appointment</a>
+        <a class="btn ghost" href="#services">Explore services</a>
+      </div>
+    </div>
+    <div class="hcard">
+      <div class="ring">
+        <svg viewBox="0 0 72 72" fill="none">
+          <circle cx="36" cy="36" r="30" stroke="#c9a227" stroke-width="2"/>
+          <circle cx="36" cy="36" r="24" stroke="#c9a227" stroke-width="1" stroke-dasharray="3 3"/>
+          <path d="M36 15l4.6 8.6 9.6 1.8-6.6 7.1 1.3 9.7L36 38.6l-8.9 4.6 1.3-9.7-6.6-7.1 9.6-1.8L36 15z" fill="#c9a227"/>
+        </svg>
+      </div>
+      <h3>Stephen's Notary</h3>
+      <div class="tag">Appointments by phone only</div>
+      <a class="tel" href="tel:+19175767942">(917) 576-7942</a>
+      <div class="telsub">Call or text to schedule your visit</div>
+      <div class="hrs"><span><b>Mon – Sun</b> 9:00 – 5:30</span><span>Open <b>weekends & holidays</b></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap stats">
+    <div class="stat"><div class="n"><em>20</em> years</div><div class="l">Licensed NY Notary</div></div>
+    <div class="stat"><div class="n">$<em>50,000</em></div><div class="l">E&O Insurance</div></div>
+    <div class="stat"><div class="n"><em>2026</em></div><div class="l">Background Screened</div></div>
+    <div class="stat"><div class="n">Veteran<em>-owned</em></div><div class="l">American Legion Member</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-kicker">Services</div>
+    <h2 class="sec-title">Every kind of in-person notarization, handled personally.</h2>
+    <p class="sec-sub">From a single signature to sensitive hospital-room visits — the same careful standard every time.</p>
+    <div class="svc">
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3 8-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>In-person notarization</h3>
+        <p>By appointment at his Riverdale office. Proof of identity is verified in person before anything is signed — always.</p>
+        <span class="price">$2 per signature</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 17h14M6 17l-2-5 2-1 2-5h6l2 5 2 1-2 5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="19" r="1.8" fill="currentColor"/><circle cx="17" cy="19" r="1.8" fill="currentColor"/></svg></div>
+        <h3>Drive-thru service</h3>
+        <p>Can't leave the car? Stay comfortable — pull up, show your ID, and have your documents notarized right from the driver's seat.</p>
+        <span class="price">$2 per signature</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 10.5l5.5-3v9L16 13.5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Limited online (PDF) service</h3>
+        <p>For non-governmental documents, with identity verified by live video (FaceTime, WhatsApp or Zoom) before anything is sealed.</p>
+        <span class="price">$5 online</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-9.3-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.3 12c-1.8 4.4-9.3 9-9.3 9z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h3>Hospital & facility visits</h3>
+        <p>Experienced with health-related notarizations at hospitals, nursing homes and end-of-life facilities — including Calvary Hospital, Bronx.</p>
+        <span class="price">Ask for details</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 2v5h5M9 13h7M9 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Printing & document prep</h3>
+        <p>Need copies? Documents printed at 50¢ per page, notarial certificates attached, and courier drop-off to FedEx or UPS arranged.</p>
+        <span class="price">From $2 · Courier $12</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>After-hours availability</h3>
+        <p>Urgent situation outside regular hours? Call — evening and holiday appointments can often be arranged in advance.</p>
+        <span class="price">$10 after-hours</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-kicker">How it works</div>
+    <h2 class="sec-title">Simple, careful, by appointment.</h2>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Call to book</h3><p>Appointments are required and made by phone: call or text <b>(917) 576-7942</b> and pick a time that works — including weekends.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Verify identity</h3><p>The one firm requirement: proof of identity. Show your photo ID in person — or over a live FaceTime, WhatsApp or Zoom call for online service.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Sign & seal</h3><p>Sign your documents, have them sealed and certified, and pay however is easiest — cash, check, PayPal, Venmo, Cash App or Zelle.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="docs">
+  <div class="wrap">
+    <div class="sec-kicker">Documents</div>
+    <h2 class="sec-title">Experienced across the documents that matter most.</h2>
+    <div class="chips reveal">
+      <span class="chip">Powers of attorney</span><span class="chip">Wills & self-proving affidavits</span><span class="chip">Passport applications</span><span class="chip">Travel consent for minors</span><span class="chip">Divorce documents</span><span class="chip">Work permits</span><span class="chip">True copies of vital records</span><span class="chip">Health care proxies</span><span class="chip">Vaccine exemptions</span><span class="chip">I-9 employment forms</span><span class="chip">Notarized letters</span><span class="chip">Corporate signings</span><span class="chip">Attached notarial certificates</span><span class="chip">Consent for minors to travel</span><span class="chip">Printed documents — 50¢/page</span>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-kicker">Pricing</div>
+    <h2 class="sec-title">Clear, lawful fees. No surprises.</h2>
+    <div class="pricing">
+      <div>
+        <div class="prow"><span class="d">In-person notarization, per signature</span><span class="p">$2</span></div>
+        <div class="prow"><span class="d">Drive-thru notarization, per signature</span><span class="p">$2</span></div>
+        <div class="prow"><span class="d">Witness, if required, per signature</span><span class="p">$2</span></div>
+        <div class="prow"><span class="d">Printed copies of notarized documents</span><span class="p">$2</span></div>
+        <div class="prow"><span class="d">Online notarization (non-governmental PDF)</span><span class="p">$5</span></div>
+        <div class="prow"><span class="d">Notarized letters</span><span class="p">$5</span></div>
+        <div class="prow"><span class="d">Attached notarial certificates</span><span class="p">$5</span></div>
+      </div>
+      <div>
+        <div class="prow"><span class="d">POA, travel consent & health proxy forms</span><span class="p">$10</span></div>
+        <div class="prow"><span class="d">Corporate signings, per signature</span><span class="p">$10</span></div>
+        <div class="prow"><span class="d">After-hours notarization</span><span class="p">$10</span></div>
+        <div class="prow"><span class="d">I-9 forms</span><span class="p">$10</span></div>
+        <div class="prow"><span class="d">Self-proving affidavit for a will</span><span class="p">$10</span></div>
+        <div class="prow"><span class="d">Downloading documents for notarization</span><span class="p">$10</span></div>
+        <div class="prow"><span class="d">Courier service to FedEx / UPS</span><span class="p">$12</span></div>
+      </div>
+    </div>
+    <div class="pay reveal">
+      <span class="lbl">Payments accepted</span>
+      <span class="mth">Cash</span><span class="mth">Check</span><span class="mth">PayPal</span><span class="mth">Venmo</span><span class="mth">Cash App</span><span class="mth">Zelle</span>
+    </div>
+    <p class="pnote">A $5 fee applies when a written statement must be added to a form. Legal in-person fee per NY law: $2 per signature.</p>
+  </div>
+</section>
+
+<section id="about" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap about">
+    <div class="photocard reveal">
+      <img src="img/stephen.jpg" alt="Stephen Reich, licensed New York Notary Public">
+      <div class="cap"><b>Stephen Reich</b><span>Notary Public · Bronx, NY</span></div>
+    </div>
+    <div>
+      <div class="sec-kicker">About Stephen</div>
+      <h2 class="sec-title">Two decades of public service, one careful notary.</h2>
+      <p class="sec-sub" style="margin-top:16px">Licensed as a New York Notary Public since 2006 — with a practice built on in-person, unhurried service for the Riverdale community and the wider Bronx.</p>
+      <div class="quote">"In-person notary work is a public service — one that many people genuinely appreciate."<small>— Stephen, on the work he does</small></div>
+      <ul>
+        <li><span class="tick">✓</span> Active NY commission #01RE6145199, listed on the NY Dept. of State website</li>
+        <li><span class="tick">✓</span> Member: National Notary Association · New York Notary Alliance · American Society of Notaries</li>
+        <li><span class="tick">✓</span> Veteran-owned business and American Legion member</li>
+        <li><span class="tick">✓</span> Former TV editor, Gannett Journal News — AP Feature Writing Award</li>
+        <li><span class="tick">✓</span> Experienced with notarizations in hospitals, nursing homes and end-of-life care facilities</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="badges">
+      <div class="badge reveal"><div class="bic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 15.5 7 18.2l1-5.5-4-3.9 5.5-.8L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div><b>NNA Member</b><span>National Notary Association</span></div>
+      <div class="badge reveal"><div class="bic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><b>Background screened</b><span>Verified July 2026</span></div>
+      <div class="badge reveal"><div class="bic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8h14M5 8L3 13a3 3 0 0 0 6 0L7 8m7 0l-2 5a3 3 0 0 0 6 0l-2-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b>$50,000 E&O</b><span>NNA-issued insurance</span></div>
+      <div class="badge reveal"><div class="bic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><b>Commission verified</b><span>NY #01RE6145199</span></div>
+      <div class="badge reveal"><div class="bic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-3.4 3.8-5 7-5s5.8 1.6 7 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><b>Local & established</b><span>Serving the Bronx since 2020</span></div>
+      <div class="badge reveal"><div class="bic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6h6l-4.5 4.5L18 19l-6-3-6 3 1.5-6.5L3 8h6l3-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div><b>Veteran-owned</b><span>American Legion member</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-kicker" style="text-align:center">FAQ</div>
+    <h2 class="sec-title" style="text-align:center;margin:0 auto">Good questions, direct answers.</h2>
+    <div class="faq">
+      <div class="q"><button>Do I need an appointment?<span class="plus">+</span></button><div class="a"><div>Yes — appointments are required and made by phone. Call or text (917) 576-7942 to schedule a time, including weekends and holidays.</div></div></div>
+      <div class="q"><button>What do I need to bring?<span class="plus">+</span></button><div class="a"><div>Proof of identity is mandatory before anything is notarized: a valid photo ID, presented in person (or over a live video call for the limited online PDF service).</div></div></div>
+      <div class="q"><button>How does drive-thru notarization work?<span class="plus">+</span></button><div class="a"><div>Pull up, stay in your car, show your photo ID, and sign. The same $2 per-signature legal fee applies — it's simply more convenient when you can't step inside.</div></div></div>
+      <div class="q"><button>Do you offer online notarization?<span class="plus">+</span></button><div class="a"><div>Limited online service is available via PDF for non-governmental documents, with identity verified on a live FaceTime, WhatsApp or Zoom call. This is traditional service made a little more flexible — not full remote online notarization (RON).</div></div></div>
+      <div class="q"><button>Can you notarize documents for a family member in the hospital?<span class="plus">+</span></button><div class="a"><div>Yes — Stephen has years of experience with health-related notarizations at hospitals, nursing homes and end-of-life facilities, including Calvary Hospital in the Bronx. Call to arrange a visit.</div></div></div>
+      <div class="q"><button>What payments do you accept?<span class="plus">+</span></button><div class="a"><div>Cash, check, PayPal, Venmo, Cash App and Zelle. Fees follow New York law: $2 per signature in person, $5 online, $10 after hours.</div></div></div>
+      <div class="q"><button>What are your hours?<span class="plus">+</span></button><div class="a"><div>9:00 a.m. to 5:30 p.m. daily — including weekends and holidays. After-hours appointments can often be arranged in advance for urgent matters ($10 after-hours fee).</div></div></div>
+      <div class="q"><button>Where are you located?<span class="plus">+</span></button><div class="a"><div>3515 Henry Hudson Parkway West, in the Riverdale section of the Bronx, NY 10463 — serving zip codes 10463, 10471, 10705, 10034 and 10710.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta2 reveal">
+      <h2>Documents ready? Give a call.</h2>
+      <p>Appointments are made by phone — Stephen answers personally and will find a time that works for you, weekends included.</p>
+      <a class="bigtel" href="tel:+19175767942">(917) 576-7942</a>
+      <div class="addr"><b>3515 Henry Hudson Parkway West, Riverdale · Bronx, NY 10463</b><br>Open daily 9:00 – 5:30, including weekends & holidays</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#top" class="brand" style="color:#fff">
+          <svg class="sealmk" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="21" stroke="#c9a227" stroke-width="2.4"/>
+            <circle cx="24" cy="24" r="16.5" stroke="#c9a227" stroke-width="1" stroke-dasharray="2.6 2.6"/>
+            <path d="M24 10l3.6 6.8 7.5 1.4-5.2 5.6 1 7.6L24 28.2l-6.9 3.2 1-7.6-5.2-5.6 7.5-1.4L24 10z" fill="#c9a227" opacity=".92"/>
+          </svg>
+          <span><span class="nm">Stephen's Notary</span><span class="sub" style="color:#8fa2c4">Riverdale · Bronx, NY</span></span>
+        </a>
+        <p class="blurb">Traditional, in-person notary public service for the Bronx — licensed since 2006, insured, background screened, and proud to serve the community.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a class="fl" href="#services">Services</a>
+        <a class="fl" href="#how">How it works</a>
+        <a class="fl" href="#pricing">Pricing</a>
+        <a class="fl" href="#about">About Stephen</a>
+        <a class="fl" href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a class="fl" href="#services">In-person notarization</a>
+        <a class="fl" href="#services">Drive-thru service</a>
+        <a class="fl" href="#services">Hospital & facility visits</a>
+        <a class="fl" href="#services">Limited online PDF service</a>
+        <a class="fl" href="#services">After-hours appointments</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a class="fl" href="tel:+19175767942" style="font-family:'Bricolage Grotesque';font-weight:700;font-size:17px;color:#fff">(917) 576-7942</a>
+        <span class="fl">3515 Henry Hudson Pkwy W<br>Bronx, NY 10463</span>
+        <span class="fl">Daily 9:00 – 5:30 · weekends & holidays</span>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Stephen's Notary · All rights reserved</span>
+      <span>Website concept preview</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.querySelector('header');
+addEventListener('scroll',()=>{header.style.boxShadow=scrollY>10?'0 10px 30px rgba(3,8,20,.45)':'none'});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.q').forEach(q=>{
+  const btn=q.querySelector('button'),a=q.querySelector('.a');
+  btn.addEventListener('click',()=>{
+    const open=q.classList.contains('open');
+    document.querySelectorAll('.q.open').forEach(o=>{if(o!==q){o.classList.remove('open');o.querySelector('.a').style.maxHeight=0}});
+    q.classList.toggle('open',!open);
+    a.style.maxHeight=open?0:a.scrollHeight+'px';
+  });
+});
+</script>
+</body>
+</html>
