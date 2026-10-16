@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pink Diamond Signings | Mobile &amp; Remote Notary — Spring, TX</title>
+<meta name="description" content="Pink Diamond Signings — precise, prompt, professional mobile and remote notary service in Spring, TX. Book in under a minute.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0910;
+  --surface:rgba(255,255,255,.035);
+  --surface-2:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.09);
+  --text:#F5F0F4;
+  --muted:#9C8FA3;
+  --rose:#D4688A; --rose-lt:#E8A0B8;
+  --gold:#D4AF7A;
+  --grad:linear-gradient(120deg,var(--rose),var(--rose-lt) 55%,var(--gold));
+  --r:22px;
+  --nav-h:64px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Outfit',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:rgba(212,104,138,.35)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- preview bar ---------- */
+.pvbar{
+  background:linear-gradient(160deg,rgba(212,104,138,.12),rgba(255,255,255,.02));
+  border-bottom:1px solid var(--line);
+  padding:10px 0;
+  font-size:13px;
+}
+.pvbar .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pvtag{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--gold);letter-spacing:.08em;text-transform:uppercase;
+  font-size:11px;font-weight:600;white-space:nowrap;
+}
+.pvtag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(212,175,122,.8)}
+.pvfields{display:flex;gap:8px;flex-wrap:wrap;flex:1;min-width:0}
+.pvfields input{
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  color:var(--text);font:inherit;font-size:12.5px;padding:6px 12px;width:150px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.pvfields input:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(212,104,138,.18)}
+.pvbtns{display:flex;gap:8px;align-items:center}
+.pvchip{
+  background:var(--surface-2);border:1px solid var(--line);color:var(--muted);
+  border-radius:10px;padding:6px 12px;font-size:12.5px;font-weight:500;
+  transition:color .2s,border-color .2s;white-space:nowrap;
+}
+.pvchip:hover{color:var(--text);border-color:var(--rose)}
+.langbtn{
+  background:transparent;border:1px solid var(--line);
+  background-image:var(--grad);
+  color:#fff;font-weight:700;font-size:13px;letter-spacing:.06em;
+  border-radius:10px;padding:7px 16px;white-space:nowrap;
+  transition:transform .15s,box-shadow .2s,filter .2s;
+}
+.langbtn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(212,104,138,.35);filter:brightness(1.08)}
+.langbtn:active{transform:translateY(0)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(12,9,16,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.brand .mono{
+  width:38px;height:38px;border-radius:50%;flex:none;
+  display:grid;place-items:center;font-size:14px;font-weight:800;color:#fff;
+  background:var(--grad);box-shadow:0 4px 16px rgba(212,104,138,.4);
+}
+.brand small{display:block;font-size:10.5px;color:var(--muted);font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}
+.navlinks{display:flex;gap:26px;font-size:14.5px;color:var(--muted);font-weight:500}
+.navlinks a{transition:color .2s;position:relative}
+.navlinks a:hover{color:var(--text)}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--grad);transition:width .25s}
+.navlinks a:hover::after{width:100%}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:12px;padding:12px 22px;font-weight:600;font-size:15px;
+  border:1px solid transparent;transition:transform .18s,box-shadow .25s,background .2s,border-color .2s;
+  white-space:nowrap;
+}
+.btn:active{transform:scale(.98)}
+.btn-grad{background-image:var(--grad);color:#fff;box-shadow:0 8px 24px rgba(212,104,138,.35)}
+.btn-grad:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(212,104,138,.5)}
+.btn-ghost{background:var(--surface);border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--rose);background:var(--surface-2);transform:translateY(-2px)}
+.btn-sm{padding:9px 16px;font-size:13.5px;border-radius:10px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:88px 0 72px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(700px 300px at 50% -80px,rgba(212,104,138,.2),transparent 70%);
+}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-lt);font-weight:600;
+  margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--rose)}
+h1{font-size:clamp(38px,5.2vw,58px);line-height:1.06;font-weight:800;letter-spacing:-.02em}
+h1 .accent{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{margin-top:20px;font-size:17.5px;color:var(--text);max-width:52ch}
+.hero p.sub{margin-top:14px;font-size:15px;color:var(--muted);max-width:52ch}
+.hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.hero-trust{display:flex;gap:22px;margin-top:30px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
+.hero-trust span{display:inline-flex;align-items:center;gap:7px}
+.hero-trust svg{width:15px;height:15px;stroke:var(--gold)}
+
+/* booking card */
+.bkcard{
+  position:relative;border-radius:var(--r);padding:30px;
+  background:linear-gradient(140deg,rgba(212,104,138,.16),rgba(255,255,255,.03) 55%);
+  border:1px solid var(--line);
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+  animation:floaty 7s ease-in-out infinite;
+}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.bkcard .bkhead{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-lt);font-weight:600}
+.bkcard h3{font-size:26px;font-weight:800;margin-top:6px}
+.bkrows{margin-top:24px;display:grid;gap:14px}
+.bkrow{display:flex;justify-content:space-between;gap:14px;padding:13px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.bkrow .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.bkrow .v{font-weight:600;font-size:15px;text-align:right}
+.bkfoot{display:flex;align-items:center;gap:9px;margin-top:20px;color:var(--muted);font-size:13px}
+.bkfoot .dot{width:8px;height:8px;border-radius:50%;background:var(--rose);box-shadow:0 0 10px rgba(212,104,138,.9);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+.seal{
+  position:absolute;top:-34px;right:22px;width:92px;height:92px;flex:none;
+  filter:drop-shadow(0 8px 18px rgba(212,104,138,.45));
+}
+.seal .ring{fill:none;stroke:var(--gold);stroke-width:1.5}
+.seal text{fill:var(--gold);font-size:8.2px;letter-spacing:.28em;font-weight:600;font-family:'Outfit',sans-serif;text-transform:uppercase}
+.seal .star{fill:var(--rose)}
+.floatcard{
+  position:absolute;right:-14px;bottom:-24px;
+  background:#180610;border:1px solid var(--line);border-radius:16px;
+  padding:12px 16px;display:flex;align-items:center;gap:10px;
+  box-shadow:0 16px 40px rgba(0,0,0,.55);font-size:13.5px;font-weight:600;
+  animation:floaty 6s 1.2s ease-in-out infinite;
+}
+.floatcard .mini{
+  width:30px;height:30px;border-radius:50%;background:var(--grad);
+  display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff;flex:none;
+}
+.floatcard small{display:block;font-size:10px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+@media(max-width:900px){.floatcard{right:8px;bottom:-18px}}
+
+/* marquee */
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:hidden;padding:13px 0;background:var(--surface);
+}
+.marquee-track{display:flex;gap:44px;width:max-content;animation:scrollx 26s linear infinite}
+.marquee-track span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+.marquee-track b{color:var(--rose)}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.sec-kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-lt);font-weight:600;margin-bottom:12px}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-.015em;line-height:1.12}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:16px}
+
+/* credentials */
+.creds{padding:64px 0 0}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cred{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.cred:hover{transform:translateY(-4px);border-color:rgba(212,104,138,.4);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.cred .ic{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:linear-gradient(140deg,rgba(212,104,138,.22),rgba(212,175,122,.12));
+  border:1px solid var(--line);
+}
+.cred .ic svg{width:20px;height:20px;stroke:var(--rose-lt)}
+.cred h3{font-size:17px;font-weight:700}
+.cred p{margin-top:8px;color:var(--muted);font-size:14px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.stat{
+  text-align:center;padding:22px 12px;border-radius:var(--r);
+  background:radial-gradient(circle at 50% 40%,rgba(212,104,138,.14),transparent 72%);
+  border:1px solid var(--line);
+}
+.stat b{font-size:26px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+.stat span{font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+
+/* booking / calendar */
+#book{background:linear-gradient(160deg,rgba(212,104,138,.1),transparent 45%)}
+.book-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.feat{display:grid;gap:22px;margin-top:8px}
+.feat li{list-style:none;display:flex;gap:16px}
+.feat .fic{
+  width:42px;height:42px;flex:none;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(140deg,rgba(212,104,138,.22),rgba(212,175,122,.12));
+  border:1px solid var(--line);
+}
+.feat .fic svg{width:19px;height:19px;stroke:var(--rose-lt)}
+.feat h3{font-size:16.5px;font-weight:700}
+.feat p{color:var(--muted);font-size:14.5px;margin-top:5px}
+
+.cal{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:28px;box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+.cal-label{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:12px}
+.days{display:flex;gap:10px;flex-wrap:wrap}
+.day{
+  flex:1;min-width:64px;background:transparent;border:1px solid var(--line);border-radius:14px;
+  padding:12px 6px;text-align:center;color:var(--text);
+  transition:border-color .2s,background .2s,transform .15s;
+}
+.day:hover{border-color:var(--rose);transform:translateY(-2px)}
+.day.sel{background:linear-gradient(140deg,rgba(212,104,138,.3),rgba(212,175,122,.14));border-color:var(--rose);box-shadow:0 6px 18px rgba(212,104,138,.3)}
+.day .dw{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.day.sel .dw{color:var(--rose-lt)}
+.day .dn{display:block;font-size:20px;font-weight:700;margin-top:3px}
+.times{margin-top:26px;display:grid;gap:18px}
+.tgroup .tg-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-weight:600;margin-bottom:9px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.tchip{
+  background:var(--surface-2);border:1px solid var(--line);border-radius:11px;
+  color:var(--text);font-size:14px;font-weight:600;padding:9px 16px;
+  transition:all .18s;
+}
+.tchip:hover:not(.booked):not(.sel){border-color:var(--rose);transform:translateY(-2px)}
+.tchip.sel{background-image:var(--grad);border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(212,104,138,.4)}
+.tchip.booked{color:var(--muted);text-decoration:line-through;opacity:.45;cursor:not-allowed;border-style:dashed}
+.cal-note{margin-top:18px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.cal-note .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+.cal-foot{
+  margin-top:22px;padding-top:20px;border-top:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+.cal-status{font-size:14px;color:var(--muted)}
+.cal-status.done{color:var(--gold);font-weight:600}
+.bring{margin-top:16px;font-size:13px;color:var(--muted);padding:12px 14px;border:1px dashed var(--line);border-radius:12px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:340px 1fr;gap:52px;align-items:center}
+.avatar-card{
+  border-radius:var(--r);padding:34px;text-align:center;
+  background:radial-gradient(circle at 50% 34%,rgba(212,104,138,.2),transparent 75%),var(--surface);
+  border:1px solid var(--line);
+}
+.avatar{
+  width:120px;height:120px;border-radius:50%;margin:0 auto;
+  background:var(--grad);display:grid;place-items:center;
+  font-size:40px;font-weight:800;color:#fff;
+  box-shadow:0 14px 36px rgba(212,104,138,.45);
+}
+.avatar-card h3{margin-top:18px;font-size:22px;font-weight:800}
+.avatar-card p.loc{margin-top:6px;font-size:13.5px;color:var(--muted)}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px;justify-content:center}
+.tag{
+  border:1px solid var(--line);background:var(--surface-2);border-radius:999px;
+  font-size:12px;color:var(--rose-lt);padding:6px 13px;font-weight:500;
+}
+.quals{display:grid;gap:16px;margin-top:22px}
+.qual{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:14.5px}
+.qual svg{width:17px;height:17px;stroke:var(--gold);flex:none;margin-top:3px}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.svc{
+  display:flex;align-items:center;gap:18px;padding:20px 22px;
+  background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  transition:transform .22s,border-color .22s,background .22s;cursor:pointer;
+}
+.svc:hover{transform:translateY(-4px);border-color:rgba(212,104,138,.45);background:var(--surface-2)}
+.svc .sic{
+  width:46px;height:46px;flex:none;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(140deg,rgba(212,104,138,.24),rgba(212,175,122,.12));
+  border:1px solid var(--line);
+}
+.svc .sic svg{width:21px;height:21px;stroke:var(--rose-lt)}
+.svc h3{font-size:16.5px;font-weight:700}
+.svc p{font-size:13.5px;color:var(--muted);margin-top:4px}
+.svc .chev{margin-left:auto;color:var(--muted);transition:transform .2s,color .2s;flex:none}
+.svc:hover .chev{transform:translateX(4px);color:var(--rose)}
+.svc.wide{grid-column:span 2}
+
+/* pricing */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.price{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:30px 26px;display:flex;flex-direction:column;position:relative;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.price:hover{transform:translateY(-6px);border-color:rgba(212,104,138,.45);box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.price.hot{background:linear-gradient(160deg,rgba(212,104,138,.14),var(--surface) 55%)}
+.hotbadge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background-image:var(--grad);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;border-radius:999px;padding:5px 16px;white-space:nowrap;
+  box-shadow:0 6px 16px rgba(212,104,138,.4);
+}
+.price .pname{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-lt);font-weight:600}
+.price .pamt{margin-top:12px;font-size:38px;font-weight:800;letter-spacing:-.02em}
+.price .pamt small{font-size:14px;color:var(--muted);font-weight:500}
+.price ul{margin-top:20px;display:grid;gap:10px;flex:1}
+.price li{list-style:none;display:flex;gap:10px;font-size:14px;color:var(--muted)}
+.price li svg{width:16px;height:16px;stroke:var(--gold);flex:none;margin-top:4px}
+.price .btn{margin-top:24px}
+.price-note{margin-top:26px;text-align:center;color:var(--muted);font-size:13.5px}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:30px 26px;position:relative;overflow:hidden;
+  transition:transform .25s,border-color .25s;
+}
+.step:hover{transform:translateY(-5px);border-color:rgba(212,175,122,.4)}
+.step b.num{
+  display:block;font-size:64px;font-weight:300;line-height:1;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:.85;
+}
+.step h3{margin-top:14px;font-size:18px;font-weight:700}
+.step p{margin-top:8px;color:var(--muted);font-size:14.5px}
+
+/* testimonials */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{
+  background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--rose);
+  border-radius:18px;padding:26px;transition:transform .25s,box-shadow .25s;
+}
+.rev:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.35)}
+.rev .stars{display:flex;gap:3px}
+.rev .stars svg{width:15px;height:15px;fill:var(--gold)}
+.rev .smp{
+  margin-left:10px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted);
+}
+.rev blockquote{margin-top:14px;font-size:15px;color:var(--text);font-weight:400}
+.rev .who{margin-top:16px;font-size:13px;color:var(--muted)}
+.rev-more{display:none}
+.rev-more.show{display:grid}
+.showmore{
+  margin-top:26px;background:transparent;border:1px solid var(--line);color:var(--rose-lt);
+  border-radius:12px;padding:10px 22px;font-weight:600;font-size:14px;
+  transition:border-color .2s,color .2s,transform .15s;
+}
+.showmore:hover{border-color:var(--rose);color:var(--text);transform:translateY(-2px)}
+.rev-note{text-align:center;margin-top:30px;color:var(--muted);font-size:14px}
+.rev-note b{color:var(--gold)}
+
+/* CTA */
+.cta{
+  position:relative;text-align:center;overflow:hidden;
+  background:radial-gradient(700px 320px at 50% 120%,rgba(212,104,138,.22),transparent 70%);
+}
+.cta h2{font-size:clamp(30px,4.4vw,46px)}
+.cta p{margin-top:14px;color:var(--muted);font-size:16.5px}
+.cta-btns{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.cta-hours{margin-top:22px;color:var(--muted);font-size:14px}
+
+/* FAQ */
+#faq{border-top:1px solid var(--line)}
+.faq-list{display:grid;gap:12px;max-width:820px;margin:0 auto}
+.faq{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .25s}
+.faq[open],.faq:hover{border-color:rgba(212,104,138,.4)}
+.faq summary{
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:19px 22px;font-weight:600;font-size:15.5px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{
+  width:26px;height:26px;flex:none;border-radius:50%;display:grid;place-items:center;
+  background:var(--surface-2);border:1px solid var(--line);font-size:15px;color:var(--rose-lt);
+  transition:transform .25s;
+}
+.faq[open] summary .pm{transform:rotate(45deg)}
+.faq .fa-body{padding:0 22px 20px;color:var(--muted);font-size:14.5px}
+
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+.foot-brand p{color:var(--muted);font-size:14px;margin-top:12px}
+.foot-contact{margin-top:18px;display:grid;gap:7px;font-size:14px;color:var(--muted)}
+.foot-contact a{color:var(--text);font-weight:500;transition:color .2s}
+.foot-contact a:hover{color:var(--rose-lt)}
+.foot-col h4{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-lt);margin-bottom:16px;font-weight:600}
+.foot-col a{display:block;color:var(--muted);font-size:14px;padding:5px 0;transition:color .2s}
+.foot-col a:hover{color:var(--text)}
+.foot-svcs{display:flex;gap:20px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.foot-svcs a{font-size:13px;color:var(--muted);transition:color .2s}
+.foot-svcs a:hover{color:var(--rose-lt)}
+.legal{margin-top:30px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--surface-2)}
+.legal h5{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.legal p{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.55}
+.legal p.en{font-weight:600;color:var(--muted)}
+.legal .fees{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.copyright{margin-top:26px;text-align:center;color:var(--muted);font-size:12.5px}
+.copyright .pvlabel{color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-size:10.5px;display:block;margin-bottom:6px}
+
+/* reveal animation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:1020px){
+  .hero .wrap{grid-template-columns:1fr;gap:60px}
+  .book-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .avatar-card{max-width:420px;margin:0 auto}
+}
+@media(max-width:840px){
+  .navlinks{display:none}
+  .cred-grid,.stats,.price-grid,.steps,.rev-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .svc.wide{grid-column:span 1}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  section{padding:64px 0}
+  .cred-grid,.stats,.price-grid,.steps,.rev-grid{grid-template-columns:1fr}
+  .pvfields input{width:100%}
+  .foot-grid{grid-template-columns:1fr}
+  .days{flex-wrap:wrap}
+  .day{min-width:56px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== preview bar ===== -->
+<div class="pvbar">
+  <div class="wrap">
+    <span class="pvtag"><span class="dot"></span><span data-en="Website concept preview" data-es="Vista previa del sitio web">Website concept preview</span></span>
+    <div class="pvfields">
+      <input id="f-name" type="text" value="Dora Nava" data-en-ph="Your name" data-es-ph="Su nombre">
+      <input id="f-city" type="text" value="Spring, TX" data-en-ph="Your city" data-es-ph="Su ciudad">
+      <input id="f-phone" type="text" value="832-722-1305" data-en-ph="Your phone" data-es-ph="Su teléfono">
+      <input id="f-email" type="text" value="pinkdiamondsignings@gmail.com" data-en-ph="Your email" data-es-ph="Su correo">
+    </div>
+    <div class="pvbtns">
+      <button class="pvchip" id="btn-reset" data-en="Reset" data-es="Restablecer">Reset</button>
+      <button class="pvchip" id="btn-svcs" data-en="Services (9)" data-es="Servicios (9)">Services (9)</button>
+      <button class="langbtn" id="btn-lang" type="button" aria-label="Switch language">ES</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== nav ===== -->
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">
+      <span class="mono">PD</span>
+      <span>Pink Diamond Signings<small data-en="Mobile &amp; Remote Notary" data-es="Notary Público Móvil y Remoto">Mobile &amp; Remote Notary</small></span>
+    </a>
+    <nav class="navlinks">
+      <a href="#top" data-en="Home" data-es="Inicio">Home</a>
+      <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+      <a href="#pricing" data-en="Pricing" data-es="Tarifas">Pricing</a>
+      <a href="#areas" data-en="Areas" data-es="Zonas">Areas</a>
+      <a href="#about" data-en="About" data-es="Acerca">About</a>
+      <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+    </nav>
+    <a href="#book" class="btn btn-grad btn-sm" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
+  </div>
+</header>
+
+<!-- ===== hero ===== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span id="eyebrow-city" data-en="Mobile &amp; Remote Notary · Spring, TX" data-es="Notary Móvil y Remoto · Spring, TX">Mobile &amp; Remote Notary · Spring, TX</span></span>
+      <h1><span data-en="Every signing," data-es="Cada firma,">Every signing,</span><br><span class="accent" data-en="flawless." data-es="impecable.">flawless.</span></h1>
+      <p class="lead" data-en="Precise, prompt, professional notary service — at your location or entirely online. Book in under a minute." data-es="Servicio notarial preciso, puntual y profesional — en su ubicación o totalmente en línea. Reserve en menos de un minuto.">Precise, prompt, professional notary service — at your location or entirely online. Book in under a minute.</p>
+      <p class="sub" data-en="Pink Diamond Signings serves Spring and nearby. Home, office, or title company — we'll meet you there." data-es="Pink Diamond Signings atiende Spring y alrededores. En su casa, oficina o compañía de títulos — allí estaremos.">Pink Diamond Signings serves Spring and nearby. Home, office, or title company — we'll meet you there.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-grad" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
+        <a href="sms:8327221305" class="btn btn-ghost" data-en="Send a text" data-es="Enviar un mensaje">Send a text</a>
+      </div>
+      <div class="hero-trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.63L18 20l-6-3.4L6 20l1.25-6.07L2.5 9.3l6.6-1.04z"/></svg><span data-en="Licensed &amp; insured" data-es="Con licencia y seguro">Licensed &amp; insured</span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-en="Same-day appointments" data-es="Citas el mismo día">Same-day appointments</span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-en="Spring &amp; surrounding areas" data-es="Spring y alrededores">Spring &amp; surrounding areas</span></span>
+      </div>
+    </div>
+    <div style="position:relative;padding-top:20px">
+      <div class="bkcard">
+        <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="ring" cx="50" cy="50" r="30"/>
+          <circle class="ring" cx="50" cy="50" r="44" stroke-dasharray="3 5"/>
+          <defs><path id="sealpath" d="M 50,50 m -26,0 a 26,26 0 1,1 52,0 a 26,26 0 1,1 -52,0"/></defs>
+          <text><textPath href="#sealpath">TX NOTARY PUBLIC • TX NOTARY PUBLIC •</textPath></text>
+          <path class="star" d="M50 40l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/>
+        </svg>
+        <div class="bkhead" data-en="Mobile Notary Public" data-es="Notary Público Móvil">Mobile Notary Public</div>
+        <h3 data-en="Signing appointment" data-es="Cita para firma">Signing appointment</h3>
+        <div class="bkrows">
+          <div class="bkrow"><span class="k" data-en="Date" data-es="Fecha">Date</span><span class="v" data-en="Tomorrow, 2:30 PM" data-es="Mañana, 2:30 p.m.">Tomorrow, 2:30 PM</span></div>
+          <div class="bkrow"><span class="k" data-en="Where" data-es="Dónde">Where</span><span class="v" data-en="Your home or office" data-es="Su casa u oficina">Your home or office</span></div>
+          <div class="bkrow"><span class="k" data-en="Notary" data-es="Notaria">Notary</span><span class="v notary-name">Dora Nava</span></div>
+        </div>
+        <div class="bkfoot"><span class="dot"></span><span data-en="Documents verified at signing" data-es="Documentos verificados al firmar">Documents verified at signing</span></div>
+      </div>
+      <div class="floatcard">
+        <span class="mini">PD</span>
+        <span><span data-en="Your notary is on the way" data-es="Su notaria va en camino">Your notary is on the way</span><small data-en="Sample appointment" data-es="Cita de muestra">Sample appointment</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== marquee ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>NOTARY PUBLIC <b>•</b> TX <b>•</b> NOTARY PUBLIC <b>•</b> TX <b>•</b> NOTARY PUBLIC <b>•</b> TX <b>•</b> NOTARY PUBLIC <b>•</b> TX <b>•</b>&nbsp;</span>
+    <span>NOTARY PUBLIC <b>•</b> TX <b>•</b> NOTARY PUBLIC <b>•</b> TX <b>•</b> NOTARY PUBLIC <b>•</b> TX <b>•</b> NOTARY PUBLIC <b>•</b> TX <b>•</b>&nbsp;</span>
+  </div>
+</div>
+
+<!-- ===== credentials + stats ===== -->
+<div class="creds">
+  <div class="wrap">
+    <div class="cred-grid">
+      <div class="cred rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3 data-en="Bonded &amp; insured" data-es="Con fianza y seguro">Bonded &amp; insured</h3>
+        <p data-en="Protection for every document we handle together." data-es="Protección para cada documento que manejamos juntos.">Protection for every document we handle together.</p>
+      </div>
+      <div class="cred rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M12 8v4M12 15.5v.5"/></svg></div>
+        <h3 data-en="E&amp;O coverage" data-es="Cobertura E&amp;O">E&amp;O coverage</h3>
+        <p data-en="Errors and omissions insurance on every signing." data-es="Seguro de errores y omisiones en cada firma.">Errors and omissions insurance on every signing.</p>
+      </div>
+      <div class="cred rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3 data-en="Same-day appointments" data-es="Citas el mismo día">Same-day appointments</h3>
+        <p data-en="Call before noon and we can usually sign today." data-es="Llame antes del mediodía y normalmente firmamos hoy.">Call before noon and we can usually sign today.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b>5,000+</b><span data-en="documents notarized" data-es="documentos notariados">documents notarized</span></div>
+      <div class="stat rv"><b>10+</b><span data-en="years of practice" data-es="años de experiencia">years of practice</span></div>
+      <div class="stat rv"><b>4.9/5</b><span data-en="average rating" data-es="calificación promedio">average rating</span></div>
+      <div class="stat rv"><b data-en="Same-day" data-es="Mismo día">Same-day</b><span data-en="service available" data-es="servicio disponible">service available</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== booking / calendar ===== -->
+<section id="book">
+  <div class="wrap">
+    <div class="book-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:8px">
+          <div class="sec-kicker" data-en="Online scheduling" data-es="Reserva en línea">Online scheduling</div>
+          <h2><span data-en="Clients book." data-es="Sus clientes reservan.">Clients book.</span> <span class="accent" data-en="You sign." data-es="Usted firma.">You sign.</span></h2>
+          <p data-en="No more phone tag while you're at a signing." data-es="Se acabó la espera al teléfono mientras está en una firma.">No more phone tag while you're at a signing.</p>
+        </div>
+        <ul class="feat">
+          <li>
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2c-8.3-.5-15-7.2-15.5-15.5a2 2 0 012-2z" transform="rotate(-8 12 12)"/></svg></span>
+            <div><h3 data-en="Never miss a call at a signing" data-es="Nunca pierda una llamada en una firma">Never miss a call at a signing</h3>
+            <p data-en="Clients book online while your phone stays in your bag." data-es="Sus clientes reservan en línea mientras su teléfono sigue guardado.">Clients book online while your phone stays in your bag.</p></div>
+          </li>
+          <li>
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>
+            <div><h3 data-en="Clients pick a time that works" data-es="Sus clientes eligen la hora que les conviene">Clients pick a time that works</h3>
+            <p data-en="They see real openings and choose one in seconds." data-es="Ven los horarios disponibles y eligen uno en segundos.">They see real openings and choose one in seconds.</p></div>
+          </li>
+          <li>
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div><h3 data-en="Everyone knows what to bring" data-es="Todos saben qué traer">Everyone knows what to bring</h3>
+            <p data-en="ID, documents, and signers are confirmed before you arrive." data-es="Identificación, documentos y firmantes confirmados antes de llegar.">ID, documents, and signers are confirmed before you arrive.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="cal rv">
+        <div class="cal-label" data-en="Pick a day" data-es="Elija un día">Pick a day</div>
+        <div class="days" id="days"></div>
+        <div class="times">
+          <div class="cal-label" data-en="Pick a time" data-es="Elija una hora" style="margin-top:10px">Pick a time</div>
+          <div id="times"></div>
+        </div>
+        <div class="cal-note"><span class="dot"></span><span data-en="Sample availability" data-es="Disponibilidad de muestra">Sample availability</span></div>
+        <div class="cal-foot">
+          <span class="cal-status" id="cal-status" data-en="Choose a time" data-es="Elija una hora">Choose a time</span>
+          <button class="btn btn-grad btn-sm" id="btn-request" disabled style="opacity:.45" data-en="Request this time" data-es="Solicitar esta hora">Request this time</button>
+        </div>
+        <div class="bring" data-en="Bring: valid photo ID, unsigned documents, all signers present." data-es="Traiga: identificación oficial con fotografía vigente, documentos sin firmar y todos los firmantes presentes.">Bring: valid photo ID, unsigned documents, all signers present.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== about ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="avatar-card rv">
+        <div class="avatar">PD</div>
+        <h3 class="notary-name">Dora Nava</h3>
+        <p class="loc" id="areas" data-en="Spring &amp; surrounding areas · 10+ years serving the community" data-es="Spring y alrededores · 10+ años sirviendo a la comunidad">Spring &amp; surrounding areas · 10+ years serving the community</p>
+        <div class="tags">
+          <span class="tag" data-en="Bonded &amp; insured" data-es="Con fianza y seguro">Bonded &amp; insured</span>
+          <span class="tag" data-en="E&amp;O coverage" data-es="Cobertura E&amp;O">E&amp;O coverage</span>
+          <span class="tag" data-en="NNA certified" data-es="Certificada NNA">NNA certified</span>
+          <span class="tag" data-en="Background screened" data-es="Antecedentes verificados">Background screened</span>
+        </div>
+      </div>
+      <div>
+        <div class="sec-head" style="margin-bottom:22px">
+          <div class="sec-kicker" data-en="About" data-es="Acerca de">About</div>
+          <h2><span data-en="Meet your" data-es="Conozca a su">Meet your</span> <span class="accent" data-en="notary" data-es="notaria">notary</span></h2>
+        </div>
+        <p style="font-size:17px;max-width:56ch" data-en="I print the package, check every ID, and stay until the last signature is done. Signing something important shouldn't feel tedious — my practice is built around precision and calm." data-es="Imprimo el paquete, verifico cada identificación y me quedo hasta la última firma. Firmar algo importante no debería ser tedioso — mi práctica se basa en la precisión y la calma.">I print the package, check every ID, and stay until the last signature is done. Signing something important shouldn't feel tedious — my practice is built around precision and calm.</p>
+        <div class="quals">
+          <div class="qual"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Accuracy — every detail checked, every stamp exact." data-es="Precisión — cada detalle verificado, cada sello exacto.">Accuracy — every detail checked, every stamp exact.</span></div>
+          <div class="qual"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Confidentiality — your documents stay private, always." data-es="Confidencialidad — sus documentos permanecen privados, siempre.">Confidentiality — your documents stay private, always.</span></div>
+          <div class="qual"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Convenience — we travel to you, on your schedule." data-es="Comodidad — viajamos hasta usted, en su horario.">Convenience — we travel to you, on your schedule.</span></div>
+          <div class="qual"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Se habla español — atendemos en español e inglés." data-es="Se habla español — we serve you in Spanish and English.">Se habla español — service in Spanish and English.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== services ===== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker" data-en="What we notarize" data-es="Lo que notariamos">What we notarize</div>
+      <h2><span data-en="Services," data-es="Servicios,">Services,</span> <span class="accent" data-en="handled." data-es="resueltos.">handled.</span></h2>
+    </div>
+    <div class="svc-grid">
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 10.5L12 6l9 4.5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg></span><div><h3 data-en="Loan signing" data-es="Firmas de préstamos">Loan signing</h3><p data-en="Full closing packages — refinances, purchases, HELOCs — printed, signed, returned same day." data-es="Paquetes completos de cierre — refinanciamientos, compras, HELOC — impresos, firmados y devueltos el mismo día.">Full closing packages — refinances, purchases, HELOCs — printed, signed, returned same day.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 21s-7-4.6-9.3-9A5.4 5.4 0 0112 5.5 5.4 5.4 0 0121.3 12C19 16.4 12 21 12 21z"/></svg></span><div><h3 data-en="Mobile notary" data-es="Notary móvil">Mobile notary</h3><p data-en="We come to your home, office, hospital, or care facility." data-es="Vamos a su casa, oficina, hospital o centro de cuidado.">We come to your home, office, hospital, or care facility.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M15 10l4.5-2.5a2 2 0 002.8.8v0a2 2 0 00.7-2.8L20 1M9.5 14.5L2.6 18a2 2 0 00-.8 2.8v0a2 2 0 002.8.8L11.5 18M13 11l-2 2 8 8 2-2z"/></svg></span><div><h3 data-en="Remote online" data-es="En línea remoto">Remote online</h3><p data-en="Secure video session, valid in minutes — anywhere in Texas." data-es="Sesión de video segura, válida en minutos — desde cualquier lugar de Texas.">Secure video session, valid in minutes — anywhere in Texas.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 12h7v9H3zM14 3h7v18h-7zM14 8h.01"/><path d="M10 3H3v5"/></svg></span><div><h3 data-en="Real estate" data-es="Bienes raíces">Real estate</h3><p data-en="Deeds, transfers, and disclosures." data-es="Escrituras, traspasos y divulgaciones.">Deeds, transfers, and disclosures.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><h3 data-en="Power of attorney" data-es="Poder notarial">Power of attorney</h3><p data-en="General, medical, and financial POAs — every signer verified." data-es="Poderes generales, médicos y financieros — cada firmante verificado.">General, medical, and financial POAs — every signer verified.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3v6l3-2M8 21h8M12 12v9M7 12h10v3a5 5 0 01-10 0z"/></svg></span><div><h3 data-en="Wills &amp; trusts" data-es="Testamentos y fideicomisos">Wills &amp; trusts</h3><p data-en="Estate documents, with discretion." data-es="Documentos testamentarios, con discreción.">Estate documents, with discretion.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></span><div><h3 data-en="Affidavits" data-es="Declaraciones juradas">Affidavits</h3><p data-en="Sworn statements, witnessed and sealed." data-es="Declaraciones bajo juramento, presenciadas y selladas.">Sworn statements, witnessed and sealed.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg></span><div><h3 data-en="Apostille" data-es="Apostillas">Apostille</h3><p data-en="International documents, guided end to end." data-es="Documentos internacionales, guiados de principio a fin.">International documents, guided end to end.</p></div><span class="chev">→</span></a>
+      <a href="#book" class="svc wide rv"><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5"/></svg></span><div><h3 data-en="Everything else" data-es="Todo lo demás">Everything else</h3><p data-en="Travel consents, DMV titles, medical directives, business documents — if it needs a stamp, ask." data-es="Consentimientos de viaje, títulos de DMV, directivas médicas, documentos de negocios — si necesita un sello, pregunte.">Travel consents, DMV titles, medical directives, business documents — if it needs a stamp, ask.</p></div><span class="chev">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== pricing ===== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker" data-en="No surprises" data-es="Sin sorpresas">No surprises</div>
+      <h2><span data-en="Clear" data-es="Precios">Clear</span> <span class="accent" data-en="starting prices" data-es="iniciales claros">starting prices</span></h2>
+      <p data-en="Travel is quoted before you confirm. No surprise add-ons at the table." data-es="El traslado se cotiza antes de confirmar. Sin cargos sorpresa en la mesa.">Travel is quoted before you confirm. No surprise add-ons at the table.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price rv">
+        <span class="pname" data-en="Classic" data-es="Clásico">Classic</span>
+        <div class="pamt">$25 <small data-en="/ signature" data-es="/ firma">/ signature</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="One document, one signer" data-es="Un documento, un firmante">One document, one signer</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Office visit" data-es="Visita a oficina">Office visit</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="ID verification included" data-es="Verificación de ID incluida">ID verification included</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Same-day available" data-es="Mismo día disponible">Same-day available</span></li>
+        </ul>
+        <a href="#book" class="btn btn-ghost" data-en="Book" data-es="Reservar">Book</a>
+      </div>
+      <div class="price hot rv">
+        <span class="hotbadge" data-en="Most chosen" data-es="El favorito">Most chosen</span>
+        <span class="pname" data-en="Mobile" data-es="Móvil">Mobile</span>
+        <div class="pamt">$55 <small data-en="/ visit" data-es="/ visita">/ visit</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="We travel to you" data-es="Vamos hasta usted">We travel to you</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Up to 2 documents" data-es="Hasta 2 documentos">Up to 2 documents</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Evenings &amp; weekends" data-es="Tardes y fines de semana">Evenings &amp; weekends</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Text confirmations" data-es="Confirmaciones por mensaje">Text confirmations</span></li>
+        </ul>
+        <a href="#book" class="btn btn-grad" data-en="Book" data-es="Reservar">Book</a>
+      </div>
+      <div class="price rv">
+        <span class="pname" data-en="Full package" data-es="Paquete completo">Full package</span>
+        <div class="pamt">$150 <small data-en="/ package" data-es="/ paquete">/ package</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Unlimited signatures in package" data-es="Firmas ilimitadas en el paquete">Unlimited signatures in package</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Printing &amp; return included" data-es="Impresión y devolución incluidas">Printing &amp; return included</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Same-day scanbacks" data-es="Escaneos el mismo día">Same-day scanbacks</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-en="Closing-table service" data-es="Servicio en la mesa de cierre">Closing-table service</span></li>
+        </ul>
+        <a href="#book" class="btn btn-ghost" data-en="Book" data-es="Reservar">Book</a>
+      </div>
+    </div>
+    <p class="price-note" data-en="Travel beyond 15 miles $0.75/mi · extra signatures $10 · after-hours +$20 · Cash, Zelle &amp; card accepted" data-es="Viajes de más de 15 millas $0.75/mi · firmas adicionales $10 · fuera de horario +$20 · Aceptamos efectivo, Zelle y tarjeta">Travel beyond 15 miles $0.75/mi · extra signatures $10 · after-hours +$20 · Cash, Zelle &amp; card accepted</p>
+  </div>
+</section>
+
+<!-- ===== how it works ===== -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker" data-en="Three steps" data-es="Tres pasos">Three steps</div>
+      <h2><span data-en="How it" data-es="Cómo">How it</span> <span class="accent" data-en="works." data-es="funciona.">works.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><b class="num">1</b><h3 data-en="Book or call" data-es="Reserve o llame">Book or call</h3><p data-en="Pick a time and place online, in under a minute." data-es="Elija hora y lugar en línea, en menos de un minuto.">Pick a time and place online, in under a minute.</p></div>
+      <div class="step rv"><b class="num">2</b><h3 data-en="We confirm time and place" data-es="Confirmamos hora y lugar">We confirm time and place</h3><p data-en="You get a confirmation with what to have ready." data-es="Recibe una confirmación con lo que debe tener listo.">You get a confirmation with what to have ready.</p></div>
+      <div class="step rv"><b class="num">3</b><h3 data-en="We sign and you're done" data-es="Firmamos y listo">We sign and you're done</h3><p data-en="We verify ID, witness signatures, and seal." data-es="Verificamos la identificación, presenciamos las firmas y sellamos.">We verify ID, witness signatures, and seal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== testimonials ===== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker" data-en="Client words" data-es="Lo que dicen los clientes">Client words</div>
+      <h2><span data-en="What clients" data-es="Lo que los">What clients</span> <span class="accent" data-en="say." data-es="clientes dicen.">say.</span></h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev rv">
+        <div><span class="stars">★★★★★</span><span class="smp" data-en="Sample" data-es="Muestra">Sample</span></div>
+        <blockquote data-en="“Arrived on time, walked me through every page of my refinance, and had it scanned back the same evening.”" data-es="“Llegó puntual, me guió por cada página de mi refinanciamiento y lo escaneó esa misma tarde.”">“Arrived on time, walked me through every page of my refinance, and had it scanned back the same evening.”</blockquote>
+        <div class="who">Maria S. · <span data-en="Loan signing" data-es="Firma de préstamo">Loan signing</span></div>
+      </div>
+      <div class="rev rv">
+        <div><span class="stars">★★★★★</span><span class="smp" data-en="Sample" data-es="Muestra">Sample</span></div>
+        <blockquote data-en="“Remote notarization took ten minutes from my couch. Clear, secure, and done.”" data-es="“La notarización remota tomó diez minutos desde mi sofá. Claro, seguro y listo.”">“Remote notarization took ten minutes from my couch. Clear, secure, and done.”</blockquote>
+        <div class="who">James T. · <span data-en="Remote online" data-es="En línea remoto">Remote online</span></div>
+      </div>
+      <div class="rev rv">
+        <div><span class="stars">★★★★★</span><span class="smp" data-en="Sample" data-es="Muestra">Sample</span></div>
+        <blockquote data-en="“Gentle and patient with my mother in the hospital. The POA was handled within three hours.”" data-es="“Amable y paciente con mi madre en el hospital. El poder quedó listo en tres horas.”">“Gentle and patient with my mother in the hospital. The POA was handled within three hours.”</blockquote>
+        <div class="who">Denise R. · <span data-en="Power of attorney" data-es="Poder notarial">Power of attorney</span></div>
+      </div>
+    </div>
+    <div class="rev-grid rev-more" id="rev-more">
+      <div class="rev">
+        <div><span class="stars">★★★★★</span><span class="smp" data-en="Sample" data-es="Muestra">Sample</span></div>
+        <blockquote data-en="“Met me at the hospital on a Sunday morning so we could close on time. Careful with every initial.”" data-es="“Me atendió en el hospital un domingo por la mañana para cerrar a tiempo. Cuidadosa con cada inicial.”">“Met me at the hospital on a Sunday morning so we could close on time. Careful with every initial.”</blockquote>
+        <div class="who">Robert H. · <span data-en="Loan signing" data-es="Firma de préstamo">Loan signing</span></div>
+      </div>
+      <div class="rev">
+        <div><span class="stars">★★★★★</span><span class="smp" data-en="Sample" data-es="Muestra">Sample</span></div>
+        <blockquote data-en="“Everything was scanned back before I even got home. The title company was impressed.”" data-es="“Todo estaba escaneado antes de que llegara a casa. La compañía de títulos quedó impresionada.”">“Everything was scanned back before I even got home. The title company was impressed.”</blockquote>
+        <div class="who">Alicia M. · <span data-en="Homebuyer" data-es="Compradora de vivienda">Homebuyer</span></div>
+      </div>
+      <div class="rev">
+        <div><span class="stars">★★★★★</span><span class="smp" data-en="Sample" data-es="Muestra">Sample</span></div>
+        <blockquote data-en="“Atendió todo en español, con paciencia y a tiempo. Hizo que fuera fácil.”" data-es="“Handled everything in Spanish, patient and on time. Made it easy.”">“Handled everything in Spanish, patient and on time. Made it easy.”</blockquote>
+        <div class="who">Carmen L. · <span data-en="Refinance" data-es="Refinanciamiento">Refinance</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <button class="showmore" id="btn-more" data-en="Show more" data-es="Ver más">Show more</button>
+    </div>
+    <p class="rev-note"><b>4.9/5</b> <span data-en="average across 120+ Google reviews." data-es="promedio en más de 120 reseñas de Google.">average across 120+ Google reviews.</span></p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2><span data-en="Ready when" data-es="Listo cuando">Ready when</span> <span class="accent" data-en="you are." data-es="usted lo esté.">you are.</span></h2>
+    <p data-en="Same-day and evening slots available. Pick a time, pick a place — done." data-es="Hay citas el mismo día y por la tarde. Elija hora y lugar — listo.">Same-day and evening slots available. Pick a time, pick a place — done.</p>
+    <div class="cta-btns">
+      <a href="#book" class="btn btn-grad" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
+      <a href="tel:8327221305" class="btn btn-ghost" data-en="Call Dora" data-es="Llamar a Dora">Call Dora</a>
+      <a href="sms:8327221305" class="btn btn-ghost" data-en="Send a text" data-es="Enviar un mensaje">Send a text</a>
+    </div>
+    <p class="cta-hours" data-en="Hours: by appointment · Evenings &amp; weekends available" data-es="Horario: con cita previa · Tardes y fines de semana disponibles">Hours: by appointment · Evenings &amp; weekends available</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head" style="margin:0 auto 44px;text-align:center">
+      <div class="sec-kicker" data-en="Good to know" data-es="Conviene saber">Good to know</div>
+      <h2><span data-en="Questions," data-es="Preguntas,">Questions,</span> <span class="accent" data-en="answered." data-es="respondidas.">answered.</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq"><summary><span data-en="What ID do I bring?" data-es="¿Qué identificación debo traer?">What ID do I bring?</span><span class="pm">+</span></summary><div class="fa-body" data-en="A current, government-issued photo ID — driver's license, state ID, passport, or military ID — for every signer." data-es="Una identificación oficial vigente con fotografía — licencia de conducir, identificación estatal, pasaporte o identificación militar — para cada firmante.">A current, government-issued photo ID — driver's license, state ID, passport, or military ID — for every signer.</div></details>
+      <details class="faq"><summary><span data-en="Can a notary give legal advice?" data-es="¿Puede un notario dar asesoría legal?">Can a notary give legal advice?</span><span class="pm">+</span></summary><div class="fa-body" data-en="No. Notaries verify identity and witness signatures. For legal guidance, consult a licensed attorney." data-es="No. Los notarios verifican la identidad y presencian las firmas. Para orientación legal, consulte a un abogado autorizado.">No. Notaries verify identity and witness signatures. For legal guidance, consult a licensed attorney.</div></details>
+      <details class="faq"><summary><span data-en="How does remote notarization work?" data-es="¿Cómo funciona la notarización remota?">How does remote notarization work?</span><span class="pm">+</span></summary><div class="fa-body" data-en="You receive a secure video link, verify identity with photo ID, sign electronically, and we apply a digital seal. Typically ten to fifteen minutes." data-es="Recibe un enlace de video seguro, verifica su identidad con foto, firma electrónicamente y aplicamos un sello digital. Normalmente de diez a quince minutos.">You receive a secure video link, verify identity with photo ID, sign electronically, and we apply a digital seal. Typically ten to fifteen minutes.</div></details>
+      <details class="faq"><summary><span data-en="Must I sign in front of the notary?" data-es="¿Debo firmar frente al notario?">Must I sign in front of the notary?</span><span class="pm">+</span></summary><div class="fa-body" data-en="Yes, for most documents. Bring them unsigned — we'll indicate exactly when to sign." data-es="Sí, para la mayoría de los documentos. Tráigalos sin firmar — le indicaremos exactamente cuándo firmar.">Yes, for most documents. Bring them unsigned — we'll indicate exactly when to sign.</div></details>
+      <details class="faq"><summary><span data-en="How long does an appointment take?" data-es="¿Cuánto dura una cita?">How long does an appointment take?</span><span class="pm">+</span></summary><div class="fa-body" data-en="Fifteen to twenty minutes for most documents; loan packages typically sixty to ninety." data-es="De quince a veinte minutos para la mayoría de los documentos; los paquetes de préstamo normalmente de sesenta a noventa.">Fifteen to twenty minutes for most documents; loan packages typically sixty to ninety.</div></details>
+      <details class="faq"><summary><span data-en="How do I pay, and what's the cancellation policy?" data-es="¿Cómo pago y cuál es la política de cancelación?">How do I pay, and what's the cancellation policy?</span><span class="pm">+</span></summary><div class="fa-body" data-en="Cash, Zelle, Venmo, or card at the time of service. Cancel or reschedule at least 4 hours ahead at no charge; later cancellations may incur a $15 trip fee." data-es="Efectivo, Zelle, Venmo o tarjeta al momento del servicio. Cancele o reprograme con al menos 4 horas de anticipación sin costo; cancelaciones tardías pueden generar un cargo de $15 por traslado.">Cash, Zelle, Venmo, or card at the time of service. Cancel or reschedule at least 4 hours ahead at no charge; later cancellations may incur a $15 trip fee.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="mono">PD</span><span>Pink Diamond Signings</span></a>
+        <p data-en="Precise. Prompt. Professional. Mobile and remote, on your schedule." data-es="Precisa. Puntual. Profesional. Móvil y remota, en su horario.">Precise. Prompt. Professional. Mobile and remote, on your schedule.</p>
+        <div class="foot-contact">
+          <a href="tel:8327221305">(832) 722-1305</a>
+          <a href="mailto:pinkdiamondsignings@gmail.com">pinkdiamondsignings@gmail.com</a>
+          <span data-en="Spring, TX &amp; surrounding areas" data-es="Spring, TX y alrededores">Spring, TX &amp; surrounding areas</span>
+          <span data-en="Hours: by appointment · Evenings &amp; weekends by appointment" data-es="Horario: con cita previa · Tardes y fines de semana con cita">Hours: by appointment · Evenings &amp; weekends by appointment</span>
+          <span data-en="Commissioned Texas Notary Public · Bonded · E&amp;O insured" data-es="Notary Pública de Texas con comisión · Con fianza · Seguro E&amp;O">Commissioned Texas Notary Public · Bonded · E&amp;O insured</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4 data-en="Index" data-es="Índice">Index</h4>
+        <a href="#top" data-en="Home" data-es="Inicio">Home</a>
+        <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+        <a href="#pricing" data-en="Pricing" data-es="Tarifas">Pricing</a>
+        <a href="#about" data-en="About" data-es="Acerca">About</a>
+        <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+        <a href="#book" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-en="Services" data-es="Servicios">Services</h4>
+        <a href="#services" data-en="Loan signing" data-es="Firmas de préstamos">Loan signing</a>
+        <a href="#services" data-en="Mobile notary" data-es="Notary móvil">Mobile notary</a>
+        <a href="#services" data-en="Remote online" data-es="En línea remoto">Remote online</a>
+        <a href="#services" data-en="Power of attorney" data-es="Poder notarial">Power of attorney</a>
+        <a href="#services" data-en="Apostille" data-es="Apostillas">Apostille</a>
+      </div>
+    </div>
+    <div class="legal">
+      <h5 data-en="Legal notice" data-es="Aviso legal">Legal notice</h5>
+      <p class="en" data-en="I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN TEXAS AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE." data-es="NO SOY ABOGADO AUTORIZADO PARA EJERCER LA ABOGACÍA EN TEXAS Y NO PUEDO DAR ASESORÍA LEGAL NI ACEPTAR HONORARIOS POR ASESORÍA LEGAL.">I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN TEXAS AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
+      <p data-en="I am not an attorney and cannot give legal advice or represent you in legal matters. Notaries cannot provide legal advice about documents or their contents." data-es="No soy abogado y no puedo ofrecer asesoría legal ni representarle en asuntos legales. Los notarios no pueden asesorar sobre el contenido de los documentos.">I am not an attorney and cannot give legal advice or represent you in legal matters. Notaries cannot provide legal advice about documents or their contents.</p>
+      <p class="fees"><span data-en="Fees: set by Texas law." data-es="Tarifas: las establece la ley de Texas.">Fees: set by Texas law.</span> <span data-en="· Las tarifas las establece la ley de Texas." data-es="· Fees are set by Texas law.">· Las tarifas las establece la ley de Texas.</span></p>
+    </div>
+    <p class="copyright">
+      <span class="pvlabel" data-en="Website concept preview" data-es="Vista previa del sitio web">Website concept preview</span>
+      © 2026 Pink Diamond Signings · Spring, TX
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  /* ---------- language toggle ---------- */
+  var i18n = document.querySelectorAll("[data-en]");
+  var inputs = document.querySelectorAll("[data-en-ph]");
+  var lang = "en";
+  var btnLang = document.getElementById("btn-lang");
+  function setLang(l){
+    lang = l;
+    document.documentElement.lang = l === "en" ? "en" : "es";
+    btnLang.textContent = l === "en" ? "ES" : "EN";
+    for(var i=0;i<i18n.length;i++){
+      i18n[i].textContent = l === "en" ? i18n[i].getAttribute("data-en") : i18n[i].getAttribute("data-es");
+    }
+    for(var j=0;j<inputs.length;j++){
+      inputs[j].setAttribute("placeholder", inputs[j].getAttribute(l === "en" ? "data-en-ph" : "data-es-ph"));
+    }
+    renderDays();
+    renderTimes();
+    if(selDay === null || selTime === null){
+      statusEl.textContent = l === "en" ? "Choose a time" : "Elija una hora";
+      statusEl.classList.remove("done");
+    } else {
+      updateStatus(false);
+    }
+  }
+  btnLang.addEventListener("click", function(){ setLang(lang === "en" ? "es" : "en"); });
+
+  /* ---------- preview fields ---------- */
+  var fName = document.getElementById("f-name"), fCity = document.getElementById("f-city"),
+      fPhone = document.getElementById("f-phone"), fEmail = document.getElementById("f-email");
+  function applyFields(){
+    var names = document.querySelectorAll(".notary-name");
+    for(var i=0;i<names.length;i++) names[i].textContent = fName.value || "Your Name";
+    var eb = document.getElementById("eyebrow-city");
+    eb.textContent = (lang === "en" ? "Mobile & Remote Notary · " : "Notary Móvil y Remoto · ") + (fCity.value || "Your City");
+  }
+  ["input","change"].forEach(function(ev){
+    [fName,fCity,fPhone,fEmail].forEach(function(f){ f.addEventListener(ev, applyFields); });
+  });
+  document.getElementById("btn-reset").addEventListener("click", function(){
+    fName.value="Dora Nava"; fCity.value="Spring, TX"; fPhone.value="832-722-1305"; fEmail.value="pinkdiamondsignings@gmail.com";
+    applyFields();
+  });
+  document.getElementById("btn-svcs").addEventListener("click", function(){
+    document.getElementById("services").scrollIntoView({behavior:"smooth"});
+  });
+
+  /* ---------- calendar ---------- */
+  var DAYS_EN = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var DAYS_ES = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
+  var MONTHS_EN = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var MONTHS_ES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+  var SLOTS = [
+    { group: {en:"Morning", es:"Mañana"}, times: [{en:"9:00 AM", es:"9:00 a.m."},{en:"10:30 AM", es:"10:30 a.m."}] },
+    { group: {en:"Afternoon", es:"Tarde"}, times: [{en:"1:00 PM", es:"1:00 p.m."},{en:"2:30 PM", es:"2:30 p.m."},{en:"4:00 PM", es:"4:00 p.m."}] },
+    { group: {en:"Evening", es:"Noche"}, times: [{en:"6:00 PM", es:"6:00 p.m."}] }
+  ];
+  var selDay = null, selTime = null, requested = false;
+  var daysEl = document.getElementById("days"), timesEl = document.getElementById("times"),
+      statusEl = document.getElementById("cal-status"), btnReq = document.getElementById("btn-request");
+
+  // deterministic sample availability: some slots "booked"
+  function isBooked(d, s){ return ((d*31 + s*17) % 7) === 0; }
+
+  function renderDays(){
+    var today = new Date(); daysEl.textContent = "";
+    for(var d=0; d<5; d++){
+      var dt = new Date(today.getTime() + d*86400000);
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "day" + (selDay===d ? " sel" : "");
+      var dw = d===0 ? (lang==="en" ? "Today" : "Hoy") : (lang==="en" ? DAYS_EN : DAYS_ES)[dt.getDay()];
+      b.innerHTML = '<span class="dw"></span><span class="dn"></span>';
+      b.firstChild.textContent = dw;
+      b.lastChild.textContent = dt.getDate();
+      b.dataset.idx = d;
+      b.addEventListener("click", (function(idx){ return function(){
+        selDay = idx; requested = false; selTime = null;
+        var all = daysEl.querySelectorAll(".day");
+        for(var k=0;k<all.length;k++) all[k].classList.toggle("sel", +all[k].dataset.idx === idx);
+        renderTimes(); updateStatus(false);
+      };})(d));
+      daysEl.appendChild(b);
+    }
+  }
+
+  function renderTimes(){
+    timesEl.textContent = "";
+    SLOTS.forEach(function(g, gi){
+      var wrap = document.createElement("div"); wrap.className = "tgroup";
+      var lab = document.createElement("div"); lab.className = "tg-label"; lab.textContent = g.group[lang];
+      var chips = document.createElement("div"); chips.className = "chips";
+      g.times.forEach(function(t, ti){
+        var c = document.createElement("button");
+        c.type = "button";
+        var booked = isBooked(selDay === null ? 0 : selDay, gi*10+ti);
+        c.className = "tchip" + (booked ? " booked" : "") + (selTime !== null && selTime.g === gi && selTime.t === ti ? " sel" : "");
+        c.textContent = t[lang];
+        if(!booked){
+          c.addEventListener("click", (function(G,T){ return function(){
+            requested = false;
+            selTime = {g:G, t:T};
+            var all = timesEl.querySelectorAll(".tchip");
+            for(var k=0;k<all.length;k++) all[k].classList.remove("sel");
+            this.classList.add("sel");
+            updateStatus(false);
+          };})(gi,ti));
+        } else { c.disabled = true; }
+        chips.appendChild(c);
+      });
+      wrap.appendChild(lab); wrap.appendChild(chips);
+      timesEl.appendChild(wrap);
+    });
+  }
+
+  function fmtSel(){
+    if(selDay === null || selTime === null) return "";
+    var dt = new Date(Date.now() + selDay*86400000);
+    var m = (lang==="en" ? MONTHS_EN : MONTHS_ES)[dt.getMonth()];
+    var dayName = selDay === 0 ? (lang==="en" ? "Today" : "Hoy") : (lang==="en" ? DAYS_EN : DAYS_ES)[dt.getDay()];
+    var wd = lang==="en" ? ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"] : ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
+    var full = lang==="en"
+      ? wd[dt.getDay()] + ", " + m + " " + dt.getDate() + " · " + SLOTS[selTime.g].times[selTime.t].en
+      : wd[dt.getDay()] + ", " + dt.getDate() + " de " + m + " · " + SLOTS[selTime.g].times[selTime.t].es;
+    return full;
+  }
+
+  function updateStatus(done){
+    if(done){
+      statusEl.textContent = (lang==="en" ? "Request received — we'll confirm shortly." : "Solicitud recibida — le confirmaremos en breve.") + "  ✓ " + fmtSel();
+      statusEl.classList.add("done");
+      btnReq.style.opacity = ".45"; btnReq.disabled = true;
+      btnReq.textContent = lang==="en" ? "Requested" : "Solicitado";
+    } else {
+      statusEl.classList.remove("done");
+      btnReq.style.opacity = selTime === null ? ".45" : "1";
+      btnReq.disabled = selTime === null;
+      btnReq.textContent = lang==="en" ? "Request this time" : "Solicitar esta hora";
+      statusEl.textContent = selTime === null
+        ? (lang==="en" ? "Choose a time" : "Elija una hora")
+        : fmtSel();
+    }
+  }
+
+  btnReq.addEventListener("click", function(){
+    if(selTime === null) return;
+    requested = true;
+    updateStatus(true);
+  });
+
+  renderDays();
+  renderTimes();
+
+  /* ---------- show more reviews ---------- */
+  var btnMore = document.getElementById("btn-more"), more = document.getElementById("rev-more");
+  btnMore.addEventListener("click", function(){
+    var show = !more.classList.contains("show");
+    more.classList.toggle("show", show);
+    btnMore.textContent = show ? (lang==="en" ? "Show less" : "Ver menos") : (lang==="en" ? "Show more" : "Ver más");
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  var rv = document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+    rv.forEach(function(el){ io.observe(el); });
+  } else {
+    rv.forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* init placeholder text */
+  for(var q=0;q<inputs.length;q++) inputs[q].setAttribute("placeholder", inputs[q].getAttribute("data-en-ph"));
+})();
+</script>
+</body>
+</html>
