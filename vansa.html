@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VANSA — Notary Public &amp; Certified Signing Agent | Henrico, VA</title>
+<meta name="description" content="Lisa Tinsley — VANSA. Notary Public and certified loan signing agent serving Henrico, Richmond, Chesterfield, Goochland, Hanover & Powhatan since 2005. Home office or mobile. Same-day service often available.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f1c30'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23b39041' stroke-width='2'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' fill='%23b39041' text-anchor='middle' font-weight='700'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f1c30; --navy-deep:#0a1524; --ink:#1d2634; --muted:#5c6572;
+  --paper:#f6f2e9; --card:#fdfcf8; --line:rgba(15,28,48,.12);
+  --gold:#a8823c; --gold-soft:#c9a961; --ivory:#ece7da;
+  --radius:6px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Libre Caslon Text',Georgia,serif;line-height:1.18;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+img{display:block;max-width:100%}
+
+/* ---------- preview banner ---------- */
+.preview{background:var(--gold);color:#fff;text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .seal{width:38px;height:38px;flex:none}
+.brand-txt .name{font-family:'Libre Caslon Text',serif;font-weight:700;font-size:21px;letter-spacing:.06em;color:var(--navy)}
+.brand-txt .sub{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:-2px}
+nav.links{display:flex;gap:30px;align-items:center;font-size:14.5px;font-weight:500;color:var(--muted)}
+nav.links a{transition:color .2s ease}
+nav.links a:hover{color:var(--navy)}
+.btn{display:inline-block;background:var(--gold);color:#fff;font-weight:600;font-size:14.5px;padding:11px 22px;border-radius:var(--radius);border:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;letter-spacing:.02em}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(168,130,60,.35)}
+.btn.ghost{background:transparent;color:var(--ivory);border:1px solid rgba(236,231,218,.45)}
+.btn.ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft);box-shadow:none}
+.btn.dark{background:var(--navy)}
+.btn.dark:hover{box-shadow:0 6px 18px rgba(15,28,48,.3)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;transition:transform .25s ease,opacity .25s ease}
+.mobile-menu{display:none;background:var(--card);border-bottom:1px solid var(--line);padding:10px 28px 20px}
+.mobile-menu a{display:block;padding:11px 0;border-bottom:1px solid var(--line);font-weight:500;color:var(--ink)}
+.mobile-menu .btn{width:100%;margin-top:14px;text-align:center}
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(168deg,var(--navy) 0%,var(--navy-deep) 62%,#081020 100%);color:var(--ivory);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(1100px 500px at 82% 18%,rgba(201,169,97,.13),transparent 60%);pointer-events:none}
+.hero-in{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:84px 0 96px}
+.hero .kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:20px}
+.hero h1{font-size:clamp(34px,4.6vw,54px);font-weight:700;color:#fff}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero p.lede{margin-top:22px;font-size:18px;color:#c9c4b8;max-width:34em}
+.hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:38px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:500;color:#d6d1c5;border:1px solid rgba(236,231,218,.22);border-radius:999px;padding:7px 14px}
+.chip svg{flex:none}
+.seal-card{position:relative;display:flex;justify-content:center}
+.seal-card svg{width:min(300px,72vw);filter:drop-shadow(0 22px 40px rgba(0,0,0,.45))}
+.seal-card .under{text-align:center;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,231,218,.55);margin-top:18px}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease-out,transform .6s ease-out}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- stat strip ---------- */
+.stats{background:var(--navy-deep);border-top:1px solid rgba(201,169,97,.25);color:var(--ivory)}
+.stats-in{display:grid;grid-template-columns:repeat(4,1fr);padding:30px 0}
+.stat{padding:0 28px;border-left:1px solid rgba(236,231,218,.14)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .n{font-family:'Libre Caslon Text',serif;font-size:32px;font-weight:700;color:var(--gold-soft)}
+.stat .l{font-size:13px;color:#b9b4a8;margin-top:2px}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.sec-kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.sec-title{font-size:clamp(27px,3.4vw,38px);font-weight:700;color:var(--navy)}
+.sec-title em{font-style:italic;color:var(--gold)}
+
+/* services — editorial split */
+.svc-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;margin-top:52px;align-items:start}
+.svc-featured{background:var(--navy);color:var(--ivory);border-radius:10px;padding:44px 46px;position:relative;overflow:hidden}
+.svc-featured::after{content:"";position:absolute;inset:0;background:radial-gradient(500px 260px at 90% 0%,rgba(201,169,97,.16),transparent 65%)}
+.svc-featured h3{font-size:26px;color:#fff;position:relative}
+.svc-featured .tag{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(201,169,97,.4);border-radius:999px;padding:5px 12px;margin-bottom:18px;position:relative}
+.svc-featured p{position:relative;color:#c4bfb3;margin-top:14px}
+.loan-list{list-style:none;margin-top:26px;position:relative}
+.loan-list li{display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(236,231,218,.12);font-size:16px}
+.loan-list li:last-child{border-bottom:none}
+.loan-list svg{flex:none;transform:translateY(2px)}
+.loan-list .wl{font-weight:600;color:#fff}
+.svc-side{display:flex;flex-direction:column;gap:24px}
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:30px 32px;transition:transform .2s ease,box-shadow .2s ease}
+.svc-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,28,48,.08)}
+.svc-card h3{font-size:20px;color:var(--navy)}
+.svc-card p{font-size:15px;color:var(--muted);margin-top:10px}
+.svc-card .mini{margin-top:14px;font-size:13px;font-weight:600;color:var(--gold);letter-spacing:.02em}
+
+/* rates */
+.rates{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rates-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:48px;align-items:start}
+.rate-note{font-size:15px;color:var(--muted);margin-top:18px;max-width:36em}
+.rate-table{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rate-row{display:flex;justify-content:space-between;align-items:baseline;padding:16px 24px;border-bottom:1px solid var(--line);gap:16px}
+.rate-row:last-child{border-bottom:none}
+.rate-row .s{font-weight:600;font-size:15.5px}
+.rate-row .d{font-size:13px;color:var(--muted);margin-top:1px}
+.rate-row .p{font-family:'Libre Caslon Text',serif;font-size:21px;font-weight:700;color:var(--gold);white-space:nowrap}
+.rate-h{background:var(--navy);color:var(--ivory);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:13px 24px}
+.free{color:#3e7c4f !important;font-family:'Figtree',sans-serif;font-weight:700;font-size:15px !important}
+
+/* fee checker */
+.fee{background:var(--navy);color:var(--ivory)}
+.fee-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.fee h2{color:#fff}
+.fee p{color:#c4bfb3;margin-top:16px;max-width:32em}
+.fee select{width:100%;margin-top:26px;background:rgba(236,231,218,.06);border:1px solid rgba(236,231,218,.28);color:#fff;font-family:'Figtree',sans-serif;font-size:15.5px;padding:14px 16px;border-radius:var(--radius);appearance:none;cursor:pointer}
+.fee select:focus{outline:2px solid var(--gold-soft);outline-offset:2px}
+.fee-box{background:rgba(236,231,218,.05);border:1px solid rgba(236,231,218,.16);border-radius:10px;padding:40px 44px;text-align:center}
+.fee-box .label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9a958a}
+.fee-box .amount{font-family:'Libre Caslon Text',serif;font-size:58px;font-weight:700;color:var(--gold-soft);margin:12px 0 4px;line-height:1}
+.fee-box .cap{font-size:14.5px;color:#c4bfb3}
+.fee-box .fine{font-size:12px;color:#8a857b;margin-top:16px}
+
+/* credentials */
+.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+.cred{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px 26px;transition:transform .2s ease,box-shadow .2s ease}
+.cred:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,28,48,.08)}
+.cred .ic{width:40px;height:40px;border-radius:50%;background:rgba(168,130,60,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.cred h3{font-size:17.5px;color:var(--navy)}
+.cred p{font-size:13.5px;color:var(--muted);margin-top:8px}
+
+/* coverage */
+.cover-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px;align-items:center}
+.counties{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.county{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;transition:border-color .2s ease}
+.county:hover{border-color:var(--gold)}
+.county .cn{font-weight:600;font-size:15px}
+.county .cf{font-family:'Libre Caslon Text',serif;font-weight:700;color:var(--gold);font-size:17px}
+.cover-copy p{color:var(--muted);margin-top:16px;max-width:30em}
+.cover-copy .same-day{margin-top:26px;display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--radius);padding:20px 22px}
+.cover-copy .same-day p{font-size:14.5px;color:var(--ink);margin:0}
+.cover-copy .same-day strong{color:var(--navy)}
+
+/* contact */
+.contact{background:var(--navy-deep);color:var(--ivory)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:50px}
+.hours{border:1px solid rgba(236,231,218,.18);border-radius:10px;overflow:hidden}
+.hours .row{display:flex;justify-content:space-between;padding:13px 22px;border-bottom:1px solid rgba(236,231,218,.1);font-size:15px}
+.hours .row:last-child{border-bottom:none}
+.hours .day{color:#c4bfb3}
+.hours .time{font-weight:600}
+.contact-lines{margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.cline{display:flex;align-items:center;gap:13px;font-size:16px}
+.cline svg{flex:none}
+.cline a{border-bottom:1px solid rgba(201,169,97,.5);transition:color .2s ease}
+.cline a:hover{color:var(--gold-soft)}
+.form{background:rgba(236,231,218,.05);border:1px solid rgba(236,231,218,.16);border-radius:10px;padding:38px 40px}
+.form h3{color:#fff;font-size:22px}
+.form label{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#9a958a;margin:18px 0 7px;font-weight:600}
+.form input,.form textarea{width:100%;background:rgba(236,231,218,.06);border:1px solid rgba(236,231,218,.28);border-radius:var(--radius);color:#fff;font-family:'Figtree',sans-serif;font-size:15px;padding:13px 15px}
+.form input:focus,.form textarea:focus{outline:2px solid var(--gold-soft);outline-offset:1px}
+.form textarea{min-height:96px;resize:vertical}
+.form .note{font-size:12px;color:#8a857b;margin-top:14px}
+.form .sent{display:none;margin-top:18px;font-size:14.5px;color:var(--gold-soft);border:1px solid rgba(201,169,97,.4);border-radius:var(--radius);padding:14px 18px}
+
+/* footer */
+footer{background:#081020;color:#9a958a;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;padding-bottom:52px}
+.foot-brand .name{font-family:'Libre Caslon Text',serif;color:#fff;font-size:22px;letter-spacing:.06em}
+.foot-brand p{font-size:13.5px;margin-top:12px;max-width:26em;line-height:1.7}
+.foot-grid h4{color:var(--ivory);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:9px;font-size:14px}
+.foot-grid a{border-bottom:1px solid transparent;transition:color .2s}
+.foot-grid a:hover{color:var(--gold-soft)}
+.foot-bar{border-top:1px solid rgba(236,231,218,.1);padding:22px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#6d6a60}
+
+/* sticky mobile call bar */
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--gold);color:#fff;text-align:center;font-weight:700;padding:14px;font-size:15px;letter-spacing:.02em}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .hero-in,.svc-grid,.rates-grid,.fee-in,.cover-grid,.contact-grid{grid-template-columns:1fr}
+  .stats-in{grid-template-columns:1fr 1fr;row-gap:24px}
+  .stat:nth-child(3){border-left:none;padding-left:0}
+  .cred-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  nav.links{display:none}
+  .burger{display:block}
+  .hero-in{padding:60px 0 72px;gap:40px}
+  .seal-card{order:-1}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px}
+  section{padding:64px 0}
+  .stats-in{grid-template-columns:1fr 1fr}
+  .stat{padding:0 20px}
+  .cred-grid,.foot-grid,.counties{grid-template-columns:1fr}
+  .callbar{display:block}
+  body{padding-bottom:52px}
+  .svc-featured{padding:32px 26px}
+  .form{padding:28px 24px}
+  .hero-ctas .btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="preview">Website concept preview</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <svg class="seal" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#0f1c30"/>
+        <circle cx="32" cy="32" r="25" fill="none" stroke="#b39041" stroke-width="1.6"/>
+        <circle cx="32" cy="32" r="22" fill="none" stroke="#b39041" stroke-width=".5" stroke-dasharray="1 3"/>
+        <text x="32" y="40" font-family="Georgia,serif" font-size="22" fill="#b39041" text-anchor="middle" font-weight="700">V</text>
+      </svg>
+      <span class="brand-txt">
+        <span class="name">VANSA</span>
+        <span class="sub">Notary &middot; Virginia</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#rates">Rates</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#contact" class="btn">Request an appointment</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <a href="#services">Services</a>
+    <a href="#rates">Rates</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#coverage">Coverage</a>
+    <a href="#contact">Request an appointment</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <p class="kicker">Henrico, Virginia &middot; Serving Greater Richmond since 2005</p>
+      <h1>Notarization done right, <em>where and when</em> you need it.</h1>
+      <p class="lede">Lisa Tinsley — Notary Public and certified loan signing agent. Bring documents to the home office in Henrico, or have loan packages brought to your door across the Richmond metro. Same-day service is often available with as little as five hours' notice.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn">Request an appointment</a>
+        <a href="#rates" class="btn ghost">See the rates</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>NNA Certified Signing Agent</span>
+        <span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Background-screened</span>
+        <span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>$25,000 E&amp;O insured</span>
+        <span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Open 7 days</span>
+      </div>
+    </div>
+    <div class="seal-card">
+      <div>
+        <svg viewBox="0 0 300 300" aria-label="VANSA seal">
+          <circle cx="150" cy="150" r="140" fill="#0b1729"/>
+          <circle cx="150" cy="150" r="132" fill="none" stroke="#b39041" stroke-width="2"/>
+          <circle cx="150" cy="150" r="122" fill="none" stroke="#b39041" stroke-width=".7" stroke-dasharray="2 5"/>
+          <text x="150" y="88" font-family="Georgia,serif" font-size="11.5" letter-spacing="4.5" fill="#8d8368" text-anchor="middle">COMMONWEALTH OF VIRGINIA</text>
+          <text x="150" y="112" font-family="Georgia,serif" font-size="10.5" letter-spacing="3.5" fill="#8d8368" text-anchor="middle">NOTARY PUBLIC &middot; SINCE 2005</text>
+          <text x="150" y="188" font-family="Georgia,serif" font-size="56" fill="#c9a961" text-anchor="middle" font-weight="700" letter-spacing="2">V</text>
+          <text x="150" y="216" font-family="Georgia,serif" font-size="20" fill="#c9a961" text-anchor="middle" letter-spacing="7">VANSA</text>
+          <text x="150" y="248" font-family="Georgia,serif" font-size="10" letter-spacing="3" fill="#8d8368" text-anchor="middle">HENRICO &middot; VIRGINIA</text>
+        </svg>
+        <p class="under">Commissioned &middot; Certified &middot; Insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-in">
+    <div class="stat"><div class="n serif">2005</div><div class="l">Commissioned by the Commonwealth of Virginia</div></div>
+    <div class="stat"><div class="n serif">Hundreds</div><div class="l">Of notarial acts completed</div></div>
+    <div class="stat"><div class="n serif">6</div><div class="l">Counties served across Greater Richmond</div></div>
+    <div class="stat"><div class="n serif">7 days</div><div class="l">Open every week, evenings included</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="sec-kicker">Services</p>
+    <h2 class="sec-title">One call covers the whole <em>signing table</em>.</h2>
+    <div class="svc-grid">
+      <div class="svc-featured reveal">
+        <span class="tag">Certified Loan Signing Agent</span>
+        <h3>Loan Signing Services</h3>
+        <p>Full loan document packages handled with accuracy and complete professionalism — from purchase closings to reverse mortgages, printed, signed, and dropped for overnight shipping.</p>
+        <ul class="loan-list">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wl">Purchases &amp; Refinances</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wl">HELOCs</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wl">FHA packages</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wl">Reverse Mortgages</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#c9a961" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wl">Edoc &amp; webdoc printing</span></li>
+        </ul>
+      </div>
+      <div class="svc-side">
+        <div class="svc-card reveal">
+          <h3>General Notary Work</h3>
+          <p>Single documents brought to the home office in Henrico, or mobile visits to homes and businesses across the metro — affidavits, powers of attorney, wills, acknowledgments and more.</p>
+          <p class="mini">Home office &middot; Mobile &middot; Same-day often available</p>
+        </div>
+        <div class="svc-card reveal">
+          <h3>Same-Day Service</h3>
+          <p>Deadlines happen. Same-day appointments are usually available with as little as five hours' notice — just call to check the schedule.</p>
+          <p class="mini">Evenings &amp; weekends included</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rates" id="rates">
+  <div class="wrap">
+    <p class="sec-kicker">Rates</p>
+    <h2 class="sec-title">Plain rates, published up <em>front</em>.</h2>
+    <div class="rates-grid">
+      <div>
+        <p class="rate-note">No callbacks to discover the price, no surprises on the invoice. Travel fees depend on where the signing happens; loan-signing travel includes printing and appointment time.</p>
+        <p class="rate-note">Documents brought to the home office are charged per notarized page — bring as many as you need.</p>
+        <p class="rate-note">Overnight drop-off of completed loan packages using the recipient's account is always free.</p>
+      </div>
+      <div class="rate-table reveal">
+        <div class="rate-h">Travel fees by county</div>
+        <div class="rate-row"><div><div class="s">Henrico</div></div><div class="p">$25</div></div>
+        <div class="rate-row"><div><div class="s">Richmond City</div></div><div class="p">$30</div></div>
+        <div class="rate-row"><div><div class="s">Chesterfield, Goochland, Hanover &amp; Powhatan</div></div><div class="p">$35</div></div>
+        <div class="rate-h">Loan signing travel &amp; appointment</div>
+        <div class="rate-row"><div><div class="s">Henrico</div></div><div class="p">$55</div></div>
+        <div class="rate-row"><div><div class="s">Richmond City</div></div><div class="p">$60</div></div>
+        <div class="rate-row"><div><div class="s">Chesterfield, Goochland, Hanover &amp; Powhatan</div></div><div class="p">$65</div></div>
+        <div class="rate-h">Home office &amp; extras</div>
+        <div class="rate-row"><div><div class="s">Documents at the home office</div><div class="d">Charged per notarized page</div></div><div class="p serif" style="font-size:15px">per page</div></div>
+        <div class="rate-row"><div><div class="s">Edoc / webdoc printing</div></div><div class="p">$20</div></div>
+        <div class="rate-row"><div><div class="s">Overnight drop-off of loan package</div><div class="d">Using the recipient's overnight account</div></div><div class="p free">FREE</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fee">
+  <div class="wrap fee-in">
+    <div>
+      <p class="sec-kicker">Quick check</p>
+      <h2 class="sec-title" style="color:#fff">What's the travel fee to <em>you</em>?</h2>
+      <p>Select your county to see the published travel fee — the same rate that appears on the rate card, no estimation games.</p>
+      <select id="county" aria-label="Select your county">
+        <option value="">Select your county…</option>
+        <option value="25">Henrico</option>
+        <option value="30">Richmond City</option>
+        <option value="35">Chesterfield</option>
+        <option value="35">Goochland</option>
+        <option value="35">Hanover</option>
+        <option value="35">Powhatan</option>
+      </select>
+    </div>
+    <div class="fee-box">
+      <p class="label">Your travel fee</p>
+      <p class="amount serif" id="feeAmount">—</p>
+      <p class="cap" id="feeCap">Choose your county to see the published rate.</p>
+      <p class="fine">Loan-signing appointments include printing and appointment time. Documents brought to the home office in Henrico are charged per notarized page instead.</p>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <p class="sec-kicker">Credentials</p>
+    <h2 class="sec-title">Trust isn't claimed. It's <em>documented</em>.</h2>
+    <div class="cred-grid">
+      <div class="cred reveal">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.4-3 8.5-7 9-4-.5-7-4.6-7-9V7l7-4z" stroke="#a8823c" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#a8823c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>NNA Member &amp; Certified</h3>
+        <p>Active National Notary Association membership and graduate of NNA's Notary Signing Agent Certification Course.</p>
+      </div>
+      <div class="cred reveal">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#a8823c" stroke-width="1.8"/><path d="M21 21l-4.8-4.8" stroke="#a8823c" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Background-Screened</h3>
+        <p>Current, cleared background screening through the NNA — renewed and on file.</p>
+      </div>
+      <div class="cred reveal">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 7v10M5 10a7 7 0 0114 0v5a7 7 0 01-14 0v-5z" stroke="#a8823c" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 13H4a2 2 0 002 2h1M19 13h1a2 2 0 01-2 2h-1" stroke="#a8823c" stroke-width="1.8"/></svg></div>
+        <h3>$25,000 E&amp;O Insured</h3>
+        <p>Errors &amp; omissions coverage in force — protection for every signing, on every document.</p>
+      </div>
+      <div class="cred reveal">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 19V5a2 2 0 012-2h13v14H6a2 2 0 00-2 2zm0 0a2 2 0 002 2h13" stroke="#a8823c" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 7h7" stroke="#a8823c" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Virginia-Trained</h3>
+        <p>Certified in Notary Law &amp; Procedures for Virginia Notaries Public through Mid-Atlantic training.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coverage">
+  <div class="wrap cover-grid">
+    <div class="cover-copy">
+      <p class="sec-kicker">Coverage</p>
+      <h2 class="sec-title">Six counties, one <em>standard</em>.</h2>
+      <p>Based in Henrico with the home office on the west end — and on the road across the Richmond metro every week.</p>
+      <div class="same-day">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="9" stroke="#a8823c" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#a8823c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p><strong>Need it today?</strong> Same-day service is usually available with as little as five hours' notice — call the mobile line and check the schedule.</p>
+      </div>
+    </div>
+    <div class="counties">
+      <div class="county"><span class="cn">Henrico</span><span class="cf">$25</span></div>
+      <div class="county"><span class="cn">Richmond City</span><span class="cf">$30</span></div>
+      <div class="county"><span class="cn">Chesterfield</span><span class="cf">$35</span></div>
+      <div class="county"><span class="cn">Goochland</span><span class="cf">$35</span></div>
+      <div class="county"><span class="cn">Hanover</span><span class="cf">$35</span></div>
+      <div class="county"><span class="cn">Powhatan</span><span class="cf">$35</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="sec-kicker">Contact</p>
+    <h2 class="sec-title" style="color:#fff">Request an <em>appointment</em>.</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="hours">
+          <div class="rate-h">Hours of operation</div>
+          <div class="row"><span class="day">Monday – Friday</span><span class="time">8:00 AM – 8:00 PM</span></div>
+          <div class="row"><span class="day">Saturday</span><span class="time">9:00 AM – 7:00 PM</span></div>
+          <div class="row"><span class="day">Sunday</span><span class="time">10:00 AM – 6:00 PM</span></div>
+        </div>
+        <div class="contact-lines">
+          <div class="cline"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2c-9.4-.5-17-8-17.5-17.5A2 2 0 015 4z" transform="translate(2 1)" stroke="#c9a961" stroke-width="1.8" stroke-linejoin="round"/></svg><a href="tel:+18048335472">Mobile: (804) 833-5472</a></div>
+          <div class="cline"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2c-9.4-.5-17-8-17.5-17.5A2 2 0 015 4z" transform="translate(2 1)" stroke="#c9a961" stroke-width="1.8" stroke-linejoin="round"/></svg><a href="tel:+18047547222">Home office: (804) 754-7222</a></div>
+          <div class="cline"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#c9a961" stroke-width="1.8"/><path d="M3 7l9 6 9-6" stroke="#c9a961" stroke-width="1.8" stroke-linejoin="round"/></svg><a href="mailto:VANSA.Lisa@aol.com">VANSA.Lisa@aol.com</a></div>
+          <div class="cline"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z" stroke="#c9a961" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="#c9a961" stroke-width="1.8"/></svg><span>Henrico, VA 23233</span></div>
+        </div>
+      </div>
+      <div class="form">
+        <h3>Request an appointment</h3>
+        <form id="reqForm">
+          <label for="fName">Your name</label>
+          <input id="fName" type="text" placeholder="Full name" required>
+          <label for="fContact">Phone or email</label>
+          <input id="fContact" type="text" placeholder="Best number or email to reach you" required>
+          <label for="fNote">What needs notarizing?</label>
+          <textarea id="fNote" placeholder="e.g. Refinance signing in Richmond, Tuesday evening"></textarea>
+          <button type="submit" class="btn" style="width:100%;margin-top:22px">Send request</button>
+          <p class="sent" id="sentMsg">Thank you — this preview shows the request experience; on the live site it would go straight to Lisa.</p>
+          <p class="note">Concept preview: submitting demonstrates the experience; nothing is transmitted yet.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="name">VANSA</p>
+      <p>Lisa Tinsley — Notary Public and certified loan signing agent, proudly serving the Greater Richmond community as an impartial witness since 2005: from a single document at the home office to a full loan package carried to a borrower's door.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#coverage">Coverage</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>General notary work</li>
+        <li>Loan signings</li>
+        <li>Refinances &amp; HELOCs</li>
+        <li>Reverse mortgages</li>
+        <li>Same-day appointments</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+18048335472">(804) 833-5472</a></li>
+        <li><a href="tel:+18047547222">(804) 754-7222</a></li>
+        <li><a href="mailto:VANSA.Lisa@aol.com">VANSA.Lisa@aol.com</a></li>
+        <li>Henrico, VA 23233</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bar">
+    <span>&copy; VANSA — Lisa Tinsley, Notary Public</span>
+    <span>Website concept preview</span>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+18048335472">Call VANSA — (804) 833-5472</a>
+
+<script>
+(function(){
+  // mobile menu
+  var burger=document.getElementById('burger'),menu=document.getElementById('mmenu');
+  burger.addEventListener('click',function(){
+    var open=menu.style.display==='block';
+    menu.style.display=open?'none':'block';
+    burger.children[0].style.transform=open?'':'translateY(7px) rotate(45deg)';
+    burger.children[1].style.opacity=open?'1':'0';
+    burger.children[2].style.transform=open?'':'translateY(-7px) rotate(-45deg)';
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.style.display='none';resetBurger();});});
+  function resetBurger(){var b=burger.children;b[0].style.transform='';b[1].style.opacity='1';b[2].style.transform='';}
+
+  // fee checker
+  var sel=document.getElementById('county'),amt=document.getElementById('feeAmount'),cap=document.getElementById('feeCap');
+  sel.addEventListener('change',function(){
+    if(!sel.value){amt.textContent='—';cap.textContent='Choose your county to see the published rate.';return;}
+    amt.textContent='$'+sel.value;
+    cap.textContent='Published travel fee for '+sel.options[sel.selectedIndex].text+' — general notary visits.';
+  });
+
+  // form preview
+  document.getElementById('reqForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('sentMsg').style.display='block';
+  });
+
+  // reveal on scroll
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
