@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esign and Mobile Notary | Mobile Notary in Appleton, WI</title>
+<meta name="description" content="Vicky Beckman — mobile notary and certified signing agent serving Appleton and the Fox Cities since 2008. Loan signings, e-sign, hospital and jail signings, fingerprinting. Call (920) 428-9669.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23143126'/%3E%3Ctext x='24' y='32' text-anchor='middle' font-family='Georgia' font-size='21' fill='%23d8b25a'%3EV B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#143126;--forest-deep:#0c2118;--forest-ink:#081710;
+  --brass:#d8b25a;--brass-soft:#e6c884;
+  --paper:#faf7ef;--paper-warm:#f3eee0;
+  --ink:#1c2420;--ink-soft:#5a6259;--line:#e2dcc8;
+  --serif:"Fraunces",Georgia,serif;--sans:"Karla",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+::selection{background:var(--brass);color:var(--forest-ink)}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* banner */
+.banner{background:var(--forest-ink);color:#d8cfae;text-align:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 20px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(250,247,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mono{width:40px;height:40px;border-radius:50%;background:var(--forest);color:var(--brass);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:.02em;border:1px solid rgba(216,178,90,.4)}
+.brand .nm{font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.1;color:var(--forest)}
+.brand .sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.links{display:flex;gap:26px}
+.links a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--ink)}
+.links a:hover{color:var(--forest)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--forest);color:#fff;text-decoration:none;font-family:var(--sans);font-weight:600;font-size:14.5px;padding:12px 22px;border-radius:8px;border:1px solid rgba(216,178,90,.35);transition:background .2s}
+.btn:hover{background:#0d261b}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass)}
+@media (max-width:860px){.links{display:none}.brand .sub{display:none}}
+
+/* HERO — elite composed */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:110px 0 96px;color:#fff;
+background:radial-gradient(1100px 620px at 82% -12%,#1f4d39 0%,transparent 55%),radial-gradient(840px 520px at -12% 112%,#17392a 0%,transparent 50%),linear-gradient(162deg,var(--forest) 0%,#0d261b 58%,#08170f 100%)}
+.wm{position:absolute;top:50%;left:57%;transform:translate(-50%,-50%);font-family:var(--serif);font-weight:700;font-size:clamp(120px,24vw,320px);letter-spacing:.06em;color:rgba(255,255,255,.045);white-space:nowrap;pointer-events:none}
+.glow{position:absolute;width:820px;height:560px;right:-160px;top:-180px;background:radial-gradient(closest-side,rgba(216,178,90,.15),rgba(216,178,90,0) 70%);pointer-events:none}
+.hgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;position:relative;z-index:1}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft);margin-bottom:22px}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);display:inline-block}
+.hero h1{font-family:var(--serif);font-size:clamp(42px,5.2vw,64px);line-height:1.06;font-weight:600;margin:0 0 24px}
+.stroke{font-style:italic;font-weight:500;color:var(--brass)}
+.lede{font-size:17px;line-height:1.65;color:rgba(255,255,255,.82);max-width:540px;margin:0 0 32px}
+.lede b{color:#fff}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hcard{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:38px 34px;text-align:center;backdrop-filter:blur(6px);box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.hcard .ring{width:76px;height:76px;margin:0 auto 16px;border-radius:50%;background:rgba(216,178,90,.12);border:1px solid rgba(216,178,90,.5);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:24px;color:var(--brass)}
+.hcard h3{font-family:var(--serif);font-size:23px;font-weight:600;margin:0;color:#fff}
+.hcard .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-soft);margin:6px 0 18px}
+.hcard .tel{display:block;font-family:var(--serif);font-size:26px;font-weight:600;color:#fff;text-decoration:none}
+.hcard .tel:hover{color:var(--brass)}
+.hcard .telsub{font-size:12.5px;color:rgba(255,255,255,.6);margin:6px 0 20px}
+.hcard .hrs{border-top:1px solid rgba(255,255,255,.14);padding-top:16px;display:flex;flex-direction:column;gap:7px;font-size:13.5px;color:rgba(255,255,255,.78)}
+.hcard .hrs b{color:#fff}
+@media (max-width:900px){.hgrid{grid-template-columns:1fr;gap:36px}.hcard{max-width:420px;margin:0 auto;padding:30px 26px}.wm{left:50%;font-size:32vw}}
+
+/* trust strip */
+.strip{background:var(--forest-ink);color:#fff;border-top:1px solid rgba(216,178,90,.25)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:30px 28px}
+.strip .cell{padding:4px 26px;border-left:1px solid rgba(255,255,255,.12)}
+.strip .cell:first-child{border-left:none;padding-left:0}
+.strip .num{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--brass)}
+.strip .lbl{font-size:12.5px;color:rgba(255,255,255,.65);letter-spacing:.02em;margin-top:3px}
+@media (max-width:860px){.strip .wrap{grid-template-columns:1fr 1fr;gap:22px 0}.strip .cell:nth-child(3){border-left:none;padding-left:0}.strip .cell{padding:0 18px}.strip .cell:nth-child(odd){padding-left:0}}
+
+/* section scaffold */
+section.pad{padding:96px 0}
+.sec-kick{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#8a6f1f;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.sec-kick::before{content:"";width:26px;height:1px;background:var(--brass);display:inline-block}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.4vw,42px);line-height:1.12;margin-bottom:16px;color:var(--forest)}
+.sec-lede{color:var(--ink-soft);max-width:640px;font-size:16.5px}
+.alt{background:var(--paper-warm)}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:52px}
+.svc{background:var(--paper);padding:34px 30px 38px;position:relative}
+.svc:hover{background:#fff}
+.svc .no{font-family:var(--serif);font-style:italic;font-size:15px;color:#b09a3f}
+.svc h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--forest);margin:10px 0 8px}
+.svc p{font-size:14.5px;color:var(--ink-soft)}
+.svc .fine{font-size:12.5px;color:#9a916d;margin-top:12px;letter-spacing:.02em}
+@media (max-width:920px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.svc-grid{grid-template-columns:1fr}}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:56px}
+.step .n{font-family:var(--serif);font-size:15px;font-style:italic;color:#b09a3f;margin-bottom:12px;display:block}
+.step h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--forest);margin-bottom:10px}
+.step p{font-size:15px;color:var(--ink-soft)}
+.step .road{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13px;color:var(--forest);font-weight:600}
+.step .road::before{content:"";width:100%;height:1px;background:linear-gradient(90deg,var(--brass),transparent)}
+@media (max-width:860px){.steps{grid-template-columns:1fr;gap:34px}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:start}
+.quotecard{background:var(--forest);color:#fff;border-radius:14px;padding:40px 38px;position:relative;box-shadow:0 24px 60px rgba(12,33,24,.25)}
+.quotecard::before{content:"“";font-family:var(--serif);font-size:110px;line-height:1;color:rgba(216,178,90,.35);position:absolute;top:14px;left:26px}
+.quotecard p{font-family:var(--serif);font-size:20px;line-height:1.5;font-style:italic;margin:34px 0 22px}
+.quotecard .who{font-size:13.5px;letter-spacing:.08em;color:var(--brass-soft)}
+.factline{display:flex;gap:12px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px}
+.factline b{font-family:var(--serif);color:var(--forest);font-weight:600;white-space:nowrap}
+.factline span{color:var(--ink-soft)}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:44px}}
+
+/* area */
+.area-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+.zips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 8px}
+.zip{font-family:var(--serif);background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 16px;font-size:16px;color:var(--forest)}
+.checker{margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.checker label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:10px}
+.checker .row{display:flex;gap:10px}
+.checker input{flex:1;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--paper);outline:none}
+.checker input:focus{border-color:var(--brass);box-shadow:0 0 0 3px rgba(216,178,90,.2)}
+.checker .btn{white-space:nowrap}
+.checker .out{margin-top:14px;font-size:14.5px;display:none}
+.checker .out.yes{display:block;color:var(--forest);font-weight:600}
+.checker .out.no{display:block;color:var(--ink-soft)}
+.mapcard{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:
+  linear-gradient(rgba(250,247,239,.92),rgba(250,247,239,.92)),
+  repeating-linear-gradient(0deg,transparent,transparent 46px,#e6e0cc 46px,#e6e0cc 47px),
+  repeating-linear-gradient(90deg,transparent,transparent 46px,#e6e0cc 46px,#e6e0cc 47px),#f0ebdc;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.mapcard:hover .go{background:var(--brass)}
+.pinwrap{text-align:center;padding:30px}
+.pin{width:52px;height:52px;margin:0 auto 16px;background:var(--forest);border:2px solid var(--brass);border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center}
+.pin i{width:14px;height:14px;background:var(--brass);border-radius:50%;display:block;transform:rotate(45deg)}
+.pinwrap .t{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--forest)}
+.pinwrap .s{font-size:13.5px;color:var(--ink-soft);margin-top:6px}
+.go{display:inline-block;margin-top:18px;background:var(--forest);color:#fff;font-weight:600;font-size:13.5px;padding:11px 20px;border-radius:8px;transition:background .2s}
+@media (max-width:900px){.area-grid{grid-template-columns:1fr;gap:44px}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.c-line{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.c-line .ic{width:40px;height:40px;border-radius:10px;background:var(--forest);color:var(--brass);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-line .ic svg{width:18px;height:18px}
+.c-line .k{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.c-line .v{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--forest);text-decoration:none;margin-top:2px}
+.c-line .v:hover{color:#8a6f1f}
+form.req{background:#fff;border:1px solid var(--line);border-radius:14px;padding:38px}
+form.req h3{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--forest);margin-bottom:6px}
+form.req .note{font-size:13px;color:var(--ink-soft);margin-bottom:24px}
+.f-row{margin-bottom:16px}
+.f-row input,.f-row select,.f-row textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:13px 14px;font-family:var(--sans);font-size:15px;background:var(--paper);color:var(--ink);outline:none}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--brass);box-shadow:0 0 0 3px rgba(216,178,90,.2)}
+.f-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.req .btn{width:100%;justify-content:center;margin-top:8px}
+.f-note{font-size:12px;color:#9a916d;margin-top:14px;text-align:center}
+.sent{display:none;background:var(--forest);color:#fff;border-radius:12px;padding:38px;text-align:center}
+.sent .big{font-family:var(--serif);font-size:22px;margin-bottom:8px}
+.sent p{font-size:14.5px;color:rgba(255,255,255,.75)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr;gap:44px}.f-2{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--forest-ink);color:rgba(255,255,255,.72);padding:64px 0 120px;font-size:14px}
+footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px}
+footer h4{font-family:var(--serif);color:#fff;font-size:17px;font-weight:600;margin-bottom:14px}
+footer a{text-decoration:none;color:rgba(255,255,255,.72)}
+footer a:hover{color:var(--brass)}
+footer .fbrand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+footer .fbrand .mono{width:38px;height:38px;border-radius:50%;background:rgba(216,178,90,.12);border:1px solid rgba(216,178,90,.5);color:var(--brass);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:14px}
+footer .fine{font-size:12.5px;color:rgba(255,255,255,.45);margin-top:26px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px}
+@media (max-width:860px){footer .grid{grid-template-columns:1fr;gap:34px}}
+
+/* sticky mobile CTA */
+.mcta{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--forest);display:none;padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-shadow:0 -8px 30px rgba(8,23,16,.35)}
+.mcta a{display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;text-decoration:none;font-weight:600;font-size:15.5px}
+.mcta .dot{width:8px;height:8px;background:var(--brass);border-radius:50%}
+@media (max-width:640px){.mcta{display:block}footer{padding-bottom:84px}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="banner">Website concept preview — for Esign and Mobile Notary</div>
+
+<header>
+  <div class="nav">
+    <div class="wrap">
+      <a href="#top" class="brand">
+        <span class="mono">VB</span>
+        <span><span class="nm">Esign and Mobile Notary</span><span class="sub">Appleton · Fox Cities, WI</span></span>
+      </a>
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+        <a href="#area">Service area</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="tel:+19204289669">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="currentColor"/></svg>
+        (920) 428-9669
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wm">ESIGN</div><div class="glow"></div>
+  <div class="wrap hgrid">
+    <div>
+      <span class="kicker"><span class="dot"></span> Appleton, Wisconsin &middot; since 2008</span>
+      <h1>The notary who comes<br><span class="stroke">to your door.</span></h1>
+      <p class="lede">Mobile notary and certified signing agent serving Appleton and the Fox Cities &mdash; loan signings, real estate closings, legal documents, hospital and jail signings, fingerprinting and weddings. <b>Eighteen years of precision, confidentiality and integrity.</b></p>
+      <div class="ctas">
+        <a class="btn" href="tel:+19204289669">Call (920) 428-9669</a>
+        <a class="btn ghost" href="#contact">Request a visit</a>
+      </div>
+    </div>
+    <div class="hcard">
+      <div class="ring">VB</div>
+      <h3>Esign and Mobile Notary</h3>
+      <div class="tag">Vicky Beckman &middot; Appleton, WI</div>
+      <a class="tel" href="tel:+19204289669">(920) 428-9669</a>
+      <div class="telsub">Call or text to schedule a signing</div>
+      <div class="hrs"><span><b>Mon &ndash; Sun</b> mornings &amp; afternoons</span><span><b>24-hour service</b> available for urgent signings</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="cell"><div class="num">Since 2008</div><div class="lbl">In business eighteen years</div></div>
+    <div class="cell"><div class="num">$100,000</div><div class="lbl">Notary bond, Merchants Bonding</div></div>
+    <div class="cell"><div class="num">Background checked</div><div class="lbl">Verified 2024, Backgrounds Online</div></div>
+    <div class="cell"><div class="num">RON capable</div><div class="lbl">E-sign and remote online notarization</div></div>
+  </div>
+</div>
+
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="rv"><div class="sec-kick">Services</div>
+    <h2>Every signature, handled with care.</h2>
+    <p class="sec-lede">From a single document at your kitchen table to a full loan closing at the title office &mdash; Vicky brings the seal, the journal and eighteen years of know-how to you.</p></div>
+    <div class="svc-grid rv">
+      <div class="svc"><span class="no">01</span><h3>Mobile notary</h3><p>She travels to your home, office, bank, care facility or coffee shop across Appleton and the Fox Cities.</p><div class="fine">Evenings and urgent signings by arrangement</div></div>
+      <div class="svc"><span class="no">02</span><h3>Loan &amp; real estate signings</h3><p>Certified signing agent for refinance, purchase, seller and HELOC packages &mdash; accurate, complete, on time.</p><div class="fine">EscrowTab (IPEN) compatible</div></div>
+      <div class="svc"><span class="no">03</span><h3>E-sign &amp; remote notarization</h3><p>Documents signed and notarized online when you can't meet in person &mdash; secure, lawful and fast.</p><div class="fine">RON capable &middot; laser printing &middot; mobile hotspot</div></div>
+      <div class="svc"><span class="no">04</span><h3>Hospital &amp; jail signings</h3><p>Experienced with the extra care, ID rules and patience these signings require &mdash; done right the first time.</p><div class="fine">Available on short notice</div></div>
+      <div class="svc"><span class="no">05</span><h3>Fingerprinting</h3><p>Ink fingerprint cards for employment, licensing and background check requirements.</p><div class="fine">By appointment</div></div>
+      <div class="svc"><span class="no">06</span><h3>Weddings &amp; special ceremonies</h3><p>Notary-officiated weddings for your small, personal ceremony anywhere in the Fox Cities.</p><div class="fine">Ask about availability</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad alt" id="how">
+  <div class="wrap">
+    <div class="rv"><div class="sec-kick">How it works</div>
+    <h2>Three steps, zero running around.</h2></div>
+    <div class="steps rv">
+      <div class="step"><span class="n">Step one</span><h3>Call or text</h3><p>Reach Vicky at (920) 428-9669 with your document type, where you are, and when you need it signed.</p><div class="road">Usually answered same day</div></div>
+      <div class="step"><span class="n">Step two</span><h3>She comes to you</h3><p>Home, office, hospital, jail, title company or the neutral ground in between &mdash; with seal, journal and witnesses sorted.</p><div class="road">Fox Cities &amp; surrounding zips</div></div>
+      <div class="step"><span class="n">Step three</span><h3>Signed and sealed</h3><p>IDs verified, journal completed, documents notarized to the letter of Wisconsin law &mdash; and you're done.</p><div class="road">Same-day scans when needed</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="about">
+  <div class="wrap about-grid">
+    <div class="rv">
+      <div class="sec-kick">About Vicky</div>
+      <h2>A trusted neighbor with a seal and a decade-plus of practice.</h2>
+      <div class="quotecard">
+        <p>I have honed my skills in notarizing a wide range of documents, from legal contracts to real estate transactions. My commitment to precision, confidentiality and integrity ensures each notarized document is executed accurately and in compliance with legal requirements.</p>
+        <div class="who">Vicky Beckman &mdash; from her professional profile</div>
+      </div>
+    </div>
+    <div class="rv" style="padding-top:56px">
+      <div class="factline"><b>In business since</b><span>November 2008 &mdash; eighteen years serving the Fox Cities</span></div>
+      <div class="factline"><b>Based in</b><span>Appleton, Wisconsin (54914)</span></div>
+      <div class="factline"><b>Certified</b><span>Certified Signing Agent (CSA), Wisconsin notary public</span></div>
+      <div class="factline"><b>Insured</b><span>$100,000 notary bond through Merchants Bonding Company</span></div>
+      <div class="factline"><b>Background</b><span>Backgrounds Online check, verified February 2024</span></div>
+      <div class="factline"><b>Toolkit</b><span>E-sign, RON, laser printer, mobile hotspot, fax &mdash; and 24-hour service for urgent signings</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad alt" id="area">
+  <div class="wrap area-grid">
+    <div class="rv">
+      <div class="sec-kick">Service area</div>
+      <h2>Appleton first, the whole Fox Cities welcome.</h2>
+      <p class="sec-lede">Home base is Appleton's 54914 &mdash; and Vicky regularly travels the neighboring zips for mobile signings.</p>
+      <div class="zips">
+        <span class="zip">54914</span><span class="zip">54913</span><span class="zip">54911</span><span class="zip">54130</span><span class="zip">54140</span>
+      </div>
+      <div class="checker">
+        <label for="zipcheck">Are you in her area? Check your zip</label>
+        <div class="row">
+          <input id="zipcheck" inputmode="numeric" maxlength="5" placeholder="e.g. 54914">
+          <a class="btn" id="zipgo" href="javascript:void(0)" onclick="checkZip()">Check</a>
+        </div>
+        <div class="out yes" id="out-yes">Good news — that's one of Vicky's regular service zips. Call or text (920) 428-9669 to book.</div>
+        <div class="out no" id="out-no">Not one of her everyday zips, but she travels across the Fox Cities — call (920) 428-9669 and she'll confirm availability for your location.</div>
+      </div>
+    </div>
+    <a class="mapcard rv" href="https://www.google.com/maps/dir/?api=1&destination=621+N+Lynndale+Dr%2C+Appleton%2C+WI+54914" target="_blank" rel="noopener">
+      <span class="pinwrap">
+        <span class="pin"><i></i></span>
+        <span class="t">Esign and Mobile Notary</span>
+        <span class="s">Based in Appleton, WI 54914 &mdash; travels to you</span>
+        <span class="go">Get directions</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section class="pad" id="contact">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <div class="sec-kick">Contact</div>
+      <h2>Ready when you are.</h2>
+      <p class="sec-lede" style="margin-bottom:34px">Mornings and afternoons, seven days a week &mdash; with 24-hour service available when the signing can't wait.</p>
+      <div class="c-line"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="currentColor"/></svg></span><div><div class="k">Call or text</div><a class="v" href="tel:+19204289669">(920) 428-9669</a></div></div>
+      <div class="c-line"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.7"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.7"/></svg></span><div><div class="k">Email</div><a class="v" href="mailto:vickybeckman@gmail.com">vickybeckman@gmail.com</a></div></div>
+      <div class="c-line"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.7"/></svg></span><div><div class="k">Based in</div><span class="v">Appleton, Wisconsin 54914</span></div></div>
+    </div>
+    <div class="rv">
+      <form class="req" id="visitForm">
+        <h3>Request a visit</h3>
+        <div class="note">Tell Vicky what needs signing and where you are — this opens a ready-to-send email draft on your device.</div>
+        <div class="f-2">
+          <div class="f-row"><input id="f-name" placeholder="Your name" required></div>
+          <div class="f-row"><input id="f-phone" placeholder="Your phone" inputmode="tel"></div>
+        </div>
+        <div class="f-row"><select id="f-svc">
+          <option value="">What needs signing?</option>
+          <option>Loan / real estate signing</option>
+          <option>General document notarization</option>
+          <option>E-sign / remote online notarization</option>
+          <option>Hospital or jail signing</option>
+          <option>Fingerprinting</option>
+          <option>Wedding ceremony</option>
+        </select></div>
+        <div class="f-row"><input id="f-when" placeholder="When do you need it? (e.g. Thursday afternoon)"></div>
+        <div class="f-row"><textarea id="f-notes" rows="3" placeholder="Anything else Vicky should know?"></textarea></div>
+        <button class="btn" type="submit">Open email draft</button>
+        <div class="f-note">This preview form shows how the real site's request form would work — no data is sent anywhere else.</div>
+      </form>
+      <div class="sent" id="sentBox">
+        <div class="big">Draft ready! <span id="sentAddr" style="font-weight:400"></span></div>
+        <p>Your email app should have opened with the details filled in. If not, write to vickybeckman@gmail.com or call (920) 428-9669.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="fbrand"><span class="mono">VB</span><span style="font-family:var(--serif);font-size:17px;color:#fff">Esign and Mobile Notary</span></div>
+        <p>Vicky Beckman &mdash; mobile notary and certified signing agent, serving Appleton and the Fox Cities since 2008.</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mornings &amp; afternoons, seven days<br>24-hour service for urgent signings</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+19204289669">(920) 428-9669</a><br><a href="mailto:vickybeckman@gmail.com">vickybeckman@gmail.com</a><br>Appleton, WI 54914</p>
+      </div>
+    </div>
+    <div class="fine">Website concept preview — hand-crafted to show what a site for Esign and Mobile Notary could look like. Hours, services and credentials shown are from Vicky's public notary directory profile.</div>
+  </div>
+</footer>
+
+<div class="mcta"><a href="tel:+19204289669"><span class="dot"></span> Call Vicky — (920) 428-9669</a></div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* reveal on scroll */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* service-area checker — Vicky's real zips */
+  var ZIPS = ['54914','54913','54911','54130','54140'];
+  window.checkZip = function(){
+    var v = (document.getElementById('zipcheck').value || '').trim();
+    var yes = document.getElementById('out-yes'), no = document.getElementById('out-no');
+    yes.className='out'; no.className='out';
+    if (!/^\d{5}$/.test(v)) { no.className='out no'; return; }
+    if (ZIPS.indexOf(v) > -1) { yes.className='out yes'; } else { no.className='out no'; }
+  };
+  document.getElementById('zipcheck').addEventListener('keydown', function(e){ if (e.key === 'Enter'){ e.preventDefault(); checkZip(); } });
+
+  /* request form -> mailto draft */
+  var form = document.getElementById('visitForm');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var n = document.getElementById('f-name').value.trim(),
+        p = document.getElementById('f-phone').value.trim(),
+        s = document.getElementById('f-svc').value,
+        w = document.getElementById('f-when').value.trim(),
+        notes = document.getElementById('f-notes').value.trim();
+    var body = 'Hi Vicky,\n\nMy name is ' + (n || '') + (p ? '\nPhone: ' + p : '') +
+      '\nI need: ' + (s || 'a notarization') +
+      (w ? '\nWhen: ' + w : '') +
+      (notes ? '\nDetails: ' + notes : '') +
+      '\n\nThank you!';
+    window.location.href = 'mailto:vickybeckman@gmail.com?subject=' +
+      encodeURIComponent('Notary request' + (s ? ' — ' + s : '')) +
+      '&body=' + encodeURIComponent(body);
+    document.getElementById('sentAddr').textContent = '';
+    form.style.display='none';
+    document.getElementById('sentBox').style.display='block';
+  });
+})();
+</script>
+</body>
+</html>
