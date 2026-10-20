@@ -9,6 +9,9 @@
 <meta property="og:description" content="Dependable, professional mobile and remote notary service in Spring, TX. Over 1,000 successful signings. Book in under a minute.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://morganfordwebsites.github.io/client-demos/pinkdiamondsignings/pds-assets/logo.png">
+<link rel="canonical" href="https://morganfordwebsites.github.io/client-demos/pinkdiamondsignings/">
+<meta property="og:url" content="https://morganfordwebsites.github.io/client-demos/pinkdiamondsignings/">
+<meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="pds-assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +19,30 @@
 <link rel="stylesheet" href="pds-site.css">
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"Pink Diamond Signings, LLC",
-  "description":"Mobile and remote notary public and certified signing agent serving Spring, TX and surrounding areas.",
-  "telephone":"+1-832-722-1305",
-  "email":"pinkdiamondsignings@gmail.com",
-  "areaServed":"Spring, TX and surrounding areas",
-  "address":{"@type":"PostalAddress","addressLocality":"Spring","addressRegion":"TX","addressCountry":"US"}
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://morganfordwebsites.github.io/client-demos/pinkdiamondsignings/#business",
+  "name": "Pink Diamond Signings, LLC",
+  "description": "Mobile and remote notary public and certified loan signing agent serving Spring, TX and surrounding areas. Over 1,000 successful signings.",
+  "url": "https://morganfordwebsites.github.io/client-demos/pinkdiamondsignings/",
+  "image": "https://morganfordwebsites.github.io/client-demos/pinkdiamondsignings/pds-assets/logo.png",
+  "telephone": "+1-832-722-1305",
+  "email": "pinkdiamondsignings@gmail.com",
+  "priceRange": "$30 - $150",
+  "address": {"@type": "PostalAddress", "streetAddress": "9714 Fairymoss Ct", "addressLocality": "Spring", "addressRegion": "TX", "postalCode": "77379", "addressCountry": "US"},
+  "areaServed": {"@type": "City", "name": "Spring, Texas and surrounding areas"},
+  "sameAs": [
+    "https://notarycafe.com/Dora.Nava",
+    "https://www.yelp.com/biz/pink-diamond-signings-klein",
+    "https://notary.snapdocs.com/notary-public/TX/spring/dora-nava"
+  ],
+  "availableLanguage": ["en", "es"],
+  "knowsAbout": ["Notary public", "Mobile notary", "Remote online notarization", "Loan signing", "Real estate closing", "Power of attorney", "Wills", "Apostille"],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "48", "bestRating": "5"},
+  "review": [
+    {"@type": "Review", "author": {"@type": "Person", "name": "Stacy"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "She is very kind and is super fast, welcoming, also offers mobile services. Highly recommended."},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Brittany E."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "I needed a letter notarized and had called around before I came across Pink Diamond Signings. She was great, very nice and personable. I will definitely use her in the future."}
+  ]
 }
 </script>
 </head>
@@ -44,7 +63,7 @@
     </nav>
     <div class="nav-right">
       <button class="langbtn" id="btn-lang" type="button" aria-label="Switch language">ES</button>
-      <a href="index.html#book" class="btn btn-grad btn-sm" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
+      <a href="#book" class="btn btn-grad btn-sm" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
     </div>
   </div>
 </header>
@@ -149,7 +168,7 @@
       </div>
       <div class="cal rv" id="calcard">
         <div class="cal-title" data-en="Dora's calendar" data-es="Calendario de Dora">Dora's calendar</div>
-        <div id="cal-holder">
+        <div id="cal-holder" data-tidycal>
           <form class="bf" id="bookform" novalidate>
             <div class="bf-row">
               <input class="bfi" id="bf-name" type="text" autocomplete="name" required data-en-ph="Your name" data-es-ph="Su nombre">
@@ -318,17 +337,24 @@
       <div class="rev-count"><span data-en="48 reviews on Google" data-es="48 reseñas en Google">48 reviews on Google</span></div>
       <a class="rev-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJmXO1bjzTQIYRJpAXMt-uNrU" data-en="Read all reviews on Google ↗" data-es="Leer todas las reseñas en Google ↗">Read all reviews on Google ↗</a>
     </div>
-    <div class="rev-grid">
-      <figure class="rev rv">
+    <div class="rev-carousel rv" role="region" aria-roledescription="carousel" aria-label="Client reviews">
+      <div class="rev-viewport"><div class="rev-track" id="revtrack">
+      <figure class="rev" role="group" aria-roledescription="slide" aria-label="Review 1 of 2">
         <div class="rev-stars sm" aria-hidden="true">★★★★★</div>
         <blockquote>She is very kind and is super fast, welcoming, also offers mobile services. Highly recommended.</blockquote>
         <figcaption>Stacy <span class="src">· Google</span></figcaption>
       </figure>
-      <figure class="rev rv">
+      <figure class="rev" role="group" aria-roledescription="slide" aria-label="Review 2 of 2">
         <div class="rev-stars sm" aria-hidden="true">★★★★★</div>
         <blockquote>I needed a letter notarized and had called around before I came across Pink Diamond Signings. She was great, very nice and personable. I will definitely use her in the future.</blockquote>
         <figcaption>Brittany E. <span class="src">· Yelp</span></figcaption>
       </figure>
+      </div></div>
+      <div class="rev-ctrl">
+        <button class="rev-btn" id="revPrev" type="button" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="rev-dots" id="revDots"></div>
+        <button class="rev-btn" id="revNext" type="button" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
     </div>
   </div>
 </section>
@@ -386,7 +412,7 @@
         <a href="pricing.html" data-en="Pricing" data-es="Tarifas">Pricing</a>
         <a href="about.html" data-en="About" data-es="Acerca">About</a>
         <a href="faq.html" data-en="FAQ" data-es="Preguntas">FAQ</a>
-        <a href="index.html#book" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
+        <a href="#book" data-en="Book appointment" data-es="Reservar cita">Book appointment</a>
         <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
       </div>
       <div class="foot-col">
@@ -433,6 +459,11 @@
     <p class="copyright">© 2026 Pink Diamond Signings, LLC · Spring, TX</p>
   </div>
 </footer>
+
+<div class="mob-cta" aria-hidden="false">
+  <a class="mc mc-call" href="tel:8327221305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2c-8.3-.5-15-7.2-15.5-15.5a2 2 0 0 1 2-2z"/></svg><span data-en="Call now" data-es="Llamar">Call now</span></a>
+  <a class="mc mc-book" href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg><span data-en="Book appointment" data-es="Reservar cita">Book appointment</span></a>
+</div>
 <script src="pds-site.js"></script>
 </body>
 </html>
