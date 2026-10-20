@@ -70,6 +70,43 @@
     });
   }
 
+
+  /* ---------- reviews carousel ---------- */
+  var track = document.getElementById("revtrack");
+  if(track){
+    var slides = track.children;
+    var dots = document.getElementById("revDots");
+    var n = slides.length, cur = 0;
+    for(var d=0; d<n; d++){
+      var b = document.createElement("button");
+      b.className = "dot" + (d===0 ? " on" : "");
+      b.type = "button";
+      b.setAttribute("aria-label", "Review " + (d+1));
+      b.addEventListener("click", (function(idx){ return function(){ go(idx); }; })(d));
+      dots.appendChild(b);
+    }
+    function go(i){
+      cur = (i + n) % n;
+      track.style.transform = "translateX(-" + (cur * 100) + "%)";
+      for(var j=0; j<n; j++){
+        var on = j === cur;
+        slides[j].setAttribute("aria-hidden", on ? "false" : "true");
+        dots.children[j].classList.toggle("on", on);
+      }
+    }
+    document.getElementById("revPrev").addEventListener("click", function(){ go(cur - 1); });
+    document.getElementById("revNext").addEventListener("click", function(){ go(cur + 1); });
+    var sx = null;
+    track.addEventListener("pointerdown", function(e){ sx = e.clientX; }, {passive:true});
+    track.addEventListener("pointerup", function(e){
+      if(sx === null) return;
+      var dx = e.clientX - sx; sx = null;
+      if(Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1);
+    });
+    track.addEventListener("pointercancel", function(){ sx = null; });
+    go(0);
+  }
+
   /* ---------- reveal on scroll ---------- */
   var rv = document.querySelectorAll(".rv");
   if("IntersectionObserver" in window){
