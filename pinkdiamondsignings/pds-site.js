@@ -71,27 +71,39 @@
   }
 
 
-  /* ---------- reviews carousel ---------- */
+  /* ---------- reviews carousel (2-3 per view) ---------- */
   var track = document.getElementById("revtrack");
   if(track){
     var slides = track.children;
     var dots = document.getElementById("revDots");
-    var n = slides.length, cur = 0;
-    for(var d=0; d<n; d++){
-      var b = document.createElement("button");
-      b.className = "dot" + (d===0 ? " on" : "");
-      b.type = "button";
-      b.setAttribute("aria-label", "Review " + (d+1));
-      b.addEventListener("click", (function(idx){ return function(){ go(idx); }; })(d));
-      dots.appendChild(b);
+    var n = slides.length, cur = 0, visible = 1, GAP = 16;
+
+    function computeVisible(){
+      var w = window.innerWidth || document.documentElement.clientWidth;
+      return w > 1020 ? 3 : (w > 680 ? 2 : 1);
+    }
+    function maxIndex(){ return Math.max(0, n - visible); }
+    function buildDots(){
+      dots.innerHTML = "";
+      for(var d=0; d<=maxIndex(); d++){
+        var b = document.createElement("button");
+        b.className = "dot";
+        b.type = "button";
+        b.setAttribute("aria-label", "Go to review " + (d+1));
+        b.addEventListener("click", (function(idx){ return function(){ go(idx); }; })(d));
+        dots.appendChild(b);
+      }
     }
     function go(i){
-      cur = (i + n) % n;
-      track.style.transform = "translateX(-" + (cur * 100) + "%)";
+      cur = Math.max(0, Math.min(i, maxIndex()));
+      var step = slides[0].getBoundingClientRect().width + GAP;
+      track.style.transform = "translateX(-" + (cur * step) + "px)";
       for(var j=0; j<n; j++){
-        var on = j === cur;
+        var on = j >= cur && j < cur + visible;
         slides[j].setAttribute("aria-hidden", on ? "false" : "true");
-        dots.children[j].classList.toggle("on", on);
+      }
+      for(var k=0; k<dots.children.length; k++){
+        dots.children[k].classList.toggle("on", k === cur);
       }
     }
     document.getElementById("revPrev").addEventListener("click", function(){ go(cur - 1); });
@@ -104,6 +116,17 @@
       if(Math.abs(dx) > 40) go(dx < 0 ? cur + 1 : cur - 1);
     });
     track.addEventListener("pointercancel", function(){ sx = null; });
+    var rz;
+    window.addEventListener("resize", function(){
+      clearTimeout(rz);
+      rz = setTimeout(function(){
+        var v = computeVisible();
+        if(v !== visible){ visible = v; buildDots(); }
+        go(cur);
+      }, 150);
+    });
+    visible = computeVisible();
+    buildDots();
     go(0);
   }
 
