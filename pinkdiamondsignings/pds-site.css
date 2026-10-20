@@ -444,3 +444,16 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
 .rev figcaption{margin-top:18px;color:var(--muted);font-size:14px;font-weight:600}
 .rev .src{color:var(--gold);font-weight:500}
 @media(max-width:840px){.rev-grid{grid-template-columns:1fr}.rev-link{margin-left:0;flex-basis:100%}}
+
+/* ---------- footer payment strip ---------- */
+.paystrip-wrap{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.pay-note{text-align:center;color:var(--muted);font-size:13.5px;margin:0 0 16px;line-height:1.6}
+.pay-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;justify-content:center}
+.pay-label{color:var(--text);font-weight:600;font-size:14px;margin-right:2px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;background:rgba(255,255,255,.02);transition:border-color .2s,color .2s,transform .2s}
+.pill:hover{border-color:rgba(212,104,138,.45);color:var(--text);transform:translateY(-1px)}
+.pill .pic{width:15px;height:15px;flex:none}
+/* ---------- contact map ---------- */
+.map-card{margin-top:36px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+.map-card iframe{display:block;width:100%;height:380px;border:0}
+@media(max-width:640px){.map-card iframe{height:280px}.pay-label{flex-basis:100%;text-align:center}}
