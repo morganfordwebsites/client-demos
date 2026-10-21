@@ -94,16 +94,9 @@ h1 .accent{
 .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
 
 /* what we provide tabs */
-.tabs{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
-.tab{
-  display:inline-flex;align-items:center;gap:8px;
-  border:1px solid rgba(212,104,138,.35);background:var(--surface);
-  border-radius:999px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--text);
-}
-.tab svg{width:14px;height:14px;stroke:var(--rose-lt);flex:none}
-.tab.invite{border-color:rgba(212,175,122,.4);color:var(--gold);font-weight:600;cursor:default}
-.tab.invite svg{stroke:var(--gold)}
-.tab.invite .spark{font-size:12px}
+.tabs{display:flex;gap:22px;margin-top:26px;flex-wrap:wrap}
+.tab{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:#e6e2e3}
+.tab svg{width:15px;height:15px;stroke:var(--gold);flex:none}
 
 /* booking card */
 .bkcard{
