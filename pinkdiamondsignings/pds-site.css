@@ -141,8 +141,9 @@ h1 .accent{
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   overflow:hidden;padding:13px 0;background:var(--surface);
 }
-.marquee-track{display:flex;gap:44px;width:max-content;animation:scrollx 26s linear infinite}
-.marquee-track span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+.marquee-track{display:flex;width:max-content;animation:scrollx 46s linear infinite}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+.marquee-track span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap;padding-right:44px}
 .marquee-track b{color:var(--rose)}
 @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
