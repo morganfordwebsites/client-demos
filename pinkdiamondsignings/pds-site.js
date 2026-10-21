@@ -128,6 +128,34 @@
     visible = computeVisible();
     buildDots();
     go(0);
+
+    /* ---------- auto-rotate ---------- */
+    var revSection = document.getElementById("reviews") || track.closest("section");
+    var revHover = false, autoTimer = null;
+    var noMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer = null; } }
+    function startAuto(){
+      if(noMotion || autoTimer) return;
+      autoTimer = setInterval(function(){
+        if(revHover || document.hidden) return;
+        go(cur >= maxIndex() ? 0 : cur + 1);
+      }, 5000);
+    }
+    function userMoved(){ stopAuto(); startAuto(); }
+    document.getElementById("revPrev").addEventListener("click", userMoved);
+    document.getElementById("revNext").addEventListener("click", userMoved);
+    track.addEventListener("pointerdown", userMoved);
+    if(revSection){
+      revSection.addEventListener("pointerenter", function(){ revHover = true; }, true);
+      revSection.addEventListener("pointerleave", function(){ revHover = false; }, true);
+      revSection.addEventListener("focusin", function(){ revHover = true; });
+      revSection.addEventListener("focusout", function(){ revHover = false; });
+      if("IntersectionObserver" in window){
+        new IntersectionObserver(function(entries){
+          entries.forEach(function(e){ e.isIntersecting ? startAuto() : stopAuto(); });
+        }, {threshold:.2}).observe(revSection);
+      } else startAuto();
+    } else startAuto();
   }
 
   /* ---------- stat count-up ---------- */
