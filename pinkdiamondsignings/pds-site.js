@@ -132,19 +132,20 @@
 
   /* ---------- stat count-up ---------- */
   var counters = document.querySelectorAll(".stats b[data-count]");
-  var fmtNum = function(n){ return n.toLocaleString("en-US"); };
+  var fmtNum = function(n, dec){ return n.toLocaleString("en-US", dec ? { minimumFractionDigits: dec, maximumFractionDigits: dec } : undefined); };
   var animateCount = function(el){
-    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+    var dec = parseInt(el.getAttribute("data-decimals"), 10) || 0;
+    var target = parseFloat(el.getAttribute("data-count")) || 0;
     var suffix = el.getAttribute("data-suffix") || "";
     if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      el.textContent = fmtNum(target) + suffix; return;
+      el.textContent = fmtNum(target, dec) + suffix; return;
     }
     var dur = 1400, t0 = null;
     var step = function(t){
       if(!t0) t0 = t;
       var p = Math.min((t - t0) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = fmtNum(Math.round(eased * target)) + suffix;
+      el.textContent = fmtNum(+(eased * target).toFixed(dec), dec) + suffix;
       if(p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
