@@ -97,6 +97,7 @@ h1 .accent{
 .tabs{display:flex;gap:22px;margin-top:26px;flex-wrap:wrap}
 .tab{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:#e6e2e3}
 .tab svg{width:15px;height:15px;stroke:var(--gold);flex:none}
+.tab .spark{color:var(--gold);font-size:13px}
 
 /* booking card */
 .bkcard{
