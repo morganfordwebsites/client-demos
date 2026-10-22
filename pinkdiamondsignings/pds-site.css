@@ -51,6 +51,17 @@ button{font-family:inherit;cursor:pointer}
   transition:transform .15s,border-color .2s,color .2s;
 }
 .langbtn:hover{transform:translateY(-1px);border-color:var(--rose);color:var(--text)}
+.burger{display:none;align-items:center;justify-content:center;width:42px;height:40px;background:transparent;border:1px solid var(--line);border-radius:10px;transition:border-color .2s}
+.burger:hover{border-color:var(--rose)}
+.burger svg{width:20px;height:20px;stroke:var(--rose-lt)}
+.mobmenu{position:absolute;top:100%;left:0;right:0;background:rgba(12,9,16,.97);border-bottom:1px solid var(--line);display:none;padding:18px 24px 22px;z-index:60}
+.mobmenu.open{display:block;animation:mobIn .22s ease}
+.mob-links{display:grid}
+.mob-links a{display:block;padding:12px 4px;font-size:16px;font-weight:500;color:var(--text);border-bottom:1px solid rgba(255,255,255,.05)}
+.mob-links a.active{color:var(--rose-lt)}
+.mobmenu .btn{margin-top:16px}
+@keyframes mobIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.mobmenu.open{animation:none}}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -368,6 +379,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
   .avatar-card{max-width:420px;margin:0 auto}
 }
 @media(max-width:840px){
+  .burger{display:inline-flex}
   .navlinks{display:none}
   .cred-grid,.stats,.price-grid,.steps{grid-template-columns:1fr 1fr}
   .svc-grid{grid-template-columns:1fr}

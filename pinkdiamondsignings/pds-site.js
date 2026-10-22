@@ -13,6 +13,24 @@
   var inputs = document.querySelectorAll("[data-en-ph]");
   var btnLang = document.getElementById("btn-lang");
 
+  /* ---------- mobile menu ---------- */
+  var burger = document.getElementById("burger");
+  var mob = document.getElementById("mobmenu");
+  if(burger && mob){
+    function closeMenu(){ mob.classList.remove("open"); burger.setAttribute("aria-expanded","false"); }
+    burger.addEventListener("click", function(e){
+      e.stopPropagation();
+      var open = mob.classList.toggle("open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    mob.addEventListener("click", function(e){ if(e.target.closest("a")) closeMenu(); });
+    document.addEventListener("click", function(e){
+      if(mob.classList.contains("open") && !mob.contains(e.target) && !burger.contains(e.target)) closeMenu();
+    });
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeMenu(); });
+  }
+  var btnLang = document.getElementById("btn-lang");
+
   function setLang(l){
     lang = l;
     document.documentElement.lang = l;
