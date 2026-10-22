@@ -10,7 +10,7 @@
   --gold:#D4AF7A;
   --grad:linear-gradient(120deg,var(--rose),var(--rose-lt) 55%,var(--gold));
   --r:22px;
-  --nav-h:64px;
+  --nav-h:86px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -30,13 +30,13 @@ button{font-family:inherit;cursor:pointer}
 
 /* ---------- nav ---------- */
 .nav{
-  position:sticky;top:0;z-index:50;
+  position:relative;z-index:50;
   background:rgba(12,9,16,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
 }
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:16px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
-.brand img{width:38px;height:38px;border-radius:50%;flex:none;filter:drop-shadow(0 4px 12px rgba(212,104,138,.35))}
+.brand img{width:68px;height:68px;border-radius:50%;flex:none;filter:drop-shadow(0 6px 20px rgba(212,104,138,.45))}
 .brand small{display:block;font-size:10.5px;color:var(--muted);font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}
 .navlinks{display:flex;gap:26px;font-size:14.5px;color:var(--muted);font-weight:500}
 .navlinks a{transition:color .2s;position:relative}
@@ -379,6 +379,8 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
   .avatar-card{max-width:420px;margin:0 auto}
 }
 @media(max-width:840px){
+  :root{--nav-h:76px}
+  .brand img{width:58px;height:58px}
   .burger{display:inline-flex}
   .navlinks{display:none}
   .cred-grid,.stats,.price-grid,.steps{grid-template-columns:1fr 1fr}
