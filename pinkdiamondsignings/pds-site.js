@@ -13,6 +13,14 @@
   var inputs = document.querySelectorAll("[data-en-ph]");
   var btnLang = document.getElementById("btn-lang");
 
+  /* ---------- seal tucks in on scroll ---------- */
+  var navEl = document.querySelector(".nav");
+  if(navEl){
+    var updSeal = function(){ navEl.classList.toggle("scrolled", window.scrollY > 70); };
+    window.addEventListener("scroll", updSeal, { passive: true });
+    updSeal();
+  }
+
   /* ---------- mobile menu ---------- */
   var burger = document.getElementById("burger");
   var mob = document.getElementById("mobmenu");
