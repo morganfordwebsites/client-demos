@@ -35,8 +35,8 @@ button{font-family:inherit;cursor:pointer}
   border-bottom:1px solid var(--line);
 }
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:16px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
-.brand img{width:68px;height:68px;border-radius:50%;flex:none;filter:drop-shadow(0 6px 20px rgba(212,104,138,.45))}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap;transform:translateY(43px);z-index:3}
+.brand img{width:132px;height:132px;border-radius:50%;flex:none;filter:drop-shadow(0 10px 28px rgba(212,104,138,.5))}
 .brand small{display:block;font-size:10.5px;color:var(--muted);font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}
 .navlinks{display:flex;gap:26px;font-size:14.5px;color:var(--muted);font-weight:500}
 .navlinks a{transition:color .2s;position:relative}
@@ -380,7 +380,8 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
 }
 @media(max-width:840px){
   :root{--nav-h:76px}
-  .brand img{width:58px;height:58px}
+  .brand{transform:translateY(20px)}
+  .brand img{width:96px;height:96px}
   .burger{display:inline-flex}
   .navlinks{display:none}
   .cred-grid,.stats,.price-grid,.steps{grid-template-columns:1fr 1fr}
