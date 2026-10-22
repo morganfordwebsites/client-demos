@@ -10,7 +10,7 @@
   --gold:#D4AF7A;
   --grad:linear-gradient(120deg,var(--rose),var(--rose-lt) 55%,var(--gold));
   --r:22px;
-  --nav-h:64px;
+  --nav-h:72px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -35,7 +35,7 @@ button{font-family:inherit;cursor:pointer}
   border-bottom:1px solid var(--line);
 }
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:16px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap;transform:translateY(32px);z-index:3;transition:transform .3s ease}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap;transform:translateY(38px);z-index:3;transition:transform .3s ease}
 .brand img{width:132px;height:132px;border-radius:50%;flex:none;filter:drop-shadow(0 10px 28px rgba(212,104,138,.5));transition:width .3s ease,height .3s ease}
 .brand small{display:block;font-size:10.5px;color:var(--muted);font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}
 .navlinks{display:flex;gap:26px;font-size:14.5px;color:var(--muted);font-weight:500}
@@ -64,8 +64,9 @@ button{font-family:inherit;cursor:pointer}
 @media(prefers-reduced-motion:reduce){.mobmenu.open{animation:none}}
 /* seal tucks into the bar on scroll */
 .nav.scrolled .brand{transform:translateY(0)}
-.nav.scrolled .brand img{width:44px;height:44px;filter:drop-shadow(0 4px 12px rgba(212,104,138,.35))}
+.nav.scrolled .brand img{width:56px;height:56px;filter:drop-shadow(0 4px 14px rgba(212,104,138,.4))}
 @media(prefers-reduced-motion:reduce){.brand{transition:none}.brand img{transition:none}}
+@media(max-width:840px){.nav.scrolled .brand img{width:48px;height:48px}}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -383,8 +384,8 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
   .avatar-card{max-width:420px;margin:0 auto}
 }
 @media(max-width:840px){
-  :root{--nav-h:60px}
-  .brand{transform:translateY(30px)}
+  :root{--nav-h:64px}
+  .brand{transform:translateY(32px)}
   .brand img{width:96px;height:96px}
   .burger{display:inline-flex}
   .navlinks{display:none}
