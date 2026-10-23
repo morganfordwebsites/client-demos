@@ -166,13 +166,24 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
 
 /* ---------- about ---------- */
 .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;margin-top:52px;align-items:start}
+.portrait{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:12px;box-shadow:var(--shadow)}
+.portrait-frame{position:relative;aspect-ratio:4/4.4;border-radius:8px;background:radial-gradient(120% 100% at 80% 0%,rgba(168,132,60,.25),transparent 55%),linear-gradient(160deg,#551820 0%,var(--ox-deep) 55%,#380f14 100%);display:grid;place-items:center;overflow:hidden}
+.portrait-frame::after{content:"";position:absolute;inset:10px;border:1px solid rgba(217,182,108,.35);border-radius:6px;pointer-events:none}
+.portrait-frame .seal{width:112px;height:112px}
+.portrait-frame .seal span{font-size:37px}
+.portrait-note{position:absolute;bottom:20px;left:12px;right:12px;text-align:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:rgba(217,182,108,.85)}
+.portrait-cap{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:15px 8px 6px}
+.portrait-cap b{font-family:var(--serif);font-size:1.22rem;font-weight:560}
+.portrait-cap small{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:800}
+@media (max-width:920px){.portrait{max-width:480px}}
 .timeline{border-top:1px solid var(--line)}
 .tl-row{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:22px 6px;border-bottom:1px solid var(--line);align-items:baseline}
 .tl-row b{font-family:var(--serif);font-weight:560;font-size:1.35rem;color:var(--ox)}
 .tl-row span{color:var(--muted);font-size:.96rem}
 .tl-row span strong{display:block;color:var(--ink);font-size:1.02rem;font-weight:700;margin-bottom:2px}
-.pull{margin-top:28px;padding:26px 30px;border-left:3px solid var(--brass);background:rgba(217,182,108,.09);border-radius:0 10px 10px 0}
-.pull p{font-family:var(--serif);font-style:italic;font-size:1.22rem;line-height:1.45;color:var(--ink)}
+.pull{margin-top:28px;padding:28px 32px 24px;border:1px solid rgba(168,132,60,.35);background:linear-gradient(160deg,rgba(217,182,108,.14),rgba(217,182,108,.04));border-radius:var(--r)}
+.pull::before{content:"";display:block;width:44px;height:3px;border-radius:2px;background:var(--brass);margin-bottom:16px}
+.pull p{font-family:var(--serif);font-style:italic;font-size:1.26rem;line-height:1.5;color:var(--ink)}
 .pull cite{display:block;margin-top:12px;font-family:var(--sans);font-style:normal;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .about-copy p{color:var(--muted);margin-top:18px;font-size:1.02rem}
 .about-copy p strong{color:var(--ink)}
@@ -205,8 +216,8 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
 /* ---------- testimonials ---------- */
 .t-carousel{position:relative;margin-top:52px;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
 .t-viewport{overflow:hidden}
-.t-track{display:flex;transition:transform .55s cubic-bezier(.22,.61,.36,1)}
-.t-slide{min-width:100%;padding:clamp(36px,5vw,58px) clamp(28px,6vw,88px)}
+.t-track{display:flex;transition:transform .65s cubic-bezier(.45,0,.2,1);will-change:transform}
+.t-slide{min-width:100%;padding:clamp(36px,5vw,58px) clamp(28px,6vw,88px);display:flex;flex-direction:column;justify-content:center;min-height:clamp(215px,25vw,295px)}
 .t-quote{font-family:var(--serif);font-weight:480;font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.45;letter-spacing:.002em;max-width:56ch}
 .t-quote::before{content:"\201C\201D";display:block;height:0;color:transparent}
 .t-attr{margin-top:24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -483,16 +494,22 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
     <div class="wrap">
       <div class="about-grid">
         <div class="rv">
+          <div class="portrait">
+            <div class="portrait-frame">
+              <span class="seal" aria-hidden="true"><span>CW</span></span>
+              <span class="portrait-note">Carla's portrait sits in this frame</span>
+            </div>
+            <div class="portrait-cap">
+              <b>Carla Williams</b>
+              <small>NNA-Certified Signing Agent</small>
+            </div>
+          </div>
           <div class="timeline">
             <div class="tl-row"><b>38+ yrs</b><span><strong>Federal service</strong>Retired federal employee, decades of exacting public work.</span></div>
             <div class="tl-row"><b>20+ yrs</b><span><strong>Property management</strong>Leases, files, and paperwork that had to be right the first time.</span></div>
             <div class="tl-row"><b>5+ yrs</b><span><strong>Auto finance desk</strong>Auto loans and the critical legal and financial documents behind them.</span></div>
             <div class="tl-row"><b>Today</b><span><strong>CW Professional Notary Public</strong>NNA-certified signing agent serving 11 Alabama counties, mobile.</span></div>
           </div>
-          <blockquote class="pull">
-            <p>"I am known for my attention to detail and professionalism."</p>
-            <cite>Carla Williams, professional profile</cite>
-          </blockquote>
         </div>
         <div class="about-copy rv">
           <p>Carla Williams spent more than <strong>38 years as a federal employee</strong>, including <strong>over 20 years in property management</strong> and five-plus years in a car dealership finance department, where she handled auto loans and the critical legal and financial documents that come with them.</p>
@@ -504,6 +521,10 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
             <div class="cred"><div><b>Alabama Commission</b><span>Valid through Nov 24, 2029</span></div></div>
             <div class="cred"><div><b>E&amp;O Insured</b><span>Errors and omissions policy active</span></div></div>
           </div>
+          <blockquote class="pull">
+            <p>I am known for my attention to detail and professionalism.</p>
+            <cite>Carla Williams · professional profile</cite>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -784,13 +805,21 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
     document.getElementById('tNext').addEventListener('click',function(){tGo(tIdx+1);tRestart()});
     var tAuto=function(){
       if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-      tTimer=setInterval(function(){tGo(tIdx+1)},6500);
+      if(!tTimer)tTimer=setInterval(function(){tGo(tIdx+1)},7000);
     };
-    function tRestart(){if(tTimer){clearInterval(tTimer);tTimer=null;tAuto()}}
+    function tPause(){if(tTimer){clearInterval(tTimer);tTimer=null}}
+    function tRestart(){tPause();tAuto()}
     var tBox=document.querySelector('.t-carousel');
-    tBox.addEventListener('mouseenter',function(){if(tTimer){clearInterval(tTimer);tTimer=null}});
-    tBox.addEventListener('mouseleave',function(){if(!tTimer)tAuto()});
-    tAuto();
+    tBox.addEventListener('mouseenter',tPause);
+    tBox.addEventListener('mouseleave',tAuto);
+    tBox.addEventListener('focusin',tPause);
+    tBox.addEventListener('focusout',tAuto);
+    if('IntersectionObserver' in window){
+      var tIO=new IntersectionObserver(function(es){
+        es.forEach(function(en){en.isIntersecting?tAuto():tPause()});
+      },{threshold:.25});
+      tIO.observe(tBox);
+    }
   }
 
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
