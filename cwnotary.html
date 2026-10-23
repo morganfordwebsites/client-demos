@@ -5,493 +5,613 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CW Professional Notary Public · Mobile Notary &amp; Signing Agent · Creola, AL</title>
 <meta name="description" content="Carla Williams, NNA-certified mobile notary and signing agent based in Creola, Alabama. Loan signings, hospital and jail visits, fingerprinting, weddings, and remote online notarization across 11 Alabama counties.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%236e1f26'/%3E%3Ccircle cx='16' cy='16' r='12.5' fill='none' stroke='%23d8b56a' stroke-width='1.2'/%3E%3Ctext x='16' y='20.5' text-anchor='middle' font-family='Georgia,serif' font-size='11' fill='%23f5ead2'%3ECW%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%236e1f26'/%3E%3Ccircle cx='16' cy='16' r='12.5' fill='none' stroke='%23d9b66c' stroke-width='1.2'/%3E%3Ctext x='16' y='20.5' text-anchor='middle' font-family='Georgia,serif' font-size='11' fill='%23f3e7cd'%3ECW%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#faf5ea;
-  --paper-2:#f2ead9;
-  --ink:#241d16;
-  --ink-soft:#6d6053;
-  --oxblood:#6e1f26;
-  --oxblood-deep:#4a141a;
-  --oxblood-ink:#5b1a21;
+  --paper:#f7f2e7;
+  --paper-2:#efe6d4;
+  --ink:#261e15;
+  --muted:#6f6252;
+  --ox:#6e1f26;
+  --ox-deep:#42141a;
+  --ox-tint:rgba(110,31,38,.05);
   --brass:#a8843c;
-  --brass-soft:#d8b56a;
-  --cream:#f5ead2;
-  --line:rgba(36,29,22,.14);
-  --line-soft:rgba(36,29,22,.08);
+  --brass-l:#d9b66c;
+  --cream:#f3e7cd;
+  --cream-soft:rgba(243,231,205,.8);
+  --line:rgba(38,30,21,.16);
+  --line-soft:rgba(38,30,21,.08);
   --r:10px;
-  --serif:'Marcellus',Georgia,serif;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Manrope',system-ui,sans-serif;
+  --shadow:0 16px 40px rgba(38,30,21,.12);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:2.5px solid var(--brass);outline-offset:3px;border-radius:2px}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease-out,transform .5s ease-out}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .btn,.f-row,.hdr{transition:none !important}
+}
 
 /* ---------- preview banner ---------- */
-.banner{position:sticky;top:0;z-index:60;background:var(--ink);color:#e9ddc4;text-align:center;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;font-weight:600}
+.banner{background:var(--ink);color:#e8dcc2;text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;font-weight:600}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line-soft);transition:box-shadow .2s ease-out}
+.hdr.scrolled{box-shadow:0 10px 30px rgba(38,30,21,.09)}
+.hdr-in{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;flex:none}
+.seal{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#7d2731,var(--ox-deep) 74%);display:grid;place-items:center;position:relative;flex:none}
+.seal::before{content:"";position:absolute;inset:4px;border-radius:50%;border:1.5px solid rgba(217,182,108,.85);border-top-color:transparent;transform:rotate(-24deg)}
+.seal span{font-family:var(--serif);color:var(--cream);font-size:17px;font-weight:500}
+.brand b{font-family:var(--serif);font-weight:560;font-size:1.16rem;line-height:1.1;letter-spacing:.01em;display:block}
+.brand small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:3px;font-weight:700}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--muted);text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s ease-out,border-color .15s ease-out}
+.nav a:hover{color:var(--ink);border-color:var(--brass)}
+.hdr-cta{flex:none;text-decoration:none;background:var(--ox);color:var(--cream);font-weight:700;font-size:13.5px;padding:11px 20px;border-radius:6px;letter-spacing:.02em;transition:transform .18s ease-out,background .18s ease-out,box-shadow .18s ease-out}
+.hdr-cta:hover{background:var(--ox-deep);transform:translateY(-1px);box-shadow:0 8px 20px rgba(66,20,26,.28)}
+@media (max-width:920px){.nav{display:none}.hdr-in{gap:16px}.brand{margin-right:auto}.hdr-cta{padding:10px 16px;font-size:13px}.cta-pre{display:none}}
+@media (max-width:920px){.brand b{font-size:1rem}.brand small{letter-spacing:.12em;font-size:10px}}
+@media (max-width:720px){.hdr-cta{display:none}}
+@media (max-width:560px){.brand small{display:none}.brand{gap:11px}.hdr-in{padding:12px 18px}}
 
 /* ---------- hero ---------- */
-.hero{position:relative;background:var(--oxblood-deep);color:var(--cream);overflow:hidden;
+.hero{position:relative;background:var(--ox-deep);color:var(--cream);overflow:hidden;
   background-image:
-    radial-gradient(115% 90% at 85% -10%, rgba(168,132,60,.28) 0%, rgba(168,132,60,0) 55%),
-    radial-gradient(140% 120% at -10% 110%, rgba(110,31,38,.9) 0%, rgba(74,20,26,0) 60%),
-    linear-gradient(160deg, #561920 0%, var(--oxblood-deep) 48%, #3a1015 100%);
+    radial-gradient(115% 90% at 85% -10%, rgba(168,132,60,.26) 0%, rgba(168,132,60,0) 55%),
+    radial-gradient(140% 120% at -10% 110%, rgba(110,31,38,.95) 0%, rgba(66,20,26,0) 60%),
+    linear-gradient(160deg,#551820 0%,var(--ox-deep) 48%,#380f14 100%);
 }
-.hero-watermark{position:absolute;left:50%;bottom:-4.2rem;transform:translateX(-50%);font-family:var(--serif);font-size:clamp(7rem,22vw,19rem);letter-spacing:.06em;color:rgba(216,181,106,.07);white-space:nowrap;pointer-events:none;user-select:none}
-.hero-frame{position:absolute;inset:18px;border:1px solid rgba(216,181,106,.35);pointer-events:none}
-.hero-frame::after{content:"";position:absolute;inset:7px;border:1px solid rgba(216,181,106,.18)}
-.hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:clamp(64px,10vw,120px) 28px 0}
-.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft);font-weight:600}
-.kicker::before,.kicker::after{content:"";width:34px;height:1px;background:rgba(216,181,106,.5)}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.5rem,6.2vw,4.6rem);line-height:1.08;margin:22px 0 0;max-width:15ch}
-h1 em{font-style:italic;color:var(--brass-soft)}
-.hero-sub{margin-top:22px;max-width:46ch;color:rgba(245,234,210,.82);font-size:1.06rem}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:6px;padding:15px 26px;font-weight:700;font-size:15.5px;text-decoration:none;transition:transform .18s ease-out,box-shadow .18s ease-out,background .18s ease-out;border:none;cursor:pointer;font-family:var(--sans)}
-.btn-solid{background:var(--brass-soft);color:var(--oxblood-deep)}
-.btn-solid:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(216,181,106,.28)}
-.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,234,210,.4)}
-.btn-ghost:hover{border-color:var(--brass-soft);color:var(--brass-soft)}
+.hero-watermark{position:absolute;left:50%;bottom:-3.6rem;transform:translateX(-50%);font-family:var(--serif);font-size:clamp(7rem,20vw,17rem);letter-spacing:.05em;color:rgba(217,182,108,.07);white-space:nowrap;pointer-events:none;user-select:none}
+.hero-frame{position:absolute;inset:18px;border:1px solid rgba(217,182,108,.32);pointer-events:none}
+.hero-frame::after{content:"";position:absolute;inset:7px;border:1px solid rgba(217,182,108,.15)}
+.hero-inner{position:relative;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,116px) 28px 0}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-l);font-weight:700}
+.kicker::before,.kicker::after{content:"";width:34px;height:1px;background:rgba(217,182,108,.5)}
+h1{font-family:var(--serif);font-weight:480;font-size:clamp(2.7rem,6vw,4.7rem);line-height:1.06;margin:22px 0 0;max-width:16ch;letter-spacing:.005em}
+h1 em{font-style:italic;font-weight:430;color:var(--brass-l)}
+.hero-sub{margin-top:22px;max-width:50ch;color:var(--cream-soft);font-size:1.07rem}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;padding-bottom:64px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:7px;padding:15px 26px;font-weight:800;font-size:15px;text-decoration:none;transition:transform .18s ease-out,box-shadow .18s ease-out,background .18s ease-out,border-color .18s ease-out;border:none;cursor:pointer;font-family:var(--sans)}
+.btn-solid{background:var(--brass-l);color:var(--ox-deep)}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(217,182,108,.3)}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(243,231,205,.4)}
+.btn-ghost:hover{border-color:var(--brass-l);color:var(--brass-l)}
 
 /* hero card */
-.hero{padding-bottom:0}
-.hcard-wrap{position:relative;max-width:1120px;margin:0 auto;padding:0 28px}
-.hcard{position:relative;background:var(--paper);color:var(--ink);border-radius:var(--r) var(--r) 0 0;margin-top:64px;padding:30px 34px;display:flex;gap:26px;align-items:center;box-shadow:0 -18px 50px rgba(0,0,0,.35);border:1px solid var(--line);border-bottom:none}
-.seal{flex:none;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 32% 28%, #7d2731, var(--oxblood-deep) 72%);display:grid;place-items:center;position:relative}
-.seal::before{content:"";position:absolute;inset:7px;border-radius:50%;border:1.5px solid rgba(216,181,106,.85);border-top-color:transparent;transform:rotate(-24deg)}
-.seal::after{content:"";position:absolute;inset:13px;border-radius:50%;border:1px solid rgba(216,181,106,.4)}
-.seal span{font-family:var(--serif);color:var(--cream);font-size:30px;letter-spacing:.02em}
-.hcard-name{font-family:var(--serif);font-size:1.45rem;line-height:1.15}
-.hcard-tag{color:var(--oxblood);font-size:13.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-top:5px}
+.hcard-wrap{position:relative;max-width:1200px;margin:0 auto;padding:0 28px}
+.hcard{position:relative;background:var(--paper);color:var(--ink);border-radius:var(--r) var(--r) 0 0;margin-top:-72px;padding:30px 34px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;box-shadow:0 -18px 50px rgba(0,0,0,.35);border:1px solid var(--line);border-bottom:none}
+.hcard .seal{width:88px;height:88px}
+.hcard .seal span{font-size:29px}
+.hcard-name{font-family:var(--serif);font-size:1.5rem;font-weight:540;line-height:1.12}
+.hcard-tag{color:var(--ox);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-top:5px}
 .hcard-meta{margin-left:auto;text-align:right;display:flex;flex-direction:column;gap:4px}
-.hcard-call{font-family:var(--serif);font-size:1.7rem;text-decoration:none;color:var(--ink)}
-.hcard-call:hover{color:var(--oxblood)}
-.hcard-hours{color:var(--ink-soft);font-size:13.5px}
+.hcard-call{font-family:var(--serif);font-size:1.75rem;font-weight:540;text-decoration:none}
+.hcard-call:hover{color:var(--ox)}
+.hcard-hours{color:var(--muted);font-size:13.5px;font-weight:600}
+@media (max-width:760px){.hcard-meta{margin-left:0;text-align:left;width:100%;border-top:1px solid var(--line-soft);padding-top:16px}}
 
-/* ---------- ledger strip (credentials) ---------- */
+/* ---------- trust ledger ---------- */
 .ledger{background:var(--paper);border-bottom:1px solid var(--line)}
-.ledger-inner{max-width:1120px;margin:0 auto;padding:26px 28px;display:flex;flex-wrap:wrap;gap:0;justify-content:space-between}
-.ledger-item{padding:4px 22px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:150px}
+.ledger-in{max-width:1200px;margin:0 auto;padding:26px 28px;display:flex;flex-wrap:wrap;gap:0;justify-content:space-between}
+.ledger-item{padding:4px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:150px}
 .ledger-item:first-child{border-left:none;padding-left:0}
-.ledger-item b{font-size:14.5px;letter-spacing:.01em}
-.ledger-item span{font-size:12.5px;color:var(--ink-soft)}
-.rule-word{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);font-weight:700}
+.ledger-item b{font-size:14.5px}
+.ledger-item span{font-size:12.5px;color:var(--muted)}
+.rule-word{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);font-weight:800}
 
-/* ---------- generic sections ---------- */
-section{position:relative}
-.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
-.sec{padding:clamp(64px,9vw,104px) 0}
-.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:14px}
-.sec-num{font-family:var(--serif);color:var(--brass);font-size:15px;letter-spacing:.08em}
-h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.12}
-.lede{color:var(--ink-soft);max-width:56ch;margin-top:14px;font-size:1.03rem}
+/* ---------- generic ---------- */
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.sec{padding:clamp(72px,9vw,110px) 0}
+.sec-head{max-width:1200px;margin:0 auto;padding:0 28px}
+.sec-num{font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);font-weight:800;display:block;margin-bottom:16px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.1;letter-spacing:.005em;max-width:20ch}
+h2 em{font-style:italic;font-weight:430;color:var(--ox)}
+.lede{color:var(--muted);max-width:52ch;margin-top:16px;font-size:1.05rem}
+.split-head{display:flex;gap:48px;justify-content:space-between;align-items:flex-end;flex-wrap:wrap}
+.split-head .lede{margin-top:14px}
 
-/* ---------- services ---------- */
-.svc-grid{display:grid;grid-template-columns:340px 1fr;gap:56px;margin-top:44px;align-items:start}
-.svc-intro{position:sticky;top:84px}
-.svc-intro p{color:var(--ink-soft);margin-top:14px;font-size:.98rem}
-.svc-intro .stamp-note{margin-top:22px;padding:16px 18px;border:1px dashed var(--brass);border-radius:8px;font-size:.86rem;color:var(--ink-soft);background:rgba(168,132,60,.06)}
-.feat{border-top:1px solid var(--line);padding:26px 0 28px;display:grid;grid-template-columns:44px 1fr;gap:16px}
-.feat:last-of-type{border-bottom:1px solid var(--line)}
-.feat-idx{font-family:var(--serif);color:var(--oxblood);font-size:1.1rem;padding-top:3px}
-.feat h3{font-family:var(--serif);font-weight:400;font-size:1.42rem;margin-bottom:8px}
-.feat p{color:var(--ink-soft);font-size:.98rem;max-width:56ch}
-.feat-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.feat-list span{font-size:12.5px;font-weight:600;letter-spacing:.04em;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
-.cap-strip{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px 0;align-items:center}
-.cap-strip .rule-word{margin-right:16px}
-.cap-strip span.c{font-size:13px;color:var(--ink-soft);padding:4px 0}
+/* ---------- services ledger ---------- */
+.ledger-rows{margin-top:52px;border-top:1px solid var(--line)}
+.f-row{display:grid;grid-template-columns:64px 1fr 300px;gap:28px;padding:30px 6px;border-bottom:1px solid var(--line);align-items:start;transition:background .16s ease-out;border-radius:4px}
+.f-row:hover{background:var(--ox-tint)}
+.f-idx{font-family:var(--serif);font-style:italic;color:var(--brass);font-size:1.05rem;padding-top:4px}
+.f-row h3{font-family:var(--serif);font-weight:520;font-size:1.5rem;margin-bottom:8px}
+.f-row p{color:var(--muted);font-size:.98rem;max-width:58ch}
+.f-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.f-tags span{font-size:12px;font-weight:700;letter-spacing:.05em;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+.f-spec{justify-self:end;text-align:right;padding-top:6px}
+.f-spec .rule-word{display:block;margin-bottom:8px}
+.f-spec span.v{display:block;font-family:var(--serif);font-style:italic;font-size:1.02rem;color:var(--ox)}
+@media (max-width:920px){.f-row{grid-template-columns:44px 1fr;gap:16px}.f-spec{grid-column:2;justify-self:start;text-align:left;padding-top:2px}.f-spec .rule-word{margin-bottom:2px}}
+.cap-strip{margin-top:40px;padding-top:26px;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:10px 0;align-items:center}
+.cap-strip .rule-word{margin-right:18px}
+.cap-strip span.c{font-size:13.5px;color:var(--muted);font-weight:600;padding:4px 0}
 .cap-strip span.c::after{content:"·";margin:0 12px;color:var(--brass)}
 .cap-strip span.c:last-child::after{content:""}
 
-/* ---------- pricing / fee ledger ---------- */
-.pricing{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.fee-grid{display:grid;grid-template-columns:1fr 340px;gap:48px;margin-top:40px;align-items:start}
-.fee-table{border-top:1px solid var(--line)}
-.fee-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:15px 4px;border-bottom:1px solid var(--line-soft);cursor:pointer;transition:background .15s ease-out;border-radius:4px}
-.fee-row:hover{background:rgba(110,31,38,.045)}
-.fee-row[aria-pressed="true"]{background:rgba(110,31,38,.07)}
-.fee-row .n{font-weight:600;font-size:15.5px}
-.fee-row .dotted{flex:1;border-bottom:1.5px dotted rgba(36,29,22,.25);transform:translateY(-4px)}
-.fee-row .p{font-family:var(--serif);font-size:1.25rem;color:var(--oxblood);white-space:nowrap}
-.fee-note{font-size:12.5px;color:var(--ink-soft);margin-top:14px}
-.fee-card{position:sticky;top:84px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;box-shadow:0 14px 34px rgba(36,29,22,.07)}
+/* ---------- fees ---------- */
+.fees{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fee-grid{display:grid;grid-template-columns:1fr 360px;gap:52px;margin-top:52px;align-items:start}
+.fee-table{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:10px 26px;box-shadow:var(--shadow)}
+.fee-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 4px;border-bottom:1px dashed rgba(38,30,21,.22);cursor:pointer;transition:background .15s ease-out;border-radius:4px;width:100%;background:none;border-left:none;border-right:none;border-top:none;font-family:var(--sans)}
+.fee-row:last-child{border-bottom:none}
+.fee-row:hover{background:var(--ox-tint)}
+.fee-row[aria-pressed="true"]{background:rgba(110,31,38,.09)}
+.fee-row .n{font-weight:700;font-size:15.5px;text-align:left}
+.fee-row .dotted{flex:1;border-bottom:1.5px dotted rgba(38,30,21,.28);transform:translateY(-4px)}
+.fee-row .p{font-family:var(--serif);font-size:1.3rem;font-weight:540;color:var(--ox);white-space:nowrap}
+.fee-note{font-size:13px;color:var(--muted);margin-top:18px;max-width:56ch}
+.fee-card{position:sticky;top:96px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;box-shadow:var(--shadow)}
 .fee-card .rule-word{display:block;margin-bottom:10px}
-.fee-card .type{font-family:var(--serif);font-size:1.35rem;line-height:1.2;min-height:2.4em}
-.fee-card .amount{font-family:var(--serif);font-size:3.1rem;color:var(--oxblood);line-height:1;margin:14px 0 4px}
-.fee-card .per{font-size:13px;color:var(--ink-soft)}
-.fee-card .btn{width:100%;margin-top:20px;background:var(--oxblood);color:var(--cream);font-size:14.5px;padding:13px 18px}
-.fee-card .btn:hover{background:var(--oxblood-deep);transform:translateY(-2px)}
-.fee-card .btn.alt{background:transparent;color:var(--oxblood);border:1px solid var(--oxblood);margin-top:10px}
-.fee-card .btn.alt:hover{background:rgba(110,31,38,.06)}
+.fee-card .type{font-family:var(--serif);font-weight:520;font-size:1.5rem;line-height:1.2;min-height:2.3em}
+.fee-card .amount{font-family:var(--serif);font-weight:560;font-size:3.4rem;color:var(--ox);line-height:1;margin:16px 0 4px}
+.fee-card .per{font-size:13px;color:var(--muted);font-weight:600}
+.fee-card .btn{width:100%;margin-top:22px;background:var(--ox);color:var(--cream);font-size:14.5px;padding:14px 18px}
+.fee-card .btn:hover{background:var(--ox-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(66,20,26,.3)}
+.fee-card .btn.alt{background:transparent;color:var(--ox);border:1px solid var(--ox);margin-top:10px;font-size:14px;padding:12px 18px}
+.fee-card .btn.alt:hover{background:rgba(110,31,38,.06);transform:none;box-shadow:none;border-color:var(--ox-deep)}
+@media (max-width:920px){.fee-grid{grid-template-columns:1fr;gap:32px}.fee-card{position:static}}
 
 /* ---------- about ---------- */
-.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;margin-top:44px;align-items:start}
-.about-copy p{color:var(--ink-soft);margin-bottom:18px;max-width:58ch}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;margin-top:52px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.tl-row{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:22px 6px;border-bottom:1px solid var(--line);align-items:baseline}
+.tl-row b{font-family:var(--serif);font-weight:560;font-size:1.35rem;color:var(--ox)}
+.tl-row span{color:var(--muted);font-size:.96rem}
+.tl-row span strong{display:block;color:var(--ink);font-size:1.02rem;font-weight:700;margin-bottom:2px}
+.pull{margin-top:28px;padding:26px 30px;border-left:3px solid var(--brass);background:rgba(217,182,108,.09);border-radius:0 10px 10px 0}
+.pull p{font-family:var(--serif);font-style:italic;font-size:1.22rem;line-height:1.45;color:var(--ink)}
+.pull cite{display:block;margin-top:12px;font-family:var(--sans);font-style:normal;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.about-copy p{color:var(--muted);margin-top:18px;font-size:1.02rem}
 .about-copy p strong{color:var(--ink)}
-.pull{border-left:3px solid var(--brass);padding:6px 0 6px 22px;margin:8px 0 22px}
-.pull p{font-family:var(--serif);font-size:1.35rem;line-height:1.4;color:var(--ink);margin:0}
-.pull cite{display:block;font-style:normal;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
-.tl{border-top:1px solid var(--line)}
-.tl-row{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
-.tl-row b{font-family:var(--serif);color:var(--oxblood);font-size:1.15rem;font-weight:400}
-.tl-row p{color:var(--ink-soft);font-size:.95rem;margin:0}
+.creds{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--paper-2)}
+.cred{padding:16px 20px;border-bottom:1px solid var(--line-soft);display:flex;gap:12px;align-items:baseline}
+.cred:nth-child(odd){border-right:1px solid var(--line-soft)}
+.cred:nth-last-child(-n+2){border-bottom:none}
+.cred b{font-size:14px;display:block}
+.cred span{font-size:12.5px;color:var(--muted)}
+@media (max-width:920px){.about-grid{grid-template-columns:1fr;gap:40px}.creds{grid-template-columns:1fr}.cred{border-right:none !important}.cred:nth-last-child(2){border-bottom:none}.cred:last-child{border-bottom:none}}
 
 /* ---------- service area ---------- */
-.area{background:var(--oxblood-deep);color:var(--cream);background-image:radial-gradient(120% 100% at 90% 0%, rgba(168,132,60,.22) 0%, rgba(168,132,60,0) 55%)}
-.area .sec-num,.area .rule-word{color:var(--brass-soft)}
-.area .lede{color:rgba(245,234,210,.75)}
-.area-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;margin-top:42px;align-items:stretch}
-.zips{display:flex;gap:14px;margin:26px 0 8px;flex-wrap:wrap}
-.zip{border:1px solid rgba(216,181,106,.5);border-radius:6px;padding:12px 18px;text-align:center}
-.zip b{font-family:var(--serif);font-size:1.3rem;display:block}
-.zip span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,234,210,.7)}
-.area-points{margin-top:22px}
-.area-points li{list-style:none;display:flex;gap:12px;padding:9px 0;color:rgba(245,234,210,.85);font-size:.97rem;border-bottom:1px solid rgba(245,234,210,.12)}
-.area-points li::before{content:"·";color:var(--brass-soft);flex:none}
-.map-block{border-radius:var(--r);overflow:hidden;border:1px solid rgba(216,181,106,.35);min-height:380px;position:relative}
-.map-block iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:saturate(.85)}
-.map-tag{position:absolute;left:14px;bottom:14px;background:rgba(58,16,21,.92);border:1px solid rgba(216,181,106,.5);border-radius:6px;padding:9px 14px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-soft)}
+.area{background:linear-gradient(165deg,#571922 0%,var(--ox-deep) 55%,#360d13 100%);color:var(--cream)}
+.area .sec-num{color:var(--brass-l)}
+.area h2{color:var(--cream)}
+.area h2 em{color:var(--brass-l)}
+.area .lede{color:var(--cream-soft)}
+.area-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;margin-top:52px;align-items:start}
+.area-count{font-family:var(--serif);font-weight:540;font-size:clamp(4rem,8vw,6rem);line-height:.95;color:var(--brass-l)}
+.area-count small{display:block;font-family:var(--sans);font-style:normal;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-soft);font-weight:800;margin-top:12px}
+.area-facts{margin-top:34px;border-top:1px solid rgba(243,231,205,.22)}
+.area-fact{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 2px;border-bottom:1px solid rgba(243,231,205,.22);align-items:baseline}
+.area-fact b{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-l);font-weight:800}
+.area-fact span{font-size:.98rem;color:var(--cream-soft)}
+.map-frame{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid rgba(217,182,108,.45);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.map-frame iframe{width:100%;height:420px;border:0;display:block;filter:saturate(.85)}
+.map-tag{position:absolute;left:14px;bottom:14px;background:rgba(38,14,18,.88);color:var(--cream);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;padding:10px 16px;border-radius:6px;border:1px solid rgba(217,182,108,.4)}
+@media (max-width:920px){.area-grid{grid-template-columns:1fr;gap:36px}}
 
 /* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px;align-items:start}
-.c-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.c-card{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--paper);transition:transform .18s ease-out,box-shadow .18s ease-out}
-.c-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(36,29,22,.09)}
-.c-card .rule-word{font-size:11px}
-.c-card a.big{display:block;font-family:var(--serif);font-size:1.3rem;text-decoration:none;margin-top:8px;color:var(--ink);overflow-wrap:anywhere}
-.c-card a.big:hover{color:var(--oxblood)}
-
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;margin-top:52px;align-items:start}
+.c-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.c-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 22px;box-shadow:0 6px 18px rgba(38,30,21,.06)}
 .c-card.wide{grid-column:1 / -1}
-.c-card p{font-size:.88rem;color:var(--ink-soft);margin-top:6px}
-.form-card{border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;background:var(--paper)}
-.form-card h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin-bottom:6px}
-.form-card .f-sub{font-size:.9rem;color:var(--ink-soft);margin-bottom:22px}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px}
-input,textarea{width:100%;font-family:var(--sans);font-size:15px;padding:13px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);margin-bottom:16px;transition:border-color .15s ease-out}
-input:focus,textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(168,132,60,.18)}
-textarea{resize:vertical;min-height:96px}
-.form-note{font-size:12.5px;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:11px 14px;margin-bottom:16px}
+.c-card .rule-word{display:block;margin-bottom:10px}
+.c-card a.big{font-family:var(--serif);font-weight:540;font-size:1.3rem;text-decoration:none;color:var(--ink);overflow-wrap:anywhere}
+.c-card a.big:hover{color:var(--ox)}
+.c-card p{font-size:.9rem;color:var(--muted);margin-top:6px}
+.c-form{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:34px 34px;box-shadow:var(--shadow)}
+.c-form h3{font-family:var(--serif);font-weight:520;font-size:1.55rem;margin-bottom:6px}
+.c-form .form-sub{font-size:.92rem;color:var(--muted);margin-bottom:24px}
+.fld{display:block;margin-bottom:18px}
+.fld span{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:8px}
+.fld input{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:13px 16px;font-family:var(--sans);font-size:15px;color:var(--ink);transition:border-color .15s ease-out,box-shadow .15s ease-out}
+.fld input:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(168,132,60,.18)}
+.fld-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.c-form .btn{width:100%;background:var(--ox);color:var(--cream);font-size:15px;padding:15px}
+.c-form .btn:hover{background:var(--ox-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(66,20,26,.3)}
+.form-note{margin-top:16px;font-size:12.5px;color:var(--muted);text-align:center}
+@media (max-width:920px){.contact-grid{grid-template-columns:1fr;gap:36px}.c-cards{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.c-cards{grid-template-columns:1fr}.fld-row{grid-template-columns:1fr}}
 
 /* ---------- footer ---------- */
-footer{background:var(--ink);color:rgba(245,234,210,.75);padding:54px 0 40px}
-.foot-inner{max-width:1120px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-end}
-.foot-name{font-family:var(--serif);font-size:1.5rem;color:var(--cream)}
-.foot-sub{font-size:13px;margin-top:6px}
-footer nav{display:flex;gap:26px;font-size:14px}
-footer nav a{text-decoration:none;color:rgba(245,234,210,.75)}
-footer nav a:hover{color:var(--brass-soft)}
-.foot-line{border-top:1px solid rgba(245,234,210,.14);margin-top:34px;padding-top:18px;font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer{background:#201810;color:rgba(243,231,205,.75)}
+.footer-top{max-width:1200px;margin:0 auto;padding:64px 28px 48px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px}
+.f-brand{display:flex;gap:16px;align-items:flex-start}
+.f-brand .seal{width:54px;height:54px}
+.f-brand .seal span{font-size:19px}
+.f-brand b{font-family:var(--serif);font-weight:540;font-size:1.2rem;color:var(--cream);display:block;line-height:1.2}
+.f-brand small{display:block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,231,205,.55);font-weight:700;margin-top:6px}
+.f-brand p{font-size:.9rem;margin-top:14px;line-height:1.6}
+.f-col h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-l);font-weight:800;margin-bottom:18px}
+.f-col ul{list-style:none}
+.f-col li{margin-bottom:10px}
+.f-col a{text-decoration:none;font-size:.93rem;color:rgba(243,231,205,.75);transition:color .15s ease-out}
+.f-col a:hover{color:var(--brass-l)}
+.f-col .f-tel{font-family:var(--serif);font-size:1.15rem;color:var(--cream)}
+.f-col .f-line{font-size:.9rem;color:rgba(243,231,205,.6);margin-bottom:12px;line-height:1.6}
+.footer-bottom{border-top:1px solid rgba(243,231,205,.14)}
+.footer-bottom-in{max-width:1200px;margin:0 auto;padding:22px 28px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;font-size:12.5px;color:rgba(243,231,205,.5)}
+@media (max-width:920px){.footer-top{grid-template-columns:1fr 1fr;gap:36px}}
+@media (max-width:560px){.footer-top{grid-template-columns:1fr}}
 
-/* ---------- sticky mobile call bar ---------- */
-.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:70;background:var(--oxblood);color:var(--cream);text-decoration:none;text-align:center;padding:15px;font-weight:700;letter-spacing:.03em;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
-
-/* ---------- reveals ---------- */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease-out,transform .5s ease-out}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  *{transition:none!important;animation:none!important;scroll-behavior:auto}
-  .rv{opacity:1;transform:none}
-}
-
-/* ---------- responsive ---------- */
-@media (max-width:960px){
-  .svc-grid{grid-template-columns:1fr;gap:8px}
-  .svc-intro{position:static}
-  .fee-grid{grid-template-columns:1fr}
-  .fee-card{position:static}
-  .about-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
-}
-@media (max-width:640px){
-  body{font-size:16px}
-  .hcard{flex-direction:column;text-align:center;gap:16px;padding:26px 22px}
-  .hcard-meta{margin:0;text-align:center;align-items:center}
-  .ledger-inner{justify-content:flex-start}
-  .ledger-item{border-left:none;padding:8px 22px 8px 0;min-width:130px}
-  .c-cards{grid-template-columns:1fr}
-  .f-row{grid-template-columns:1fr}
-  .hero-inner{padding-bottom:8px}
-  .hero-ctas .btn{width:100%}
-  .sec{padding:60px 0}
-  .callbar{display:block}
-  footer{padding-bottom:86px}
-  .feat{grid-template-columns:1fr}
+/* ---------- mobile call bar ---------- */
+.callbar{display:none}
+@media (max-width:720px){
+  .callbar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:var(--ox-deep);color:var(--cream);display:block;padding:12px 18px calc(12px + env(safe-area-inset-bottom));text-align:center;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:.02em;border-top:1px solid rgba(217,182,108,.4)}
+  .callbar span{border-bottom:1px solid rgba(217,182,108,.6)}
+  body{padding-bottom:58px}
 }
 </style>
 </head>
 <body>
 
-<div class="banner" role="note">Website concept preview</div>
+<div class="banner">Website concept preview</div>
 
-<header class="hero">
-  <div class="hero-frame" aria-hidden="true"></div>
-  <div class="hero-watermark" aria-hidden="true">NOTARY</div>
-  <div class="hero-inner">
-    <p class="kicker">Mobile Notary &middot; Creola &amp; Axis, Alabama</p>
-    <h1>The notary who comes to you, <em>across 11 Alabama counties.</em></h1>
-    <p class="hero-sub">CW Professional Notary Public is the mobile signing service of Carla Williams, an NNA-certified Notary Signing Agent and retired federal employee who has spent 38+ years getting important documents right.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-solid" href="tel:+12515241431">Call or text &middot; 251-524-1431</a>
-      <a class="btn btn-ghost" href="#fees">See loan signing fees</a>
-    </div>
-  </div>
-  <div class="hcard-wrap">
-    <div class="hcard">
-      <div class="seal" aria-hidden="true"><span>CW</span></div>
-      <div>
-        <p class="hcard-name">CW Professional Notary Public</p>
-        <p class="hcard-tag">Carla Williams &middot; NNA-Certified Signing Agent</p>
-      </div>
-      <div class="hcard-meta">
-        <a class="hcard-call" href="tel:+12515241431">251-524-1431</a>
-        <p class="hcard-hours">Seven days a week, mornings &amp; evenings &middot; 24-hour service available</p>
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="ledger">
-  <div class="ledger-inner">
-    <div class="ledger-item"><b>NNA-Certified Signing Agent</b><span>National Notary Association</span></div>
-    <div class="ledger-item"><b>Background-Checked</b><span>Accurate Background &middot; valid through 12/2026</span></div>
-    <div class="ledger-item"><b>Insured</b><span>State Farm policy on file</span></div>
-    <div class="ledger-item"><b>Alabama Commissioned</b><span>Valid through 11/24/2029</span></div>
-    <div class="ledger-item"><b>In Business Since</b><span>November 2025 &middot; NotaryCafe Pro member</span></div>
-  </div>
-</div>
-
-<section class="sec" id="services">
-  <div class="wrap">
-    <div class="svc-grid">
-      <div class="svc-intro rv">
-        <p class="sec-num">I &middot; Services</p>
-        <h2>Every kind of signing, handled on your schedule.</h2>
-        <p>Carla is a mobile notary: she travels to your home, office, title company, hospital, or correctional facility with everything needed to complete the signing: laser printer, mobile hotspot, and e-sign capability included.</p>
-        <div class="stamp-note">She also offers 24-hour service for last-minute and after-hours signings. Call to check same-day availability.</div>
-      </div>
-      <div>
-        <article class="feat rv">
-          <div class="feat-idx">1.</div>
-          <div>
-            <h3>Loan Signings</h3>
-            <p>Full real-estate signing support for borrowers, buyers, and title companies, from refinance packages to reverse mortgages. Every document reviewed line by line before the borrower signs.</p>
-            <div class="feat-list"><span>Refinance</span><span>Purchase Closing</span><span>HELOC</span><span>Home Equity</span><span>Reverse Mortgage</span><span>Loan Modification</span><span>Deed in Lieu</span></div>
-          </div>
-        </article>
-        <article class="feat rv">
-          <div class="feat-idx">2.</div>
-          <div>
-            <h3>General Notary Work</h3>
-            <p>Affidavits, powers of attorney, and other everyday documents, acknowledged, jurated, and stamped on the spot.</p>
-          </div>
-        </article>
-        <article class="feat rv">
-          <div class="feat-idx">3.</div>
-          <div>
-            <h3>Hospital &amp; Jail Signings</h3>
-            <p>Patients and inmates have family and legal matters that can't wait. Carla handles hospital and correctional-facility signings with patience, discretion, and full ID compliance.</p>
-          </div>
-        </article>
-        <article class="feat rv">
-          <div class="feat-idx">4.</div>
-          <div>
-            <h3>Fingerprinting &amp; Wedding Paperwork</h3>
-            <p>On-site fingerprinting services, plus wedding document notarization for Alabama couples.</p>
-          </div>
-        </article>
-        <article class="feat rv">
-          <div class="feat-idx">5.</div>
-          <div>
-            <h3>Remote Online Notarization</h3>
-            <p>Can't meet in person? RON-capable sessions and EscrowTab IPEN e-closings let you sign securely from anywhere.</p>
-          </div>
-        </article>
-        <div class="cap-strip rv">
-          <span class="rule-word">Also equipped for</span>
-          <span class="c">Attorney support</span>
-          <span class="c">E-sign</span>
-          <span class="c">Fax &amp; email delivery</span>
-          <span class="c">Abstractor services</span>
-          <span class="c">English-speaking sessions</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="pricing sec" id="fees">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="sec-num">II &middot; Loan Signing Fees</span></div>
-    <h2 class="rv">Flat fees, listed up front.</h2>
-    <p class="lede rv">Pick your signing type to see Carla's published flat fee. No surprises, no add-ons at the table.</p>
-    <div class="fee-grid">
-      <div>
-        <div class="fee-table" role="group" aria-label="Loan signing types and fees">
-          <button class="fee-row" type="button" aria-pressed="true" data-type="Purchase Closing" data-fee="125"><span class="n">Purchase Closing</span><span class="dotted" aria-hidden="true"></span><span class="p">$125</span></button>
-          <button class="fee-row" type="button" aria-pressed="false" data-type="Refinance with insurance" data-fee="115"><span class="n">Refinance with insurance</span><span class="dotted" aria-hidden="true"></span><span class="p">$115</span></button>
-          <button class="fee-row" type="button" aria-pressed="false" data-type="Refinance without insurance" data-fee="110"><span class="n">Refinance without insurance</span><span class="dotted" aria-hidden="true"></span><span class="p">$110</span></button>
-          <button class="fee-row" type="button" aria-pressed="false" data-type="Home Equity" data-fee="105"><span class="n">Home Equity</span><span class="dotted" aria-hidden="true"></span><span class="p">$105</span></button>
-          <button class="fee-row" type="button" aria-pressed="false" data-type="Reverse Mortgage" data-fee="105"><span class="n">Reverse Mortgage</span><span class="dotted" aria-hidden="true"></span><span class="p">$105</span></button>
-          <button class="fee-row" type="button" aria-pressed="false" data-type="Deed In Lieu" data-fee="100"><span class="n">Deed In Lieu</span><span class="dotted" aria-hidden="true"></span><span class="p">$100</span></button>
-          <button class="fee-row" type="button" aria-pressed="false" data-type="HELOC" data-fee="95"><span class="n">HELOC</span><span class="dotted" aria-hidden="true"></span><span class="p">$95</span></button>
-          <button class="fee-row" type="button" aria-pressed="false" data-type="Loan Modification" data-fee="85"><span class="n">Loan Modification</span><span class="dotted" aria-hidden="true"></span><span class="p">$85</span></button>
-        </div>
-        <p class="fee-note">Fees as published on Carla's NotaryCafe profile. For general notary work and other services, call or text for a quote.</p>
-      </div>
-      <aside class="fee-card rv" aria-live="polite">
-        <span class="rule-word">Your signing, at a glance</span>
-        <p class="type" id="feeType">Purchase Closing</p>
-        <p class="amount" id="feeAmount">$125</p>
-        <p class="per">flat fee &middot; mobile service included</p>
-        <a class="btn" href="tel:+12515241431">Book this signing &middot; call 251-524-1431</a>
-        <a class="btn alt" href="sms:+12515241431">Or send a text message</a>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="about">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="sec-num">III &middot; About Carla</span></div>
-    <h2 class="rv">Thirty-eight years of handling documents that matter.</h2>
-    <div class="about-grid">
-      <div class="about-copy rv">
-        <div class="pull">
-          <p>"My experience as a notary fits well with my customer service experience. I am known for my attention to detail and professionalism."</p>
-          <cite>Carla Williams</cite>
-        </div>
-        <p>Carla Williams retired from the federal government after <strong>more than 38 years of service</strong>, including <strong>over 20 years in property management</strong>, work where a single missed signature can delay a closing, a lease, or a claim.</p>
-        <p>She also spent <strong>five-plus years in a car dealership's finance department</strong>, preparing auto loans and the legal and financial documents that ride along with them. She knows what lenders and title companies look for in a completed package, because she spent a career on the other side of the table.</p>
-        <p>Today she brings that same care to south Alabama as an <strong>NNA-certified Notary Signing Agent</strong>, with an active background check through Accurate Background and an Alabama commission valid through November 2029.</p>
-      </div>
-      <div class="tl rv">
-        <div class="tl-row"><b>38+ yrs</b><p>Retired federal employee. A career built on doing things right the first time.</p></div>
-        <div class="tl-row"><b>20+ yrs</b><p>Property management, where complete, correct paperwork was the daily job.</p></div>
-        <div class="tl-row"><b>5+ yrs</b><p>Auto dealership finance department: loans, titles, and legal documents.</p></div>
-        <div class="tl-row"><b>2025</b><p>Founded CW Professional Notary Public, serving Creola, Axis, and 11 surrounding counties.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="area sec" id="area">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="sec-num">IV &middot; Service Area</span></div>
-    <h2 class="rv">Based in Creola. On the road across south Alabama.</h2>
-    <p class="lede rv">Carla provides mobile notary service across 11 counties in the surrounding Alabama area. If you're anywhere near the Mobile County corridor, she'll come to you.</p>
-    <div class="area-grid">
-      <div class="rv">
-        <div class="zips">
-          <div class="zip"><b>36525</b><span>Creola</span></div>
-          <div class="zip"><b>36505</b><span>Axis</span></div>
-        </div>
-        <ul class="area-points">
-          <li>Home, office, and title-company visits by appointment</li>
-          <li>Hospital and correctional-facility signings across the region</li>
-          <li>Remote online notarization when you can't meet in person</li>
-          <li>24-hour service for urgent, after-hours documents</li>
-        </ul>
-      </div>
-      <div class="map-block rv">
-        <iframe title="Map of Creola, Alabama service area" loading="lazy" src="https://www.google.com/maps?q=Creola,+AL+36525&output=embed"></iframe>
-        <span class="map-tag">Home base &middot; Creola &amp; Axis, Alabama</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="contact">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="sec-num">V &middot; Contact</span></div>
-    <h2 class="rv">Ready when your paperwork is.</h2>
-    <div class="contact-grid">
-      <div class="c-cards rv">
-        <div class="c-card">
-          <span class="rule-word">Call or text</span>
-          <a class="big" href="tel:+12515241431">251-524-1431</a>
-          <p>Mobile line, texting welcome. Fastest way to book.</p>
-        </div>
-        <div class="c-card">
-          <span class="rule-word">Second line</span>
-          <a class="big" href="tel:+12514089612">251-408-9612</a>
-          <p>Backup number if the mobile line is busy.</p>
-        </div>
-        <div class="c-card wide">
-          <span class="rule-word">Email</span>
-          <a class="big" href="mailto:chillingbymail@gmail.com">chillingbymail@gmail.com</a>
-          <p>Good for signing packages and scanned documents.</p>
-        </div>
-        <div class="c-card">
-          <span class="rule-word">Availability</span>
-          <a class="big" href="sms:+12515241431">Mon-Sun &middot; AM &amp; PM</a>
-          <p>24-hour service available for urgent signings.</p>
-        </div>
-      </div>
-      <div class="form-card rv">
-        <h3>Request a signing</h3>
-        <p class="f-sub">Tell Carla what needs notarizing and she'll confirm a time and place.</p>
-        <div class="form-note">This form is part of the concept preview. Submissions aren't delivered yet. Please call or text 251-524-1431 for now.</div>
-        <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('sent').textContent='Got it. For a real booking, call or text 251-524-1431.';">
-          <div class="f-row">
-            <div><label for="f-name">Name</label><input id="f-name" type="text" autocomplete="name" required></div>
-            <div><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel" required></div>
-          </div>
-          <label for="f-msg">What needs signing?</label>
-          <textarea id="f-msg" required></textarea>
-          <button class="btn" type="submit" style="background:var(--oxblood);color:var(--cream);width:100%">Send request</button>
-          <p id="sent" style="font-size:13px;color:var(--oxblood);margin-top:12px;margin-bottom:0" role="status"></p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="foot-inner">
-    <div>
-      <p class="foot-name">CW Professional Notary Public</p>
-      <p class="foot-sub">Carla Williams &middot; Mobile Notary &amp; NNA-Certified Signing Agent &middot; Creola, Alabama</p>
-    </div>
-    <nav aria-label="Sections">
+<header class="hdr" id="top">
+  <div class="hdr-in">
+    <a class="brand" href="#top" aria-label="CW Professional Notary Public, back to top">
+      <span class="seal" aria-hidden="true"><span>CW</span></span>
+      <span>
+        <b>CW Professional Notary Public</b>
+        <small>Mobile Notary · Creola &amp; Axis, AL</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a>
       <a href="#fees">Fees</a>
       <a href="#about">About</a>
       <a href="#area">Service Area</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="hdr-cta" href="tel:2515241431"><span class="cta-pre">Call or text · </span>251-524-1431</a>
   </div>
-  <div class="wrap foot-line">
-    <span>Call or text 251-524-1431 &middot; chillingbymail@gmail.com</span>
-    <span>Serving Creola, Axis &amp; 11 Alabama counties</span>
+</header>
+
+<section class="hero">
+  <div class="hero-watermark" aria-hidden="true">NOTARY</div>
+  <div class="hero-frame" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker">NNA-Certified Signing Agent · Creola &amp; Axis, Alabama</p>
+    <h1>The notary who <em>comes to you</em>, wherever you are.</h1>
+    <p class="hero-sub">CW Professional Notary Public is the mobile signing service of Carla Williams: NNA-certified, background-checked, and backed by 38+ years of federal service spent getting critical documents right.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="tel:2515241431">Call or text · 251-524-1431</a>
+      <a class="btn btn-ghost" href="#fees">See loan signing fees</a>
+    </div>
+  </div>
+</section>
+
+<div class="hcard-wrap">
+  <div class="hcard rv">
+    <span class="seal" aria-hidden="true"><span>CW</span></span>
+    <div>
+      <p class="hcard-name">Carla Williams</p>
+      <p class="hcard-tag">CW Professional Notary Public</p>
+    </div>
+    <div class="hcard-meta">
+      <a class="hcard-call" href="tel:2515241431">251-524-1431</a>
+      <p class="hcard-hours">Open Monday through Sunday · AM &amp; PM · 24-hour service for urgent signings</p>
+    </div>
+  </div>
+</div>
+
+<div class="ledger">
+  <div class="ledger-in">
+    <div class="ledger-item"><span class="rule-word">Certified</span><b>NNA Signing Agent</b><span>National Notary Association</span></div>
+    <div class="ledger-item"><span class="rule-word">Background</span><b>Accurate Background</b><span>Checked through Dec 2026</span></div>
+    <div class="ledger-item"><span class="rule-word">Commission</span><b>Alabama</b><span>Valid through Nov 24, 2029</span></div>
+    <div class="ledger-item"><span class="rule-word">Insured</span><b>Errors &amp; Omissions</b><span>Active policy on file</span></div>
+    <div class="ledger-item"><span class="rule-word">Equipped</span><b>RON Capable</b><span>Remote online notarization</span></div>
+  </div>
+</div>
+
+<main>
+  <!-- ================= SERVICES ================= -->
+  <section class="sec" id="services">
+    <div class="sec-head split-head">
+      <div>
+        <span class="sec-num">I · Services</span>
+        <h2>Every kind of signing, <em>handled with care</em>.</h2>
+      </div>
+      <p class="lede">Carla is a mobile notary: she travels to your home, office, title company, hospital, or correctional facility with everything needed to complete the signing: laser printer, mobile hotspot, and e-sign capability included.</p>
+    </div>
+    <div class="wrap">
+      <div class="ledger-rows rv">
+        <div class="f-row">
+          <span class="f-idx">No. 1</span>
+          <div>
+            <h3>Loan Signings</h3>
+            <p>Full real-estate signing support for borrowers, buyers, and title companies. Every package is reviewed line by line before your borrower signs, so the closing goes right the first time.</p>
+            <div class="f-tags"><span>Refinance</span><span>Purchase</span><span>HELOC</span><span>Home Equity</span><span>Reverse Mortgage</span><span>Loan Modification</span><span>Deed in Lieu</span></div>
+          </div>
+          <div class="f-spec"><span class="rule-word">Equipped</span><span class="v">E-sign · EscrowTab IPEN</span></div>
+        </div>
+        <div class="f-row">
+          <span class="f-idx">No. 2</span>
+          <div>
+            <h3>General Notary Work</h3>
+            <p>Affidavits, powers of attorney, consent forms, school and travel letters: acknowledged, jurated, and stamped on the spot, at your kitchen table or hers.</p>
+            <div class="f-tags"><span>Acknowledgments</span><span>Jurats</span><span>Verifications</span></div>
+          </div>
+          <div class="f-spec"><span class="rule-word">Scheduling</span><span class="v">By appointment, 7 days</span></div>
+        </div>
+        <div class="f-row">
+          <span class="f-idx">No. 3</span>
+          <div>
+            <h3>Hospital &amp; Jail Signings</h3>
+            <p>When a signing can't wait and can't travel, Carla brings the notary to the bedside or the facility, with the same patience, discretion, and attention to detail every time.</p>
+          </div>
+          <div class="f-spec"><span class="rule-word">Availability</span><span class="v">24-hour service</span></div>
+        </div>
+        <div class="f-row">
+          <span class="f-idx">No. 4</span>
+          <div>
+            <h3>Fingerprinting</h3>
+            <p>Ink fingerprinting for license applications, employment files, and background-check packets, done cleanly and without the office-queue wait.</p>
+          </div>
+          <div class="f-spec"><span class="rule-word">Setting</span><span class="v">Mobile, on your schedule</span></div>
+        </div>
+        <div class="f-row">
+          <span class="f-idx">No. 5</span>
+          <div>
+            <h3>Weddings &amp; Family Papers</h3>
+            <p>The document side of life's big moments: wedding-related paperwork, name-change forms, and family documents notarized with care and zero rush.</p>
+          </div>
+          <div class="f-spec"><span class="rule-word">Booking</span><span class="v">Call or text to reserve</span></div>
+        </div>
+        <div class="f-row">
+          <span class="f-idx">No. 6</span>
+          <div>
+            <h3>Remote Online Notarization</h3>
+            <p>Can't meet in person? RON-capable sessions and EscrowTab IPEN e-closings let you sign securely from anywhere, with Carla guiding you through every step on camera.</p>
+          </div>
+          <div class="f-spec"><span class="rule-word">Format</span><span class="v">RON · IPEN e-closing</span></div>
+        </div>
+      </div>
+      <div class="cap-strip rv">
+        <span class="rule-word">Also equipped for</span>
+        <span class="c">Attorney support</span><span class="c">Abstractor services</span><span class="c">Fax &amp; email delivery</span><span class="c">Laser printing on site</span><span class="c">Mobile hotspot</span><span class="c">English-speaking sessions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEES ================= -->
+  <section class="sec fees" id="fees">
+    <div class="sec-head split-head">
+      <div>
+        <span class="sec-num">II · Loan Signing Fees</span>
+        <h2>Published prices, <em>no surprises</em>.</h2>
+      </div>
+      <p class="lede">Carla posts her loan-signing fees openly. Tap any signing type to see the flat rate; mobile travel to you is included.</p>
+    </div>
+    <div class="wrap">
+      <div class="fee-grid">
+        <div>
+          <div class="fee-table rv">
+            <button class="fee-row" data-type="Purchase Closing" data-price="125" aria-pressed="false"><span class="n">Purchase Closing</span><span class="dotted"></span><span class="p">$125</span></button>
+            <button class="fee-row" data-type="Refinance with insurance" data-price="115" aria-pressed="false"><span class="n">Refinance with insurance</span><span class="dotted"></span><span class="p">$115</span></button>
+            <button class="fee-row" data-type="Refinance without insurance" data-price="110" aria-pressed="false"><span class="n">Refinance without insurance</span><span class="dotted"></span><span class="p">$110</span></button>
+            <button class="fee-row" data-type="Home Equity" data-price="105" aria-pressed="false"><span class="n">Home Equity</span><span class="dotted"></span><span class="p">$105</span></button>
+            <button class="fee-row" data-type="Reverse Mortgage" data-price="105" aria-pressed="false"><span class="n">Reverse Mortgage</span><span class="dotted"></span><span class="p">$105</span></button>
+            <button class="fee-row" data-type="Deed In Lieu" data-price="100" aria-pressed="false"><span class="n">Deed In Lieu</span><span class="dotted"></span><span class="p">$100</span></button>
+            <button class="fee-row" data-type="HELOC" data-price="95" aria-pressed="false"><span class="n">HELOC</span><span class="dotted"></span><span class="p">$95</span></button>
+            <button class="fee-row" data-type="Loan Modification" data-price="85" aria-pressed="false"><span class="n">Loan Modification</span><span class="dotted"></span><span class="p">$85</span></button>
+          </div>
+          <p class="fee-note">Fees as published on Carla's NotaryCafe profile. General notary work, fingerprinting, hospital and jail visits are quoted by call or text.</p>
+        </div>
+        <aside class="fee-card rv" aria-live="polite">
+          <span class="rule-word">Your signing, at a glance</span>
+          <p class="type" id="feeType">Purchase Closing</p>
+          <p class="amount" id="feeAmount">$125</p>
+          <p class="per">flat fee · mobile service included</p>
+          <a class="btn" id="feeCall" href="tel:2515241431">Book this signing · call 251-524-1431</a>
+          <a class="btn alt" href="sms:2515241431">Or send a text message</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="sec" id="about">
+    <div class="sec-head">
+      <span class="sec-num">III · About Carla</span>
+      <h2>Thirty-eight years of <em>getting documents right</em>.</h2>
+      <p class="lede">Notary work rewards exactly the traits Carla built a career on: precision, patience, and the habit of treating every signature like it matters.</p>
+    </div>
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="rv">
+          <div class="timeline">
+            <div class="tl-row"><b>38+ yrs</b><span><strong>Federal service</strong>Retired federal employee, decades of exacting public work.</span></div>
+            <div class="tl-row"><b>20+ yrs</b><span><strong>Property management</strong>Leases, files, and paperwork that had to be right the first time.</span></div>
+            <div class="tl-row"><b>5+ yrs</b><span><strong>Auto finance desk</strong>Auto loans and the critical legal and financial documents behind them.</span></div>
+            <div class="tl-row"><b>Today</b><span><strong>CW Professional Notary Public</strong>NNA-certified signing agent serving 11 Alabama counties, mobile.</span></div>
+          </div>
+          <blockquote class="pull">
+            <p>"I am known for my attention to detail and professionalism."</p>
+            <cite>Carla Williams, professional profile</cite>
+          </blockquote>
+        </div>
+        <div class="about-copy rv">
+          <p>Carla Williams spent more than <strong>38 years as a federal employee</strong>, including <strong>over 20 years in property management</strong> and five-plus years in a car dealership finance department, where she handled auto loans and the critical legal and financial documents that come with them.</p>
+          <p>Today she brings that same care to south Alabama as an <strong>NNA-certified Notary Signing Agent</strong>, traveling to homes, offices, hospitals, and correctional facilities with a laser printer, mobile hotspot, and e-sign kit in the car, so nothing about your signing is left to chance.</p>
+          <p>Every signing gets her full attention: documents reviewed line by line, IDs verified carefully, and a stamp she is proud to stand behind.</p>
+          <div class="creds">
+            <div class="cred"><div><b>NNA Certified</b><span>Notary Signing Agent</span></div></div>
+            <div class="cred"><div><b>Accurate Background</b><span>Current through Dec 2026</span></div></div>
+            <div class="cred"><div><b>Alabama Commission</b><span>Valid through Nov 24, 2029</span></div></div>
+            <div class="cred"><div><b>E&amp;O Insured</b><span>Errors and omissions policy active</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICE AREA ================= -->
+  <section class="sec area" id="area">
+    <div class="sec-head">
+      <span class="sec-num">IV · Service Area</span>
+      <h2>Eleven counties, <em>one phone call</em>.</h2>
+      <p class="lede">Home base is Creola and Axis, just north of Mobile. From there Carla runs mobile notary appointments across the surrounding Alabama counties, morning through evening, seven days a week.</p>
+    </div>
+    <div class="wrap">
+      <div class="area-grid">
+        <div class="rv">
+          <p class="area-count">11<small>Alabama counties served</small></p>
+          <div class="area-facts">
+            <div class="area-fact"><b>Home base</b><span>Creola &amp; Axis, Alabama</span></div>
+            <div class="area-fact"><b>Zips</b><span>36525 · 36505</span></div>
+            <div class="area-fact"><b>Mailing</b><span>PO Box 113, Creola, AL 36525</span></div>
+            <div class="area-fact"><b>Hours</b><span>Monday through Sunday · AM &amp; PM · 24-hour service for urgent signings</span></div>
+          </div>
+        </div>
+        <div class="map-frame rv">
+          <iframe title="Map of Creola and Axis, Alabama" src="https://maps.google.com/maps?q=Creola%20%2C%20AL%20Axis&amp;z=11&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <span class="map-tag">Home base · Creola &amp; Axis, AL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="sec" id="contact">
+    <div class="sec-head">
+      <span class="sec-num">V · Contact</span>
+      <h2>Ready when <em>you are</em>.</h2>
+      <p class="lede">Call or text is fastest. Tell Carla what needs signing and where, and she will confirm a time that works, including evenings and weekends.</p>
+    </div>
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="c-cards rv">
+          <div class="c-card wide">
+            <span class="rule-word">Call or text</span>
+            <a class="big" href="tel:2515241431">251-524-1431</a>
+            <p>Carla's work line · text-friendly, answers 7 days a week</p>
+          </div>
+          <div class="c-card">
+            <span class="rule-word">Also reachable</span>
+            <a class="big" href="tel:2514089612">251-408-9612</a>
+            <p>Home line · text-friendly</p>
+          </div>
+          <div class="c-card">
+            <span class="rule-word">Email</span>
+            <a class="big" href="mailto:chillingbymail@gmail.com">chillingbymail@gmail.com</a>
+            <p>Good for signing packages and documents in advance</p>
+          </div>
+          <div class="c-card wide">
+            <span class="rule-word">Availability</span>
+            <a class="big">Mon-Sun · AM &amp; PM</a>
+            <p>Plus 24-hour service for last-minute and after-hours signings, including hospital and jail visits.</p>
+          </div>
+        </div>
+        <form class="c-form rv" onsubmit="return false;">
+          <h3>Request an appointment</h3>
+          <p class="form-sub">Tell Carla what needs signing and where. She replies by call or text.</p>
+          <div class="fld-row">
+            <label class="fld"><span>Name</span><input type="text" name="name" autocomplete="name"></label>
+            <label class="fld"><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
+          </div>
+          <label class="fld"><span>What needs signing?</span><input type="text" name="job"></label>
+          <button class="btn" type="submit">Send request</button>
+          <p class="form-note">This is a website concept preview, so the form doesn't send yet. The fastest way to reach Carla is a call or text to 251-524-1431.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="f-brand">
+      <span class="seal" aria-hidden="true"><span>CW</span></span>
+      <div>
+        <b>CW Professional Notary Public</b>
+        <small>Mobile Notary · Creola &amp; Axis, AL</small>
+        <p>NNA-certified signing agent serving 11 Alabama counties: loan signings, general notary work, hospital and jail visits, fingerprinting, and remote online notarization.</p>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fees">Loan signing fees</a></li>
+        <li><a href="#about">About Carla</a></li>
+        <li><a href="#area">Service area</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Signings</h4>
+      <ul>
+        <li><a href="#fees">Purchase closings</a></li>
+        <li><a href="#fees">Refinance packages</a></li>
+        <li><a href="#services">HELOC &amp; home equity</a></li>
+        <li><a href="#services">Reverse mortgage</a></li>
+        <li><a href="#services">Loan modification</a></li>
+        <li><a href="#services">Deed in lieu</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Get in touch</h4>
+      <p class="f-line"><a class="f-tel" href="tel:2515241431">251-524-1431</a><br>Call or text, 7 days a week</p>
+      <p class="f-line"><a href="mailto:chillingbymail@gmail.com">chillingbymail@gmail.com</a></p>
+      <p class="f-line">PO Box 113, Creola, AL 36525<br>Mon-Sun · AM &amp; PM · 24-hour urgent service</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-in">
+      <span>© 2026 CW Professional Notary Public · Alabama commission valid through Nov 24, 2029</span>
+      <span>Notaries are not attorneys and cannot provide legal advice.</span>
+      <span>Website concept preview</span>
+    </div>
   </div>
 </footer>
 
-<a class="callbar" href="tel:+12515241431">Call or text Carla &middot; 251-524-1431</a>
+<a class="callbar" href="tel:2515241431">Call or text · <span>251-524-1431</span></a>
 
 <script>
 (function(){
+  var header=document.querySelector('.hdr');
+  var onScroll=function(){header.classList.toggle('scrolled',window.scrollY>8)};
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
   var rows=document.querySelectorAll('.fee-row');
-  var t=document.getElementById('feeType'),a=document.getElementById('feeAmount');
+  var typeEl=document.getElementById('feeType');
+  var amountEl=document.getElementById('feeAmount');
   rows.forEach(function(r){
     r.addEventListener('click',function(){
       rows.forEach(function(x){x.setAttribute('aria-pressed','false')});
       r.setAttribute('aria-pressed','true');
-      t.textContent=r.dataset.type;
-      a.textContent='$'+r.dataset.fee;
+      typeEl.textContent=r.dataset.type;
+      amountEl.textContent='$'+r.dataset.price;
     });
   });
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.12});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  rows[0].setAttribute('aria-pressed','true');
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  }else{
+    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+  }
 })();
 </script>
 </body>
