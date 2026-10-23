@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 2 Go Notary Service — Cynthia M. Trainor, Certified Notary Signing Agent · Mobile, AL</title>
+<meta name="description" content="Happy 2 Go Notary Service — Cynthia M. Trainor, NNA Certified Notary Signing Agent since 2002. 70,000+ loan signings across Mobile, Baldwin & the lower Alabama bay area. Sign your loan at home. Call or text 251-604-5552, 24-hour service.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%230d2a20'/%3E%3Ccircle cx='24' cy='24' r='14' fill='none' stroke='%23dd8f2f' stroke-width='2.6' stroke-dasharray='3 2.4'/%3E%3Cpath d='M17 30V19l7 6 7-6v11' fill='none' stroke='%23dd8f2f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#0d2a20; --pine2:#174536; --pine3:#1f6350;
+  --amber:#dd8f2f; --amber2:#eda23f; --ambersoft:#f7e6cd;
+  --paper:#f8f4ea; --card:#fffdf7; --ink:#152420; --mut:#5a6b60;
+  --line:rgba(23,69,54,.14); --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Archivo',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif;line-height:1.1;letter-spacing:-.008em}
+:focus-visible{outline:2.5px solid var(--amber);outline-offset:2px;border-radius:4px}
+.banner{background:linear-gradient(90deg,var(--pine),var(--pine3));color:#eaf3ee;text-align:center;font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;padding:9px 12px;font-weight:600}
+.banner b{color:var(--amber2)}
+header{position:sticky;top:0;z-index:50;background:rgba(13,42,32,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 24px;max-width:1140px;margin:0 auto;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.sealmk{width:38px;height:38px;flex:0 0 38px}
+.brand .nm{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1;letter-spacing:-.01em}
+.brand .sub{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:#9dbcae;margin-top:3px;display:block}
+nav.links{display:flex;gap:24px;align-items:center}
+nav.links a{color:#c3d6ca;font-size:14.5px;font-weight:500;transition:color .2s}
+nav.links a:hover{color:var(--amber2)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--amber2),#c77c1e);color:#20150a;font-weight:700;padding:12px 22px;border-radius:var(--r);box-shadow:0 8px 22px rgba(221,143,47,.35);transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(221,143,47,.45)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff;box-shadow:none}
+.btn.ghost:hover{border-color:var(--amber2);color:var(--amber2)}
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden;padding:92px 0 100px;background:radial-gradient(1100px 620px at 82% -12%,#2a7458 0%,transparent 56%),radial-gradient(760px 520px at -8% 112%,#1b5440 0%,transparent 52%),linear-gradient(158deg,var(--pine) 0%,#123828 58%,#0a2118 100%)}
+.hero .wm{position:absolute;right:-30px;top:14px;font-family:'Fraunces',serif;font-weight:700;font-style:italic;font-size:min(21vw,242px);line-height:.8;color:rgba(255,255,255,.028);pointer-events:none;user-select:none}
+.hero .glow{position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(221,143,47,.17),transparent 66%);top:-90px;left:-130px;pointer-events:none}
+.hgrid{display:grid;grid-template-columns:1.14fr .86fr;gap:56px;align-items:center;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber2);font-weight:600;margin-bottom:20px}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--amber2);box-shadow:0 0 12px var(--amber2)}
+.hero h1{font-size:clamp(41px,5.3vw,63px);font-weight:600}
+.hero h1 .it{font-style:italic;font-weight:600;color:var(--amber2)}
+.hero p.lede{margin:22px 0 30px;font-size:17.5px;color:#c7d9cd;max-width:530px;font-weight:400}
+.hero p.lede b{color:#fff;font-weight:600}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:30px 30px 26px;backdrop-filter:blur(8px);box-shadow:0 24px 60px rgba(3,14,9,.45);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hcard .ring{width:64px;height:64px;margin:0 auto 16px}
+.hcard h3{font-size:20px;text-align:center;margin-bottom:4px;font-weight:600}
+.hcard .tag{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--amber2);text-align:center;margin-bottom:16px}
+.hcard a.tel{display:block;text-align:center;font-family:'Fraunces',serif;font-weight:700;font-size:29px;color:#fff;transition:color .2s}
+.hcard a.tel:hover{color:var(--amber2)}
+.hcard .telsub{text-align:center;color:#9dbcae;font-size:13.5px;margin-top:7px}
+.hcard .hrs{margin-top:17px;padding-top:15px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:13px;color:#c7d9cd}
+.hcard .hrs b{color:#fff;font-weight:600}
+/* STRIP */
+.strip{background:var(--pine2);color:#d9e7dd;border-top:1px solid rgba(255,255,255,.08)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:26px 16px;text-align:center;border-left:1px solid rgba(255,255,255,.09)}
+.stat:first-child{border-left:none}
+.stat .n{font-family:'Fraunces',serif;font-weight:700;font-size:27px;color:#fff}
+.stat .n em{font-style:normal;color:var(--amber2)}
+.stat .l{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#9dbcae;margin-top:4px}
+/* SECTIONS */
+section{padding:86px 0}
+.sec-kicker{font-size:12.5px;letter-spacing:.21em;text-transform:uppercase;color:#b06e15;font-weight:700;margin-bottom:12px}
+.sec-title{font-size:clamp(30px,3.6vw,42px);font-weight:600;max-width:640px}
+.sec-sub{margin-top:14px;color:var(--mut);max-width:560px;font-size:16.5px}
+/* SERVICES — asymmetric editorial */
+.feat{display:grid;grid-template-columns:1.25fr .75fr;gap:0;margin-top:54px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 18px 46px rgba(13,42,32,.09)}
+.feat .fl{padding:42px 44px}
+.feat h3{font-size:26px;margin-bottom:10px;font-weight:600}
+.feat p{color:var(--mut);font-size:15.5px;max-width:460px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-weight:600;font-size:13.5px;color:var(--pine2);transition:border-color .2s,color .2s,transform .2s,box-shadow .2s}
+.chip:hover{border-color:var(--amber);color:#b06e15;transform:translateY(-2px)}
+.feat .fr{background:linear-gradient(165deg,var(--pine2),var(--pine));color:#e9f2ec;padding:42px 36px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+.feat .fr .big{font-family:'Fraunces',serif;font-size:52px;font-weight:700;color:var(--amber2);line-height:1}
+.feat .fr .cap{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#9dbcae}
+.feat .fr .hr-line{border-top:1px solid rgba(255,255,255,.14);padding-top:16px;font-size:14px;color:#c7d9cd}
+.beyond{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:26px}
+.bc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;display:flex;gap:18px;align-items:flex-start;transition:transform .25s,box-shadow .25s}
+.bc:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(13,42,32,.1)}
+.bc .ic{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#eef4ec,#e0ebdf);display:flex;align-items:center;justify-content:center;color:var(--pine3)}
+.bc h3{font-size:18.5px;margin-bottom:6px;font-weight:600}
+.bc p{font-size:14.5px;color:var(--mut)}
+/* QUOTE TOOL */
+.quote{background:linear-gradient(170deg,#eef3ea,#f8f4ea);border-top:1px solid #e2e8da;border-bottom:1px solid #e2e8da}
+.qgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;margin-top:48px;align-items:start}
+.qgrid>*,.about>*,.areagrid>*,.cgrid>*{min-width:0}
+.qpanel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 34px 30px;box-shadow:0 18px 46px rgba(13,42,32,.08)}
+.qpanel .lbl{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);font-weight:700;display:block;margin-bottom:12px}
+.qopts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.qopt{border:1.5px solid var(--line);background:#fff;border-radius:11px;padding:10px 18px;font-weight:600;font-size:14.5px;color:var(--pine2)}
+.qopt{transition:border-color .2s,background .2s,color .2s,box-shadow .2s}
+.qopt[aria-pressed="true"]{border-color:var(--amber);background:#fbf1de;color:#7c5410;box-shadow:0 4px 14px rgba(221,143,47,.18)}
+.qopt:hover{border-color:var(--amber)}
+.qadd{display:flex;gap:10px;flex-wrap:wrap}
+.qadd .qopt[aria-pressed="true"]{background:var(--pine2);border-color:var(--pine2);color:#fff;box-shadow:0 4px 14px rgba(23,69,54,.2)}
+.qout{margin-top:28px;border-top:1px dashed var(--line);padding-top:22px;display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.qout .amount{font-family:'Fraunces',serif;font-size:44px;font-weight:700;color:var(--pine)}
+.qout .amount sup{font-size:20px;font-weight:600}
+.qout .qlabel{font-size:13px;color:var(--mut);max-width:200px;line-height:1.45}
+.qnote{margin-top:14px;font-size:13px;color:var(--mut);background:var(--paper);border-radius:10px;padding:12px 14px;border:1px solid var(--line)}
+/* PRICING TABLE */
+.ptable{margin-top:30px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:17px 26px;border-bottom:1px solid var(--line)}
+.prow:last-of-type{border-bottom:none}
+.prow .what{font-weight:600;font-size:15.5px}
+.prow .what span{display:block;font-weight:400;color:var(--mut);font-size:13.5px;margin-top:1px}
+.prow .amt{font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--pine);white-space:nowrap}
+.pfees{margin-top:16px;font-size:14px;color:var(--mut);display:flex;flex-wrap:wrap;gap:8px 26px}
+.pfees b{color:var(--ink)}
+/* ABOUT */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;margin-top:52px;align-items:start}
+.pull{background:linear-gradient(165deg,var(--pine2),var(--pine));border-radius:20px;color:#e9f2ec;padding:44px 40px;position:relative;overflow:hidden;box-shadow:0 22px 54px rgba(13,42,32,.28)}
+.pull .qmark{position:absolute;top:-26px;right:6px;font-family:'Fraunces',serif;font-size:170px;color:rgba(255,255,255,.05);line-height:1}
+.pull blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:25px;line-height:1.35;font-weight:400;position:relative}
+.pull cite{display:block;margin-top:20px;font-style:normal;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber2)}
+.biotext p{font-size:15.5px;color:var(--mut);margin-bottom:16px}
+.biotext p b{color:var(--ink)}
+.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
+.cred{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;font-size:14px;display:flex;gap:12px;align-items:center}
+.cred svg{flex:0 0 20px;color:var(--pine3)}
+.cred b{display:block;font-size:14.5px}
+.cred span{color:var(--mut);font-size:13px}
+/* AREA */
+.areagrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start}
+.counties{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.county{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px;font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px}
+.county svg{color:var(--amber);flex:0 0 17px}
+.county.home{background:var(--pine2);color:#fff;border-color:var(--pine2)}
+.county.home svg{color:var(--amber2)}
+.zips{margin-top:22px;font-size:14.5px;color:var(--mut)}
+.zips b{color:var(--pine2)}
+.mapbox{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 40px rgba(13,42,32,.1);min-height:380px}
+.mapbox iframe{width:100%;height:380px;border:0;display:block;filter:saturate(.85)}
+.mapbox .cap{background:var(--card);padding:13px 18px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+/* CONTACT */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:46px;margin-top:50px;align-items:start}
+.ccards{display:grid;gap:15px}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:20px 22px;display:flex;gap:16px;align-items:center;transition:transform .2s,box-shadow .2s}
+.ccard:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(13,42,32,.1)}
+.ccard .ic{flex:0 0 44px;width:44px;height:44px;border-radius:11px;background:linear-gradient(135deg,#eef4ec,#e0ebdf);display:flex;align-items:center;justify-content:center;color:var(--pine3)}
+.ccard b{display:block;font-size:15.5px}
+.ccard span{color:var(--mut);font-size:13.5px}
+.ccard a.tel-big{font-family:'Fraunces',serif;font-size:21px;font-weight:700;color:var(--pine)}
+.ccard a:hover{color:#b06e15}
+form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 32px 26px;box-shadow:0 18px 46px rgba(13,42,32,.08)}
+label{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--mut);font-weight:700;display:block;margin:0 0 8px}
+input,textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;background:#fff;padding:12px 14px;font:inherit;font-size:15px;color:var(--ink);transition:border-color .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--amber)}
+input+label,textarea+label{margin-top:18px}
+form .btn{width:100%;justify-content:center;margin-top:22px}
+.qpanel .btn{white-space:normal;text-align:center}
+.formnote{margin-top:14px;font-size:12.5px;color:var(--mut);text-align:center}
+/* FOOTER */
+footer{background:var(--pine);color:#b9cfc0;padding:64px 0 0;margin-top:90px}
+.fgrid{display:grid;grid-template-columns:1.3fr .7fr .7fr 1fr;gap:40px}
+footer h4{color:#fff;font-family:'Fraunces',serif;font-size:15.5px;margin-bottom:15px;font-weight:600}
+footer a.fl{display:block;padding:4px 0;font-size:14.5px;color:#b9cfc0;transition:color .2s}
+footer a.fl:hover{color:var(--amber2)}
+footer .blurb{font-size:14.5px;margin-top:14px;max-width:300px}
+footer .socials{display:flex;gap:10px;margin-top:18px}
+footer .socials a{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#cfe0d5;transition:background .2s,color .2s,transform .2s}
+footer .socials a:hover{background:var(--amber);color:#20150a;transform:translateY(-2px)}
+.fbottom{border-top:1px solid rgba(255,255,255,.1);margin-top:52px;padding:22px 0 26px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#8aa394}
+.fbottom .pv{letter-spacing:.1em;text-transform:uppercase}
+/* MOTION */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hcard{animation:none}
+  *{scroll-behavior:auto}
+}
+/* RESPONSIVE */
+@media (max-width:980px){
+  .hgrid{grid-template-columns:1fr;gap:44px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:none}
+  .feat{grid-template-columns:1fr}
+  .qgrid,.about,.areagrid,.cgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:700px){
+  nav.links{display:none}
+  section{padding:66px 0}
+  .beyond{grid-template-columns:1fr}
+  .creds{grid-template-columns:1fr}
+  .counties{grid-template-columns:1fr}
+  .feat .fl{padding:30px 26px}
+  .feat .fr{padding:30px 26px}
+  .fgrid{grid-template-columns:1fr}
+  .qout .amount{font-size:38px}
+}
+</style>
+</head>
+<body id="top">
+<div class="banner">Website concept preview — <b>Happy 2 Go Notary Service</b> · Eight Mile / Mobile, AL</div>
+<header>
+  <div class="nav">
+    <a href="#top" class="brand" aria-label="Happy 2 Go Notary Service, back to top">
+      <svg class="sealmk" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="#dd8f2f" stroke-width="2.4"/>
+        <circle cx="24" cy="24" r="16.5" stroke="#dd8f2f" stroke-width="1" stroke-dasharray="2.6 2.6"/>
+        <path d="M17 30V19l7 6 7-6v11" stroke="#dd8f2f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span><span class="nm">Happy 2 Go Notary</span><span class="sub">Cynthia M. Trainor · Mobile, AL</span></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About Cynthia</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="tel:+12516045552">Call 251-604-5552</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wm" aria-hidden="true">Sign</div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hgrid">
+      <div>
+        <span class="kicker"><span class="dot"></span>Mobile &amp; Baldwin County · Lower Alabama</span>
+        <h1>Sign Your Loan<br><span class="it">At Home.</span></h1>
+        <p class="lede">I'm <b>Cynthia Trainor</b>, Mobile's own mobile notary, and I'm <b>Happy 2 Go</b> to you. NNA Certified Signing Agent since 2002 with <b>70,000+ loan signings</b> completed, from the bay area's kitchen tables to closing rooms across ten counties.</p>
+        <div class="ctas">
+          <a class="btn" href="tel:+12516045552">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 1.9z"/></svg>
+            Call Cynthia · 251-604-5552</a>
+          <a class="btn ghost" href="#pricing">See real pricing</a>
+        </div>
+      </div>
+      <div class="hcard" aria-label="Happy 2 Go Notary Service card">
+        <svg class="ring" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="#dd8f2f" stroke-width="2.2"/>
+          <circle cx="32" cy="32" r="23" stroke="#dd8f2f" stroke-width="1" stroke-dasharray="3 3"/>
+          <path d="M22 42V26l10 8 10-8v16" stroke="#dd8f2f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Happy 2 Go Notary Service</h3>
+        <div class="tag">Certified NSA · NNA member since 2002</div>
+        <a class="tel" href="tel:+12516045552">251-604-5552</a>
+        <div class="telsub">Call or text. I answer my own phone</div>
+        <div class="hrs"><span><b>24-hour service</b></span><span>7 days · AM &amp; PM</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">70,000<em>+</em></div><div class="l">Loan signings completed</div></div>
+      <div class="stat"><div class="n">Since <em>2002</em></div><div class="l">Serving lower Alabama</div></div>
+      <div class="stat"><div class="n">10 <em>counties</em></div><div class="l">Mobile, Baldwin &amp; beyond</div></div>
+      <div class="stat"><div class="n"><em>$25,000</em></div><div class="l">Bonded · Merchants Bonding Co.</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-kicker">What I sign</div>
+      <h2 class="sec-title">Every kind of loan closing, handled error-free</h2>
+      <p class="sec-sub">From RESPA packages to reverse mortgages, I execute your borrowers' documents as specified and on time, and I come to them.</p>
+    </div>
+    <div class="feat reveal">
+      <div class="fl">
+        <h3>Loan closings, at the borrower's table</h3>
+        <p>Refinances, purchases, REO, HELOC, commercial and debt-resolution closings across the Mobile &amp; Baldwin County bay area. Equipped with a dual-tray laser printer, portable scanner, mobile hotspot and GPS: everything a clean signing needs, wherever the table is.</p>
+        <div class="chips">
+          <span class="chip">RESPA</span><span class="chip">Refinance</span><span class="chip">Purchases &amp; Sales</span><span class="chip">REO</span><span class="chip">HELOC</span><span class="chip">Reverse Mortgages</span><span class="chip">Commercial</span><span class="chip">Debt Resolutions</span><span class="chip">Loan Modifications</span><span class="chip">Auto Refi</span><span class="chip">Settlement Modifications</span><span class="chip">Foreclosure Purchases</span>
+        </div>
+      </div>
+      <div class="fr">
+        <div><div class="big">24 hrs</div><div class="cap">Service, 7 days a week</div></div>
+        <div class="hr-line">Last-minute order or an extra-large package? I have a track record of making it happen. That's the make-it-happen attitude.</div>
+      </div>
+    </div>
+    <div class="beyond reveal">
+      <div class="bc">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <div><h3>Hospital &amp; facility signings</h3><p>Compassionate, careful notarization at the bedside, in care facilities and nursing homes.</p></div>
+      </div>
+      <div class="bc">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v7a6 6 0 0 0 12 0V3"/><circle cx="12" cy="17" r="0"/><path d="M12 16v5"/><path d="M8 21h8"/></svg></div>
+        <div><h3>Jail signings</h3><p>Experienced with correctional-facility procedures and the documentation they require.</p></div>
+      </div>
+      <div class="bc">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+        <div><h3>Weddings</h3><p>Alabama wedding officiant services, from courthouse papers to backyard ceremonies.</p></div>
+      </div>
+      <div class="bc">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 11a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0v-4a3 3 0 0 0-3-3z"/><path d="M19 3v2M22 6h-2M16 4.5l1.4 1.4"/><path d="M9 2l1.2 3.4L13.5 6"/></svg></div>
+        <div><h3>Fingerprinting</h3><p>FDLE-style ink fingerprinting for background checks, licenses and employment files.</p></div>
+      </div>
+      <div class="bc">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.5-4.5"/><circle cx="7.5" cy="16.5" r="4.5"/><path d="M10.5 13.5L15 9l-1.5-1.5L18 3"/></svg></div>
+        <div><h3>RON &amp; e-sign: remote online notarization</h3><p>RON-capable, with EscrowTab IPEN e-closings and e-sign, for borrowers who can't be in the room.</p></div>
+      </div>
+      <div class="bc">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div><h3>Witness &amp; interpreter, on call</h3><p>A witness on retainer (Mary Spencer) and a Spanish-speaking interpreter available impromptu. Se habla español.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="quote">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-kicker">Straight talk on price</div>
+      <h2 class="sec-title">Published rates. Estimate yours in two clicks</h2>
+      <p class="sec-sub">These are my real, published signing fees. No surprise invoices, no fine-print games.</p>
+    </div>
+    <div class="qgrid">
+      <div class="qpanel reveal" id="quoter">
+        <span class="lbl">How are the docs arriving?</span>
+        <div class="qopts" role="group" aria-label="Document delivery">
+          <button class="qopt" type="button" data-doc="overnight" aria-pressed="false">Overnight docs</button>
+          <button class="qopt" type="button" data-doc="edocs" aria-pressed="true">E-Docs (printed by me)</button>
+        </div>
+        <span class="lbl">Where is the signing?</span>
+        <div class="qopts" role="group" aria-label="Signing location">
+          <button class="qopt" type="button" data-zone="mobile" aria-pressed="true">Mobile County</button>
+          <button class="qopt" type="button" data-zone="baldwin" aria-pressed="false">Baldwin County</button>
+          <button class="qopt" type="button" data-zone="extended" aria-pressed="false">Extended counties</button>
+        </div>
+        <span class="lbl">Anything extra?</span>
+        <div class="qadd qopts" role="group" aria-label="Extras">
+          <button class="qopt" type="button" data-x="lastmin" aria-pressed="false">Last-minute / X-large pkg</button>
+          <button class="qopt" type="button" data-x="fax" aria-pressed="false">Fax-backs (+$20)</button>
+          <button class="qopt" type="button" data-x="print" aria-pressed="false">I print docs (+$25)</button>
+        </div>
+        <div class="qout">
+          <div class="amount" id="qamt">$100<sup>*</sup></div>
+          <div class="qlabel">estimated signing fee, based on my published rates</div>
+        </div>
+        <div class="qnote" id="qdesc">E-Docs signing within Mobile County, $100.</div>
+        <a class="btn" style="width:100%;justify-content:center;margin-top:20px" href="tel:+12516045552">Confirm &amp; book · 251-604-5552</a>
+      </div>
+      <div class="reveal">
+        <div class="ptable" role="table" aria-label="Published signing fees">
+          <div class="prow" role="row"><div class="what" role="cell">Overnight docs<span>within Mobile County</span></div><div class="amt" role="cell">$75</div></div>
+          <div class="prow" role="row"><div class="what" role="cell">E-Docs<span>within Mobile County</span></div><div class="amt" role="cell">$100</div></div>
+          <div class="prow" role="row"><div class="what" role="cell">E-Docs<span>within Baldwin County</span></div><div class="amt" role="cell">$125</div></div>
+          <div class="prow" role="row"><div class="what" role="cell">E-Docs<span>extended counties</span></div><div class="amt" role="cell">$150</div></div>
+          <div class="prow" role="row"><div class="what" role="cell">Last-minute docs / X-large package</div><div class="amt" role="cell">$150</div></div>
+        </div>
+        <div class="pfees">
+          <span><b>Fax-backs:</b> $20</span>
+          <span><b>Printing fee:</b> $25</span>
+          <span><b>Drive-by:</b> $50 if the order cancels</span>
+        </div>
+        <p class="qnote" style="margin-top:18px">Travel is included within the zone. Mileage beyond the extended counties is quoted when you book. Final fee is always confirmed by phone before we lock the appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-kicker">About Cynthia</div>
+      <h2 class="sec-title">"The Trainor": a make-it-happen signing agent</h2>
+    </div>
+    <div class="about">
+      <div class="pull reveal">
+        <div class="qmark" aria-hidden="true">"</div>
+        <blockquote>Servicing the real estate community is my happy. Do yourself the greatest good: call Cynthia and book now!</blockquote>
+        <cite>Cynthia M. Trainor</cite>
+      </div>
+      <div class="biotext reveal">
+        <p>I'm the independent type, a University of South Alabama graduate (BA, Business Management &amp; Accounting) who found a true love for this work through <b>15 years in housing management</b>. Since 2002 I've been a <b>Certified Notary Signing Agent with the National Notary Association</b>, with additional certification through Notary 2 Pro, and I've processed <b>over 70,000 loan signings</b> to date, and growing.</p>
+        <p>Off the clock I play a little tennis, travel, and spend quality time with family and friends. I'm also an income tax practitioner and a former US Census field rep. Numbers and people, that's me. Knowledgeable, flexible, energetic, and always open to new opportunities.</p>
+        <div class="creds">
+          <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg><div><b>NNA Certified NSA</b><span>Since 2002 · Notary 2 Pro certified</span></div></div>
+          <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Background screened</b><span>USAFACT, Inc. · current</span></div></div>
+          <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><div><b>Alabama @ Large commission</b><span>Valid through 12/27/2028</span></div></div>
+          <div class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M12 8v4M12 16h.01"/></svg><div><b>$25,000 bond</b><span>Merchants Bonding Co.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-kicker">Where I go</div>
+      <h2 class="sec-title">Ten counties, one happy notary on the road</h2>
+      <p class="sec-sub">Based in Eight Mile, covering the Mobile &amp; Baldwin County bay area and the lower Alabama counties beyond.</p>
+    </div>
+    <div class="areagrid">
+      <div class="reveal">
+        <div class="counties">
+          <div class="county home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Mobile County</div>
+          <div class="county home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Baldwin County</div>
+          <div class="county">Washington</div>
+          <div class="county">Clarke</div>
+          <div class="county">Monroe</div>
+          <div class="county">Escambia</div>
+          <div class="county">Conecuh</div>
+          <div class="county">Choctaw</div>
+          <div class="county">Covington</div>
+          <div class="county">Butler</div>
+        </div>
+        <p class="zips">Core service zips: <b>36616 · 36608 · 36526 · 36507 · 36535</b>, and everywhere between. Mailing address: P.O. Box 161283, Mobile, AL 36616.</p>
+      </div>
+      <div class="mapbox reveal">
+        <iframe title="Map of the Mobile, Alabama bay area" src="https://www.openstreetmap.org/export/embed.html?bbox=-88.35%2C30.42%2C-87.62%2C30.95&amp;layer=mapnik" loading="lazy"></iframe>
+        <div class="cap">The bay area: Mobile, Prichard, Eight Mile, Chickasaw, Satsuma, Creola, and across the bay to Baldwin County.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:20px">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-kicker">Book a signing</div>
+      <h2 class="sec-title">Call, text, or send a note. I'm happy to go</h2>
+    </div>
+    <div class="cgrid">
+      <div class="ccards reveal">
+        <a class="ccard" href="tel:+12516045552">
+          <div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 1.9z"/></svg></div>
+          <div><b class="tel-big">251-604-5552</b><span>Call or text · 24-hour service, 7 days a week</span></div>
+        </a>
+        <a class="ccard" href="mailto:happy2gonotary@yahoo.com">
+          <div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+          <div><b>happy2gonotary@yahoo.com</b><span>Docs can go straight here</span></div>
+        </a>
+        <div class="ccard">
+          <div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><b>Happy 2 Go Notary Service</b><span>P.O. Box 161283 · Mobile, AL 36616</span></div>
+        </div>
+        <div class="ccard">
+          <div class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div><b>Same-week, same-day, last-minute</b><span>AM &amp; PM appointments, Monday through Sunday</span></div>
+        </div>
+      </div>
+      <form class="reveal" onsubmit="event.preventDefault();this.querySelector('.formnote').textContent='Thanks! This is a website concept preview, so nothing was sent. Call or text 251-604-5552 to book the real thing.';">
+        <label for="fname">Your name</label>
+        <input id="fname" name="name" type="text" autocomplete="name" placeholder="Borrower or title company contact">
+        <label for="fphone">Phone or email</label>
+        <input id="fphone" name="phone" type="text" autocomplete="tel" placeholder="Where should Cynthia reach you?">
+        <label for="fneed">What needs signing?</label>
+        <textarea id="fneed" name="need" rows="4" placeholder="e.g. Refinance closing in Daphne, Tuesday afternoon, e-docs to follow"></textarea>
+        <button class="btn" type="submit">Send booking request</button>
+        <p class="formnote">This form is part of a website concept preview: nothing is sent yet.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#top" class="brand" style="color:#fff">
+          <svg class="sealmk" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="#dd8f2f" stroke-width="2.4"/>
+            <circle cx="24" cy="24" r="16.5" stroke="#dd8f2f" stroke-width="1" stroke-dasharray="2.6 2.6"/>
+            <path d="M17 30V19l7 6 7-6v11" stroke="#dd8f2f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span><span class="nm">Happy 2 Go Notary</span><span class="sub" style="color:#8aa394">Cynthia M. Trainor · Mobile, AL</span></span>
+        </a>
+        <p class="blurb">Mobile's own mobile notary: certified loan signing services for the Mobile &amp; Baldwin County bay area since 2002. Sign your loan at home!</p>
+        <div class="socials">
+          <a href="https://facebook.com/happy2gonotary" aria-label="Happy 2 Go Notary on Facebook" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.4V13h2.4v8h3.7z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a class="fl" href="#services">Services</a>
+        <a class="fl" href="#pricing">Pricing</a>
+        <a class="fl" href="#about">About Cynthia</a>
+        <a class="fl" href="#area">Service area</a>
+        <a class="fl" href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a class="fl" href="#services">Loan closings &amp; refis</a>
+        <a class="fl" href="#services">Hospital &amp; jail signings</a>
+        <a class="fl" href="#services">Weddings</a>
+        <a class="fl" href="#services">Fingerprinting</a>
+        <a class="fl" href="#services">RON &amp; e-sign</a>
+      </div>
+      <div>
+        <h4>Credentials</h4>
+        <span class="fl" style="display:block;padding:4px 0;font-size:14.5px">NNA Certified NSA since 2002</span>
+        <span class="fl" style="display:block;padding:4px 0;font-size:14.5px">Alabama @ Large · exp. 12/27/2028</span>
+        <span class="fl" style="display:block;padding:4px 0;font-size:14.5px">$25,000 bond · USAFACT screened</span>
+        <a class="fl" href="tel:+12516045552"><b style="color:#fff">251-604-5552</b></a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© 2026 Happy 2 Go Notary Service · Eight Mile / Mobile, Alabama</span>
+      <span class="pv">Website concept preview</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var doc='edocs', zone='mobile', lastmin=false, fax=false, printx=false;
+  var base={overnight:{mobile:75,baldwin:100,extended:100},edocs:{mobile:100,baldwin:125,extended:150}};
+  function fmt(n){return '$'+n;}
+  function calc(){
+    var amt, desc;
+    if(lastmin){
+      amt=150;
+      desc='Last-minute docs / extra-large package: flat $150.';
+    } else if(doc==='overnight'){
+      amt=zone==='mobile'?75:100;
+      desc=zone==='mobile'?'Overnight docs within Mobile County, $75.':'Overnight docs outside Mobile County are quoted at the E-Docs rate.';
+    } else {
+      amt=base.edocs[zone];
+      desc='E-Docs signing within '+(zone==='mobile'?'Mobile':zone==='baldwin'?'Baldwin':'the extended')+' '+(zone==='extended'?'counties':'County')+': '+fmt(amt)+'.';
+    }
+    var extras=[];
+    if(fax){amt+=20;extras.push('fax-backs +$20');}
+    if(printx){amt+=25;extras.push('printing +$25');}
+    document.getElementById('qamt').innerHTML=fmt(amt)+'<sup>*</sup>';
+    document.getElementById('qdesc').textContent=desc+(extras.length?' Includes '+extras.join(', ')+'.':'');
+  }
+  document.querySelectorAll('#quoter .qopt').forEach(function(b){
+    b.addEventListener('click', function(){
+      if(b.dataset.doc){
+        doc=b.dataset.doc;
+        document.querySelectorAll('#quoter [data-doc]').forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});
+      } else if(b.dataset.zone){
+        zone=b.dataset.zone;
+        document.querySelectorAll('#quoter [data-zone]').forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});
+      } else {
+        if(b.dataset.x==='lastmin'){lastmin=!lastmin;}
+        if(b.dataset.x==='fax'){fax=!fax;}
+        if(b.dataset.x==='print'){printx=!printx;}
+        b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
+      }
+      calc();
+    });
+  });
+  calc();
+  /* reveal on scroll */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
