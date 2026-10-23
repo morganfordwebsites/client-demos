@@ -61,7 +61,6 @@ a{color:inherit}
 .nav a:hover{color:var(--ink);border-color:var(--brass)}
 .hdr-cta{flex:none;text-decoration:none;background:var(--ox);color:var(--cream);font-weight:700;font-size:13.5px;padding:11px 20px;border-radius:6px;letter-spacing:.02em;transition:transform .18s ease-out,background .18s ease-out,box-shadow .18s ease-out}
 .hdr-cta:hover{background:var(--ox-deep);transform:translateY(-1px);box-shadow:0 8px 20px rgba(66,20,26,.28)}
-@media (max-width:1180px){.cta-pre{display:none}}
 @media (max-width:920px){.nav{display:none}.hdr-in{gap:16px}.brand{margin-right:auto}.hdr-cta{padding:10px 16px;font-size:13px}}
 @media (max-width:920px){.brand b{font-size:1rem}.brand small{letter-spacing:.12em;font-size:10px}}
 @media (max-width:720px){.hdr-cta{display:none}}
@@ -83,7 +82,7 @@ a{color:inherit}
 h1{font-family:var(--serif);font-weight:480;font-size:clamp(2.7rem,6vw,4.7rem);line-height:1.06;margin:22px 0 0;max-width:16ch;letter-spacing:.005em}
 h1 em{font-style:italic;font-weight:430;color:var(--brass-l)}
 .hero-sub{margin-top:22px;max-width:50ch;color:var(--cream-soft);font-size:1.07rem}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;padding-bottom:64px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;padding-bottom:118px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:7px;padding:15px 26px;font-weight:800;font-size:15px;text-decoration:none;transition:transform .18s ease-out,box-shadow .18s ease-out,background .18s ease-out,border-color .18s ease-out;border:none;cursor:pointer;font-family:var(--sans)}
 .btn-solid{background:var(--brass-l);color:var(--ox-deep)}
 .btn-solid:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(217,182,108,.3)}
@@ -92,7 +91,7 @@ h1 em{font-style:italic;font-weight:430;color:var(--brass-l)}
 
 /* hero card */
 .hcard-wrap{position:relative;max-width:1200px;margin:0 auto;padding:0 28px}
-.hcard{position:relative;background:var(--paper);color:var(--ink);border-radius:var(--r) var(--r) 0 0;margin-top:-72px;padding:30px 34px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;box-shadow:0 -18px 50px rgba(0,0,0,.35);border:1px solid var(--line);border-bottom:none}
+.hcard{position:relative;background:var(--paper);color:var(--ink);border-radius:var(--r) var(--r) 0 0;margin-top:-48px;padding:30px 34px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;box-shadow:0 -18px 50px rgba(0,0,0,.35);border:1px solid var(--line);border-bottom:none}
 .hcard .seal{width:88px;height:88px}
 .hcard .seal span{font-size:29px}
 .hcard-name{font-family:var(--serif);font-size:1.5rem;font-weight:540;line-height:1.12}
@@ -105,7 +104,7 @@ h1 em{font-style:italic;font-weight:430;color:var(--brass-l)}
 
 /* ---------- trust ledger ---------- */
 .ledger{background:var(--paper);border-bottom:1px solid var(--line)}
-.ledger-in{max-width:1200px;margin:0 auto;padding:26px 28px;display:flex;flex-wrap:wrap;gap:0;justify-content:space-between}
+.ledger-in{max-width:1200px;margin:0 auto;padding:32px 28px 28px;display:flex;flex-wrap:wrap;gap:0;justify-content:space-between}
 .ledger-item{padding:4px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:150px}
 .ledger-item:first-child{border-left:none;padding-left:0}
 .ledger-item b{font-size:14.5px}
@@ -203,6 +202,32 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
 .map-tag{position:absolute;left:14px;bottom:14px;background:rgba(38,14,18,.88);color:var(--cream);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;padding:10px 16px;border-radius:6px;border:1px solid rgba(217,182,108,.4)}
 @media (max-width:920px){.area-grid{grid-template-columns:1fr;gap:36px}}
 
+/* ---------- online booking ---------- */
+.book{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.book-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;margin-top:52px;align-items:start}
+.steps{list-style:none;counter-reset:st;border-top:1px solid var(--line)}
+.steps li{position:relative;padding:20px 0 20px 52px;border-bottom:1px solid var(--line)}
+.steps li::before{counter-increment:st;content:"0" counter(st);position:absolute;left:2px;top:22px;font-family:var(--serif);font-style:italic;color:var(--brass);font-size:1.05rem}
+.steps b{display:block;font-size:1.05rem}
+.steps span{font-size:.95rem;color:var(--muted);display:block;margin-top:2px}
+.need-card{margin-top:28px;border:1px dashed var(--brass);border-radius:var(--r);padding:22px 24px;background:rgba(217,182,108,.08)}
+.need-card ul{list-style:none;margin-top:12px}
+.need-card li{padding:7px 0 7px 22px;position:relative;font-size:.95rem}
+.need-card li::before{content:"";position:absolute;left:2px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--ox)}
+.book-panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:32px 32px;box-shadow:var(--shadow)}
+.book-panel h3{font-family:var(--serif);font-weight:520;font-size:1.5rem;margin-bottom:6px}
+.bk-label{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--muted);margin:20px 0 10px}
+.day-strip,.slot-grid{display:flex;gap:10px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:9px 14px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:var(--sans);color:var(--ink);transition:background .15s ease-out,border-color .15s ease-out,transform .15s ease-out}
+.chip:hover{border-color:var(--brass);transform:translateY(-1px)}
+.chip[aria-pressed="true"]{background:var(--ox);border-color:var(--ox);color:var(--cream)}
+.book-panel .btn{width:100%;margin-top:26px;background:var(--ox);color:var(--cream);font-size:15px;padding:15px}
+.book-panel .btn:hover{background:var(--ox-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(66,20,26,.3)}
+.bk-confirm{margin-top:16px;padding:16px 18px;border-radius:8px;background:rgba(110,31,38,.07);border:1px solid rgba(110,31,38,.2);font-size:.92rem;display:none}
+.bk-confirm.show{display:block}
+.bk-confirm b{color:var(--ox)}
+@media (max-width:920px){.book-grid{grid-template-columns:1fr;gap:36px}}
+
 /* ---------- contact ---------- */
 .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;margin-top:52px;align-items:start}
 .c-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -211,14 +236,17 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
 .c-card .rule-word{display:block;margin-bottom:10px}
 .c-card a.big{font-family:var(--serif);font-weight:540;font-size:1.3rem;text-decoration:none;color:var(--ink);overflow-wrap:anywhere}
 .c-card a.big:hover{color:var(--ox)}
+.c-card a.mail{font-family:var(--sans);font-size:.98rem;font-weight:700;line-height:1.45}
 .c-card p{font-size:.9rem;color:var(--muted);margin-top:6px}
 .c-form{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:34px 34px;box-shadow:var(--shadow)}
 .c-form h3{font-family:var(--serif);font-weight:520;font-size:1.55rem;margin-bottom:6px}
 .c-form .form-sub{font-size:.92rem;color:var(--muted);margin-bottom:24px}
 .fld{display:block;margin-bottom:18px}
 .fld span{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:8px}
-.fld input{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:13px 16px;font-family:var(--sans);font-size:15px;color:var(--ink);transition:border-color .15s ease-out,box-shadow .15s ease-out}
-.fld input:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(168,132,60,.18)}
+.fld input,.fld select,.fld textarea{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:13px 16px;font-family:var(--sans);font-size:15px;color:var(--ink);transition:border-color .15s ease-out,box-shadow .15s ease-out}
+.fld select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236e1f26' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.fld textarea{min-height:112px;resize:vertical;line-height:1.5}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(168,132,60,.18)}
 .fld-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .c-form .btn{width:100%;background:var(--ox);color:var(--cream);font-size:15px;padding:15px}
 .c-form .btn:hover{background:var(--ox-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(66,20,26,.3)}
@@ -274,9 +302,10 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
       <a href="#fees">Fees</a>
       <a href="#about">About</a>
       <a href="#area">Service Area</a>
+      <a href="#book">Book Online</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="hdr-cta" href="tel:2515241431"><span class="cta-pre">Call or text · </span>251-524-1431</a>
+    <a class="hdr-cta" href="tel:2515241431">251-524-1431</a>
   </div>
 </header>
 
@@ -288,7 +317,7 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
     <h1>The notary who <em>comes to you</em>, wherever you are.</h1>
     <p class="hero-sub">CW Professional Notary Public is the mobile signing service of Carla Williams: NNA-certified, background-checked, and backed by 38+ years of federal service spent getting critical documents right.</p>
     <div class="hero-ctas">
-      <a class="btn btn-solid" href="tel:2515241431">Call or text · 251-524-1431</a>
+      <a class="btn btn-solid" href="tel:2515241431">251-524-1431</a>
       <a class="btn btn-ghost" href="#fees">See loan signing fees</a>
     </div>
   </div>
@@ -417,7 +446,7 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
           <p class="type" id="feeType">Purchase Closing</p>
           <p class="amount" id="feeAmount">$125</p>
           <p class="per">flat fee · mobile service included</p>
-          <a class="btn" id="feeCall" href="tel:2515241431">Book this signing · call 251-524-1431</a>
+          <a class="btn" id="feeCall" href="tel:2515241431">251-524-1431</a>
           <a class="btn alt" href="sms:2515241431">Or send a text message</a>
         </aside>
       </div>
@@ -486,10 +515,57 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
     </div>
   </section>
 
+  <!-- ================= ONLINE BOOKING ================= -->
+  <section class="sec book" id="book">
+    <div class="sec-head">
+      <span class="sec-num">V · Online Notarization</span>
+      <h2>Sign from home with <em>online notarization</em>.</h2>
+      <p class="lede">Can't meet in person? Carla is RON capable: your documents can be notarized over a live video session, sealed digitally, and returned to you the same day.</p>
+    </div>
+    <div class="wrap">
+      <div class="book-grid">
+        <div class="rv">
+          <ol class="steps">
+            <li><b>Book a time</b><span>Pick your signing type and hold a time that works for you below.</span></li>
+            <li><b>Verify your ID</b><span>Join the video call with a government-issued photo ID in hand.</span></li>
+            <li><b>Sign and seal</b><span>Sign on camera; Carla applies her digital seal and returns your completed documents.</span></li>
+          </ol>
+          <div class="need-card">
+            <span class="rule-word">What you will need</span>
+            <ul>
+              <li>A valid government-issued photo ID</li>
+              <li>A device with camera and microphone</li>
+              <li>To be physically in the United States during the session</li>
+            </ul>
+          </div>
+        </div>
+        <div class="book-panel rv">
+          <h3>Book an online session</h3>
+          <p class="form-sub">Scheduling runs through TidyCal in the live build: pick a slot here, then confirm instantly on Carla's calendar.</p>
+          <label class="fld"><span>Signing type</span>
+            <select id="bkType">
+              <option>Single document</option>
+              <option>Multiple documents</option>
+              <option>Loan package (online closing)</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <p class="bk-label">Choose a day</p>
+          <div class="day-strip" id="bkDays"></div>
+          <p class="bk-label">Choose a time</p>
+          <div class="slot-grid" id="bkSlots"></div>
+          <button class="btn" id="bkBtn" type="button">Request this time</button>
+          <div class="bk-confirm" id="bkConfirm" aria-live="polite"></div>
+          <p class="form-note">Sample availability for this concept preview. In the live build, the button opens Carla's TidyCal calendar and locks your slot in real time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= CONTACT ================= -->
   <section class="sec" id="contact">
     <div class="sec-head">
-      <span class="sec-num">V · Contact</span>
+      <span class="sec-num">VI · Contact</span>
       <h2>Ready when <em>you are</em>.</h2>
       <p class="lede">Call or text is fastest. Tell Carla what needs signing and where, and she will confirm a time that works, including evenings and weekends.</p>
     </div>
@@ -508,7 +584,7 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
           </div>
           <div class="c-card">
             <span class="rule-word">Email</span>
-            <a class="big" href="mailto:chillingbymail@gmail.com">chillingbymail@gmail.com</a>
+            <a class="big mail" href="mailto:chillingbymail@gmail.com">chillingbymail@gmail.com</a>
             <p>Good for signing packages and documents in advance</p>
           </div>
           <div class="c-card wide">
@@ -524,7 +600,20 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
             <label class="fld"><span>Name</span><input type="text" name="name" autocomplete="name"></label>
             <label class="fld"><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
           </div>
-          <label class="fld"><span>What needs signing?</span><input type="text" name="job"></label>
+          <label class="fld"><span>Email</span><input type="email" name="email" autocomplete="email"></label>
+          <label class="fld"><span>Service</span>
+            <select name="service">
+              <option value="">Select a service</option>
+              <option>General notary work</option>
+              <option>Loan signing</option>
+              <option>Fingerprinting</option>
+              <option>Hospital or jail signing</option>
+              <option>Wedding or family documents</option>
+              <option>Online notarization (RON)</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label class="fld"><span>Description</span><textarea name="description" placeholder="What needs signing, where, and when?"></textarea></label>
           <button class="btn" type="submit">Send request</button>
           <p class="form-note">This is a website concept preview, so the form doesn't send yet. The fastest way to reach Carla is a call or text to 251-524-1431.</p>
         </form>
@@ -551,6 +640,7 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
         <li><a href="#fees">Loan signing fees</a></li>
         <li><a href="#about">About Carla</a></li>
         <li><a href="#area">Service area</a></li>
+        <li><a href="#book">Book online notarization</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -581,7 +671,7 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
   </div>
 </footer>
 
-<a class="callbar" href="tel:2515241431">Call or text · <span>251-524-1431</span></a>
+<a class="callbar" href="tel:2515241431"><span>251-524-1431</span></a>
 
 <script>
 (function(){
@@ -601,6 +691,48 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
     });
   });
   rows[0].setAttribute('aria-pressed','true');
+
+  var dayNames=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var dayWrap=document.getElementById('bkDays');
+  var slotWrap=document.getElementById('bkSlots');
+  var bkType=document.getElementById('bkType');
+  var bkBtn=document.getElementById('bkBtn');
+  var bkConfirm=document.getElementById('bkConfirm');
+  var selDay=null,selSlot=null;
+  if(dayWrap&&slotWrap){
+    for(var i=0;i<7;i++){
+      var d=new Date();d.setDate(d.getDate()+i);
+      var label=dayNames[d.getDay()]+' '+d.getDate();
+      var dc=document.createElement('button');
+      dc.type='button';dc.className='chip';dc.textContent=label;
+      dc.setAttribute('aria-pressed',i===0?'true':'false');
+      if(i===0)selDay=label;
+      dc.addEventListener('click',function(){
+        dayWrap.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
+        this.setAttribute('aria-pressed','true');selDay=this.textContent;renderConfirm('');
+      });
+      dayWrap.appendChild(dc);
+    }
+    ['9:00 AM','10:30 AM','1:00 PM','3:00 PM','5:00 PM'].forEach(function(t,idx){
+      var sc=document.createElement('button');
+      sc.type='button';sc.className='chip';sc.textContent=t;
+      sc.setAttribute('aria-pressed',idx===2?'true':'false');
+      if(idx===2)selSlot=t;
+      sc.addEventListener('click',function(){
+        slotWrap.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
+        this.setAttribute('aria-pressed','true');selSlot=this.textContent;renderConfirm('');
+      });
+      slotWrap.appendChild(sc);
+    });
+    function renderConfirm(msg){
+      if(!msg)return;
+      bkConfirm.innerHTML='<b>Noted.</b> '+msg+' In the live build, this confirms instantly on Carla\'s TidyCal calendar. For now, call or text 251-524-1431 to lock it in.';
+      bkConfirm.classList.add('show');
+    }
+    bkBtn.addEventListener('click',function(){
+      renderConfirm(bkType.value+' on '+selDay+' at '+selSlot+'.');
+    });
+  }
 
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(!reduce&&'IntersectionObserver' in window){
