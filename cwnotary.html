@@ -176,11 +176,14 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
 .portrait-cap b{font-family:var(--serif);font-size:1.22rem;font-weight:560}
 .portrait-cap small{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:800}
 @media (max-width:920px){.portrait{max-width:480px}}
-.timeline{border-top:1px solid var(--line)}
-.tl-row{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:22px 6px;border-bottom:1px solid var(--line);align-items:baseline}
-.tl-row b{font-family:var(--serif);font-weight:560;font-size:1.35rem;color:var(--ox)}
-.tl-row span{color:var(--muted);font-size:.96rem}
-.tl-row span strong{display:block;color:var(--ink);font-size:1.02rem;font-weight:700;margin-bottom:2px}
+.tl-band{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--paper-2);box-shadow:0 6px 18px rgba(38,30,21,.05)}
+.tl-cell{padding:26px 24px;border-right:1px solid var(--line-soft);display:flex;flex-direction:column;gap:7px}
+.tl-cell:last-child{border-right:none}
+.tl-cell b{font-family:var(--serif);font-weight:560;font-size:1.65rem;color:var(--ox);line-height:1}
+.tl-cell strong{color:var(--ink);font-size:.98rem;font-weight:800;letter-spacing:.01em}
+.tl-cell span{color:var(--muted);font-size:.9rem;line-height:1.55}
+@media (max-width:920px){.tl-band{grid-template-columns:1fr 1fr}.tl-cell:nth-child(even){border-right:none}.tl-cell:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}}
+@media (max-width:560px){.tl-band{grid-template-columns:1fr}.tl-cell{border-right:none}.tl-cell:not(:last-child){border-bottom:1px solid var(--line-soft)}}
 .pull{margin-top:28px;padding:28px 32px 24px;border:1px solid rgba(168,132,60,.35);background:linear-gradient(160deg,rgba(217,182,108,.14),rgba(217,182,108,.04));border-radius:var(--r)}
 .pull::before{content:"";display:block;width:44px;height:3px;border-radius:2px;background:var(--brass);margin-bottom:16px}
 .pull p{font-family:var(--serif);font-style:italic;font-size:1.26rem;line-height:1.5;color:var(--ink)}
@@ -504,12 +507,6 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
               <small>NNA-Certified Signing Agent</small>
             </div>
           </div>
-          <div class="timeline">
-            <div class="tl-row"><b>38+ yrs</b><span><strong>Federal service</strong>Retired federal employee, decades of exacting public work.</span></div>
-            <div class="tl-row"><b>20+ yrs</b><span><strong>Property management</strong>Leases, files, and paperwork that had to be right the first time.</span></div>
-            <div class="tl-row"><b>5+ yrs</b><span><strong>Auto finance desk</strong>Auto loans and the critical legal and financial documents behind them.</span></div>
-            <div class="tl-row"><b>Today</b><span><strong>CW Professional Notary Public</strong>NNA-certified signing agent serving 11 Alabama counties, mobile.</span></div>
-          </div>
         </div>
         <div class="about-copy rv">
           <p>Carla Williams spent more than <strong>38 years as a federal employee</strong>, including <strong>over 20 years in property management</strong> and five-plus years in a car dealership finance department, where she handled auto loans and the critical legal and financial documents that come with them.</p>
@@ -526,6 +523,12 @@ h2 em{font-style:italic;font-weight:430;color:var(--ox)}
             <cite>Carla Williams · professional profile</cite>
           </blockquote>
         </div>
+      </div>
+      <div class="tl-band rv">
+        <div class="tl-cell"><b>38+ yrs</b><strong>Federal service</strong><span>Retired federal employee, decades of exacting public work.</span></div>
+        <div class="tl-cell"><b>20+ yrs</b><strong>Property management</strong><span>Leases, files, and paperwork that had to be right the first time.</span></div>
+        <div class="tl-cell"><b>5+ yrs</b><strong>Auto finance desk</strong><span>Auto loans and the critical legal and financial documents behind them.</span></div>
+        <div class="tl-cell"><b>Today</b><strong>CW Professional Notary Public</strong><span>NNA-certified signing agent serving 11 Alabama counties, mobile.</span></div>
       </div>
     </div>
   </section>
