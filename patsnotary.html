@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAT's Notary — Certified Mobile Notary &amp; Signing Agent, Greensboro, NC</title>
+<meta name="description" content="PAT's Notary — Patricia Thurman, Certified &amp; background-screened NNA signing agent serving Greensboro and ten Piedmont NC counties. Hospital, jail and loan signings. Call or text (757) 636-1408.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%23133440'/%3E%3Ctext x='24' y='30' font-family='Georgia,serif' font-size='16' font-weight='700' fill='%23e7c9a9' text-anchor='middle'%3EPT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#133440; --deep2:#1b4a58; --deep3:#0c232c;
+  --paper:#f6f2e9; --card:#fffdf8; --ink:#182a30; --mut:#5a6b70;
+  --rust:#b1542f; --rust2:#93401f; --rustsoft:#f2e0d4;
+  --line:rgba(19,52,64,.14); --line-soft:rgba(19,52,64,.08);
+  --serif:'Newsreader',Georgia,serif; --sans:'Karla',sans-serif;
+  --r:14px; --sh:0 18px 44px rgba(12,35,44,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.hgrid>*,.about-grid>*,.svc>*,.cred-grid>*,.cov-grid>*,.contact-grid>*,.f-grid>*{min-width:0}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2.5px solid var(--rust);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+h1,h2,h3,.disp{font-family:var(--serif);line-height:1.12;letter-spacing:-.005em;font-weight:600}
+
+/* banner */
+.banner{background:var(--deep3);color:#d8e2e2;text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:9px 14px;font-weight:700}
+.banner b{color:#e7c9a9;font-weight:700}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(246,242,233,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);transition:box-shadow .2s ease-out}
+.hdr.scrolled{box-shadow:0 10px 30px rgba(19,52,64,.10)}
+.hdr-in{max-width:1160px;margin:0 auto;padding:13px 26px;display:flex;align-items:center;gap:30px}
+.brand{display:flex;align-items:center;gap:13px;flex:none}
+.seal{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 30% 26%,var(--deep2),var(--deep3) 76%);display:grid;place-items:center;flex:none;box-shadow:0 4px 12px rgba(12,35,44,.28)}
+.seal span{font-family:var(--serif);font-weight:700;color:#e7c9a9;font-size:15px;letter-spacing:.03em}
+.brand .nm{font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.05}
+.brand .nm i{font-style:italic}
+.brand .sub{font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-top:2px}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{font-size:14.5px;font-weight:600;color:#33474d;transition:color .2s}
+.nav a:hover{color:var(--rust)}
+.callbtn{display:inline-flex;align-items:center;gap:8px;background:var(--rust);color:#fff6ee;font-weight:700;font-size:14.5px;padding:10px 18px;border-radius:10px;white-space:nowrap;transition:transform .2s,background .2s,box-shadow .2s;box-shadow:0 6px 16px rgba(177,84,47,.28)}
+.callbtn:hover{background:var(--rust2);transform:translateY(-2px);box-shadow:0 10px 22px rgba(177,84,47,.36)}
+.callbtn svg{width:15px;height:15px}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(1000px 560px at 82% -12%,var(--deep2) 0%,transparent 56%),radial-gradient(720px 460px at -8% 112%,#164554 0%,transparent 52%),linear-gradient(158deg,var(--deep) 0%,#102d38 62%,var(--deep3) 100%);color:#fff;overflow:hidden;padding:86px 0 104px}
+.hero .wm{position:absolute;right:-56px;top:-8px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:min(27vw,290px);line-height:.82;color:rgba(255,255,255,.035);pointer-events:none;user-select:none}
+.hero .glow{position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(231,201,169,.15),transparent 66%);top:-90px;left:-130px;pointer-events:none}
+.hgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#e7c9a9;font-weight:700;margin-bottom:22px}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:#e7c9a9;box-shadow:0 0 12px #e7c9a9}
+.hero h1{font-size:clamp(38px,5.1vw,60px);font-weight:600}
+.hero h1 em{font-style:italic;color:#ead6bc}
+.hero p.lede{margin:22px 0 30px;font-size:17.5px;color:#c2d1d3;max-width:540px;font-weight:400}
+.hero p.lede b{color:#fff;font-weight:600}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#c26a3e,var(--rust));color:#fff6ee;font-weight:700;padding:14px 24px;border-radius:11px;box-shadow:0 10px 26px rgba(177,84,47,.4);transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(177,84,47,.5)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.32);color:#fff;box-shadow:none}
+.btn.ghost:hover{border-color:#e7c9a9;color:#e7c9a9}
+.hcard{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:32px 30px 26px;backdrop-filter:blur(8px);box-shadow:0 26px 64px rgba(4,16,22,.5);animation:float 6.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hcard .ring{width:68px;height:68px;margin:0 auto 16px;border-radius:50%;background:radial-gradient(circle at 32% 28%,var(--deep2),var(--deep3) 78%);display:grid;place-items:center;border:1.5px solid rgba(231,201,169,.5)}
+.hcard .ring span{font-family:var(--serif);font-weight:700;font-size:19px;color:#e7c9a9}
+.hcard h3{font-size:21px;text-align:center}
+.hcard .tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#e7c9a9;text-align:center;margin:5px 0 18px;font-weight:700}
+.hcard a.tel{display:block;text-align:center;font-family:var(--serif);font-weight:700;font-size:30px;color:#fff;transition:color .2s}
+.hcard a.tel:hover{color:#e7c9a9}
+.hcard .telsub{text-align:center;color:#9fb4b6;font-size:13px;margin-top:6px}
+.hcard .hrs{margin-top:18px;padding-top:15px;border-top:1px solid rgba(255,255,255,.13);display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:13px;color:#c2d1d3}
+.hcard .hrs b{color:#fff;font-weight:700}
+.hcard .hrs .sun{grid-column:1/-1;color:#e7c9a9}
+
+/* trust strip */
+.strip{background:#0f2832;color:#b9cbc9;border-top:1px solid rgba(255,255,255,.07)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr)}
+.tcell{padding:22px 20px;text-align:center;border-left:1px solid rgba(255,255,255,.08)}
+.tcell:first-child{border-left:none}
+.tcell b{display:block;font-family:var(--serif);font-weight:600;font-size:16.5px;color:#fff}
+.tcell span{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#8ba2a2;margin-top:3px;display:block}
+
+/* sections */
+section{padding:86px 0}
+.sec-kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--rust);font-weight:700;margin-bottom:12px}
+.sec-title{font-size:clamp(30px,3.5vw,42px);max-width:620px}
+.sec-title em{font-style:italic}
+.sec-sub{margin-top:14px;color:var(--mut);max-width:560px;font-size:16.5px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:62px;align-items:center;margin-top:10px}
+.portrait{position:relative;justify-self:center}
+.portrait .ph{width:200px;height:200px;border-radius:50%;object-fit:cover;border:7px solid #fff;background:#e8dfcf;box-shadow:0 24px 54px rgba(19,52,64,.24)}
+.portrait .badge{position:absolute;right:-6px;bottom:8px;background:var(--deep);color:#fff;border-radius:99px;padding:8px 15px;font-size:12px;font-weight:700;letter-spacing:.06em;box-shadow:0 8px 20px rgba(12,35,44,.3)}
+.portrait .badge i{color:#e7c9a9;font-style:normal}
+.about-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:13.5px;font-weight:600;color:#33474d}
+.pull{border-left:3px solid var(--rust);padding:4px 0 4px 20px;margin:24px 0;font-family:var(--serif);font-style:italic;font-size:21px;color:var(--deep2);line-height:1.4}
+.bio p{color:#3d4f54;max-width:60ch}
+.bio p+p{margin-top:14px}
+
+/* services */
+.svcwrap{background:#efe9db;border-top:1px solid #e4dcc8;border-bottom:1px solid #e4dcc8}
+.svc{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:48px}
+.svc-main{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--sh)}
+.svc-main::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--rust),#d08057)}
+.svc-main h3{font-size:25px;margin-bottom:12px}
+.svc-main p{color:var(--mut);font-size:15.5px;max-width:52ch}
+.svc-main .tagline{display:inline-block;margin-top:20px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);background:var(--rustsoft);border-radius:99px;padding:7px 14px}
+.svc-side{display:grid;gap:22px}
+.svc-side .row{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 26px;transition:transform .25s,box-shadow .25s}
+.svc-side .row:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.svc-side h3{font-size:19.5px;margin-bottom:8px}
+.svc-side p{font-size:14.5px;color:var(--mut)}
+.svc-icons{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.svc-icons span{background:#f1f6f2;border:1px solid #d5e2d8;color:#2c5241;font-size:12px;font-weight:700;border-radius:99px;padding:5px 11px}
+
+/* credentials */
+.cred-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;margin-top:44px;align-items:start}
+.ledger{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.ledger .lrow{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:19px 26px;border-bottom:1px solid var(--line-soft);font-size:14.5px}
+.ledger .lrow:last-child{border-bottom:none}
+.ledger .k{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);font-weight:700;padding-top:3px}
+.ledger .v{font-weight:600;color:#26383d}
+.ledger .v small{display:block;font-weight:400;color:var(--mut);font-size:13px;margin-top:2px}
+.cred-aside .vfy{background:var(--deep);color:#dbe6e4;border-radius:var(--r);padding:30px 28px;box-shadow:0 20px 50px rgba(12,35,44,.3)}
+.cred-aside .vfy h3{color:#fff;font-size:21px;margin-bottom:10px}
+.cred-aside .vfy p{font-size:14.5px;color:#b7c9c8}
+.cred-aside .vfy a{display:inline-flex;align-items:center;gap:8px;margin-top:18px;color:#e7c9a9;font-weight:700;font-size:14.5px;border-bottom:1.5px solid rgba(231,201,169,.4);padding-bottom:3px;transition:border-color .2s}
+.cred-aside .vfy a:hover{border-color:#e7c9a9}
+.cred-aside .note{margin-top:18px;font-size:13.5px;color:var(--mut);font-style:italic}
+
+/* coverage */
+.covwrap{background:#efe9db;border-top:1px solid #e4dcc8;border-bottom:1px solid #e4dcc8}
+.cov-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:44px;align-items:start}
+.zipcheck{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;box-shadow:var(--sh)}
+.zipcheck label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--mut);display:block;margin-bottom:10px}
+.ziprow{display:flex;gap:10px}
+.ziprow input{flex:1;min-width:0;font-family:var(--sans);font-size:16px;font-weight:600;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);transition:border-color .2s}
+.ziprow input:focus{outline:none;border-color:var(--rust)}
+.ziprow button{background:var(--rust);color:#fff6ee;font-family:var(--sans);font-weight:700;font-size:15px;border:none;border-radius:10px;padding:12px 20px;cursor:pointer;transition:background .2s,transform .2s}
+.ziprow button:hover{background:var(--rust2);transform:translateY(-1px)}
+#zipout{margin-top:16px;font-size:14.5px;border-radius:10px;padding:14px 16px;display:none;line-height:1.55}
+#zipout.ok{display:block;background:#eef4ec;border:1px solid #cfe0cf;color:#2c5241}
+#zipout.maybe{display:block;background:var(--rustsoft);border:1px solid #e3c3ae;color:#7a3a1c}
+#zipout.err{display:block;background:#fdeaea;border:1px solid #ecc9c9;color:#8a2626}
+.zipnote{margin-top:14px;font-size:12.5px;color:var(--mut)}
+.counties{display:flex;flex-wrap:wrap;gap:10px}
+.counties .chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:10px 18px;font-weight:600;font-size:14.5px;color:var(--deep2);transition:all .2s}
+.counties .chip:hover{border-color:var(--rust);color:var(--rust);transform:translateY(-2px)}
+.counties .chip.home{background:var(--deep);color:#fff;border-color:var(--deep)}
+.counties .chip.home i{color:#e7c9a9;font-style:normal;font-size:12.5px;display:block;text-align:center;letter-spacing:.08em}
+.mileage{margin-top:20px;font-size:13.5px;color:var(--mut);font-style:italic;max-width:52ch}
+.covzips{margin-top:24px}
+.covzips .zl{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--mut)}
+.covzips .zs{margin-top:8px;font-family:var(--serif);font-size:19px;color:var(--deep2);font-weight:600;letter-spacing:.04em}
+
+/* schedule */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:44px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 10px 14px;text-align:center;transition:transform .2s,box-shadow .2s}
+.day:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.day .d{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--deep2)}
+.day .m{font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--mut);text-transform:uppercase;margin-top:6px}
+.day .m.on{color:#2c5241}
+.sun-note{margin-top:18px;text-align:center;font-size:14px;color:var(--mut)}
+.sun-note b{color:var(--rust)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px;align-items:stretch}
+.c-left{display:grid;gap:18px;align-content:start}
+.c-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s,box-shadow .2s}
+.c-item:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.c-item .ic{width:44px;height:44px;border-radius:11px;background:var(--deep);display:grid;place-items:center;flex:none}
+.c-item .ic svg{width:20px;height:20px;stroke:#e7c9a9}
+.c-item h3{font-size:18px;margin-bottom:3px}
+.c-item p{font-size:14.5px;color:var(--mut)}
+.c-item a.big{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--deep2)}
+.c-item a.big:hover{color:var(--rust)}
+.c-form{background:var(--deep);color:#dbe6e4;border-radius:var(--r);padding:34px 32px;box-shadow:0 22px 56px rgba(12,35,44,.32)}
+.c-form h3{color:#fff;font-size:23px;margin-bottom:6px}
+.c-form .fs{font-size:14px;color:#9fb4b6;margin-bottom:22px}
+.c-form label{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#9fb4b6;margin-bottom:7px}
+.c-form .fld{margin-bottom:16px}
+.c-form input,.c-form textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:12px 14px;font-family:var(--sans);font-size:15px;color:#fff;transition:border-color .2s}
+.c-form input::placeholder,.c-form textarea::placeholder{color:#7d9294}
+.c-form input:focus,.c-form textarea:focus{outline:none;border-color:#e7c9a9}
+.c-form textarea{resize:vertical;min-height:96px}
+.c-form button{width:100%;background:linear-gradient(135deg,#c26a3e,var(--rust));color:#fff6ee;border:none;border-radius:10px;padding:14px;font-family:var(--sans);font-weight:700;font-size:15.5px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 24px rgba(177,84,47,.35)}
+.c-form button:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(177,84,47,.45)}
+.form-msg{display:none;margin-top:14px;font-size:13.5px;background:rgba(231,201,169,.12);border:1px solid rgba(231,201,169,.3);color:#e7c9a9;border-radius:10px;padding:12px 14px;line-height:1.5}
+
+/* map */
+.mapwrap{margin-top:56px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);position:relative}
+.mapwrap iframe{width:100%;height:400px;border:0;display:block;filter:saturate(.8)}
+.map-cap{position:absolute;left:18px;bottom:18px;background:rgba(255,253,248,.96);border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:0 10px 26px rgba(12,35,44,.18)}
+.map-cap b{font-family:var(--serif);font-size:16px;display:block}
+.map-cap span{font-size:12.5px;color:var(--mut)}
+
+/* footer */
+footer{background:var(--deep3);color:#9fb4b6;padding:54px 0 40px}
+.f-grid{display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between;align-items:flex-start}
+.f-brand .nm{font-family:var(--serif);font-weight:700;font-size:21px;color:#fff}
+.f-brand .nm i{font-style:italic}
+.f-brand .sub{font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-top:3px}
+.f-social{display:flex;flex-wrap:wrap;gap:14px}
+.f-social a{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#c2d1d3;border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:9px 16px;transition:all .2s}
+.f-social a:hover{border-color:#e7c9a9;color:#e7c9a9;transform:translateY(-2px)}
+.f-social svg{width:15px;height:15px;fill:currentColor}
+.f-note{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.09);display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;font-size:12.5px;color:#7d9294}
+.f-note b{color:#c2d1d3;font-weight:600}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .5s ease-out,transform .5s ease-out}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .hcard{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* responsive */
+@media(max-width:960px){
+  .hcard{padding:26px 22px 22px}
+  .hgrid,.cred-grid,.cov-grid,.contact-grid{grid-template-columns:1fr}
+  .hcard{max-width:420px}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .svc{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .tcell:nth-child(3){border-left:none}
+  .week{grid-template-columns:repeat(4,1fr)}
+  .ledger .lrow{grid-template-columns:1fr;gap:4px}
+}
+@media(max-width:700px){
+  .nav{display:none}
+  .callbtn{margin-left:auto;font-size:13px;padding:9px 14px}
+  .brand .nm{font-size:17px}
+  .brand .sub{display:none}
+  .seal{width:38px;height:38px;flex:none}
+  .hdr-in{padding:12px 18px;gap:12px}
+  section{padding:64px 0}
+  .hero{padding:60px 0 76px}
+  .week{grid-template-columns:repeat(2,1fr)}
+  .strip .trust{grid-template-columns:1fr 1fr}
+  .tcell{border-left:none;border-top:1px solid rgba(255,255,255,.08)}
+  .tcell:nth-child(-n+2){border-top:none}
+  .c-form{padding:26px 22px}
+}
+</style>
+</head>
+<body id="top">
+
+<div class="banner">Website concept preview — <b>PAT's Notary</b> · Greensboro, NC</div>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a href="#top" class="brand">
+      <div class="seal"><span>PT</span></div>
+      <div>
+        <div class="nm">PAT's Notary</div>
+        <div class="sub">Mobile Notary · Greensboro NC</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#coverage">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="callbtn" href="tel:+17576361408">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+      (757) 636-1408
+    </a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wm">PAT&rsquo;S</div>
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="hgrid">
+      <div>
+        <div class="kicker"><span class="dot"></span>Certified &middot; Background-Screened &middot; NNA Member</div>
+        <h1>Every signing done <em>right, on time, every time.</em></h1>
+        <p class="lede"><b>Patricia Thurman</b> is a certified mobile notary and signing agent who comes to you — home, office, hospital, or care facility — across <b>ten Piedmont counties</b> from her home base in Greensboro.</p>
+        <div class="ctas">
+          <a class="btn" href="tel:+17576361408">Call (757) 636-1408</a>
+          <a class="btn ghost" href="#services">Explore services</a>
+        </div>
+      </div>
+      <div class="hcard">
+        <div class="ring"><span>PT</span></div>
+        <h3>PAT's Notary</h3>
+        <div class="tag">Certified Mobile Notary &amp; Signing Agent</div>
+        <a class="tel" href="tel:+17576361408">(757) 636-1408</a>
+        <div class="telsub">Calls &amp; texts welcome</div>
+        <div class="hrs">
+          <div><b>Mon – Sat</b> · AM &amp; PM</div>
+          <div><b>Sunday</b> · 1 – 4 PM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="trust">
+      <div class="tcell"><b>NNA Member</b><span>National Notary Association</span></div>
+      <div class="tcell"><b>NC Commission #202507100192</b><span>Licensed through 2030</span></div>
+      <div class="tcell"><b>Background-Screened</b><span>NNA screening, current</span></div>
+      <div class="tcell"><b>Bonded — $25,000</b><span>Merchants Bonding Company</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="portrait rv">
+        <img class="ph" src="img/patricia_profile.png" alt="Patricia Thurman, notary public in Greensboro, NC" width="200" height="200">
+        <div class="badge"><i>&#9733;</i> Greensboro native</div>
+      </div>
+      <div class="bio rv">
+        <div class="sec-kicker">About Patricia</div>
+        <h2 class="sec-title">A teacher's precision, <em>a veteran's word.</em></h2>
+        <div class="pull">&ldquo;I have very high standards, and I&rsquo;m detail-oriented.&rdquo;</div>
+        <p>Patricia Thurman was born in Greensboro and knows the surrounding areas of Guilford County like few others. An <b>Army veteran</b> and retired high school <b>business teacher</b>, she was commissioned as a North Carolina Notary Public in <b>March 2025</b> and certified by the National Notary Association as a signing agent.</p>
+        <div class="about-facts">
+          <span class="fact">Army Veteran</span>
+          <span class="fact">Retired business teacher</span>
+          <span class="fact">NNA Certified Signing Agent</span>
+          <span class="fact">Commissioned March 2025</span>
+          <span class="fact">Greensboro, NC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="svcwrap" id="services">
+  <section>
+    <div class="wrap">
+      <div class="rv">
+        <div class="sec-kicker">Services</div>
+        <h2 class="sec-title">Notary work that <em>travels to you.</em></h2>
+        <p class="sec-sub">From a single signature to a full loan package, Patricia brings the seal, the ledger and the laser printer — so the signing happens on your schedule, not an office's.</p>
+      </div>
+      <div class="svc rv">
+        <div class="svc-main">
+          <h3>Loan Document Signings</h3>
+          <p>As a Certified Signing Agent, Patricia handles full real-estate and refinance packages — printed, organized, and returned correctly the first time. Title companies, signing services and lenders can rely on a detail-oriented closer.</p>
+          <span class="tagline">Certified Signing Agent (CSA)</span>
+        </div>
+        <div class="svc-side">
+          <div class="row">
+            <h3>General Notary Work</h3>
+            <p>Acknowledgments, jurats, affidavits, powers of attorney, vehicle and title paperwork — the everyday documents, witnessed properly.</p>
+          </div>
+          <div class="row">
+            <h3>Hospital &amp; Care-Facility Signings</h3>
+            <p>Compassionate, unhurried visits to hospitals and care homes, with the patience these signings require.</p>
+          </div>
+          <div class="row">
+            <h3>Jail Signings</h3>
+            <p>Experienced with correctional-facility procedures and the ID rules that come with them.</p>
+          </div>
+          <div class="row">
+            <h3>E-Documents</h3>
+            <p>Docs sent ahead by email or fax arrive printed on a laser printer, ready before she reaches the table.</p>
+            <div class="svc-icons"><span>Email</span><span>Fax</span><span>Laser print</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-kicker">Credentials</div>
+      <h2 class="sec-title">Trust, <em>on the record.</em></h2>
+    </div>
+    <div class="cred-grid">
+      <div class="ledger rv">
+        <div class="lrow">
+          <div class="k">NC Notary Commission</div>
+          <div class="v">#202507100192<small>State of North Carolina &middot; expires March 11, 2030</small></div>
+        </div>
+        <div class="lrow">
+          <div class="k">Certification</div>
+          <div class="v">Certified Signing Agent<small>National Notary Association</small></div>
+        </div>
+        <div class="lrow">
+          <div class="k">Background Screening</div>
+          <div class="v">NNA screening, current<small>Renewed March 2026 &middot; Ref. #2499783</small></div>
+        </div>
+        <div class="lrow">
+          <div class="k">Bond</div>
+          <div class="v">Merchants Bonding Company<small>$25,000</small></div>
+        </div>
+        <div class="lrow">
+          <div class="k">Commissioned</div>
+          <div class="v">March 2025<small>North Carolina Notary Public</small></div>
+        </div>
+      </div>
+      <div class="cred-aside rv">
+        <div class="vfy">
+          <h3>Verify Patricia yourself</h3>
+          <p>Her National Notary Association signing-agent profile is public — certification, screening and commission details, all in one place.</p>
+          <a href="https://www.signingagent.com/profile/161897788" target="_blank" rel="noopener">View NSA profile &rarr;</a>
+        </div>
+        <p class="note">Every credential on this page is drawn from Patricia's public professional listings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="covwrap" id="coverage">
+  <section>
+    <div class="wrap">
+      <div class="rv">
+        <div class="sec-kicker">Service Area</div>
+        <h2 class="sec-title">Ten counties, <em>one familiar face.</em></h2>
+        <p class="sec-sub">Based in Greensboro, Patricia travels across the Piedmont — with mileage charged outside her primary area, as her listing notes.</p>
+      </div>
+      <div class="cov-grid">
+        <div class="zipcheck rv">
+          <label for="zip">Check your ZIP code</label>
+          <div class="ziprow">
+            <input id="zip" inputmode="numeric" maxlength="5" placeholder="e.g. 27455" aria-label="Your ZIP code">
+            <button id="zipbtn" type="button">Check</button>
+          </div>
+          <div id="zipout" role="status"></div>
+          <p class="zipnote">Primary ZIPs from Patricia's listing: 27455, 27408, 27235, 27201, 28379.</p>
+        </div>
+        <div class="rv">
+          <div class="counties">
+            <span class="chip home">Guilford<i>Home county</i></span>
+            <span class="chip">Forsyth</span>
+            <span class="chip">Davidson</span>
+            <span class="chip">Randolph</span>
+            <span class="chip">Alamance</span>
+            <span class="chip">Orange</span>
+            <span class="chip">Chatham</span>
+            <span class="chip">Rockingham</span>
+            <span class="chip">Caswell</span>
+            <span class="chip">Stokes</span>
+          </div>
+          <p class="mileage">Counties served per Patricia's listing: Guilford, Stokes, Rockingham, Caswell, Forsyth, Alamance, Orange, Davidson, Randolph, and Chatham — mileage will be charged for travel.</p>
+          <div class="covzips">
+            <div class="zl">Primary ZIP codes</div>
+            <div class="zs">27455 &middot; 27408 &middot; 27235 &middot; 27201 &middot; 28379</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="schedule">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-kicker">Availability</div>
+      <h2 class="sec-title">Open week, <em>flexible hours.</em></h2>
+      <p class="sec-sub">Mornings and afternoons, six days a week — with Sunday hours for end-of-week signings.</p>
+    </div>
+    <div class="week rv">
+      <div class="day"><div class="d">Mon</div><div class="m on">AM &middot; PM</div></div>
+      <div class="day"><div class="d">Tue</div><div class="m on">AM &middot; PM</div></div>
+      <div class="day"><div class="d">Wed</div><div class="m on">AM &middot; PM</div></div>
+      <div class="day"><div class="d">Thu</div><div class="m on">AM &middot; PM</div></div>
+      <div class="day"><div class="d">Fri</div><div class="m on">AM &middot; PM</div></div>
+      <div class="day"><div class="d">Sat</div><div class="m on">AM &middot; PM</div></div>
+      <div class="day"><div class="d">Sun</div><div class="m on">1 – 4 PM</div></div>
+    </div>
+    <p class="sun-note">Sunday availability is <b>1 – 4 PM</b>, per Patricia's listing.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <div class="sec-kicker">Contact</div>
+      <h2 class="sec-title">Reach Patricia <em>directly.</em></h2>
+      <p class="sec-sub">Call or text for the fastest response — she answers herself.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-left rv">
+        <div class="c-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></div>
+          <div>
+            <h3>Call or text</h3>
+            <a class="big" href="tel:+17576361408">(757) 636-1408</a>
+            <p>Text-friendly — best for quick scheduling.</p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <div>
+            <h3>Email</h3>
+            <a class="big" href="mailto:PATnotary@yahoo.com">PATnotary@yahoo.com</a>
+            <p>Send documents ahead — they'll be printed and ready.</p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <h3>Based in</h3>
+            <p style="font-family:var(--serif);font-weight:700;font-size:19px;color:var(--deep2);margin-top:2px">Greensboro, NC 27455</p>
+            <p>Serving ten Piedmont counties — mileage charged outside the primary area.</p>
+          </div>
+        </div>
+      </div>
+      <form class="c-form rv" id="cform" novalidate>
+        <h3>Send a request</h3>
+        <p class="fs">Tell Patricia what you need signed and where. She replies personally.</p>
+        <div class="fld">
+          <label for="f-name">Your name</label>
+          <input id="f-name" type="text" autocomplete="name" placeholder="Full name">
+        </div>
+        <div class="fld">
+          <label for="f-contact">Phone or email</label>
+          <input id="f-contact" type="text" autocomplete="tel" placeholder="How should she reach you?">
+        </div>
+        <div class="fld">
+          <label for="f-msg">What needs notarizing?</label>
+          <textarea id="f-msg" placeholder="Document type, location, preferred time…"></textarea>
+        </div>
+        <button type="submit">Send request</button>
+        <div class="form-msg" id="fmsg">This is a website concept preview, so nothing was sent yet. Once live, requests reach Patricia directly. For now, call or text <b>(757) 636-1408</b>.</div>
+      </form>
+    </div>
+    <div class="mapwrap rv">
+      <iframe title="Map — Greensboro, North Carolina" src="https://www.openstreetmap.org/export/embed.html?bbox=-80.05%2C35.98%2C-79.65%2C36.18&amp;layer=mapnik" loading="lazy"></iframe>
+      <div class="map-cap"><b>PAT's Notary</b><span>Greensboro &middot; Piedmont North Carolina</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="nm">PAT's <i>Notary</i></div>
+        <div class="sub">Greensboro, North Carolina</div>
+      </div>
+      <div class="f-social">
+        <a href="https://www.linkedin.com/in/patricia-thurman-aa7a4837b" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.4a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.signingagent.com/profile/161897788" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          NNA Profile
+        </a>
+        <a href="https://notarycafe.com/Patricia.Thurman" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+          NotaryCafe
+        </a>
+      </div>
+    </div>
+    <div class="f-note">
+      <span>&copy; 2026 PAT's Notary &middot; Patricia Thurman, Notary Public — Greensboro, NC</span>
+      <span><b>Website concept preview</b> — no messages sent from this page</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  var last=false;
+  function onScroll(){
+    var s=window.scrollY>8;
+    if(s!==last){last=s;hdr.classList.toggle('scrolled',s);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // reveal once
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+
+  // zip checker
+  var zips=['27455','27408','27235','27201','28379'];
+  var out=document.getElementById('zipout');
+  function check(){
+    var v=(document.getElementById('zip').value||'').replace(/\D/g,'');
+    if(v.length!==5){
+      out.className='err';
+      out.textContent='Enter a 5-digit ZIP code to check.';
+      return;
+    }
+    if(zips.indexOf(v)>-1){
+      out.className='ok';
+      out.innerHTML='<b>'+v+' is in Patricia&rsquo;s primary service area</b> — based right in Greensboro. Call or text (757) 636-1408 to book.';
+    } else {
+      out.className='maybe';
+      out.innerHTML='<b>'+v+' isn&rsquo;t one of the primary ZIPs on her listing</b> — but Patricia travels across ten Piedmont counties (mileage charged). Call (757) 636-1408 to confirm she can reach you.';
+    }
+  }
+  document.getElementById('zipbtn').addEventListener('click',check);
+  document.getElementById('zip').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();check();}});
+
+  // honest preview form
+  document.getElementById('cform').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('fmsg').style.display='block';
+  });
+})();
+</script>
+</body>
+</html>
