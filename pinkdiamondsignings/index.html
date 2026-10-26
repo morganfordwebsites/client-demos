@@ -281,7 +281,42 @@
       <div class="cal rv" id="calcard">
         <div class="cal-title" data-en="Dora's calendar" data-es="Calendario de Dora">Dora's calendar</div>
         <div id="cal-holder" data-tidycal>
-                    <div class="tidycal-embed" data-path="pinkdiamondsignings/30-minute-meeting"></div>
+                    <div class="bw" id="bw">
+            <div class="bw-label" data-en="Pick a day" data-es="Elija un día">Pick a day</div>
+            <div class="bw-days" id="bw-days"></div>
+            <div class="bw-label" data-en="Pick a time" data-es="Elija una hora">Pick a time</div>
+            <div class="bw-timeswrap" id="bw-times"></div>
+            <div class="bw-legend"><span class="dot"></span><span data-en="Live availability from Dora's calendar" data-es="Disponibilidad en vivo del calendario de Dora">Live availability from Dora's calendar</span></div>
+            <form id="bw-form" novalidate>
+              <div class="bw-fields" id="bw-fields" hidden>
+                <div class="bf-row">
+                  <input class="bfi" id="bw-name" type="text" autocomplete="name" data-en-ph="Your name" data-es-ph="Su nombre">
+                  <input class="bfi" id="bw-phone" type="tel" autocomplete="tel" data-en-ph="Your phone" data-es-ph="Su teléfono">
+                </div>
+                <div class="bf-row">
+                  <input class="bfi" id="bw-email" type="email" autocomplete="email" data-en-ph="Your email (for the invite)" data-es-ph="Su correo (para la invitación)">
+                  <select class="bfi" id="bw-svc">
+                    <option value="Classic" data-en="Classic — from $30" data-es="Clásico — desde $30">Classic — from $30</option>
+                    <option value="Mobile visit" data-en="Mobile visit — from $30" data-es="Visita móvil — desde $30">Mobile visit — from $30</option>
+                    <option value="Loan signing" data-en="Loan signing (full package) — $150" data-es="Firma de préstamo (paquete completo) — $150">Loan signing (full package) — $150</option>
+                    <option value="Something else" data-en="Something else" data-es="Otro servicio">Something else</option>
+                  </select>
+                </div>
+                <input class="bfi" id="bw-notes" type="text" data-en-ph="Notes for Dora (optional)" data-es-ph="Notas para Dora (opcional)">
+                <input id="bw-hp" type="text" name="company" tabindex="-1" autocomplete="off" class="bw-hp" aria-hidden="true">
+              </div>
+              <div class="bw-foot">
+                <span id="bw-sum" data-en="Choose a time" data-es="Elija una hora">Choose a time</span>
+                <button class="btn btn-grad btn-glow" id="bw-go" type="submit" disabled data-en="Request this time" data-es="Solicitar esta hora">Request this time</button>
+              </div>
+            </form>
+            <div class="bw-ok" id="bw-ok" hidden>
+              <div class="okmark"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <h4 data-en="Request received — we'll confirm shortly." data-es="Solicitud recibida — le confirmaremos en breve.">Request received — we'll confirm shortly.</h4>
+              <p class="sum" id="bw-ok-when"></p>
+              <p class="note" data-en="Your appointment is on Dora's calendar. A calendar invite is on its way to your email — Dora confirms by text or email." data-es="Su cita ya está en el calendario de Dora. La invitación va en camino a su correo — Dora confirma por mensaje o correo.">Your appointment is on Dora's calendar. A calendar invite is on its way to your email — Dora confirms by text or email.</p>
+            </div>
+          </div>
 <div class="bring" data-en="Bring: valid photo ID, unsigned documents, all signers present." data-es="Traiga: identificación oficial con fotografía vigente, documentos sin firmar y todos los firmantes presentes.">Bring: valid photo ID, unsigned documents, all signers present.</div>
         </div>
       </div>
@@ -558,7 +593,6 @@
   <a class="mc mc-call" href="tel:8327221305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2c-8.3-.5-15-7.2-15.5-15.5a2 2 0 0 1 2-2z"/></svg><span data-en="Call now" data-es="Llamar">Call now</span></a>
   <a class="mc mc-book" href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg><span data-en="Book now" data-es="Reservar">Book now</span></a>
 </div>
-  <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 <script src="pds-site.js"></script>
 </body>
 </html>
