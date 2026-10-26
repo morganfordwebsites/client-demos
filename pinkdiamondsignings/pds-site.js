@@ -168,12 +168,11 @@
       for(var d = 1; d <= dim; d++){
         var ds = y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
         var dt = new Date(y, m, d);
-        var closed = dt.getDay() === 0;
         var past = ds < bwToday;
         var slots = map[ds];
         var open = slots && slots.some(function(s){ return s.ok; });
-        var dis = closed || past || !open;
-        html += '<button type="button" class="bw-cell' + (bwDay === ds ? ' on' : '') + (ds === bwToday ? ' today' : '') + (closed && !past ? ' closed' : '') + '" data-d="' + ds + '"' + (dis ? ' disabled' : '') + '>' + d + '</button>';
+        var dis = past || !open;
+        html += '<button type="button" class="bw-cell' + (bwDay === ds ? ' on' : '') + (ds === bwToday ? ' today' : '') + '" data-d="' + ds + '"' + (dis ? ' disabled' : '') + '>' + d + '</button>';
       }
       bwDaysEl.innerHTML = html;
       bwDaysEl.querySelectorAll('.bw-cell[data-d]').forEach(function(c){
