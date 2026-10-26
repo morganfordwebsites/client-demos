@@ -281,34 +281,8 @@
       <div class="cal rv" id="calcard">
         <div class="cal-title" data-en="Dora's calendar" data-es="Calendario de Dora">Dora's calendar</div>
         <div id="cal-holder" data-tidycal>
-          <form class="bf" id="bookform" novalidate>
-            <div class="bf-row">
-              <input class="bfi" id="bf-name" type="text" autocomplete="name" required data-en-ph="Your name" data-es-ph="Su nombre">
-              <input class="bfi" id="bf-phone" type="tel" autocomplete="tel" required data-en-ph="Your phone" data-es-ph="Su teléfono">
-            </div>
-            <select class="bfi" id="bf-svc">
-              <option value="classic" data-en="Classic — from $30" data-es="Clásico — desde $30">Classic — from $30</option>
-              <option value="mobile" data-en="Mobile visit — from $30" data-es="Visita móvil — desde $30">Mobile visit — from $30</option>
-              <option value="loan" data-en="Loan signing (full package) — $150" data-es="Firma de préstamo (paquete completo) — $150">Loan signing (full package) — $150</option>
-              <option value="other" data-en="Something else" data-es="Otro servicio">Something else</option>
-            </select>
-            <div class="bf-row">
-              <input class="bfi" id="bf-day" type="text" placeholder="" data-en-ph="Preferred day (e.g. Sat, Oct 24)" data-es-ph="Día preferido (ej. sáb, 24 oct)">
-              <input class="bfi" id="bf-time" type="text" placeholder="" data-en-ph="Preferred time (e.g. 10:30 AM)" data-es-ph="Hora preferida (ej. 10:30 a.m.)">
-            </div>
-            <button class="btn btn-grad btn-glow" type="submit" data-en="Request this time" data-es="Solicitar esta hora">Request this time</button>
-          </form>
-          <div class="bok" id="bookok">
-            <div class="okmark"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></div>
-            <h4 data-en="Request received — we'll confirm shortly." data-es="Solicitud recibida — le confirmaremos en breve.">Request received — we'll confirm shortly.</h4>
-            <p class="sum" id="booksum"></p>
-            <p class="note" data-en="Your request is on its way to Dora. She'll confirm by text or email — need it faster? Call or text (832) 722-1305." data-es="Su solicitud va en camino a Dora. Ella confirmará por mensaje o correo — ¿lo necesita antes? Llame o envíe un mensaje al (832) 722-1305.">Your request is on its way to Dora. She'll confirm by text or email — need it faster? Call or text (832) 722-1305.</p>
-            <div class="acts">
-              <a href="tel:8327221305" class="btn btn-ghost btn-sm" data-en="Call Dora" data-es="Llamar a Dora">Call Dora</a>
-              <a href="sms:8327221305" class="btn btn-ghost btn-sm" data-en="Send a text" data-es="Enviar un mensaje">Send a text</a>
-            </div>
-          </div>
-          <div class="bring" data-en="Bring: valid photo ID, unsigned documents, all signers present." data-es="Traiga: identificación oficial con fotografía vigente, documentos sin firmar y todos los firmantes presentes.">Bring: valid photo ID, unsigned documents, all signers present.</div>
+                    <div class="tidycal-embed" data-path="pinkdiamondsignings/30-minute-meeting"></div>
+<div class="bring" data-en="Bring: valid photo ID, unsigned documents, all signers present." data-es="Traiga: identificación oficial con fotografía vigente, documentos sin firmar y todos los firmantes presentes.">Bring: valid photo ID, unsigned documents, all signers present.</div>
         </div>
       </div>
     </div>
@@ -584,6 +558,7 @@
   <a class="mc mc-call" href="tel:8327221305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2c-8.3-.5-15-7.2-15.5-15.5a2 2 0 0 1 2-2z"/></svg><span data-en="Call now" data-es="Llamar">Call now</span></a>
   <a class="mc mc-book" href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg><span data-en="Book now" data-es="Reservar">Book now</span></a>
 </div>
+  <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 <script src="pds-site.js"></script>
 </body>
 </html>
