@@ -537,6 +537,21 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
 
 /* ---------- booking widget ---------- */
 .bw{padding:2px 0 4px;position:relative}
+.bw-progress{display:flex;gap:18px;margin:2px 0 18px}
+.bw-p{display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);opacity:.45;transition:opacity .2s}
+.bw-p i{width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:10px;font-weight:700;color:var(--muted);transition:border-color .2s,color .2s,background .2s;flex:none}
+.bw-p.on{opacity:1;color:var(--rose-lt)}
+.bw-p.on i{border-color:var(--rose);color:var(--rose-lt);background:rgba(212,104,138,.09)}
+.bw-p.done{opacity:.8}
+.bw-p.done i{border-color:var(--gold);color:var(--gold)}
+.bw-step{display:none}
+.bw-step.on{display:block;animation:bwIn .18s ease}
+@keyframes bwIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.bw-back{background:none;border:0;color:var(--muted);font-size:12.5px;cursor:pointer;padding:12px 0 0;letter-spacing:.02em;font-family:inherit;transition:color .15s}
+.bw-back:hover{color:var(--rose-lt)}
+.bw-sumline{font-size:13px;color:var(--gold);font-weight:600;margin:0 0 12px}
+.bw-cta{width:100%;padding:13px;font-size:15px;margin-top:14px}
+.bw.done .bw-progress,.bw.done .bw-step{display:none}
 .bw-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-lt);font-weight:600;margin:14px 0 10px}
 .bw-days{display:flex;gap:8px}
 .bw-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 6px;background:var(--surface);border:1px solid var(--line);border-radius:10px;transition:border-color .15s,background .15s,opacity .15s}
@@ -558,10 +573,6 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
 .bw-fields{display:grid;gap:10px;margin-top:14px}
 .bw-fields[hidden]{display:none}
 .bw-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.bw-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--line);margin-top:16px;padding-top:16px}
-.bw-foot > span{font-size:14px;color:var(--muted)}
-.bw-foot .btn{padding:10px 20px;font-size:14px}
-.bw-foot .btn:disabled{opacity:.45;cursor:not-allowed}
 .bw-ok{display:grid;gap:8px;justify-items:center;text-align:center;padding:22px 10px}
 .bw-ok[hidden]{display:none}
 .bw-ok .okmark{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(212,175,122,.12);border:1px solid rgba(212,175,122,.4)}
@@ -569,4 +580,3 @@ footer{border-top:1px solid var(--line);background:var(--surface);padding:60px 0
 .bw-ok h4{font-size:16px;color:var(--text)}
 .bw-ok .sum{font-weight:600;color:var(--rose-lt);font-size:14px}
 .bw-ok .note{font-size:13px;color:var(--muted);max-width:46ch}
-.bw.done .bw-days,.bw.done .bw-timeswrap,.bw.done .bw-legend{display:none}

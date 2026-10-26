@@ -279,16 +279,27 @@
         </ul>
       </div>
       <div class="cal rv" id="calcard">
-        <div class="cal-title" data-en="Dora's calendar" data-es="Calendario de Dora">Dora's calendar</div>
         <div id="cal-holder" data-tidycal>
-                    <div class="bw" id="bw">
-            <div class="bw-label" data-en="Pick a day" data-es="Elija un día">Pick a day</div>
-            <div class="bw-days" id="bw-days"></div>
-            <div class="bw-label" data-en="Pick a time" data-es="Elija una hora">Pick a time</div>
-            <div class="bw-timeswrap" id="bw-times"></div>
-            <div class="bw-legend"><span class="dot"></span><span data-en="Live availability from Dora's calendar" data-es="Disponibilidad en vivo del calendario de Dora">Live availability from Dora's calendar</span></div>
-            <form id="bw-form" novalidate>
-              <div class="bw-fields" id="bw-fields" hidden>
+                              <div class="bw" id="bw">
+            <div class="bw-progress" aria-hidden="true">
+              <span class="bw-p on" data-step="1"><i>1</i><span data-en="Day" data-es="Día">Day</span></span>
+              <span class="bw-p" data-step="2"><i>2</i><span data-en="Time" data-es="Hora">Time</span></span>
+              <span class="bw-p" data-step="3"><i>3</i><span data-en="Details" data-es="Datos">Details</span></span>
+            </div>
+            <div class="bw-step on" id="bw-step1">
+              <div class="bw-label" data-en="Pick a day" data-es="Elija un día">Pick a day</div>
+              <div class="bw-days" id="bw-days"></div>
+            </div>
+            <div class="bw-step" id="bw-step2">
+              <div class="bw-label" data-en="Pick a time" data-es="Elija una hora">Pick a time</div>
+              <div class="bw-timeswrap" id="bw-times"></div>
+              <div class="bw-legend"><span class="dot"></span><span data-en="Live availability from Dora's calendar" data-es="Disponibilidad en vivo del calendario de Dora">Live availability from Dora's calendar</span></div>
+              <button class="bw-back" type="button" id="bw-back2" data-en="← Change day" data-es="← Cambiar día">← Change day</button>
+            </div>
+            <div class="bw-step" id="bw-step3">
+              <div class="bw-label" data-en="Your details" data-es="Sus datos">Your details</div>
+              <p class="bw-sumline" id="bw-sumline"></p>
+              <div class="bw-fields">
                 <div class="bf-row">
                   <input class="bfi" id="bw-name" type="text" autocomplete="name" data-en-ph="Your name" data-es-ph="Su nombre">
                   <input class="bfi" id="bw-phone" type="tel" autocomplete="tel" data-en-ph="Your phone" data-es-ph="Su teléfono">
@@ -305,16 +316,16 @@
                 <input class="bfi" id="bw-notes" type="text" data-en-ph="Notes for Dora (optional)" data-es-ph="Notas para Dora (opcional)">
                 <input id="bw-hp" type="text" name="company" tabindex="-1" autocomplete="off" class="bw-hp" aria-hidden="true">
               </div>
-              <div class="bw-foot">
-                <span id="bw-sum" data-en="Choose a time" data-es="Elija una hora">Choose a time</span>
-                <button class="btn btn-grad btn-glow" id="bw-go" type="submit" disabled data-en="Request this time" data-es="Solicitar esta hora">Request this time</button>
-              </div>
-            </form>
+              <form id="bw-form" novalidate>
+                <button class="btn btn-grad btn-glow bw-cta" id="bw-go" type="submit" data-en="Request this time" data-es="Solicitar esta hora">Request this time</button>
+              </form>
+              <button class="bw-back" type="button" id="bw-back3" data-en="← Change time" data-es="← Cambiar hora">← Change time</button>
+            </div>
             <div class="bw-ok" id="bw-ok" hidden>
               <div class="okmark"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></div>
               <h4 data-en="Request received — we'll confirm shortly." data-es="Solicitud recibida — le confirmaremos en breve.">Request received — we'll confirm shortly.</h4>
               <p class="sum" id="bw-ok-when"></p>
-              <p class="note" data-en="Your appointment is on Dora's calendar. A calendar invite is on its way to your email — Dora confirms by text or email." data-es="Su cita ya está en el calendario de Dora. La invitación va en camino a su correo — Dora confirma por mensaje o correo.">Your appointment is on Dora's calendar. A calendar invite is on its way to your email — Dora confirms by text or email.</p>
+              <p class="note" data-en="Your appointment is booked. A confirmation email with your video meeting link is on its way — Dora confirms by text or email." data-es="Su cita está registrada. Un correo de confirmación con su enlace de video va en camino — Dora confirma por mensaje o correo.">Your appointment is booked. A confirmation email with your video meeting link is on its way — Dora confirms by text or email.</p>
             </div>
           </div>
 <div class="bring" data-en="Bring: valid photo ID, unsigned documents, all signers present." data-es="Traiga: identificación oficial con fotografía vigente, documentos sin firmar y todos los firmantes presentes.">Bring: valid photo ID, unsigned documents, all signers present.</div>
