@@ -141,18 +141,54 @@
       for(var i = 0; i < bwDays.length; i++){ if(bwDays[i].day === bwDay) return bwDays[i]; }
       return null;
     }
-    function bwRenderDays(){
-      bwDaysEl.innerHTML = "";
-      bwDays.forEach(function(dd){
-        var L = bwLabel(dd.day);
-        var open = dd.slots.some(function(s){ return s.ok; });
-        var b = document.createElement("button");
-        b.type = "button";
-        b.className = "bw-day" + (bwDay === dd.day ? " on" : "") + (open ? "" : " none");
-        b.disabled = !open;
-        b.innerHTML = "<small>" + L.top + "</small><b>" + L.num + "</b>";
-        b.addEventListener("click", function(){ bwDay = dd.day; bwTime = null; bwRenderDays(); bwRenderTimes(); bwGoto(2); });
-        bwDaysEl.appendChild(b);
+    var BW_MON_FULL = { en: ["January","February","March","April","May","June","July","August","September","October","November","December"], es: ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"] };
+    var bwMonthIdx = 0;
+    function bwMap(){
+      var m = {};
+      bwDays.forEach(function(dd){ m[dd.day] = dd.slots; });
+      return m;
+    }
+    function bwRenderCal(){
+      var es = bwL();
+      var map = bwMap();
+      var tp = bwToday.split("-");
+      var base = new Date(+tp[0], +tp[1] - 1 + bwMonthIdx, 1);
+      var y = base.getFullYear(), m = base.getMonth();
+      var name = (es ? BW_MON_FULL.es[m] : BW_MON_FULL.en[m]);
+      var label = es ? (name.charAt(0).toUpperCase() + name.slice(1)) + " " + y : name + " " + y;
+      var firstDow = new Date(y, m, 1).getDay();
+      var dim = new Date(y, m + 1, 0).getDate();
+      var WD = es ? ["D","L","M","X","J","V","S"] : ["S","M","T","W","T","F","S"];
+      var html = '<div class="bw-mhead">';
+      html += '<button type="button" class="bw-mnav" data-nav="-1" aria-label="' + (es ? "Mes anterior" : "Previous month") + '"' + (bwMonthIdx === 0 ? " disabled" : "") + '>&#8249;</button>';
+      html += '<span class="bw-mname">' + label + '</span>';
+      html += '<button type="button" class="bw-mnav" data-nav="1" aria-label="' + (es ? "Mes siguiente" : "Next month") + '"' + (bwMonthIdx === 1 ? " disabled" : "") + '>&#8250;</button></div>';
+      for(var w = 0; w < 7; w++) html += '<span class="bw-wd">' + WD[w] + '</span>';
+      for(var p = 0; p < firstDow; p++) html += '<span class="bw-cell bw-blank"></span>';
+      for(var d = 1; d <= dim; d++){
+        var ds = y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+        var dt = new Date(y, m, d);
+        var closed = dt.getDay() === 0;
+        var past = ds < bwToday;
+        var slots = map[ds];
+        var open = slots && slots.some(function(s){ return s.ok; });
+        var dis = closed || past || !open;
+        html += '<button type="button" class="bw-cell' + (bwDay === ds ? ' on' : '') + (ds === bwToday ? ' today' : '') + (closed && !past ? ' closed' : '') + '" data-d="' + ds + '"' + (dis ? ' disabled' : '') + '>' + d + '</button>';
+      }
+      bwDaysEl.innerHTML = html;
+      bwDaysEl.querySelectorAll('.bw-cell[data-d]').forEach(function(c){
+        c.addEventListener('click', function(){
+          bwDay = c.getAttribute('data-d'); bwTime = null;
+          bwRenderCal(); bwRenderTimes(); bwGoto(2);
+        });
+      });
+      bwDaysEl.querySelectorAll('.bw-mnav').forEach(function(nv){
+        nv.addEventListener('click', function(){
+          var dir = +nv.getAttribute('data-nav');
+          var next = bwMonthIdx + dir;
+          if(next < 0 || next > 1) return;
+          bwMonthIdx = next; bwRenderCal();
+        });
       });
     }
     function bwRenderTimes(){
@@ -186,7 +222,7 @@
       bwSumline.textContent = svcTxt + " \u00b7 " + BW_DOW_FULL[es ? "es" : "en"][dd.getDay()] + " " + dd.getDate() + " " + BW_MON[es ? "es" : "en"][dd.getMonth()] + ", " + bwT12(bwTime, es);
     }
     function bwRenderAll(){
-      bwRenderDays();
+      bwRenderCal();
       bwRenderTimes();
       bwUpdate();
       bwGoto(bwDay ? (bwTime ? 3 : 2) : 1);
@@ -203,7 +239,7 @@
       var es = bwL();
       bwTimesEl.innerHTML = '<div class="bw-empty">' + (es ? "Cargando disponibilidad\u2026" : "Loading availability\u2026") + "</div>";
       fetch(BW_API).then(function(r){ return r.json(); }).then(function(d){
-        bwDays = d.days || []; bwDay = null; bwTime = null;
+        bwDays = d.days || []; bwMonthIdx = 0; bwDay = null; bwTime = null;
         bwRenderAll();
       }).catch(function(){
         var es2 = bwL();
