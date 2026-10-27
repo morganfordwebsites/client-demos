@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linda L Franklin — Mobile Texas Notary &amp; Loan Signing Agent · Fredericksburg, TX</title>
+<meta name="description" content="NNA-certified mobile notary and loan signing agent serving Fredericksburg and the Texas Hill Country. 500+ signings. Purchases, sellers, refinances, HELOCs, reverse mortgages, Texas cash-outs. Call (830) 460-0279.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d3a2f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23f3ede0' text-anchor='middle'%3ELF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#1d3a2f; --pine-deep:#122619; --pine-soft:#2b5341;
+  --cream:#faf6ee; --cream-2:#f1ebdd; --paper:#fffcf5;
+  --terra:#c05a2e; --terra-deep:#a34a22;
+  --gold:#c9a24b;
+  --ink:#22302a; --muted:#5c6b60; --line:#e4dcc9;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Fraunces',Georgia,serif}
+.banner{background:#111;text-align:center;color:#d8d2c2;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px}
+.banner b{color:#f3ede0;font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;background:linear-gradient(158deg,var(--pine-deep) 0%,var(--pine) 55%,var(--pine-soft) 100%);color:#f3ede0;overflow:hidden}
+.hero svg.contour{position:absolute;inset:0;width:100%;height:100%;opacity:.13;pointer-events:none}
+.hero .glow{position:absolute;width:640px;height:640px;border-radius:50%;top:-260px;right:-160px;background:radial-gradient(circle,rgba(201,162,75,.22),transparent 62%);pointer-events:none}
+.hero .watermark{position:absolute;bottom:-6%;left:-2%;font-family:'Fraunces',serif;font-weight:700;font-size:clamp(120px,26vw,320px);letter-spacing:.02em;color:rgba(243,237,224,.055);line-height:1;user-select:none;pointer-events:none;white-space:nowrap}
+.hero-inner{position:relative;z-index:2;padding:96px 0 140px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.kicker::before{content:"";width:34px;height:1.5px;background:var(--gold)}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(38px,5.6vw,64px);line-height:1.08;letter-spacing:-.01em;margin:22px 0 0;max-width:13ch}
+h1 em{font-style:italic;font-weight:500;color:#e8c98f}
+.hero p.lede{margin:24px 0 0;font-size:clamp(16px,1.9vw,19px);color:rgba(243,237,224,.82);max-width:46ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn-call{background:var(--terra);color:#fff;box-shadow:0 10px 28px rgba(192,90,46,.35)}
+.btn-call:hover{background:var(--terra-deep);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(243,237,224,.4);color:#f3ede0}
+.btn-ghost:hover{border-color:#f3ede0;background:rgba(243,237,224,.07);transform:translateY(-2px)}
+
+/* floating hcard */
+.hcard{position:absolute;z-index:3;right:4%;bottom:64px;width:340px;background:var(--paper);color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.hcard .seal{width:54px;height:54px;border-radius:50%;background:var(--pine);color:#f3ede0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:20px;margin-bottom:14px}
+.hcard h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.hcard .tag{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-top:4px}
+.hcard .tel{display:block;font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--pine);text-decoration:none;margin:14px 0 10px;letter-spacing:.01em}
+.hcard .tel:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.hcard .hours{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;line-height:1.7}
+.hcard .hours b{color:var(--ink);font-weight:600}
+
+/* ---------- CREDENTIALS STRIP ---------- */
+.creds{background:var(--paper);border-bottom:1px solid var(--line)}
+.creds-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:26px 0}
+.cred{padding:6px 20px;border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.cred:first-child{border-left:none}
+.cred .num{font-family:'Fraunces',serif;font-size:30px;font-weight:700;color:var(--pine);line-height:1.15}
+.cred .lbl{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+
+/* ---------- SECTION HEADS ---------- */
+section{padding:88px 0}
+.sh {margin-bottom:48px}
+.sh .kicker{color:var(--terra)}
+.sh .kicker::before{background:var(--terra)}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.01em;margin-top:14px;max-width:22ch}
+h2 em{font-style:italic;font-weight:500;color:var(--terra)}
+.sh p.sub{margin-top:14px;color:var(--muted);max-width:56ch;font-size:16.5px}
+
+/* ---------- LOAN SERVICES ---------- */
+.loan-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.lcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:transform .2s ease,box-shadow .2s ease}
+.lcard:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(29,58,47,.1)}
+.lcard.w5{grid-column:span 5}.lcard.w7{grid-column:span 7}.lcard.w4{grid-column:span 4}.lcard.w8{grid-column:span 8}
+.lcard .idx{font-family:'Fraunces',serif;font-size:15px;color:var(--terra);font-weight:700}
+.lcard h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:8px 0 8px;letter-spacing:-.01em}
+.lcard p{font-size:14.5px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:12.5px;font-weight:600;color:var(--pine);background:var(--cream-2);border:1px solid var(--line);border-radius:999px;padding:5px 13px}
+
+/* ---------- GENERAL NOTARY (cream band) ---------- */
+.band{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.split .quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(21px,2.6vw,27px);line-height:1.45;color:var(--pine);border-left:3px solid var(--terra);padding-left:26px;margin:28px 0}
+.gcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 14px 32px rgba(29,58,47,.08)}
+.gcard ul{list-style:none;display:grid;gap:12px;margin-top:18px}
+.gcard li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink)}
+.gcard li::before{content:"";flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:var(--terra);margin-top:8px}
+
+/* ---------- SERVICE AREA ---------- */
+.counties{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.county{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
+.county h4{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--pine)}
+.county .zips{margin-top:6px;font-size:12.5px;letter-spacing:.04em;color:var(--muted);font-variant-numeric:tabular-nums}
+.area-note{margin-top:26px;display:flex;gap:12px;align-items:flex-start;background:var(--cream-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14.5px;color:var(--muted)}
+.area-note b{color:var(--ink)}
+
+/* ---------- ABOUT ---------- */
+.about{background:linear-gradient(180deg,var(--pine) 0%,var(--pine-deep) 100%);color:#f3ede0}
+.about .kicker{color:var(--gold)}.about .kicker::before{background:var(--gold)}
+.about h2{color:#f3ede0}.about h2 em{color:#e8c98f}
+.about p{color:rgba(243,237,224,.82);max-width:58ch;font-size:16.5px}
+.about p + p{margin-top:14px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.fact{border:1px solid rgba(243,237,224,.18);border-radius:14px;padding:20px;background:rgba(243,237,224,.04)}
+.fact .f-num{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:#e8c98f}
+.fact .f-lbl{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,237,224,.6);font-weight:600;margin-top:4px}
+
+/* ---------- BOOKING ---------- */
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.book-card{background:var(--pine);color:#f3ede0;border-radius:var(--radius);padding:34px;position:relative;overflow:hidden}
+.book-card::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.18),transparent 70%);top:-80px;right:-60px}
+.book-card h3{font-family:'Fraunces',serif;font-size:24px;font-weight:600;position:relative;z-index:1}
+.book-card .big-tel{display:block;font-family:'Fraunces',serif;font-size:clamp(26px,3.4vw,36px);font-weight:700;color:#fff;text-decoration:none;margin:16px 0 6px;position:relative;z-index:1}
+.book-card .big-tel:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.book-card .small{font-size:13.5px;color:rgba(243,237,224,.7);position:relative;z-index:1}
+.book-card .row{display:flex;gap:10px;margin-top:22px;position:relative;z-index:1;flex-wrap:wrap}
+.book-card .pill{border:1px solid rgba(243,237,224,.3);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600}
+.hours-table{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.hours-table h4{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--pine)}
+.hours-table dl{margin-top:16px;display:grid;gap:0}
+.hours-table .hrow{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.hours-table .hrow:last-child{border-bottom:none}
+.hours-table dt{color:var(--muted);font-weight:500}
+.hours-table dd{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.hours-table .addr{margin-top:18px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--pine-deep);color:rgba(243,237,224,.65);padding:36px 0;font-size:13.5px}
+footer .foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer a{color:#e8c98f;text-decoration:none}
+footer a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* ---------- REVEAL ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .btn,.lcard:hover{transition:none;transform:none}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:980px){
+  .hcard{position:relative;right:auto;bottom:auto;width:100%;max-width:420px;margin:-60px auto 0}
+  .hero-inner{padding:72px 0 120px}
+  .split{grid-template-columns:1fr;gap:34px}
+  .book-grid{grid-template-columns:1fr}
+  .creds-grid{grid-template-columns:repeat(2,1fr);row-gap:18px}
+  .cred:nth-child(3){border-left:none}
+  .lcard.w5,.lcard.w7,.lcard.w4,.lcard.w8{grid-column:span 12}
+}
+@media (max-width:600px){
+  .facts{grid-template-columns:1fr}
+  .counties{grid-template-columns:repeat(2,1fr)}
+  .cred{padding:6px 0 6px 16px}
+  .cred:nth-child(3),.cred:nth-child(1){border-left:none}
+}
+</style>
+</head>
+<body>
+<div class="banner"><b>Website concept preview</b> — built for Linda L Franklin · Mobile Texas Notary</div>
+
+<header class="hero">
+  <svg class="contour" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#f3ede0" stroke-width="1">
+      <path d="M-50 120 C 200 60, 380 180, 620 120 S 1050 40, 1250 130"/>
+      <path d="M-50 220 C 220 160, 420 280, 640 220 S 1080 140, 1250 240"/>
+      <path d="M-50 330 C 240 260, 460 390, 680 320 S 1100 250, 1250 350"/>
+      <path d="M-50 460 C 260 380, 500 520, 720 440 S 1130 360, 1250 480"/>
+      <path d="M-50 600 C 280 510, 540 650, 760 560 S 1160 480, 1250 620"/>
+      <path d="M-50 750 C 300 640, 580 780, 800 690 S 1180 620, 1250 770"/>
+    </g>
+  </svg>
+  <div class="glow"></div>
+  <div class="watermark" aria-hidden="true">NOTARY</div>
+  <div class="wrap hero-inner">
+    <span class="kicker">Fredericksburg · Texas Hill Country</span>
+    <h1>Your loan closing, handled with <em>integrity.</em></h1>
+    <p class="lede">Mobile notary and NNA-certified loan signing agent serving the Hill Country — 500+ signings, at your home, office, or closing table.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+18304600279" aria-label="Call Linda Franklin at 830-460-0279">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="currentColor"/></svg>
+        Call (830) 460-0279
+      </a>
+      <a class="btn btn-ghost" href="#book">Request a signing</a>
+    </div>
+  </div>
+  <aside class="hcard" aria-label="Contact card">
+    <div class="seal" aria-hidden="true">LF</div>
+    <h3>Linda L Franklin</h3>
+    <p class="tag">Mobile Notary · Loan Signing Agent</p>
+    <a class="tel" href="tel:+18304600279">(830) 460-0279</a>
+    <p class="hours"><b>Mon–Fri</b> 9:00 AM – 5:00 PM CST<br><b>Saturday</b> 9:00 AM – 12:00 PM<br>General notary by appointment</p>
+  </aside>
+</header>
+
+<div class="creds">
+  <div class="wrap creds-grid">
+    <div class="cred"><span class="num">500+</span><span class="lbl">Signings completed</span></div>
+    <div class="cred"><span class="num">NNA</span><span class="lbl">Certified Signing Agent</span></div>
+    <div class="cred"><span class="num">E&amp;O</span><span class="lbl">Insured &amp; background screened</span></div>
+    <div class="cred"><span class="num">2020</span><span class="lbl">Serving the Hill Country since</span></div>
+  </div>
+</div>
+
+<section id="loan">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kicker">Loan signing services</span>
+      <h2>Every package, signed right — <em>the first time.</em></h2>
+      <p class="sub">Fidelity-approved and experienced in residential and commercial transactions across Texas. I come to your borrowers, on your schedule.</p>
+    </div>
+    <div class="loan-grid">
+      <article class="lcard w7 rv">
+        <span class="idx">01</span>
+        <h3>Purchase &amp; seller packages</h3>
+        <p>Residential and commercial purchases and seller packages, handled end to end — from the first page to the notarized original, shipped or scanned back same-day.</p>
+      </article>
+      <article class="lcard w5 rv">
+        <span class="idx">02</span>
+        <h3>Refinances &amp; HELOCs</h3>
+        <p>Refinances, home equity lines of credit, and Texas cash-outs with careful attention to the Texas-specific disclosures.</p>
+      </article>
+      <article class="lcard w4 rv">
+        <span class="idx">03</span>
+        <h3>Reverse mortgages</h3>
+        <p>Patience and clarity for your borrowers, with every signature and initials accounted for.</p>
+      </article>
+      <article class="lcard w4 rv">
+        <span class="idx">04</span>
+        <h3>Loan modifications</h3>
+        <p>Accurate execution of modification packages, with same-day confirmation to your signing service.</p>
+      </article>
+      <article class="lcard w4 rv">
+        <span class="idx">05</span>
+        <h3>General notary — by appointment</h3>
+        <p>At your home, office, or another location that suits you. Always open to special requests.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap split">
+    <div class="rv">
+      <span class="kicker" style="color:var(--terra)">About Linda</span>
+      <h2>Just outside Fredericksburg, in the <em>beautiful Hill Country.</em></h2>
+      <p>I'm a mobile Notary Public for the State of Texas and an NNA-certified notary signing agent — background screened, E&amp;O insured, and Fidelity approved — with experience in residential and commercial purchases, sellers packages, refinances, home equity lines of credit, reverse mortgages, loan modifications, and Texas cash-outs.</p>
+      <blockquote class="quote">I provide dependable, reliable service with integrity.</blockquote>
+      <p>I live just outside Fredericksburg, Texas. I know the roads, the closing offices, and the people — and I'll treat your borrowers like neighbors, because they are.</p>
+      <div class="chips">
+        <span class="chip">Mobile Notary Public · State of Texas</span>
+        <span class="chip">NNA Notary Signing Agent</span>
+        <span class="chip">Background screened</span>
+        <span class="chip">E&amp;O Insurance</span>
+        <span class="chip">Fidelity approved</span>
+      </div>
+    </div>
+    <div class="gcard rv">
+      <h3 class="serif" style="font-size:19px;font-weight:600">What working together looks like</h3>
+      <ul>
+        <li>You call or message — I confirm the time, place, and package details.</li>
+        <li>I travel to your borrower's home, office, or closing location.</li>
+        <li>Every page is checked: signatures, initials, notarizations, dates.</li>
+        <li>Documents returned same-day — scan-backs on request, shipped securely.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kicker">Service area</span>
+      <h2>Seven counties of <em>Hill Country</em> coverage.</h2>
+      <p class="sub">Based in Fredericksburg and traveling throughout the region — with the zip codes lenders and signing services need.</p>
+    </div>
+    <div class="counties rv">
+      <div class="county"><h4>Gillespie</h4><p class="zips">78624 · 78631 · 78671</p></div>
+      <div class="county"><h4>Kerr</h4><p class="zips">78028 · 78025 · 78058</p></div>
+      <div class="county"><h4>Mason</h4><p class="zips">76856</p></div>
+      <div class="county"><h4>Kendall</h4><p class="zips">78006 · 78013</p></div>
+      <div class="county"><h4>Bandera</h4><p class="zips">78003 · 78055</p></div>
+      <div class="county"><h4>Kimble</h4><p class="zips">78649</p></div>
+      <div class="county"><h4>Real</h4><p class="zips">78873</p></div>
+    </div>
+    <p class="area-note rv"><b>Always open to special requests.</b> If your closing is just past these counties, call — we'll work it out.</p>
+  </div>
+</section>
+
+<section class="about" id="trust">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kicker">Why lenders &amp; signing services return</span>
+      <h2>Dependable. Reliable. <em>On time.</em></h2>
+    </div>
+    <div class="facts rv">
+      <div class="fact"><div class="f-num">500+</div><div class="f-lbl">Signings completed</div></div>
+      <div class="fact"><div class="f-num">7</div><div class="f-lbl">Counties served</div></div>
+      <div class="fact"><div class="f-num">6+ yrs</div><div class="f-lbl">In business — since 2020</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kicker">Book a signing</span>
+      <h2>One call and it's <em>handled.</em></h2>
+    </div>
+    <div class="book-grid rv">
+      <div class="book-card">
+        <h3>Call or text Linda directly</h3>
+        <a class="big-tel" href="tel:+18304600279">(830) 460-0279</a>
+        <p class="small">Message the office with your appointment request and we'll confirm the time, place, and package details.</p>
+        <div class="row">
+          <a class="pill" href="mailto:Linda@Franklinmobiletexasnotary.com?subject=Signing%20Appointment%20Request">Email the office</a>
+          <a class="pill" href="https://notarycafe.com/Linda.L.Franklin" target="_blank" rel="noopener">NotaryCafe profile</a>
+        </div>
+      </div>
+      <div class="hours-table">
+        <h4>Office hours</h4>
+        <dl>
+          <div class="hrow"><dt>Monday – Friday</dt><dd>9:00 AM – 5:00 PM CST</dd></div>
+          <div class="hrow"><dt>Saturday</dt><dd>9:00 AM – 12:00 PM CST</dd></div>
+          <div class="hrow"><dt>Sunday</dt><dd>Closed</dd></div>
+          <div class="hrow"><dt>General notary</dt><dd>By appointment only</dd></div>
+        </dl>
+        <p class="addr">Mailing: PO Box 2001, Fredericksburg, TX 78624<br>Located just outside Fredericksburg, Texas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>Linda L Franklin · Mobile Texas Notary / Loan Signing Agent · Fredericksburg, TX</span>
+    <span>PO Box 2001, Fredericksburg, TX 78624 · <a href="tel:+18304600279">(830) 460-0279</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
