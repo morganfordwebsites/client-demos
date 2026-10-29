@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAT's Notary — Mobile Notary &amp; Signing Agent, Greensboro NC</title>
+<meta name="description" content="Patricia Thurman — certified, background-screened signing agent serving Greensboro and Guilford County. Loan signings, mobile notary, RON, fingerprinting. NNA member. Call or text 757-636-1408.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E7; --paper-2:#EFE8DA; --ink:#16241C; --muted:#5C665B;
+  --accent:#9A5B2C; --line:rgba(22,36,28,.16); --line-strong:rgba(22,36,28,.34);
+  --r-sm:3px; --r-md:10px; --r-pill:999px;
+  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:64px; --s6:96px; --s7:128px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17.5px/1.62 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--s3)}
+.kicker{font:500 11.5px/1 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.banner{background:var(--ink);color:#EFE8DA;text-align:center;font:500 12px/1 Inter,sans-serif;letter-spacing:.06em;padding:9px 12px}
+.banner b{color:#F6F1E7}
+
+/* sticky header */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.tb{display:flex;align-items:center;gap:var(--s3);height:66px}
+.mark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.seal{width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:Fraunces,serif;font-size:15px;font-weight:600;letter-spacing:.02em;flex:none}
+.mark-txt{font-family:Fraunces,serif;font-size:17px;font-weight:600;line-height:1.1}
+.mark-txt small{display:block;font-family:Inter,sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav{display:flex;gap:var(--s3);margin-left:auto}
+.nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink);padding:6px 0;border-bottom:1.5px solid transparent}
+.nav a:hover{border-color:var(--accent)}
+.tb-call{background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:10px 17px;border-radius:var(--r-pill);white-space:nowrap;transition:transform .18s ease-out,filter .18s ease-out}
+.tb-call:hover{transform:translateY(-1px);filter:brightness(1.07)}
+
+/* hero */
+.hero{padding:var(--s6) 0 var(--s5);position:relative;overflow:hidden}
+.hero::after{content:"NOTARY";position:absolute;right:-2%;bottom:-38px;font-family:Fraunces,serif;font-weight:600;font-size:clamp(120px,17vw,230px);letter-spacing:.02em;color:rgba(22,36,28,.045);pointer-events:none;line-height:1}
+.hero-grid{display:grid;grid-template-columns:1.45fr .85fr;gap:var(--s5);align-items:end;position:relative;z-index:1}
+h1{font-size:clamp(44px,5.6vw,76px);line-height:1.02;letter-spacing:-.03em;margin:var(--s2) 0 var(--s3)}
+h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+.lede{font-size:19px;line-height:1.6;max-width:46ch;color:#2C382E}
+.hero-cta{display:flex;align-items:center;gap:var(--s3);margin-top:var(--s4);flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;padding:15px 26px;border-radius:var(--r-pill);transition:transform .18s ease-out}
+.btn:hover{transform:translateY(-1px)}
+.btn-ghost{background:none;color:var(--ink);border-bottom:1.5px solid var(--line-strong);border-radius:0;padding:6px 0}
+.hero-note{font-size:13.5px;color:var(--muted);margin-top:var(--s3)}
+
+/* credential card */
+.hcard{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-md);padding:var(--s3);box-shadow:0 18px 40px -28px rgba(22,36,28,.5)}
+.hcard .seal{width:52px;height:52px;font-size:19px;margin-bottom:14px}
+.hcard h3{font-size:20px;margin-bottom:2px}
+.hcard .role{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--s2)}
+.hcard dl{display:grid;grid-template-columns:auto 1fr;gap:9px var(--s2);font-size:13.5px;border-top:1px solid var(--line);padding-top:var(--s2)}
+.hcard dt{color:var(--muted)}
+.hcard dd{text-align:right;font-weight:500}
+.hcard .tel{display:block;margin-top:var(--s2);font-family:Fraunces,serif;font-size:22px;text-decoration:none;color:var(--ink)}
+
+/* sections */
+section{padding:var(--s6) 0;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:.9fr 1.4fr;gap:var(--s5);align-items:start;margin-bottom:var(--s5)}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.08}
+.sec-head p{font-size:16.5px;color:#2C382E;max-width:52ch}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--s5)}
+.svc{padding:var(--s3) 0;border-top:1px solid var(--line);display:grid;grid-template-columns:34px 1fr;gap:var(--s2)}
+.svc:nth-child(-n+2){border-top:0;padding-top:0}
+.svc .n{font-family:Fraunces,serif;font-size:13px;color:var(--accent);letter-spacing:.06em}
+.svc h3{font-size:19px;margin-bottom:5px}
+.svc p{font-size:15px;color:#37423A;line-height:1.55}
+.creds{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4);border-top:1px solid var(--line);padding-top:var(--s4)}
+.cred .k{font-family:Fraunces,serif;font-size:26px;line-height:1.05;margin-bottom:6px}
+.cred .v{font-size:13px;color:var(--muted);line-height:1.5}
+.counties{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--s5)}
+.county{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.county span:last-child{color:var(--muted);font-size:13px}
+.about{display:grid;grid-template-columns:.9fr 1.4fr;gap:var(--s5)}
+.about p{font-size:17px;line-height:1.65;color:#2C382E;margin-bottom:var(--s2)}
+.about .sig{font-family:Fraunces,serif;font-style:italic;font-size:20px;margin-top:var(--s3)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);border-top:0;padding:var(--s6) 0}
+.contact .kicker{color:#C98B5A}
+.contact-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:var(--s5);align-items:start}
+.contact h2{color:var(--paper);font-size:clamp(30px,3.8vw,46px);line-height:1.06;margin:var(--s2) 0 var(--s3)}
+.contact p{color:#CBD2C5;font-size:16.5px;max-width:44ch}
+.contact-tel{display:inline-block;margin-top:var(--s4);font-family:Fraunces,serif;font-size:clamp(30px,4vw,44px);color:var(--paper);text-decoration:none;border-bottom:2px solid rgba(246,241,231,.35);padding-bottom:4px}
+.contact-tel:hover{border-color:#C98B5A}
+.hours{background:rgba(246,241,231,.07);border:1px solid rgba(246,241,231,.16);border-radius:var(--r-md);padding:var(--s3)}
+.hours h3{font-size:17px;color:var(--paper);margin-bottom:var(--s2)}
+.hours .row{display:flex;justify-content:space-between;font-size:14px;padding:8px 0;border-bottom:1px solid rgba(246,241,231,.12);color:#CBD2C5}
+.hours .row:last-child{border:0}
+.hours .row b{color:var(--paper);font-weight:500}
+
+/* footer */
+footer{background:var(--ink);color:#A9B3A4;border-top:1px solid rgba(246,241,231,.14);padding:var(--s4) 0}
+.foot{display:flex;justify-content:space-between;gap:var(--s3);font-size:13px;flex-wrap:wrap}
+.foot a{color:#D7DED2;text-decoration:none}
+.foot a:hover{color:#fff}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease-out,transform .5s ease-out}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .btn,.tb-call{transition:none}
+}
+@media (max-width:900px){
+  .hero-grid,.sec-head,.about,.contact-grid{grid-template-columns:1fr;gap:var(--s4)}
+  .services{grid-template-columns:1fr}
+  .svc:nth-child(2){border-top:1px solid var(--line);padding-top:var(--s3)}
+  .creds{grid-template-columns:repeat(2,1fr);gap:var(--s3)}
+  .nav{display:none}
+  .tb{justify-content:space-between}
+  section{padding:var(--s5) 0}
+  .hero{padding:var(--s5) 0 var(--s4)}
+  h1{font-size:clamp(38px,9vw,54px)}
+  .hero::after{font-size:clamp(90px,26vw,150px)}
+  .counties{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="banner"><b>Website concept preview</b> — built for PAT's Notary · Greensboro, NC</div>
+
+<header class="topbar">
+  <div class="wrap tb">
+    <a class="mark" href="#top">
+      <span class="seal">PT</span>
+      <span class="mark-txt">PAT's Notary<small>Greensboro · Guilford County</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#area">Area Served</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tb-call" href="tel:+17576361408">(757) 636-1408</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Certified Signing Agent · Mobile Notary · Guilford County</p>
+      <h1>Documents signed<br>correctly, <em>on time</em>,<br>at your table.</h1>
+      <p class="lede">I'm Patricia Thurman — a background-screened signing agent and NNA member based in Greensboro. I come to your home, hospital, office or jail, and I get the signing done right the first time.</p>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+17576361408">Call or text (757) 636-1408</a>
+        <a class="btn btn-ghost" href="#services">See what I handle</a>
+      </div>
+      <p class="hero-note">Sunday appointments 1–4 p.m. · 24-hour service available · RON capable</p>
+    </div>
+    <aside class="hcard rv">
+      <div class="seal">PT</div>
+      <h3>Patricia Thurman</h3>
+      <p class="role">Owner · PAT's Notary</p>
+      <dl>
+        <dt>Commission</dt><dd>NC #202507100192</dd>
+        <dt>Bond</dt><dd>Merchants Bonding · $25,000</dd>
+        <dt>Background</dt><dd>NNA screened · current</dd>
+        <dt>Serving since</dt><dd>March 2025</dd>
+      </dl>
+      <a class="tel" href="tel:+17576361408">(757) 636-1408</a>
+    </aside>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">What I do</p><h2>Notary work, handled properly</h2></div>
+      <p>Most of my work comes from title companies and signing services who need a notary who shows up prepared, reads the documents carefully, and returns them the same day. Individuals are welcome too.</p>
+    </div>
+    <div class="services">
+      <div class="svc"><span class="n">01</span><div><h3>Loan signings</h3><p>Refinances, purchases, HELOCs and seller packages, printed and reviewed before I arrive.</p></div></div>
+      <div class="svc"><span class="n">02</span><div><h3>Mobile notary</h3><p>General notarizations at your home, office, care facility or hospital bed — by appointment.</p></div></div>
+      <div class="svc"><span class="n">03</span><div><h3>Remote online (RON)</h3><p>RON capable for signers who can't be in the room. I walk you through the platform, start to finish.</p></div></div>
+      <div class="svc"><span class="n">04</span><div><h3>Fingerprinting &amp; e-sign</h3><p>Ink and electronic signing support, mobile hotspot and laser printer on hand for last-minute copies.</p></div></div>
+      <div class="svc"><span class="n">05</span><div><h3>Hospital, jail &amp; wedding signings</h3><p>Sensitive locations handled calmly and discreetly — including after-hours and Sunday requests.</p></div></div>
+      <div class="svc"><span class="n">06</span><div><h3>Abstractor &amp; escrow support</h3><p>EscrowTab IPEN capable, attorney and title work supported when the file needs it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Why read the fine print</p><h2>Credentials you can check</h2></div>
+      <p>A notary is only as good as their commission, bond and background check. Mine are current — and I'll put the numbers in writing.</p>
+    </div>
+    <div class="creds">
+      <div class="cred"><div class="k">NC</div><div class="v">Commission #202507100192, valid through March 2030</div></div>
+      <div class="cred"><div class="k">$25,000</div><div class="v">Surety bond held with Merchants Bonding Company</div></div>
+      <div class="cred"><div class="k">NNA</div><div class="v">National Notary Association member, background-screened and current</div></div>
+      <div class="cred"><div class="k">Veteran</div><div class="v">U.S. Army veteran · retired high school business teacher</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Area served</p><h2>Ten counties, based in Greensboro</h2></div>
+      <p>Guilford County is home. I travel to the surrounding counties below; mileage is quoted up front so there are no surprises on the invoice.</p>
+    </div>
+    <div class="counties">
+      <div class="county"><span>Guilford</span><span>Home county</span></div>
+      <div class="county"><span>Forsyth</span><span>Winston-Salem</span></div>
+      <div class="county"><span>Alamance</span><span>Burlington</span></div>
+      <div class="county"><span>Randolph</span><span>Asheboro</span></div>
+      <div class="county"><span>Davidson</span><span>Lexington</span></div>
+      <div class="county"><span>Rockingham</span><span>Reidsville</span></div>
+      <div class="county"><span>Stokes</span><span>Danbury</span></div>
+      <div class="county"><span>Caswell</span><span>Yanceyville</span></div>
+      <div class="county"><span>Orange</span><span>Hillsborough</span></div>
+      <div class="county"><span>Chatham</span><span>Pittsboro</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div><p class="kicker">About Patricia</p><h2>A local, and a veteran</h2></div>
+    <div>
+      <p>I was born in Greensboro and I've lived here most of my life. Before I became a notary I taught high school business for years — which is where the habit of checking every line comes from.</p>
+      <p>I'm an Army veteran, married 46 years, with two grown children. I've been a commissioned notary public since March 2025 and a certified signing agent since then as well, working with title companies, signing services and neighbors who just need one document done right.</p>
+      <p class="sig">— Patricia Thurman</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="kicker">Booking</p>
+      <h2>Call or text — I answer personally.</h2>
+      <p>Give me the date, the location and what needs signing. I'll confirm availability, quote mileage if you're outside Guilford, and put it on the calendar.</p>
+      <a class="contact-tel" href="tel:+17576361408">(757) 636-1408</a>
+      <p style="margin-top:16px;font-size:14px">Text-friendly · 24-hour service · RON capable</p>
+    </div>
+    <div class="hours">
+      <h3>Availability</h3>
+      <div class="row"><span>Monday – Friday</span><b>AM &amp; PM</b></div>
+      <div class="row"><span>Saturday</span><b>AM &amp; PM</b></div>
+      <div class="row"><span>Sunday</span><b>1 – 4 p.m.</b></div>
+      <div class="row"><span>After hours</span><b>By request</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>PAT's Notary · Patricia Thurman · Greensboro, NC</span>
+    <span>NC Commission #202507100192 · <a href="tel:+17576361408">(757) 636-1408</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
