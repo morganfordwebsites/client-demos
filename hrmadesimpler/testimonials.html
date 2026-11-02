@@ -9,7 +9,7 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -17,10 +17,9 @@
 
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-mark" aria-hidden="true">HR</span>
-      <span class="brand-name">HR Made Simpler</span>
-    </a>
+    <a class="brand" href="index.html" aria-label="HR Made Simpler, home">
+        <img class="brand-logo" src="assets/img/logo.png" alt="HR Made Simpler" width="99" height="46">
+      </a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -43,10 +42,9 @@
 
 <div class="drawer" id="drawer" data-drawer data-open="false" aria-hidden="true">
   <div class="drawer-top">
-    <a class="brand" href="index.html">
-      <span class="brand-mark" aria-hidden="true">HR</span>
-      <span class="brand-name">HR Made Simpler</span>
-    </a>
+    <a class="brand" href="index.html" aria-label="HR Made Simpler, home">
+        <img class="brand-logo" src="assets/img/logo.png" alt="HR Made Simpler" width="99" height="46">
+      </a>
     <button class="drawer-close" type="button" data-nav-close>Close</button>
   </div>
   <nav aria-label="Primary mobile">
@@ -77,66 +75,64 @@
 
   <section class="section">
     <div class="shell">
+      <div class="tcar-layout" data-carousel-group>
 
-      <div class="tst-feature reveal">
-        <blockquote>Jordana is one of the most loyal, trusted and capable people I have had the pleasure to employ in my 20+ years in business. At EnviroPest, she did a fantastic job managing our office team, taking over HR and accounting, as well as serving as my executive assistant, making my life much more enjoyable. Since her moving from Colorado in 2013, Jordana is still a very valuable part of my team, assisting with HR, Accounting, Administration, Planning, Policies and Processes, and much more for EnviroPest, Lobster Marketing and Pro Impressions Marketing Group. <span style="color:var(--teal-ink)">Bottom line: any company would benefit greatly by having her on their team.</span></blockquote>
-        <div class="quote-attrib" style="border-top:0;padding-top:1.75rem;margin-top:0">
-          <b>Marc Dykstra</b><span>CEO, Enviropest, PCO Central, LLC</span>
+        <div class="reveal">
+          <p class="eyebrow" style="margin-bottom:1.25rem">The six</p>
+          <ul class="tcar-names">
+            <li><button type="button" data-goto aria-current="true"><span class="nm">Marc Dykstra</span><span class="rl">CEO, Enviropest, PCO Central, LLC</span></button></li>
+            <li><button type="button" data-goto aria-current="false"><span class="nm">Charles J. Piche</span><span class="rl">Custom Cart Solutions</span></button></li>
+            <li><button type="button" data-goto aria-current="false"><span class="nm">Kevin Lemasters</span><span class="rl">EnviroPest</span></button></li>
+            <li><button type="button" data-goto aria-current="false"><span class="nm">Kristen Hansen</span><span class="rl">Director of HR and Administration, Gerrard Excavating, Inc.</span></button></li>
+            <li><button type="button" data-goto aria-current="false"><span class="nm">Delma Gutierrez</span><span class="rl">Founder and Executive Director, WinGs Ministries</span></button></li>
+            <li><button type="button" data-goto aria-current="false"><span class="nm">Dr. Richard Roberts</span><span class="rl">D.Phil</span></button></li>
+          </ul>
         </div>
-      </div>
 
-      <div class="tst-grid">
-        <article class="tst reveal">
-          <blockquote>&ldquo;Jordana is a very experienced Human Resource Professional. Coupled with her consulting excellence in Administration makes her a valuable resource to any company.&rdquo;</blockquote>
-          <div class="who">
-            <b>Charles J. Piche</b><span>Custom Cart Solutions</span>
-            <span class="rmark" aria-hidden="true">02</span>
+        <div class="tcar tcar--lg reveal" data-carousel aria-roledescription="carousel" aria-label="Client testimonials">
+          <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 1 of 6" aria-hidden="true">
+            <blockquote class="tcar-quote">&ldquo;Jordana is one of the most loyal, trusted and capable people I have had the pleasure to employ in my 20+ years in business. At EnviroPest, she did a fantastic job managing our office team, taking over HR and accounting, as well as serving as my executive assistant, making my life much more enjoyable. Since her moving from Colorado in 2013, Jordana is still a very valuable part of my team, assisting with HR, Accounting, Administration, Planning, Policies and Processes, and much more for EnviroPest, Lobster Marketing and Pro Impressions Marketing Group. Bottom line: any company would benefit greatly by having her on their team.&rdquo;</blockquote>
+            <figcaption class="tcar-meta"><b>Marc Dykstra</b><span>CEO, Enviropest, PCO Central, LLC</span></figcaption>
+          </figure>
+          <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 2 of 6" aria-hidden="true">
+            <blockquote class="tcar-quote">&ldquo;Jordana is a very experienced Human Resource Professional. Coupled with her consulting excellence in Administration makes her a valuable resource to any company.&rdquo;</blockquote>
+            <figcaption class="tcar-meta"><b>Charles J. Piche</b><span>Custom Cart Solutions</span></figcaption>
+          </figure>
+          <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 3 of 6" aria-hidden="true">
+            <blockquote class="tcar-quote">&ldquo;Jordana effectively managed both people and processes for our company. She was always on top of HR and Administrative functions. We still benefit from Jordana's experience and expertise as we continue to retain her services as a consultant for our company.&rdquo;</blockquote>
+            <figcaption class="tcar-meta"><b>Kevin Lemasters</b><span>EnviroPest</span></figcaption>
+          </figure>
+          <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 4 of 6" aria-hidden="true">
+            <blockquote class="tcar-quote">&ldquo;Jordana is an extremely knowledgeable professional with an innate ability to determine a company's needs and find the right candidate that will fit the company culture. Jordana's personality and professionalism made our interactions easy and pleasurable.&rdquo;</blockquote>
+            <figcaption class="tcar-meta"><b>Kristen Hansen</b><span>Director of HR and Administration, Gerrard Excavating, Inc.</span></figcaption>
+          </figure>
+          <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 5 of 6" aria-hidden="true">
+            <blockquote class="tcar-quote">&ldquo;I have had the opportunity to partner with Jordana on many professional levels. Jordana's ability to discern the character qualities in potential candidates and volunteers have allowed companies to build successful teams of great people. Jordana is very personable and yet intentional about connecting the right character traits, training, and talents to the right position in companies. She is the first person I call for professional and relational advice in finding key people.&rdquo;</blockquote>
+            <figcaption class="tcar-meta"><b>Delma Gutierrez</b><span>Founder and Executive Director, WinGs Ministries</span></figcaption>
+          </figure>
+          <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 6 of 6" aria-hidden="true">
+            <blockquote class="tcar-quote">&ldquo;I came to Jordana shortly after losing my job. She spent time with me reviewing my job history, work ethic, and personal goals. She not only identified the workplace culture and environment which fit my skills and personality, but also articulated the work environment in which I would not thrive. In addition to her gift of encouragement, she is professional, personable, articulate, and knowledgeable in her field.&rdquo;</blockquote>
+            <figcaption class="tcar-meta"><b>Dr. Richard Roberts</b><span>D.Phil</span></figcaption>
+          </figure>
+          <div class="tcar-bar">
+            <p class="tcar-count"><span data-current>01</span> / <span data-total>06</span></p>
+            <div class="tcar-dots" data-dots></div>
+            <div class="tcar-nav">
+              <button type="button" data-prev aria-label="Previous testimonial">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              </button>
+              <button type="button" data-next aria-label="Next testimonial">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="tst reveal">
-          <blockquote>&ldquo;Jordana effectively managed both people and processes for our company. She was always on top of HR and Administrative functions. We still benefit from Jordana's experience and expertise as we continue to retain her services as a consultant for our company.&rdquo;</blockquote>
-          <div class="who">
-            <b>Kevin Lemasters</b><span>EnviroPest</span>
-            <span class="rmark" aria-hidden="true">03</span>
-          </div>
-        </article>
-
-        <article class="tst reveal">
-          <blockquote>&ldquo;Jordana is an extremely knowledgeable professional with an innate ability to determine a company's needs and find the right candidate that will fit the company culture. Jordana's personality and professionalism made our interactions easy and pleasurable.&rdquo;</blockquote>
-          <div class="who">
-            <b>Kristen Hansen</b><span>Director of HR and Administration, Gerrard Excavating, Inc.</span>
-            <span class="rmark" aria-hidden="true">04</span>
-          </div>
-        </article>
-
-        <article class="tst reveal">
-          <blockquote>&ldquo;I have had the opportunity to partner with Jordana on many professional levels. Jordana's ability to discern the character qualities in potential candidates and volunteers have allowed companies to build successful teams of great people. Jordana is very personable and yet intentional about connecting the right character traits, training, and talents to the right position in companies. She is the first person I call for professional and relational advice in finding key people.&rdquo;</blockquote>
-          <div class="who">
-            <b>Delma Gutierrez</b><span>Founder and Executive Director, WinGs Ministries</span>
-            <span class="rmark" aria-hidden="true">05</span>
-          </div>
-        </article>
-
-        <article class="tst reveal">
-          <blockquote>&ldquo;I came to Jordana shortly after losing my job. She spent time with me reviewing my job history, work ethic, and personal goals. She not only identified the workplace culture and environment which fit my skills and personality, but also articulated the work environment in which I would not thrive. In addition to her gift of encouragement, she is professional, personable, articulate, and knowledgeable in her field.&rdquo;</blockquote>
-          <div class="who">
-            <b>Dr. Richard Roberts</b><span>D.Phil</span>
-            <span class="rmark" aria-hidden="true">06</span>
-          </div>
-        </article>
-
-        <article class="tst reveal" style="border-top-color:var(--gold)">
-          <p class="eyebrow" style="margin-bottom:1rem">Next reference</p>
-          <h3 style="font-size:var(--step-2);margin-bottom:1rem">Yours, after the first engagement.</h3>
-          <p style="font-size:.9375rem;color:var(--ink-70);margin-bottom:1.5rem">The free initial consultation is where it starts. Bring the situation as it actually is.</p>
-          <a class="btn" href="contact.html" style="align-self:flex-start">Request a consultation</a>
-        </article>
       </div>
 
       <div style="margin-top:clamp(2.5rem,5vw,4rem);padding-top:1.5rem;border-top:1px solid var(--ink-12)" class="reveal">
         <p class="eyebrow" style="margin-bottom:1.25rem">Work includes</p>
-        <p style="font-family:var(--font-display);font-size:var(--step-2);line-height:1.5;color:var(--ink-70);max-width:52ch">
+        <p style="font-size:var(--step-2);line-height:1.5;color:var(--ink-70);max-width:52ch;font-weight:500;letter-spacing:-.02em">
           EnviroPest &nbsp;·&nbsp; PCO Central, LLC &nbsp;·&nbsp; Lobster Marketing &nbsp;·&nbsp; Pro Impressions Marketing Group &nbsp;·&nbsp; Custom Cart Solutions &nbsp;·&nbsp; Gerrard Excavating, Inc. &nbsp;·&nbsp; WinGs Ministries
         </p>
       </div>
@@ -165,10 +161,9 @@
   <div class="shell">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true">HR</span>
-          <span class="brand-name">HR Made Simpler</span>
-        </a>
+        <a class="brand" href="index.html" aria-label="HR Made Simpler, home">
+        <img class="brand-logo" src="assets/img/logo.png" alt="HR Made Simpler" width="99" height="46">
+      </a>
         <p>Making the complex simpler for ministries, non-profits and small businesses, with expert human resources consulting and career path counseling for individuals.</p>
       </div>
       <div class="foot-col">
