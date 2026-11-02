@@ -4,6 +4,10 @@
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* the reveal styles are gated on html.js, so this file must be the one to set it */
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+
   /* ---- mobile drawer ---- */
   var drawer = document.querySelector('[data-drawer]');
   var openBtn = document.querySelector('[data-nav-open]');
@@ -29,22 +33,7 @@
     if (e.key === 'Escape' && drawer && drawer.getAttribute('data-open') === 'true') setDrawer(false);
   });
 
-  /* ---- reveal on scroll (fires once) ---- */
-  var items = document.querySelectorAll('.reveal');
-  if (items.length && !reduce && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('in'); });
-  }
-
+  /* ---- scroll reveal removed: sections are painted immediately, never hidden ---- */
 
   /* ---- testimonial carousel ---- */
   document.querySelectorAll('[data-carousel]').forEach(function (root) {
@@ -58,6 +47,7 @@
     var names = [].slice.call(scope.querySelectorAll('[data-goto]'));
     var dots = [];
     var index = 0;
+    root.setAttribute('data-ready', 'true');
 
     var pad = function (n) { return (n < 10 ? '0' : '') + n; };
 
