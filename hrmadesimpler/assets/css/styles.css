@@ -1304,3 +1304,9 @@ blockquote.pull .mark { color: var(--teal); }
   .tcar-dots button { width: 22px; }
   .tcar-nav button { width: 40px; height: 40px; }
 }
+
+/* ---------- 26. Carousel auto-rotation toggle ---------- */
+.tcar-pause .ico-play { display: none; }
+.tcar-pause[aria-pressed="true"] .ico-play { display: block; }
+.tcar-pause[aria-pressed="true"] .ico-pause { display: none; }
+.tcar-pause[aria-pressed="true"] { border-color: var(--gold); color: var(--teal-ink); }
