@@ -12,7 +12,7 @@
 <meta property="og:description" content="HR consulting, recruitment and career counseling for ministries, non-profits and small businesses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -20,10 +20,9 @@
 
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-mark" aria-hidden="true">HR</span>
-      <span class="brand-name">HR Made Simpler</span>
-    </a>
+    <a class="brand" href="index.html" aria-label="HR Made Simpler, home">
+        <img class="brand-logo" src="assets/img/logo.png" alt="HR Made Simpler" width="99" height="46">
+      </a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
@@ -46,10 +45,9 @@
 
 <div class="drawer" id="drawer" data-drawer data-open="false" aria-hidden="true">
   <div class="drawer-top">
-    <a class="brand" href="index.html">
-      <span class="brand-mark" aria-hidden="true">HR</span>
-      <span class="brand-name">HR Made Simpler</span>
-    </a>
+    <a class="brand" href="index.html" aria-label="HR Made Simpler, home">
+        <img class="brand-logo" src="assets/img/logo.png" alt="HR Made Simpler" width="99" height="46">
+      </a>
     <button class="drawer-close" type="button" data-nav-close>Close</button>
   </div>
   <nav aria-label="Primary mobile">
@@ -163,27 +161,48 @@
     </div>
   </section>
 
-  <!-- PREMISE -->
-  <section class="section section--sand">
+  <!-- OUTLOOK -->
+  <section class="section section--sand" id="outlook">
     <div class="shell premise">
       <div class="premise-rail">
-        <span class="kicker">02 / The premise</span>
+        <span class="kicker">02 / Outlook</span>
         <span class="rule-v" aria-hidden="true"></span>
       </div>
       <div class="reveal">
-        <p class="statement" style="max-width:26ch">A poor culture or a compliance gap can <span class="hl">threaten the livelihood of a mission.</span></p>
-        <div class="premise-cols">
-          <p>So the framework has to be right: hiring the right people, and effective systems, policies and procedures underneath them. That is what makes employee satisfaction, positive culture, retention and continuity possible.</p>
-          <p>Administrative and HR functions have become harder to navigate than the work they are meant to support. Too often they end up leading the organisation instead of following it. The job here is to put them back in their place.</p>
+        <p class="statement" style="max-width:30ch">A poor culture or a compliance gap can <span class="hl">threaten the livelihood of a mission.</span></p>
+        <div class="outlook">
+          <article>
+            <h3 class="outlook-h">Ministries, non-profits and small businesses</h3>
+            <p>Build the framework. Hire the right people, then put effective systems, policies and procedures underneath them. That is what makes employee satisfaction, positive culture, retention and continuity possible.</p>
+            <p>With extensive resources and the expertise of a seasoned professional, the work is to partner with you and reduce the complexity of the HR function, so it follows the mission instead of leading it.</p>
+          </article>
+          <article>
+            <h3 class="outlook-h">Individuals</h3>
+            <p>A purposeful approach to gaining employment. As a recruitment specialist and HR professional, Jordana can highlight your skills and expertise, and hand you the tools and resources to stand out in the selection process.</p>
+            <a class="arrow-link" href="services.html#career" style="margin-top:.85rem">Career counseling detail
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission-band">
+    <div class="shell mission-inner reveal">
+      <div>
+        <p class="mission-label">03 / Mission statement</p>
+        <p class="mission-note">One sentence, and it has not changed since the first client.</p>
+      </div>
+      <p class="mission-text">To provide top-notch human resources consulting that lets ministries, non-profits, small businesses and individuals <span class="hl">make the complex simpler.</span></p>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section class="section">
     <div class="shell">
-      <p class="eyebrow"><span class="num">03</span> Services</p>
+      <p class="eyebrow"><span class="num">04</span> Services</p>
       <div class="sec-head">
         <h2 class="reveal" style="max-width:20ch">What comes off your desk.</h2>
         <p class="lede reveal" style="max-width:38ch;font-size:1rem">Recruitment, HR consulting, handbooks, speaking and career counseling. Taken on as a project, on retainer, or one audit at a time.</p>
@@ -255,7 +274,7 @@
   <!-- CREDENTIALS -->
   <section class="section section--ink">
     <div class="shell">
-      <p class="eyebrow"><span class="num">04</span> Credentials</p>
+      <p class="eyebrow"><span class="num">05</span> Credentials</p>
       <div class="split-2">
         <div class="reveal">
           <h2 style="font-size:var(--step-4);max-width:16ch">Certification, and the years behind it.</h2>
@@ -274,18 +293,57 @@
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
+  <!-- TESTIMONIALS -->
   <section class="section">
-    <div class="shell quote-block reveal">
-      <p class="eyebrow"><span class="num">05</span> In their words</p>
-      <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-      <blockquote class="pull">One of the most loyal, trusted and capable people I have had the pleasure to employ in 20+ years of business. <span class="mark">Any company would benefit by having her on their team.</span></blockquote>
-      <div class="quote-attrib">
-        <b>Marc Dykstra</b><span>CEO, Enviropest, PCO Central, LLC</span>
-        <a class="arrow-link" href="testimonials.html" style="margin-left:auto">Read all six
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
+    <div class="shell">
+      <p class="eyebrow"><span class="num">06</span> Testimonials</p>
+      <div class="sec-head">
+        <h2 class="reveal" style="max-width:18ch">Six of them, in their own words.</h2>
+        <p class="lede reveal" style="max-width:34ch;font-size:1rem">Nothing here has been polished for the website. Use the arrows, or read the full set.</p>
       </div>
+
+      <div class="tcar reveal" data-carousel aria-roledescription="carousel" aria-label="Client testimonials">
+        <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 1 of 6" aria-hidden="true">
+          <blockquote class="tcar-quote">&ldquo;Jordana is one of the most loyal, trusted and capable people I have had the pleasure to employ in my 20+ years in business.&rdquo;</blockquote>
+          <figcaption class="tcar-meta"><b>Marc Dykstra</b><span>CEO, Enviropest, PCO Central, LLC</span></figcaption>
+        </figure>
+        <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 2 of 6" aria-hidden="true">
+          <blockquote class="tcar-quote">&ldquo;Jordana is a very experienced Human Resource Professional. Coupled with her consulting excellence in Administration makes her a valuable resource to any company.&rdquo;</blockquote>
+          <figcaption class="tcar-meta"><b>Charles J. Piche</b><span>Custom Cart Solutions</span></figcaption>
+        </figure>
+        <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 3 of 6" aria-hidden="true">
+          <blockquote class="tcar-quote">&ldquo;Jordana effectively managed both people and processes for our company. She was always on top of HR and Administrative functions. We still benefit from Jordana's experience and expertise as we continue to retain her services as a consultant for our company.&rdquo;</blockquote>
+          <figcaption class="tcar-meta"><b>Kevin Lemasters</b><span>EnviroPest</span></figcaption>
+        </figure>
+        <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 4 of 6" aria-hidden="true">
+          <blockquote class="tcar-quote">&ldquo;Jordana is an extremely knowledgeable professional with an innate ability to determine a company's needs and find the right candidate that will fit the company culture. Jordana's personality and professionalism made our interactions easy and pleasurable.&rdquo;</blockquote>
+          <figcaption class="tcar-meta"><b>Kristen Hansen</b><span>Director of HR and Administration, Gerrard Excavating, Inc.</span></figcaption>
+        </figure>
+        <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 5 of 6" aria-hidden="true">
+          <blockquote class="tcar-quote">&ldquo;I have had the opportunity to partner with Jordana on many professional levels. Jordana's ability to discern the character qualities in potential candidates and volunteers have allowed companies to build successful teams of great people. She is the first person I call for professional and relational advice in finding key people.&rdquo;</blockquote>
+          <figcaption class="tcar-meta"><b>Delma Gutierrez</b><span>Founder and Executive Director, WinGs Ministries</span></figcaption>
+        </figure>
+        <figure class="tcar-slide" data-slide role="group" aria-roledescription="slide" aria-label="Testimonial 6 of 6" aria-hidden="true">
+          <blockquote class="tcar-quote">&ldquo;I came to Jordana shortly after losing my job. She not only identified the workplace culture and environment which fit my skills and personality, but also articulated the work environment in which I would not thrive. She is professional, personable, articulate, and knowledgeable in her field.&rdquo;</blockquote>
+          <figcaption class="tcar-meta"><b>Dr. Richard Roberts</b><span>D.Phil</span></figcaption>
+        </figure>
+        <div class="tcar-bar">
+          <p class="tcar-count"><span data-current>01</span> / <span data-total>06</span></p>
+          <div class="tcar-dots" data-dots></div>
+          <div class="tcar-nav">
+          <button type="button" data-prev aria-label="Previous testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          </button>
+          <button type="button" data-next aria-label="Next testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:1.75rem"><a class="arrow-link" href="testimonials.html">All six references
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a></p>
     </div>
   </section>
 
@@ -311,7 +369,7 @@
   <section class="section">
     <div class="shell split-2">
       <div class="reveal">
-        <p class="eyebrow"><span class="num">06</span> Questions</p>
+        <p class="eyebrow"><span class="num">07</span> Questions</p>
         <h2 style="font-size:var(--step-3);max-width:16ch">Before you pick up the phone.</h2>
       </div>
       <div class="faq reveal">
@@ -365,10 +423,9 @@
   <div class="shell">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true">HR</span>
-          <span class="brand-name">HR Made Simpler</span>
-        </a>
+        <a class="brand" href="index.html" aria-label="HR Made Simpler, home">
+        <img class="brand-logo" src="assets/img/logo.png" alt="HR Made Simpler" width="99" height="46">
+      </a>
         <p>Making the complex simpler for ministries, non-profits and small businesses, with expert human resources consulting and career path counseling for individuals.</p>
       </div>
       <div class="foot-col">
