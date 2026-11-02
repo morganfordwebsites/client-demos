@@ -42,6 +42,7 @@
 }
 
 /* ---------- 2. Base ---------- */
+button, input, select, textarea, optgroup { font: inherit; }
 *, *::before, *::after { box-sizing: border-box; }
 
 html {
@@ -232,12 +233,9 @@ a:hover { color: var(--ink); }
   text-decoration: none;
   color: var(--ink);
   flex: 0 0 auto;
-  background: var(--ink);
-  padding: 7px 12px 8px;
-  border-radius: var(--radius);
 }
 .brand-logo {
-  height: 38px;
+  height: 40px;
   width: auto;
   flex: 0 0 auto;
   display: block;
@@ -979,8 +977,8 @@ blockquote.pull .mark { color: var(--teal); }
 .header-call:hover { background: var(--teal); color: var(--paper); }
 
 /* ---------- 18. Motion ---------- */
-.reveal { opacity: 0; transform: translateY(14px); }
-.reveal.in { opacity: 1; transform: none; transition: opacity 620ms var(--ease), transform 620ms var(--ease); }
+/* content never depends on an observer to become visible */
+.reveal, .reveal.in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -989,7 +987,6 @@ blockquote.pull .mark { color: var(--teal); }
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
-  .reveal { opacity: 1; transform: none; }
 }
 
 /* ---------- 19. Responsive ---------- */
@@ -1028,8 +1025,7 @@ blockquote.pull .mark { color: var(--teal); }
   .podcast .pod-cta { grid-column: 1 / -1; }
   .header-call { display: inline-flex; }
   .header-inner { min-height: 62px; }
-  .brand { padding: 5px 9px 6px; }
-  .brand-logo { height: 30px; }
+  .brand-logo { height: 28px; }
   .nav-toggle { padding: 0.5rem 0.65rem; }
   .quote-attrib { gap: 0.2rem 0.8125rem; }
 }
@@ -1165,7 +1161,11 @@ blockquote.pull .mark { color: var(--teal); }
 /* ---------- 25. Testimonial carousel ---------- */
 .tcar { position: relative; }
 .tcar-slide { margin: 0; display: none; }
-.tcar-slide.is-active { display: block; animation: tcarIn 420ms var(--ease) both; }
+.tcar-slide:first-of-type { display: block; }
+[data-carousel][data-ready] .tcar-slide { display: none; }
+[data-carousel] .tcar-slide.is-active { display: block; }
+[data-carousel]:not([data-ready]) .tcar-bar { display: none; }
+.tcar-slide.is-active { display: block; animation: tcarIn 380ms var(--ease); }
 @keyframes tcarIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
