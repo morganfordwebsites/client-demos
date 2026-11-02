@@ -73,7 +73,54 @@
       dots.forEach(function (d, k) { d.setAttribute('aria-current', k === index ? 'true' : 'false'); });
       names.forEach(function (b, k) { b.setAttribute('aria-current', k === index ? 'true' : 'false'); });
       if (curEl) curEl.textContent = pad(index + 1);
+      if (timer) startTicker();
     }
+
+    /* ---- auto rotation: a single ticker with guards, so nothing can strand it ---- */
+    var DWELL = 7000;
+    var timer = null;
+    var paused = reduce;
+    var inView = true;
+    var held = false;   // pointer over it, or focus inside it
+    var toggle = root.querySelector('[data-pause]');
+
+    function tick() {
+      if (paused || held || !inView || document.hidden) return;
+      go(index + 1);
+    }
+    function startTicker() {
+      if (timer) { clearInterval(timer); }
+      timer = setInterval(tick, DWELL);
+    }
+
+    function paintToggle() {
+      if (!toggle) return;
+      toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
+      toggle.setAttribute('aria-label', paused ? 'Start testimonial rotation' : 'Pause testimonial rotation');
+    }
+    paintToggle();
+
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        paused = !paused;
+        paintToggle();
+        if (!paused) startTicker();
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { inView = e.isIntersecting; });
+      }, { threshold: 0.25 }).observe(root);
+    }
+
+    /* reading a quote should not be interrupted mid-sentence */
+    root.addEventListener('mouseenter', function () { held = true; });
+    root.addEventListener('mouseleave', function () { held = false; });
+    root.addEventListener('focusin', function () { held = true; });
+    root.addEventListener('focusout', function () { held = false; });
+
+    startTicker();
 
     var prev = root.querySelector('[data-prev]');
     var next = root.querySelector('[data-next]');
