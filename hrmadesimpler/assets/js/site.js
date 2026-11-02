@@ -45,6 +45,69 @@
     items.forEach(function (el) { el.classList.add('in'); });
   }
 
+
+  /* ---- testimonial carousel ---- */
+  document.querySelectorAll('[data-carousel]').forEach(function (root) {
+    var slides = [].slice.call(root.querySelectorAll('[data-slide]'));
+    if (!slides.length) return;
+
+    var dotsWrap = root.querySelector('[data-dots]');
+    var curEl = root.querySelector('[data-current]');
+    var totalEl = root.querySelector('[data-total]');
+    var scope = root.closest('[data-carousel-group]') || root;
+    var names = [].slice.call(scope.querySelectorAll('[data-goto]'));
+    var dots = [];
+    var index = 0;
+
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+
+    if (dotsWrap) {
+      slides.forEach(function (_, n) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Testimonial ' + (n + 1) + ' of ' + slides.length);
+        b.addEventListener('click', function () { go(n); });
+        dotsWrap.appendChild(b);
+        dots.push(b);
+      });
+    }
+
+    if (totalEl) totalEl.textContent = pad(slides.length);
+
+    function go(n) {
+      index = (n + slides.length) % slides.length;
+      slides.forEach(function (s, k) {
+        s.classList.toggle('is-active', k === index);
+        s.setAttribute('aria-hidden', k === index ? 'false' : 'true');
+      });
+      dots.forEach(function (d, k) { d.setAttribute('aria-current', k === index ? 'true' : 'false'); });
+      names.forEach(function (b, k) { b.setAttribute('aria-current', k === index ? 'true' : 'false'); });
+      if (curEl) curEl.textContent = pad(index + 1);
+    }
+
+    var prev = root.querySelector('[data-prev]');
+    var next = root.querySelector('[data-next]');
+    if (prev) prev.addEventListener('click', function () { go(index - 1); });
+    if (next) next.addEventListener('click', function () { go(index + 1); });
+    names.forEach(function (b, k) { b.addEventListener('click', function () { go(k); }); });
+
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { go(index - 1); }
+      if (e.key === 'ArrowRight') { go(index + 1); }
+    });
+
+    var startX = null;
+    root.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 45) go(index + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+
+    go(0);
+  });
+
   /* ---- current year ---- */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
