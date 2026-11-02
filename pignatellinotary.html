@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pignatelli CT Mobile Notary — Mobile Notary &amp; Signing Agent, Colchester CT</title>
+<meta name="description" content="Spenser Pignatelli — certified Connecticut Notary Public and Notary Public Association Certified Signing Agent. Loan signings, real estate closings, and general notarization statewide, including military installations. Veteran-owned. Call or text 541-613-1569.">
+<meta name="theme-color" content="#101C2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101C2B'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='600' fill='%23F3F1EA' text-anchor='middle'%3ESP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#101C2B;        /* deep navy slate */
+  --bone:#EFF1EC;       /* paper */
+  --sand:#E3E6DE;       /* second surface */
+  --slate:#5A6674;      /* muted text */
+  --leaf:#39695C;       /* reserved accent */
+  --leaf-lt:#8FBFAE;    /* accent on dark */
+  --line:rgba(16,28,43,.15);
+  --line-2:rgba(16,28,43,.32);
+  --d-line:rgba(239,241,236,.16);
+  --r1:3px; --r2:12px; --r3:999px;
+  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:64px; --s6:96px; --s7:132px;
+  --sans:"Public Sans",system-ui,-apple-system,sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bone);color:var(--ink);font:400 17.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.018em}
+a{color:inherit}
+img,svg{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--s3)}
+.kicker{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--leaf)}
+:focus-visible{outline:2px solid var(--leaf);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bone);padding:10px 16px;z-index:200}
+.skip:focus{left:12px;top:12px}
+
+/* ---------- banner ---------- */
+.banner{background:var(--ink);color:var(--sand);text-align:center;font:500 11.5px/1 var(--sans);letter-spacing:.08em;padding:10px 14px}
+.banner b{color:var(--bone);letter-spacing:.1em;text-transform:uppercase;font-size:10.5px}
+
+/* ---------- sticky header ---------- */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(239,241,236,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.tb{display:flex;align-items:center;gap:var(--s3);height:70px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.seal{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bone);display:grid;place-items:center;font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.01em;flex:none;border:1px solid var(--ink)}
+.mark-txt{font-family:var(--serif);font-size:16.5px;line-height:1.12;letter-spacing:-.01em}
+.mark-txt small{display:block;font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--slate);margin-top:4px}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;font-size:14px;font-weight:500;padding:7px 0;border-bottom:1.5px solid transparent;transition:border-color .18s ease-out,color .18s ease-out}
+.nav a:hover{border-color:var(--leaf);color:var(--leaf)}
+.tb-call{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bone);text-decoration:none;font-weight:500;font-size:14px;padding:11px 18px;border-radius:var(--r3);white-space:nowrap;transition:transform .18s ease-out,background .18s ease-out}
+.tb-call:hover{transform:translateY(-1px);filter:brightness(1.28)}
+
+/* ---------- hero (dark, composed) ---------- */
+.hero{position:relative;background:var(--ink);color:var(--bone);padding:var(--s6) 0 0;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(80% 60% at 12% -10%, rgba(57,105,92,.42) 0%, rgba(57,105,92,0) 62%),
+    radial-gradient(70% 70% at 96% 8%, rgba(143,191,174,.14) 0%, rgba(143,191,174,0) 60%),
+    radial-gradient(120% 90% at 50% 120%, rgba(16,28,43,0) 40%, rgba(0,0,0,.35) 100%);}
+.hero::after{content:"NOTARY";position:absolute;right:-1%;top:34%;z-index:-1;font-family:var(--serif);font-size:clamp(110px,19vw,270px);line-height:1;letter-spacing:.01em;color:rgba(239,241,236,.045);pointer-events:none;user-select:none}
+.hero-grid{display:grid;grid-template-columns:1.42fr .88fr;gap:var(--s5);align-items:end}
+.hero .kicker{color:var(--leaf-lt)}
+h1{font-size:clamp(46px,7.2vw,88px);line-height:1.0;letter-spacing:-.028em;margin:20px 0 26px;font-weight:400}
+h1 em{font-style:italic;font-weight:300;color:var(--leaf-lt)}
+.lede{font-size:18.5px;line-height:1.62;max-width:47ch;color:rgba(239,241,236,.86)}
+.hero-cta{display:flex;align-items:center;gap:22px;margin-top:38px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--leaf);color:#fff;text-decoration:none;font-weight:500;font-size:15px;padding:15px 26px;border-radius:var(--r3);border:1px solid var(--leaf);transition:transform .18s ease-out,background .18s ease-out}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.14)}
+.btn-ghost{background:none;border:0;border-bottom:1.5px solid rgba(239,241,236,.4);border-radius:0;padding:4px 0;color:var(--bone);font-size:15px}
+.btn-ghost:hover{border-color:var(--leaf-lt);background:none;transform:none;color:var(--leaf-lt)}
+
+/* hcard */
+.hcard{background:rgba(239,241,236,.055);border:1px solid var(--d-line);border-radius:var(--r2);padding:26px 24px;box-shadow:0 40px 80px -50px rgba(0,0,0,.9)}
+.hcard .seal{width:54px;height:54px;font-size:19px;background:var(--bone);color:var(--ink);border-color:var(--bone);margin-bottom:16px}
+.hcard h2{font-size:22px;line-height:1.15;margin-bottom:5px}
+.hcard .role{font:500 10px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--leaf-lt);margin-bottom:18px}
+.hcard dl{display:grid;grid-template-columns:1fr auto;gap:10px 14px;font-size:13px;border-top:1px solid var(--d-line);padding-top:16px;color:rgba(239,241,236,.72)}
+.hcard dt{font-weight:400}
+.hcard dd{font-weight:500;color:var(--bone);text-align:right}
+.hcard .tel{display:inline-block;margin-top:16px;font-family:var(--serif);font-size:25px;letter-spacing:-.01em;text-decoration:none;color:var(--bone);border-bottom:1px solid rgba(239,241,236,.3);padding-bottom:3px}
+.hcard .tel:hover{color:var(--leaf-lt);border-color:var(--leaf-lt)}
+
+/* quick facts strip */
+.qfacts{border-top:1px solid var(--d-line);margin-top:var(--s5)}
+.qfacts ul{display:grid;grid-template-columns:repeat(4,1fr);list-style:none}
+.qfacts li{padding:22px 0 26px;border-right:1px solid var(--d-line);padding-right:20px}
+.qfacts li:not(:first-child){padding-left:26px}
+.qfacts li:last-child{border-right:0}
+.qfacts .q-k{display:block;font:500 9.5px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:var(--leaf-lt);margin-bottom:7px}
+.qfacts .q-v{font-family:var(--serif);font-size:17px;line-height:1.25;color:var(--bone)}
+
+/* ---------- shared section chrome ---------- */
+section{position:relative}
+.pad{padding:var(--s7) 0}
+.rule{border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:.82fr 1.35fr;gap:var(--s5);align-items:start;margin-bottom:var(--s5)}
+.sec-head h2{font-size:clamp(30px,3.6vw,46px);line-height:1.06;letter-spacing:-.022em}
+.sec-head p{font-size:17px;line-height:1.62;color:var(--ink);max-width:54ch}
+.sec-head p + p{margin-top:14px;color:var(--slate)}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.eyebrow .ln{height:1px;width:34px;background:var(--leaf);opacity:.6}
+
+/* ---------- services inventory ---------- */
+.svc-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--s5)}
+.grp{padding:var(--s3) 0 var(--s4);border-top:1px solid var(--line-2)}
+.grp:nth-child(-n+2){border-top:0;padding-top:0}
+.grp .g-n{font:600 10.5px/1 var(--sans);letter-spacing:.16em;color:var(--leaf);display:block;margin-bottom:12px}
+.grp h3{font-size:23px;line-height:1.15;margin-bottom:10px}
+.grp p{font-size:15.5px;line-height:1.6;color:var(--slate);margin-bottom:16px;max-width:42ch}
+.grp ul{list-style:none;display:flex;flex-wrap:wrap;gap:7px}
+.grp li{font-size:13px;font-weight:500;padding:7px 12px;border:1px solid var(--line-2);border-radius:var(--r1);background:rgba(255,255,255,.45);white-space:nowrap}
+.grp.feat{grid-column:span 2;display:grid;grid-template-columns:.82fr 1.35fr;gap:var(--s5);align-items:start;padding-bottom:var(--s4)}
+.grp.feat h3{font-size:clamp(26px,3vw,34px)}
+.svc-note{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:wrap;font-size:14.5px;color:var(--slate)}
+.svc-note a{color:var(--leaf);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(57,105,92,.4)}
+
+/* ---------- booking widget ---------- */
+.book{background:var(--sand);border-top:1px solid var(--line)}
+.book-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:var(--s5);align-items:start}
+.book-intro h2{font-size:clamp(30px,3.6vw,44px);line-height:1.06;margin-bottom:16px}
+.book-intro p{font-size:16px;line-height:1.62;color:var(--ink);margin-bottom:18px}
+.book-intro ul{list-style:none;margin-top:var(--s3)}
+.book-intro li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14.5px;color:var(--slate);padding:9px 0;border-top:1px solid var(--line)}
+.book-intro li b{color:var(--ink);font-weight:600}
+.tick{display:block;position:relative;width:13px;height:13px;margin-top:4px}
+.tick::before{content:"";position:absolute;left:1px;top:1px;width:9px;height:5px;border-left:2px solid var(--leaf);border-bottom:2px solid var(--leaf);transform:rotate(-45deg)}
+.wid{background:var(--bone);border:1px solid var(--line-2);border-radius:var(--r2);overflow:hidden}
+.wid-top{display:flex;align-items:center;gap:10px;padding:16px 22px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.5)}
+.wid-top .dot{width:8px;height:8px;border-radius:50%;background:var(--leaf)}
+.wid-top span{font:500 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+.steps{display:flex;margin-left:auto;gap:6px}
+.steps i{width:22px;height:3px;background:var(--line-2);border-radius:2px;transition:background .25s ease-out}
+.steps i.on{background:var(--leaf)}
+.wid-body{padding:26px 22px 24px}
+.step{display:none}
+.step.on{display:block;animation:fade .28s ease-out}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.wid label{display:block;font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:10px}
+.wid input[type=text],.wid select{width:100%;font:500 17px/1.2 var(--sans);padding:14px 15px;border:1px solid var(--line-2);border-radius:var(--r1);background:#fff;color:var(--ink);appearance:none}
+.wid input[type=text]:focus,.wid select:focus{outline:2px solid var(--leaf);outline-offset:1px;border-color:var(--leaf)}
+.wid .hint{font-size:13px;color:var(--slate);margin-top:10px;min-height:18px;line-height:1.45}
+.wid .hint.ok{color:var(--leaf);font-weight:500}
+.wid .hint.warn{color:var(--ink);font-weight:600;border-left:2px solid var(--leaf);padding-left:9px;margin-left:-11px}
+.wid-next{margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.wid button{font:500 14.5px/1 var(--sans);border-radius:var(--r3);border:1px solid var(--ink);background:var(--ink);color:var(--bone);padding:13px 22px;cursor:pointer;transition:transform .16s ease-out,background .16s ease-out}
+.wid button:hover{transform:translateY(-1px);filter:brightness(1.28)}
+.wid button:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.wid button.link{background:none;border:0;color:var(--slate);padding:13px 4px;text-decoration:underline;text-underline-offset:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 13.5px/1 var(--sans);padding:10px 14px;border:1px solid var(--line-2);border-radius:var(--r1);background:#fff;cursor:pointer;transition:border-color .16s ease-out,background .16s ease-out}
+.chip:hover{border-color:var(--leaf)}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bone)}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:16px}
+.sum{border:1px solid var(--line);border-radius:var(--r1);background:rgba(255,255,255,.7);padding:16px 18px;margin-bottom:18px}
+.sum div{display:flex;justify-content:space-between;gap:16px;font-size:14.5px;padding:6px 0}
+.sum div + div{border-top:1px solid var(--line)}
+.sum span{color:var(--slate)}
+.sum b{font-weight:600;text-align:right}
+.wid-note{font-size:12.5px;line-height:1.55;color:var(--slate);margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.wid-note b{color:var(--ink)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:.86fr 1.4fr;gap:var(--s5);align-items:start}
+.about-txt p{font-size:17px;line-height:1.68;color:var(--ink);margin-bottom:16px}
+.about-txt p:last-of-type{margin-bottom:0}
+.about-txt .leaddrop::first-letter{font-family:var(--serif);font-size:3.3em;float:left;line-height:.82;padding:6px 10px 0 0;color:var(--leaf)}
+.about-txt strong{font-weight:600}
+.pull{margin-top:var(--s4);padding:20px 0 20px 22px;border-left:2px solid var(--leaf);font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.4;color:var(--ink);max-width:38ch}
+.sidecard{background:var(--sand);border:1px solid var(--line);border-radius:var(--r2);padding:24px;position:sticky;top:96px}
+.sidecard .who{display:flex;align-items:center;gap:16px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line-2)}
+.sidecard .face{width:160px;height:160px;flex:none;border-radius:var(--r2);object-fit:cover;object-position:50% 20%;background:var(--sand);border:1px solid var(--line)}
+.sidecard .who-t b{display:block;font-family:var(--serif);font-size:19px;font-weight:500;line-height:1.2;margin-bottom:6px}
+.sidecard .who-t span{font:500 11px/1.6 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
+.sidecard h3{font-size:18px;margin-bottom:4px}
+.sidecard .sub{font-size:12.5px;color:var(--slate);margin-bottom:18px}
+.sidecard ul{list-style:none}
+.sidecard li{display:grid;grid-template-columns:18px 1fr;gap:9px;font-size:14px;line-height:1.5;padding:11px 0;border-top:1px solid var(--line);color:var(--ink)}
+.sidecard li b{font-weight:600}
+.sidecard .sealmk{width:100%;display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line-2)}
+.sidecard .sealmk .seal{width:44px;height:44px;font-size:15px}
+.sidecard .sealmk span{font-size:12px;line-height:1.4;color:var(--slate)}
+
+/* ---------- credentials rows ---------- */
+.cred-list{list-style:none;border-top:1px solid var(--line-2)}
+.cred-list li{display:grid;grid-template-columns:52px 210px 1fr;gap:var(--s3);align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.cred-list .n{font:600 11px/1 var(--sans);letter-spacing:.15em;color:var(--leaf)}
+.cred-list .what{font:600 12.5px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.cred-list .detail{font-size:16.5px;line-height:1.55;color:var(--slate)}
+.cred-list .detail b{color:var(--ink);font-weight:600}
+
+/* ---------- service area ---------- */
+.area-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:var(--s5);align-items:start}
+.town{border-top:1px solid var(--line);display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:baseline;padding:13px 0;font-size:15.5px}
+.town:last-of-type{border-bottom:1px solid var(--line)}
+.town .cty{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate)}
+.town .zp{font:500 12.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--leaf);letter-spacing:.04em}
+.area-note{font-size:14.5px;color:var(--slate);line-height:1.6;margin-top:20px;max-width:48ch}
+.mapbox{background:var(--sand);border:1px solid var(--line);border-radius:var(--r2);padding:18px}
+.mapbox svg{display:block;width:100%;height:auto}
+.mapbox .cap{display:flex;justify-content:space-between;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.legend{display:flex;gap:16px;align-items:center;margin-top:10px;font-size:12.5px;color:var(--slate)}
+.legend i{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px;vertical-align:middle}
+
+/* ---------- contact (dark) ---------- */
+.contact{background:var(--ink);color:var(--bone);padding:var(--s7) 0 var(--s6);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 88% -10%,rgba(57,105,92,.34),transparent 60%);pointer-events:none}
+.contact .wrap{position:relative}
+.contact .kicker{color:var(--leaf-lt)}
+.c-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:var(--s5);align-items:start}
+.contact h2{font-size:clamp(32px,4.2vw,54px);line-height:1.02;color:var(--bone);margin:18px 0 20px}
+.contact h2 em{font-style:italic;font-weight:300;color:var(--leaf-lt)}
+.contact p{font-size:16.5px;line-height:1.62;color:rgba(239,241,236,.8);max-width:44ch}
+.c-tel{display:inline-block;margin-top:32px;font-family:var(--serif);font-size:clamp(30px,4vw,44px);color:var(--bone);text-decoration:none;border-bottom:1px solid rgba(239,241,236,.35);padding-bottom:4px;transition:color .18s ease-out,border-color .18s ease-out}
+.c-tel:hover{color:var(--leaf-lt);border-color:var(--leaf-lt)}
+.c-mail{display:inline-block;margin-top:16px;font-size:14.5px;color:rgba(239,241,236,.8);text-decoration:none;border-bottom:1px solid rgba(239,241,236,.28)}
+.c-mail:hover{color:var(--bone)}
+.hours{background:rgba(239,241,236,.06);border:1px solid var(--d-line);border-radius:var(--r2);padding:22px}
+.hours h3{font-size:17px;color:var(--bone);margin-bottom:14px}
+.hours .row{display:flex;justify-content:space-between;gap:14px;font-size:14px;padding:9px 0;border-bottom:1px solid var(--d-line);color:rgba(239,241,236,.75)}
+.hours .row:last-of-type{border:0;padding-bottom:0}
+.hours .row b{color:var(--bone);font-weight:500}
+.form{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--d-line);display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:720px}
+.form label{display:block;font:500 10.5px/1 var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--leaf-lt);margin-bottom:8px}
+.form input,.form textarea{width:100%;font:400 15px/1.5 var(--sans);color:var(--bone);background:rgba(239,241,236,.07);border:1px solid var(--d-line);border-radius:var(--r1);padding:12px 13px}
+.form input::placeholder,.form textarea::placeholder{color:rgba(239,241,236,.42)}
+.form input:focus,.form textarea:focus{outline:2px solid var(--leaf-lt);outline-offset:1px;border-color:var(--leaf-lt)}
+.form .full{grid-column:1/-1}
+.form .formnote{grid-column:1/-1;font-size:12.5px;color:rgba(239,241,236,.55);line-height:1.55}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:rgba(239,241,236,.6);border-top:1px solid var(--d-line);padding:var(--s4) 0}
+.foot{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:wrap;font-size:13px;line-height:1.6}
+.foot a{color:rgba(239,241,236,.75);text-decoration:none}
+.foot a:hover{color:var(--bone)}
+.foot .cols{display:flex;gap:22px;flex-wrap:wrap}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease-out,transform .55s ease-out}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .step.on{animation:none}
+  .btn,.tb-call,.chip,.wid button{transition:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid,.sec-head,.about-grid,.book-grid,.c-grid,.area-grid,.grp.feat{grid-template-columns:1fr;gap:var(--s4)}
+  .svc-groups{grid-template-columns:1fr}
+  .grp:nth-child(2){border-top:1px solid var(--line);padding-top:var(--s3)}
+  .grp.feat{grid-column:auto;padding-bottom:var(--s3)}
+  .nav{display:none}
+  .tb{justify-content:space-between;gap:12px}
+  .mark-txt{min-width:0;overflow:hidden}
+  .qf-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .qfacts ul{grid-template-columns:repeat(2,1fr);min-width:0}
+  .qfacts li{border-right:0;padding:18px 0}
+  .qfacts li:not(:first-child){padding-left:0}
+  .qfacts li:nth-child(odd){padding-right:18px;border-right:1px solid var(--d-line)}
+  .sidecard{position:static;top:auto}
+  .cred-list li{grid-template-columns:34px 1fr;gap:10px 14px}
+  .cred-list .detail{grid-column:2}
+  .form{grid-template-columns:1fr}
+  .pad{padding:var(--s6) 0}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .hcard{padding:20px}
+  .hcard .tel{font-size:23px}
+  h1{font-size:clamp(40px,11.5vw,56px);letter-spacing:-.03em}
+  .hero::after{top:44%;font-size:clamp(88px,26vw,150px)}
+  .btns{flex-direction:column;align-items:flex-start}
+  .grp ul{gap:6px}
+  .grp li{font-size:12.5px;padding:6px 10px}
+  .days{grid-template-columns:repeat(3,1fr)}
+  .slots{grid-template-columns:repeat(2,1fr)}
+  .tb{height:62px;gap:10px}
+  .mark{gap:10px;min-width:0}
+  .mark .seal{width:36px;height:36px;font-size:13.5px}
+  .mark-txt{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mark-txt small{display:none}
+  .tb-call{font-size:13px;padding:10px 13px;gap:6px;flex:none}
+  .tb-call svg{width:12px;height:12px}
+  .sidecard .who{gap:14px}
+  .sidecard .face{width:112px;height:112px}
+  .town{grid-template-columns:1fr auto;gap:4px 12px}
+  .town .cty{grid-column:1;grid-row:2}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="banner"><b>Website concept preview</b> &nbsp;·&nbsp; Built for Pignatelli CT Mobile Notary</div>
+
+<div class="topbar">
+  <div class="wrap tb">
+    <a class="mark" href="#top" aria-label="Pignatelli CT Mobile Notary, home">
+      <span class="seal" aria-hidden="true">SP</span>
+      <span class="mark-txt">Pignatelli<span class="serif" style="font-style:italic;color:var(--leaf)"> CT</span>
+        <small>Mobile Notary &amp; Signing Agent</small></span>
+    </a>
+    <nav class="nav" aria-label="Section navigation">
+      <a href="#services">Services</a>
+      <a href="#book">Book</a>
+      <a href="#about">About</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#area">Service Area</a>
+    </nav>
+    <a class="tb-call" href="tel:+15416131569">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6.6 3h3l1.5 4.3-2 1.5a13 13 0 0 0 6.1 6.1l1.5-2L21 14.4v3a2.6 2.6 0 0 1-2.9 2.6A17.5 17.5 0 0 1 4 5.9 2.6 2.6 0 0 1 6.6 3Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      541-613-1569
+    </a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><span class="ln"></span><span class="kicker">Colchester, Connecticut · Statewide</span></div>
+        <h1>Every signature,<br><em>with precision.</em></h1>
+        <p class="lede">Certified Connecticut Notary Public and Notary Public Association Certified Signing Agent. Loan signings, real estate closings and general notarization — at your table, in a hospital, or on a military installation. Veteran-owned, background screened, and equipped to print, scan and close on the spot.</p>
+        <div class="hero-cta btns">
+          <a class="btn" href="#book">Book a signing
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="sms:+15416131569">Text 541-613-1569</a>
+        </div>
+      </div>
+
+      <aside class="hcard" aria-label="Business card">
+        <span class="seal" aria-hidden="true">SP</span>
+        <h2>Spenser Pignatelli</h2>
+        <div class="role">CT Notary Public · Signing Agent</div>
+        <dl>
+          <dt>Commission</dt><dd>#159949353</dd>
+          <dt>Coverage</dt><dd>Statewide CT</dd>
+          <dt>Availability</dt><dd>Mon–Sun, AM &amp; PM</dd>
+          <dt>After hours</dt><dd>24-hour service</dd>
+          <dt>E&amp;O insurance</dt><dd>$100,000</dd>
+        </dl>
+        <a class="tel" href="tel:+15416131569">541-613-1569</a>
+      </aside>
+    </div>
+
+    <div class="qf-wrap">
+      <div class="qfacts">
+        <ul>
+          <li><span class="q-k">Screening</span><span class="q-v">Background screened<br>through 10/2028</span></li>
+          <li><span class="q-k">Credentials</span><span class="q-v">NNA certified<br>Commissioned in CT</span></li>
+          <li><span class="q-k">Remote</span><span class="q-v">RON capable<br>EscrowTab IPEN</span></li>
+          <li><span class="q-k">On hand</span><span class="q-v">Laser printer<br>+ scanner</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ SERVICES ============ -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow"><span class="ln"></span><span class="kicker">What he handles</span></div>
+        <h2>Loans, closings, and the odd Tuesday.</h2>
+      </div>
+      <div>
+        <p>Most of the work is loan packages and real estate closings — full signings where the documents have to come back clean the first time. The rest is everything else people need a commissioned notary for, and it all gets the same standard: appointment confirmed, documents reviewed, signing closed without a second trip.</p>
+        <p>Titles below are the actual services on file. If what you need isn't listed, call — it's usually still a yes.</p>
+      </div>
+    </div>
+
+    <div class="svc-groups">
+      <div class="grp feat rv">
+        <div>
+          <span class="g-n">Primary practice</span>
+          <h3>Loan signings &amp; real estate closings</h3>
+        </div>
+        <div>
+          <p>The bulk of the calendar. Purchase and refinance packages, HELOCs, reverse mortgages and seller-side closings, handled start to finish with a laser printer and scanner on site so nothing leaves the table unverified. Attorney and signing-service work welcome.</p>
+          <ul>
+            <li>Loan Signing</li>
+            <li>Real Estate Closing</li>
+            <li>Refinance &amp; HELOC Packages</li>
+            <li>Attorney Closings</li>
+            <li>CSA Assignments</li>
+            <li>E-Sign &amp; IPEN</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grp rv">
+        <span class="g-n">General notary</span>
+        <h3>Everyday notarization</h3>
+        <p>Single documents and small batches, by appointment. Bring valid photo ID and unsigned documents.</p>
+        <ul>
+          <li>Acknowledgments</li>
+          <li>Jurats</li>
+          <li>Oaths &amp; Affirmations</li>
+          <li>Power of Attorney</li>
+          <li>Affidavits</li>
+          <li>Copy Certifications</li>
+          <li>Permission Slips</li>
+          <li>Title &amp; Registration</li>
+        </ul>
+      </div>
+
+      <div class="grp rv">
+        <span class="g-n">Remote &amp; digital</span>
+        <h3>Notarized without the drive</h3>
+        <p>Connecticut RON work for anyone who can't be in the room — out-of-state family, deployed service members, late-night signers.</p>
+        <ul>
+          <li>Remote Online Notarization</li>
+          <li>EscrowTab IPEN</li>
+          <li>Mobile Hotspot On Site</li>
+          <li>24-Hour Service</li>
+          <li>Email &amp; Fax Intake</li>
+        </ul>
+      </div>
+
+      <div class="grp rv">
+        <span class="g-n">On location</span>
+        <h3>Wherever the signer is</h3>
+        <p>Travel is the whole business. Homes, offices, care facilities, correctional facilities and military installations — all normal for a mobile notary with a cleared background check.</p>
+        <ul>
+          <li>Mobile Notary</li>
+          <li>Hospital Signing</li>
+          <li>Jail Signings</li>
+          <li>Military Installations</li>
+          <li>Nursing &amp; Rehab Facilities</li>
+          <li>Office &amp; Workplace Visits</li>
+        </ul>
+      </div>
+
+      <div class="grp rv">
+        <span class="g-n">Specialty</span>
+        <h3>Everything past the paperwork</h3>
+        <p>The add-ons that show up around a closing: prints, scans, prints again, and the occasional wedding.</p>
+        <ul>
+          <li>Fingerprinting</li>
+          <li>Weddings</li>
+          <li>Printing &amp; Scanning</li>
+          <li>Abstractor Work</li>
+          <li>Document Review with Signer</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="svc-note rv">
+      <span>No published rate card — quotes are given up front, before the appointment is confirmed.</span>
+      <a href="#book">Start a booking request →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING WIDGET ============ -->
+<section class="book pad" id="book">
+  <div class="wrap book-grid">
+    <div class="book-intro rv">
+      <div class="eyebrow"><span class="ln"></span><span class="kicker">Online booking</span></div>
+      <h2>Three steps. About 40 seconds.</h2>
+      <p>Check that the address is inside the coverage area, pick the service, then choose a window. Weekends and evenings are open, and after-hours work is available.</p>
+      <ul>
+        <li><span class="tick" aria-hidden="true"></span><span><b>Zip check first.</b> The five core towns book immediately; the rest of Connecticut is routed by appointment.</span></li>
+        <li><span class="tick" aria-hidden="true"></span><span><b>Real windows.</b> Two-hour blocks, 8 AM to 8 PM, plus an overnight option.</span></li>
+        <li><span class="tick" aria-hidden="true"></span><span><b>Confirmed by text.</b> Requests come to the phone that's on the road.</span></li>
+        <li><span class="tick" aria-hidden="true"></span><span><b>Bring a photo ID.</b> Signers must appear in person with valid, unexpired ID.</span></li>
+      </ul>
+    </div>
+
+    <div class="wid rv" id="wid">
+      <div class="wid-top">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Request a signing</span>
+        <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      </div>
+      <div class="wid-body">
+
+        <!-- step 1 -->
+        <div class="step on" id="s1">
+          <label for="zip">Where is the signing?</label>
+          <input type="text" id="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Enter the 5-digit zip code">
+          <p class="hint" id="zipHint">Core area: 06415, 06420, 06336, 06423, 06447 — and everywhere else in Connecticut by appointment.</p>
+          <div class="wid-next">
+            <button type="button" id="next1" disabled>Check coverage</button>
+          </div>
+        </div>
+
+        <!-- step 2 -->
+        <div class="step" id="s2">
+          <label>What do you need?</label>
+          <div class="chips" id="svcChips" role="group" aria-label="Choose a service">
+            <button type="button" class="chip" data-svc="Loan Signing">Loan Signing</button>
+            <button type="button" class="chip" data-svc="Real Estate Closing">Real Estate Closing</button>
+            <button type="button" class="chip" data-svc="General Notarization">General Notarization</button>
+            <button type="button" class="chip" data-svc="Remote Online Notarization">RON</button>
+            <button type="button" class="chip" data-svc="Fingerprinting">Fingerprinting</button>
+            <button type="button" class="chip" data-svc="Wedding">Wedding</button>
+            <button type="button" class="chip" data-svc="Printing &amp; Scanning">Print &amp; Scan</button>
+            <button type="button" class="chip" data-svc="Something else">Something else</button>
+          </div>
+          <p class="hint" id="svcHint">Not sure which one? Choose the closest — it gets sorted on the call.</p>
+          <div class="wid-next">
+            <button type="button" class="link" data-back="1">← Back</button>
+            <button type="button" id="next2" disabled>Choose a window</button>
+          </div>
+        </div>
+
+        <!-- step 3 -->
+        <div class="step" id="s3">
+          <label>Pick a day</label>
+          <div class="days" id="days"></div>
+          <label style="margin-top:20px">Pick a window</label>
+          <div class="slots" id="slots"></div>
+          <p class="hint" id="timeHint">Two-hour blocks. Overnight and short-notice work is on the list too.</p>
+          <div class="wid-next">
+            <button type="button" class="link" data-back="2">← Back</button>
+            <button type="button" id="next3" disabled>Review request</button>
+          </div>
+        </div>
+
+        <!-- step 4 -->
+        <div class="step" id="s4">
+          <div class="sum" id="summary"></div>
+          <div class="wid-next">
+            <button type="button" class="link" data-back="3">← Change</button>
+            <a class="btn" id="smsSend" href="sms:+15416131569" style="padding:13px 20px">Text this request</a>
+            <a class="btn btn-ghost" href="tel:+15416131569" style="color:var(--ink);border-color:var(--line-2)">Call instead</a>
+          </div>
+          <p class="wid-note"><b>Concept preview.</b> This widget is a working demonstration for the concept site — pressing through pre-fills a text message to Spenser rather than booking a slot. On the live site it connects to the booking calendar and sends an automatic confirmation.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="pad rule" id="about">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow"><span class="ln"></span><span class="kicker">About</span></div>
+        <h2>Built on service discipline.</h2>
+      </div>
+      <div>
+        <p>Pignatelli CT Mobile Notary is a one-man operation in Colchester, built on the habits that come out of a military background: be early, be exact, sign nothing you haven't read.</p>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-txt rv">
+        <p class="leaddrop">Spenser Pignatelli spent his service years in an environment where a missed line on a form had consequences, and that is roughly the whole story of how he notarizes today. As a commissioned <strong>Connecticut Notary Public</strong> and a <strong>Notary Public Association Certified Notary Signing Agent</strong>, he works a schedule that looks less like a storefront and more like a route: closings in the morning, hospitals and care facilities in the afternoon, and whatever needs a notary after that.</p>
+        <p>The work splits cleanly. <strong>Loan signings and real estate closings</strong> are the primary practice — purchase and refinance packages, HELOCs and attorney closings where the package has to come back complete, legible and correctly dated. <strong>General notarization</strong> covers the rest: acknowledgments, jurats, oaths, powers of attorney, affidavits and certified copies, usually in small batches at a kitchen table.</p>
+        <p>He arrives equipped rather than improvising. A <strong>laser printer and scanner</strong> travel with him, so a missing page gets printed and a completed package gets scanned before he leaves the room. A <strong>mobile hotspot</strong> covers e-signing and EscrowTab IPEN work when there's no usable Wi-Fi. <strong>Fingerprinting, weddings, hospital signings and jail signings</strong> are all regular parts of the service list, and he is RON capable for remote signers who can't be present in person.</p>
+        <p>Coverage runs from the five core towns around Colchester out across Connecticut by appointment, <strong>including access to military installations</strong> — a detail that matters to the veteran and military families he already serves, and one that very few mobile notaries can offer at all. He is NNA certified, background screened and carries a <strong>$100,000</strong> errors and omissions policy, so the agency, title company or attorney sending the package has something real to point at.</p>
+        <div class="pull">"Prompt, error-free signings — with the confidentiality a closing deserves."</div>
+      </div>
+
+      <aside class="sidecard rv">
+        <div class="who">
+          <img class="face" src="assets/pignatelli/spenser.jpg" width="160" height="160" alt="Spenser Pignatelli, Connecticut notary public" loading="eager" decoding="async">
+          <div class="who-t">
+            <b>Spenser Pignatelli</b>
+            <span>CT Notary Public<br>#159949353<br><br>Colchester, Connecticut<br>06415</span>
+          </div>
+        </div>
+        <h3>On every assignment</h3>
+        <p class="sub">What's actually in the vehicle</p>
+        <ul>
+          <li><span class="tick" aria-hidden="true"></span><span><b>Laser printer</b> — last-minute pages and full reprints, on site.</span></li>
+          <li><span class="tick" aria-hidden="true"></span><span><b>Scanner</b> — package imaged and quality-checked before departure.</span></li>
+          <li><span class="tick" aria-hidden="true"></span><span><b>Mobile hotspot</b> — e-signing, IPEN and RON where there's no Wi-Fi.</span></li>
+          <li><span class="tick" aria-hidden="true"></span><span><b>Background screening</b> — on file, valid through 10/31/2028.</span></li>
+          <li><span class="tick" aria-hidden="true"></span><span><b>$100,000 E&amp;O</b> — Western Surety Company.</span></li>
+          <li><span class="tick" aria-hidden="true"></span><span><b>Discretion</b> — client information stays with the signing.</span></li>
+        </ul>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDENTIALS ============ -->
+<section class="pad rule" id="credentials">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow"><span class="ln"></span><span class="kicker">Credentials</span></div>
+        <h2>The paperwork behind it.</h2>
+      </div>
+      <div>
+        <p>Every number below is verifiable. Title companies, signing services and attorneys are welcome to request copies of the commission, screening report and insurance certificate before the first assignment.</p>
+      </div>
+    </div>
+
+    <ol class="cred-list rv">
+      <li>
+        <span class="n">01</span>
+        <span class="what">Connecticut Notary Commission</span>
+        <span class="detail">Commission <b>#159949353</b>, issued by the State of Connecticut. Current through <b>03/05/2032</b>.</span>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <span class="what">Background Screening</span>
+        <span class="detail">Notary Public background check conducted <b>10/15/2025</b>, valid through <b>10/31/2028</b>. Reference #4404851.</span>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <span class="what">Certifications</span>
+        <span class="detail"><b>NNA certified</b> and background screened, plus <b>Notary Public Association Certified Notary Signing Agent</b>.</span>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <span class="what">Errors &amp; Omissions</span>
+        <span class="detail"><b>$100,000</b> coverage with <b>Western Surety Company</b>, active for the commission term.</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREA ============ -->
+<section class="pad rule" id="area">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow"><span class="ln"></span><span class="kicker">Service area</span></div>
+        <h2>Colchester first. Then most of Connecticut.</h2>
+      </div>
+      <div>
+        <p>These five towns are the home base and usually the fastest to book. Everything else in the state is available by appointment, and travel time gets quoted up front rather than discovered afterwards.</p>
+      </div>
+    </div>
+
+    <div class="area-grid">
+      <div class="rv">
+        <div class="town"><span>Colchester</span><span class="cty">New London County</span><span class="zp">06415</span></div>
+        <div class="town"><span>Salem</span><span class="cty">New London County</span><span class="zp">06420</span></div>
+        <div class="town"><span>Gilman</span><span class="cty">New London County</span><span class="zp">06336</span></div>
+        <div class="town"><span>East Haddam</span><span class="cty">Middlesex County</span><span class="zp">06423</span></div>
+        <div class="town"><span>Marlborough</span><span class="cty">Hartford County</span><span class="zp">06447</span></div>
+        <p class="area-note">Beyond these: Hartford, New Haven, Middlesex, New London, Tolland and Windham counties by appointment, plus military installations where access is arranged in advance. Hospitals, correctional facilities and nursing homes are routine stops, not special requests.</p>
+      </div>
+
+      <div class="mapbox rv">
+        <svg viewBox="0 0 300 190" role="img" aria-label="Stylized map of Connecticut showing the five core service towns">
+          <defs>
+            <pattern id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="6" stroke="#101C2B" stroke-opacity=".07" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <path d="M18 40 L268 40 L268 72 L286 72 L286 104 L262 104 L262 122 L238 138 L212 128 L186 142 L160 132 L134 142 L108 132 L86 142 L62 132 L40 140 L22 126 L18 104 Z"
+                fill="url(#hatch)" stroke="#101C2B" stroke-opacity=".32" stroke-width="1.2" stroke-linejoin="round"/>
+          <text x="150" y="26" font-family="Public Sans, sans-serif" font-size="8.5" letter-spacing="2.4" fill="#5A6674" text-anchor="middle">CONNECTICUT</text>
+          <text x="150" y="176" font-family="Public Sans, sans-serif" font-size="7.5" letter-spacing="2" fill="#5A6674" text-anchor="middle" opacity=".8">LONG ISLAND SOUND</text>
+
+          <!-- pins: Colchester, Salem, Gilman, East Haddam, Marlborough -->
+          <g fill="#39695C">
+            <circle cx="204" cy="88" r="4.5"/>
+            <circle cx="212" cy="104" r="3.4"/>
+            <circle cx="223" cy="112" r="2.8"/>
+            <circle cx="146" cy="106" r="3.4"/>
+            <circle cx="176" cy="80" r="3.4"/>
+          </g>
+          <g fill="#39695C" fill-opacity=".18">
+            <circle cx="204" cy="88" r="14"/><circle cx="212" cy="104" r="10"/>
+            <circle cx="223" cy="112" r="9"/><circle cx="146" cy="106" r="10"/>
+            <circle cx="176" cy="80" r="10"/>
+          </g>
+          <g font-family="Public Sans, sans-serif" font-size="8" fill="#101C2B">
+            <text x="196" y="76" text-anchor="end">Colchester</text>
+            <text x="180" y="70" text-anchor="end">Marlborough</text>
+            <text x="214" y="122">Salem</text>
+            <text x="228" y="116">Gilman</text>
+            <text x="140" y="120" text-anchor="end">East Haddam</text>
+          </g>
+        </svg>
+        <div class="cap"><span>Core coverage</span><span>Not to scale</span></div>
+        <div class="legend"><span><i style="background:#39695C"></i>Home base towns</span><span><i style="background:#E3E6DE;border:1px solid rgba(16,28,43,.3)"></i>Statewide by appointment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="c-grid">
+      <div class="rv">
+        <div class="eyebrow"><span class="ln"></span><span class="kicker">Get it scheduled</span></div>
+        <h2>Tell him the address,<br><em>he'll bring the stamp.</em></h2>
+        <p>Call or text is fastest — most signings get confirmed the same day. For title companies and signing services: send the package details, signer contact and order number and it goes on the calendar.</p>
+        <a class="c-tel" href="tel:+15416131569">541-613-1569</a><br>
+        <a class="c-mail" href="mailto:spenser.pignatelli@gmail.com">spenser.pignatelli@gmail.com</a>
+
+        <form class="form" id="cform" novalidate>
+          <div><label for="fn">Name</label><input id="fn" type="text" placeholder="Your name" required></div>
+          <div><label for="fp">Phone</label><input id="fp" type="tel" placeholder="Best number" required></div>
+          <div><label for="fz">Zip code</label><input id="fz" type="text" inputmode="numeric" maxlength="5" placeholder="Signing location"></div>
+          <div class="full"><label for="fm">What's the signing?</label><input id="fm" type="text" placeholder="Purchase closing, jurat, fingerprinting…"></div>
+          <div class="formnote">This is a concept page, so the form doesn't submit anywhere yet — on the live site it delivers straight to Spenser's inbox. For anything urgent today, call or text <a href="tel:+15416131569" style="color:var(--leaf-lt)">541-613-1569</a>.</div>
+        </form>
+      </div>
+
+      <div class="hours rv">
+        <h3>Availability</h3>
+        <div class="row"><span>Monday – Friday</span><b>By appointment, AM &amp; PM</b></div>
+        <div class="row"><span>Saturday &amp; Sunday</span><b>By appointment</b></div>
+        <div class="row"><span>After hours</span><b>24-hour service available</b></div>
+        <div class="row"><span>Remote signings</span><b>RON capable</b></div>
+        <div class="row"><span>Short notice</span><b>Call — gaps fill fast</b></div>
+        <div class="row"><span>Base</span><b>Colchester, CT 06415</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      Pignatelli CT Mobile Notary · Spenser Pignatelli, CT Notary Public #159949353<br>
+      Colchester, Connecticut · Statewide by appointment
+    </div>
+    <div class="cols">
+      <a href="tel:+15416131569">541-613-1569</a>
+      <a href="mailto:spenser.pignatelli@gmail.com">Email</a>
+      <a href="#book">Book</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- reveal on scroll ---------- */
+  var rvs = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else {
+    rvs.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- booking widget ---------- */
+  var CORE = ['06415','06420','06336','06423','06447'];
+  var state = { zip:'', area:'', svc:'', day:'', dayLabel:'', slot:'' };
+  var steps = [null,
+    document.getElementById('s1'),document.getElementById('s2'),
+    document.getElementById('s3'),document.getElementById('s4')];
+  var bars = document.querySelectorAll('.steps i');
+
+  function go(n){
+    for(var i=1;i<=4;i++){ steps[i].classList.toggle('on', i===n); }
+    for(var j=0;j<bars.length;j++){ bars[j].classList.toggle('on', j < Math.min(n,3)); }
+  }
+
+  /* step 1 */
+  var zipEl = document.getElementById('zip');
+  var zipHint = document.getElementById('zipHint');
+  var next1 = document.getElementById('next1');
+
+  zipEl.addEventListener('input', function(){
+    var v = zipEl.value.replace(/\D/g,'').slice(0,5);
+    zipEl.value = v;
+    next1.disabled = v.length !== 5;
+    if(v.length === 5){
+      next1.textContent = 'Check coverage';
+    } else {
+      zipHint.className = 'hint';
+      zipHint.textContent = 'Core area: 06415, 06420, 06336, 06423, 06447 — and everywhere else in Connecticut by appointment.';
+    }
+  });
+
+  next1.addEventListener('click', function(){
+    var z = zipEl.value;
+    state.zip = z;
+    if(CORE.indexOf(z) !== -1){
+      state.area = 'core';
+      zipHint.className = 'hint ok';
+      zipHint.textContent = 'Inside the home base. ' + z + ' books immediately — same-day is often possible.';
+    } else if(/^06[0-9]{3}$/.test(z)){
+      state.area = 'state';
+      zipHint.className = 'hint ok';
+      zipHint.textContent = 'Covered statewide. ' + z + ' is available by appointment, travel quoted up front.';
+    } else {
+      state.area = 'outside';
+      zipHint.className = 'hint warn';
+      zipHint.textContent = 'Outside the listed Connecticut area — call 541-613-1569 and travel can usually still be arranged.';
+    }
+    setTimeout(function(){ go(2); }, 420);
+  });
+
+  /* step 2 */
+  var chips = document.querySelectorAll('#svcChips .chip');
+  var next2 = document.getElementById('next2');
+  var svcHint = document.getElementById('svcHint');
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(o){ o.setAttribute('aria-pressed','false'); });
+      c.setAttribute('aria-pressed','true');
+      state.svc = c.getAttribute('data-svc');
+      next2.disabled = false;
+      svcHint.className = 'hint';
+      svcHint.textContent = state.svc === 'Something else'
+        ? 'Tell the details in the text message — it gets quoted on the call.'
+        : state.svc + ' selected.';
+    });
+  });
+  next2.addEventListener('click', function(){ buildDays(); go(3); });
+
+  /* step 3 */
+  var daysEl = document.getElementById('days');
+  var slotsEl = document.getElementById('slots');
+  var next3 = document.getElementById('next3');
+  var timeHint = document.getElementById('timeHint');
+  var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var SLOTS = ['8 – 10 AM','10 AM – 12 PM','12 – 2 PM','2 – 4 PM','4 – 6 PM','6 – 8 PM','Overnight (24-hr)'];
+
+  function buildDays(){
+    daysEl.innerHTML = '';
+    slotsEl.innerHTML = '';
+    state.day = ''; state.slot = ''; next3.disabled = true;
+    var now = new Date();
+    for(var i=0;i<12;i++){
+      var d = new Date(now.getFullYear(), now.getMonth(), now.getDate()+i);
+      var label = DAYS[d.getDay()] + ' ' + MONTHS[d.getMonth()] + ' ' + d.getDate();
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.setAttribute('aria-pressed','false');
+      b.textContent = label;
+      if(i===0){ b.textContent = 'Today · ' + MONTHS[d.getMonth()] + ' ' + d.getDate(); }
+      b.addEventListener('click', function(lbl, self){
+        return function(){
+          Array.prototype.forEach.call(daysEl.children, function(o){ o.setAttribute('aria-pressed','false'); });
+          self.setAttribute('aria-pressed','true');
+          state.day = lbl; state.dayLabel = lbl;
+          buildSlots();
+        };
+      }(label, b));
+      daysEl.appendChild(b);
+    }
+  }
+
+  function buildSlots(){
+    slotsEl.innerHTML = '';
+    state.slot = ''; next3.disabled = true;
+    timeHint.className = 'hint';
+    timeHint.textContent = 'Day selected. Now choose a two-hour window.';
+    SLOTS.forEach(function(s){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.setAttribute('aria-pressed','false');
+      b.textContent = s;
+      b.addEventListener('click', function(){
+        Array.prototype.forEach.call(slotsEl.children, function(o){ o.setAttribute('aria-pressed','false'); });
+        b.setAttribute('aria-pressed','true');
+        state.slot = s;
+        next3.disabled = false;
+        timeHint.className = 'hint ok';
+        timeHint.textContent = s === 'Overnight (24-hr)'
+          ? 'After-hours request — confirmed by phone, not by calendar.'
+          : 'Window held. Review the request to send it.';
+      });
+      slotsEl.appendChild(b);
+    });
+  }
+
+  next3.addEventListener('click', function(){
+    var areaLabel = state.area === 'core' ? 'Home base' : (state.area === 'state' ? 'Statewide' : 'Call to confirm');
+    var rows = [
+      ['Zip code', state.zip],
+      ['Coverage', areaLabel],
+      ['Service', state.svc],
+      ['Day', state.day],
+      ['Window', state.slot]
+    ];
+    var html = '';
+    rows.forEach(function(r){
+      html += '<div><span>' + r[0] + '</span><b>' + r[1] + '</b></div>';
+    });
+    document.getElementById('summary').innerHTML = html;
+    var body = 'Signing request for Pignatelli CT Mobile Notary%0AZip: ' + encodeURIComponent(state.zip) +
+               '%0AService: ' + encodeURIComponent(state.svc) +
+               '%0ADay: ' + encodeURIComponent(state.day) +
+               '%0AWindow: ' + encodeURIComponent(state.slot);
+    document.getElementById('smsSend').setAttribute('href','sms:+15416131569?&body=' + body);
+    go(4);
+  });
+
+  document.querySelectorAll('[data-back]').forEach(function(b){
+    b.addEventListener('click', function(){ go(parseInt(b.getAttribute('data-back'),10)); });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Pignatelli CT Mobile Notary",
+  "description":"Certified Connecticut Notary Public and Notary Public Association Certified Notary Signing Agent. Loan signings, real estate closings and general notarization statewide, including military installations.",
+  "telephone":"+1-541-613-1569",
+  "email":"spenser.pignatelli@gmail.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Colchester","addressRegion":"CT","postalCode":"06415","addressCountry":"US"},
+  "areaServed":{"@type":"State","name":"Connecticut"},
+  "knowsLanguage":"en",
+  "availableLanguage":"en"
+}
+</script>
+</body>
+</html>
