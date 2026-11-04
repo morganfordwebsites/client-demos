@@ -145,7 +145,7 @@ section{position:relative}
 @media(max-width:620px){.svcpick{grid-template-columns:1fr}}
 .field{display:grid;gap:6px}
 .field label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:600}
-.field input,.field select,.field textarea{width:100%;background:#0D0F10;border:1px solid var(--line);border-radius:2px;color:var(--bone);padding:12px 13px;font:inherit;font-size:14.5px;transition:border-color .18s}
+.field input,.field select,.field textarea{width:100%;background:#0D0F10;border:1px solid var(--line);border-radius:2px;color:var(--bone);padding:12px 13px;font:inherit;font-size:16px;transition:border-color .18s;min-height:46px}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brass)}
 .field textarea{resize:vertical;min-height:64px}
 .zonegrid{display:grid;grid-template-columns:1fr 140px;gap:12px;align-items:end}
@@ -153,14 +153,14 @@ section{position:relative}
 .days{display:flex;gap:7px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
 .days::-webkit-scrollbar{height:5px}
 .days::-webkit-scrollbar-thumb{background:var(--steel)}
-.days button{flex:0 0 auto;border:1px solid var(--line);border-radius:2px;padding:10px 13px;text-align:center;min-width:72px;transition:all .18s}
+.days button{flex:0 0 auto;border:1px solid var(--line);border-radius:2px;padding:11px 14px;text-align:center;min-width:76px;min-height:52px;transition:all .18s}
 .days button .d{display:block;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:700}
 .days button .n{display:block;font-family:'Archivo Black';font-size:17px;margin-top:4px}
 .days button:hover{border-color:rgba(192,138,62,.45)}
 .days button[aria-pressed="true"]{background:var(--steel);border-color:var(--brass);color:#fff}
 .days button[aria-pressed="true"] .d{color:var(--brasslt)}
 .times{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:7px;margin-top:14px}
-.times button{border:1px solid var(--line);border-radius:2px;padding:11px 6px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;transition:all .16s;color:#C3C8CA}
+.times button{border:1px solid var(--line);border-radius:2px;padding:12px 6px;min-height:44px;font-size:13.5px;font-weight:600;font-variant-numeric:tabular-nums;transition:all .16s;color:#C3C8CA}
 .times button:hover:not(:disabled){border-color:rgba(192,138,62,.5);color:#fff}
 .times button[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:#120E08}
 .times button:disabled{color:#7B8285;border-color:rgba(237,232,223,.06);text-decoration:line-through;cursor:not-allowed}
