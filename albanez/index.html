@@ -273,11 +273,14 @@
   .c-row dd{margin:0;font-size:15.5px;color:#D8D1C5}
   .c-row dd a:hover{color:var(--copper-hi)}
   .c-row dd.big{font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em;color:var(--bone)}
-  .map{margin-top:var(--sp-3);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;position:relative}
-  .map iframe{width:100%;height:230px;border:0;display:block;filter:grayscale(1) contrast(.92) brightness(.82)}
-  .map a{position:absolute;right:10px;bottom:10px;background:rgba(12,17,16,.9);border:1px solid var(--line-strong);
+  .map{margin-top:var(--sp-3);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;position:relative;background:var(--ink-2)}
+  .map img{width:100%;height:238px;object-fit:cover;object-position:50% 50%;display:block;filter:grayscale(1) contrast(.95) brightness(.72) sepia(.14)}
+  .map .pin{position:absolute;left:34.7%;top:50%;width:13px;height:13px;border-radius:50%;background:var(--copper);
+            transform:translate(-50%,-50%);box-shadow:0 0 0 5px rgba(217,116,52,.25),0 0 0 1px rgba(8,12,11,.6)}
+  .map .credit{position:absolute;left:10px;bottom:8px;font-size:9.5px;letter-spacing:.06em;color:rgba(242,237,228,.55)}
+  .map .go-map{position:absolute;right:10px;bottom:10px;background:rgba(12,17,16,.9);border:1px solid var(--line-strong);
          padding:8px 12px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;border-radius:var(--r)}
-  .map a:hover{background:var(--copper);color:#140C06;border-color:var(--copper)}
+  .map .go-map:hover{background:var(--copper);color:#140C06;border-color:var(--copper)}
 
   form.enq{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,2.6vw,30px)}
   form.enq .eyebrow{margin-bottom:20px}
@@ -682,8 +685,10 @@
           <div class="c-row"><dt>Payment</dt><dd>Credit or debit card, and more</dd></div>
         </dl>
         <div class="map">
-          <iframe title="Map showing Albanez Inc at 1232 Clagett Dr, Rockville, MD" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.1443%2C39.0682%2C-77.1143%2C39.0842&amp;layer=mapnik&amp;marker=39.0762%2C-77.1293" loading="lazy"></iframe>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=1232+Clagett+Dr+Rockville+MD+20851" target="_blank" rel="noopener">Open in Maps</a>
+          <img src="img/map.jpg" alt="Street map of Rockville, Maryland around Clagett Drive, with a pin on 1232 Clagett Dr" width="768" height="420" loading="lazy">
+          <span class="pin" aria-hidden="true"></span>
+          <span class="credit">Map data © OpenStreetMap contributors</span>
+          <a class="go-map" href="https://www.google.com/maps/search/?api=1&amp;query=1232+Clagett+Dr+Rockville+MD+20851" target="_blank" rel="noopener">Open in Maps</a>
         </div>
       </div>
 
