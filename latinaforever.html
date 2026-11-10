@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Latina Forever — Mobile Notary &amp; Translation · Athens, GA</title>
+<meta name="description" content="Latina Forever: bilingual mobile notary public and English–Spanish document translation in Athens, Georgia. Acknowledgments, jurats, powers of attorney, estate documents, loan signings, hospital visits. Open 24 hours. Call or text (706) 363-0347." />
+<meta name="theme-color" content="#0A1E78" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A1E78'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' font-style='italic' fill='%23FAF7F2' text-anchor='middle'%3ELF%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0B1226;
+    --navy:#0A1E78;
+    --red:#8E1F28;
+    --paper:#FAF7F2;
+    --sand:#E6DCCB;
+    --slate:#565E70;
+    --max:1180px;
+    --s1:8px; --s2:12px; --s3:20px; --s4:32px; --s5:56px; --s6:88px; --s7:132px;
+    --r:2px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block}
+  a{color:inherit}
+  h1,h2,h3,h4{font-family:"Newsreader",Georgia,serif; font-weight:400; margin:0; letter-spacing:-.02em}
+  h1{font-size:clamp(46px,6.4vw,92px); line-height:.96}
+  h2{font-size:clamp(32px,3.6vw,52px); line-height:1.03}
+  h3{font-size:clamp(22px,2vw,27px); line-height:1.15}
+  p{margin:0}
+  em{font-style:italic}
+  .wrap{width:100%; max-width:var(--max); margin:0 auto; padding:0 28px}
+  .eyebrow{
+    font-size:11.5px; letter-spacing:.18em; text-transform:uppercase;
+    font-weight:500; color:var(--slate)
+  }
+  .micro{font-size:12px; letter-spacing:.12em; text-transform:uppercase; font-weight:500}
+  .skip{position:absolute; left:-9999px}
+  .skip:focus{left:16px; top:16px; z-index:99; background:var(--ink); color:var(--paper); padding:10px 16px}
+  :focus-visible{outline:2px solid var(--red); outline-offset:3px}
+
+  /* preview strip */
+  .preview{
+    background:var(--ink); color:var(--paper); font-size:11px; letter-spacing:.16em;
+    text-transform:uppercase; text-align:center; padding:8px 16px; font-weight:500
+  }
+  .preview span{opacity:.62}
+  .preview b{font-weight:600; letter-spacing:.16em}
+
+  /* utility bar */
+  .util{background:var(--navy); color:var(--paper); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase}
+  .util .wrap{display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:40px; padding-top:7px; padding-bottom:7px}
+  .util-left{opacity:.85}
+  .util-right{display:flex; align-items:center; gap:22px}
+  .util a{text-decoration:none; opacity:.95}
+  .util a:hover{opacity:1; text-decoration:underline; text-underline-offset:3px}
+  .lang{display:flex; align-items:center; border:1px solid rgba(250,247,242,.35); border-radius:var(--r); overflow:hidden}
+  .lang button{
+    background:none; border:0; color:var(--paper); font:inherit; letter-spacing:.1em;
+    padding:4px 9px; cursor:pointer; opacity:.6
+  }
+  .lang button[aria-pressed="true"]{background:rgba(250,247,242,.16); opacity:1}
+
+  /* header */
+  header.site{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--sand)}
+  header.site .wrap{display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:74px}
+  .brand{display:flex; align-items:center; gap:14px; text-decoration:none}
+  .brand img{height:46px; width:auto}
+  nav.main{display:flex; align-items:center; gap:26px}
+  nav.main a{
+    text-decoration:none; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+    font-weight:500; color:var(--ink); padding:6px 0; border-bottom:1px solid transparent
+  }
+  nav.main a:hover{border-bottom-color:var(--red)}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+    font-size:13.5px; letter-spacing:.06em; font-weight:500; padding:13px 20px;
+    border-radius:var(--r); border:1px solid var(--ink); background:var(--ink); color:var(--paper)
+  }
+  .btn:hover{background:var(--navy); border-color:var(--navy)}
+  .btn.ghost{background:none; color:var(--ink)}
+  .btn.ghost:hover{background:var(--sand); border-color:var(--ink)}
+  .btn.small{padding:10px 16px; font-size:12px; letter-spacing:.1em; text-transform:uppercase}
+  .btn svg{width:15px; height:15px; flex:none}
+
+  /* hero */
+  .hero{position:relative; overflow:hidden; border-bottom:1px solid var(--sand)}
+  .hero::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      radial-gradient(1100px 520px at 78% -10%, rgba(10,30,120,.10), transparent 65%),
+      radial-gradient(760px 420px at 8% 108%, rgba(142,31,40,.07), transparent 62%);
+  }
+  .hero .wrap{position:relative; display:grid; grid-template-columns:1.12fr .88fr; gap:70px; padding-top:88px; padding-bottom:84px; align-items:start}
+  .watermark{
+    position:absolute; top:-6px; right:-40px; z-index:0;
+    font-family:"Newsreader",Georgia,serif; font-style:italic; font-size:clamp(90px,15vw,230px);
+    line-height:1; color:rgba(11,18,38,.045); letter-spacing:-.03em; white-space:nowrap; pointer-events:none;
+    user-select:none
+  }
+  .hero-copy{position:relative; z-index:1; max-width:620px}
+  .kicker{display:flex; align-items:center; gap:12px; margin-bottom:26px}
+  .kicker .rule{width:42px; height:1px; background:var(--red); flex:none}
+  .hero h1{margin-bottom:26px; color:var(--ink)}
+  .hero h1 em{color:var(--navy); font-weight:300}
+  .lede{font-size:19px; line-height:1.62; color:var(--slate); max-width:52ch}
+  .cta-row{display:flex; flex-wrap:wrap; gap:16px; margin-top:34px; align-items:center}
+  .cta-note{display:flex; align-items:center; gap:9px; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); margin-top:26px}
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--red); flex:none}
+
+  /* hero card */
+  .hcard{
+    position:relative; z-index:1; background:#fff; border:1px solid var(--sand);
+    border-radius:var(--r); padding:26px 26px 24px; box-shadow:0 24px 48px -34px rgba(11,18,38,.42)
+  }
+  .hcard-top{display:flex; align-items:center; gap:14px; padding-bottom:20px; border-bottom:1px solid var(--sand)}
+  .hcard-top img.face{width:62px; height:62px; border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--sand)}
+  .hcard-top .lg{height:38px; width:auto}
+  .hcard h2{font-size:25px; line-height:1.1; margin-bottom:4px}
+  .hcard .tag{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--slate)}
+  .hcard-mid{padding:20px 0 18px; border-bottom:1px solid var(--sand)}
+  .rating{display:flex; align-items:center; gap:10px}
+  .stars{display:flex; gap:2px}
+  .stars svg{width:14px; height:14px; fill:var(--red)}
+  .rating b{font-weight:600; font-size:14px}
+  .rating span{font-size:12.5px; color:var(--slate)}
+  .telbig{
+    display:block; font-family:"Newsreader",Georgia,serif; font-size:33px; line-height:1.1;
+    text-decoration:none; color:var(--ink); margin:16px 0 6px; letter-spacing:-.01em
+  }
+  .telbig:hover{color:var(--navy)}
+  .hcard-mid .micro{color:var(--slate); letter-spacing:.1em}
+  .hcard-foot{display:flex; flex-direction:column; gap:8px; padding-top:16px; font-size:13.5px; color:var(--slate)}
+  .hcard-foot .row{display:flex; align-items:center; gap:10px}
+  .hcard-foot svg{width:15px; height:15px; stroke:var(--red); fill:none; stroke-width:1.6; flex:none}
+
+  /* credential strip */
+  .creds{border-bottom:1px solid var(--sand); background:#fff}
+  .creds .wrap{display:grid; grid-template-columns:repeat(5,1fr)}
+  .cred{padding:20px 22px 20px 0; border-right:1px solid var(--sand)}
+  .cred:last-child{border-right:0}
+  .cred b{display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--slate); font-weight:500; margin-bottom:5px}
+  .cred span{font-family:"Newsreader",Georgia,serif; font-size:19px; line-height:1.2}
+
+  /* generic section */
+  section{padding:var(--s6) 0}
+  .sec-head{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:end; margin-bottom:56px}
+  .sec-head p{color:var(--slate); max-width:56ch}
+  .sec-num{font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--red); font-weight:500; margin-bottom:16px; display:block}
+
+  /* services */
+  .svc-list{border-top:1px solid var(--sand)}
+  .svc{
+    display:grid; grid-template-columns:76px 1fr 1.05fr; gap:32px;
+    padding:32px 8px 32px 0; border-bottom:1px solid var(--sand);
+    transition:background .18s ease-out, padding-left .18s ease-out
+  }
+  .svc:hover{background:#fff; padding-left:10px}
+  .svc .no{font-size:12px; letter-spacing:.1em; color:var(--red); font-weight:600; padding-top:7px}
+  .svc h3{margin-bottom:8px}
+  .svc .docs{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--slate)}
+  .svc p{color:var(--slate); font-size:16.5px}
+  .also{margin-top:34px; display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+  .also .micro{color:var(--slate); margin-right:6px}
+  .chip{
+    font-size:13px; padding:7px 13px; border:1px solid var(--sand); border-radius:var(--r);
+    background:#fff; color:var(--ink)
+  }
+
+  /* translation */
+  .trans{background:var(--ink); color:var(--paper); position:relative; overflow:hidden}
+  .trans::after{
+    content:""; position:absolute; right:-120px; bottom:-160px; width:520px; height:520px;
+    border:1px solid rgba(250,247,242,.10); border-radius:50%; pointer-events:none
+  }
+  .trans .wrap{position:relative; display:grid; grid-template-columns:.85fr 1.15fr; gap:70px}
+  .trans h2{color:var(--paper)}
+  .trans .sec-num{color:#C9A35A}
+  .trans .lede{color:rgba(250,247,242,.72); font-size:17.5px; margin-top:24px}
+  .dict{border-top:1px solid rgba(250,247,242,.18)}
+  .dict li{
+    list-style:none; display:grid; grid-template-columns:1fr auto 1fr; gap:18px;
+    padding:15px 0; border-bottom:1px solid rgba(250,247,242,.14); font-size:15.5px
+  }
+  .dict ul{margin:0; padding:0}
+  .dict .en{color:rgba(250,247,242,.92)}
+  .dict .es{color:rgba(250,247,242,.62); text-align:right; font-style:italic}
+  .dict .sep{color:#C9A35A; font-size:12px}
+  .trans-note{
+    margin-top:34px; padding:22px 24px; border:1px solid rgba(250,247,242,.22); border-radius:var(--r);
+    font-size:15px; color:rgba(250,247,242,.82); background:rgba(250,247,242,.04)
+  }
+  .trans-note b{color:var(--paper); font-weight:600}
+
+  /* finder */
+  .finder-grid{display:grid; grid-template-columns:1fr 1.15fr; gap:56px; align-items:start}
+  .picker{display:flex; flex-wrap:wrap; gap:9px}
+  .pick{
+    font:inherit; font-size:14px; text-align:left; padding:11px 15px; cursor:pointer;
+    border:1px solid var(--sand); background:#fff; border-radius:var(--r); color:var(--ink);
+    transition:background .15s ease-out, border-color .15s ease-out
+  }
+  .pick:hover{border-color:var(--ink)}
+  .pick[aria-pressed="true"]{background:var(--navy); border-color:var(--navy); color:var(--paper)}
+  .panel{background:#fff; border:1px solid var(--sand); border-radius:var(--r); padding:30px 32px}
+  .panel h3{margin-bottom:18px}
+  .panel dl{margin:0; display:grid; gap:18px}
+  .panel dt{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--red); font-weight:600; margin-bottom:4px}
+  .panel dd{margin:0; color:var(--slate); font-size:15.5px}
+  .panel .foot{margin-top:24px; padding-top:18px; border-top:1px solid var(--sand); font-size:13px; color:var(--slate)}
+
+  /* steps */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--sand)}
+  .step{padding:34px 30px 0 0; border-right:1px solid var(--sand); margin-right:30px}
+  .step:last-child{border-right:0; margin-right:0; padding-right:0}
+  .step .no{font-family:"Newsreader",Georgia,serif; font-size:52px; line-height:1; color:var(--sand); margin-bottom:14px}
+  .step h3{font-size:22px; margin-bottom:10px}
+  .step p{color:var(--slate); font-size:15.5px}
+
+  /* area */
+  .area{background:#fff; border-top:1px solid var(--sand); border-bottom:1px solid var(--sand)}
+  .area .wrap{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start}
+  .towns{columns:2; column-gap:28px; margin:26px 0 0; padding:0; list-style:none}
+  .towns li{padding:7px 0; border-bottom:1px solid var(--sand); font-size:15.5px; break-inside:avoid}
+  .towns li span{color:var(--slate); font-size:12.5px; letter-spacing:.06em}
+  .mapwrap{border:1px solid var(--sand); border-radius:var(--r); overflow:hidden; background:var(--sand)}
+  .mapwrap iframe{display:block; width:100%; height:360px; border:0; filter:grayscale(1) contrast(1.04)}
+  .mapmeta{display:flex; justify-content:space-between; gap:16px; align-items:baseline; margin-top:16px; font-size:13.5px; color:var(--slate)}
+  .mapmeta a{color:var(--navy)}
+
+  /* reviews */
+  .rev-top{display:grid; grid-template-columns:.75fr 1.25fr; gap:60px; align-items:start}
+  .bignum{font-family:"Newsreader",Georgia,serif; font-size:104px; line-height:.9; letter-spacing:-.03em}
+  .bignum small{font-size:22px; letter-spacing:0; color:var(--slate); display:block; margin-top:12px; font-family:"Archivo",sans-serif}
+  .rev-list{display:grid; gap:30px}
+  .rev{border-top:1px solid var(--sand); padding-top:22px}
+  .rev:first-child{border-top:0; padding-top:0}
+  .rev blockquote{margin:0 0 12px; font-family:"Newsreader",Georgia,serif; font-size:20px; line-height:1.45}
+  .rev .who{display:flex; align-items:center; gap:12px; font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--slate)}
+  .rev .who .stars svg{width:12px; height:12px}
+  .rev .who .src{padding-left:12px; border-left:1px solid var(--sand)}
+
+  /* about */
+  .about{background:var(--paper)}
+  .about .wrap{display:grid; grid-template-columns:.72fr 1.28fr; gap:64px; align-items:start}
+  .portrait{position:relative}
+  .portrait img{width:100%; max-width:330px; aspect-ratio:1; object-fit:cover; border:1px solid var(--sand); border-radius:var(--r)}
+  .portrait figcaption{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); margin-top:12px; max-width:330px}
+  .about blockquote{
+    margin:0 0 22px; font-family:"Newsreader",Georgia,serif; font-size:clamp(24px,2.4vw,32px);
+    line-height:1.25; color:var(--navy); max-width:24ch
+  }
+  .about p{color:var(--slate); margin-bottom:16px; max-width:60ch}
+  .own{display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 24px}
+  .own span{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; padding:6px 11px; border:1px solid var(--sand); background:#fff}
+  .socials{display:flex; gap:20px; flex-wrap:wrap}
+  .socials a{display:inline-flex; align-items:center; gap:9px; text-decoration:none; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink)}
+  .socials a:hover{color:var(--navy)}
+  .socials svg{width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.6}
+
+  /* faq */
+  .faq{background:#fff; border-top:1px solid var(--sand)}
+  .faq-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 64px}
+  details{border-top:1px solid var(--sand); padding:20px 0}
+  details summary{
+    cursor:pointer; list-style:none; font-family:"Newsreader",Georgia,serif; font-size:20px;
+    display:flex; justify-content:space-between; gap:20px; align-items:baseline
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+"; color:var(--red); font-family:"Archivo",sans-serif; font-size:18px; line-height:1; flex:none}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:12px; color:var(--slate); font-size:15.5px; max-width:52ch}
+
+  /* contact */
+  .contact{background:var(--navy); color:var(--paper); position:relative; overflow:hidden}
+  .contact .wrap{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start; position:relative}
+  .contact h2{color:var(--paper); margin-bottom:20px}
+  .contact .lede{color:rgba(250,247,242,.74)}
+  .bigtel{display:block; margin:34px 0 8px; font-family:"Newsreader",Georgia,serif; font-size:clamp(34px,4.4vw,54px); color:var(--paper); text-decoration:none; letter-spacing:-.02em}
+  .bigtel:hover{color:#fff; text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:1px}
+  .contact .note{font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:rgba(250,247,242,.6)}
+  .contact-list{margin:32px 0 0; padding:0; list-style:none; display:grid; gap:18px}
+  .contact-list li{display:grid; grid-template-columns:20px 1fr; gap:14px; align-items:start; color:rgba(250,247,242,.85); font-size:15.5px}
+  .contact-list svg{width:16px; height:16px; stroke:rgba(250,247,242,.6); fill:none; stroke-width:1.6; margin-top:4px}
+  .contact-list a{text-decoration:none; border-bottom:1px solid rgba(250,247,242,.28)}
+  .contact-list a:hover{border-bottom-color:var(--paper)}
+  form{background:rgba(250,247,242,.06); border:1px solid rgba(250,247,242,.22); padding:28px; border-radius:var(--r)}
+  form h3{color:var(--paper); font-size:22px; margin-bottom:6px}
+  form .hint{font-size:13px; color:rgba(250,247,242,.6); margin-bottom:22px}
+  label{display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(250,247,242,.72); margin-bottom:6px}
+  input,textarea{
+    width:100%; font:inherit; font-size:15px; padding:11px 12px; border-radius:var(--r);
+    border:1px solid rgba(250,247,242,.28); background:rgba(11,18,38,.28); color:var(--paper)
+  }
+  input::placeholder,textarea::placeholder{color:rgba(250,247,242,.42)}
+  .field{margin-bottom:16px}
+  form .btn{background:var(--paper); color:var(--ink); border-color:var(--paper); width:100%; justify-content:center; margin-top:6px}
+  form .btn:hover{background:#fff}
+  form .preview-note{font-size:12px; color:rgba(250,247,242,.55); margin-top:14px; line-height:1.5}
+
+  /* footer */
+  footer.site{background:var(--ink); color:rgba(250,247,242,.72); padding:64px 0 34px; font-size:14px}
+  .foot-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:44px; padding-bottom:44px; border-bottom:1px solid rgba(250,247,242,.16)}
+  .foot-top img{height:52px; width:auto; background:var(--paper); padding:8px 10px; border-radius:var(--r)}
+  .foot-top .blurb{margin-top:20px; max-width:34ch; font-size:14px; line-height:1.6}
+  footer h4{font-family:"Archivo",sans-serif; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(250,247,242,.55); margin-bottom:14px; font-weight:500}
+  footer ul{list-style:none; margin:0; padding:0; display:grid; gap:9px}
+  footer a{text-decoration:none; color:rgba(250,247,242,.85)}
+  footer a:hover{color:#fff; text-decoration:underline; text-underline-offset:3px}
+  .foot-bottom{display:flex; justify-content:space-between; gap:28px; padding-top:26px; font-size:12.5px; color:rgba(250,247,242,.5)}
+  .foot-bottom p{max-width:70ch}
+
+  @media (max-width:1024px){
+    .hero .wrap{grid-template-columns:1fr; gap:44px; padding-top:60px}
+    .hcard{max-width:420px}
+    .creds .wrap{grid-template-columns:repeat(2,1fr)}
+    .cred{border-right:0; border-bottom:1px solid var(--sand); padding-right:0}
+    .sec-head,.finder-grid,.rev-top,.about .wrap,.area .wrap,.contact .wrap,.trans .wrap{grid-template-columns:1fr; gap:36px}
+    .steps{grid-template-columns:1fr}
+    .step{border-right:0; margin-right:0; padding:28px 0; border-bottom:1px solid var(--sand)}
+    .step:last-child{border-bottom:0}
+    .foot-top{grid-template-columns:1fr 1fr}
+    .svc{grid-template-columns:56px 1fr; gap:18px}
+    .svc p{grid-column:2}
+    .panel{padding:24px}
+    nav.main{display:none}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    section{padding:64px 0}
+    .watermark{font-size:34vw; top:auto; bottom:0; right:-10px}
+    .faq-grid{grid-template-columns:1fr}
+    .towns{columns:1}
+    .hcard-top{flex-wrap:wrap}
+    .foot-bottom{flex-direction:column}
+    .util .wrap{flex-direction:column; gap:8px; padding:10px 20px; align-items:flex-start}
+    .util-right{width:100%; justify-content:space-between}
+    .rev-top{gap:28px}
+    .bignum{font-size:74px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important; transition:none !important; scroll-behavior:auto}
+  }
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease-out, transform .5s ease-out}
+  .reveal.in{opacity:1; transform:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="preview"><b>Website concept preview</b> <span>· prepared for review · not a live site</span></div>
+
+<div class="util">
+  <div class="wrap">
+    <div class="util-left" data-es="Athens, Georgia · Notario móvil · Abierto 24 horas">Athens, Georgia · Mobile notary · Open 24 hours</div>
+    <div class="util-right">
+      <a href="tel:+17063630347">(706) 363-0347</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="lang-en" aria-pressed="true" onclick="setLang('en')">EN</button>
+        <button id="lang-es" aria-pressed="false" onclick="setLang('es')">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Latina Forever home">
+      <img src="latinaforever-assets/logo.png" alt="Latina Forever — Translation and Notary Services" />
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#services" data-es="Servicios">Services</a>
+      <a href="#translation" data-es="Traducción">Translation</a>
+      <a href="#finder" data-es="Qué traer">What to bring</a>
+      <a href="#area" data-es="Área">Service area</a>
+      <a href="#reviews" data-es="Reseñas">Reviews</a>
+      <a href="#faq" data-es="Preguntas">FAQ</a>
+    </nav>
+    <a class="btn small" href="tel:+17063630347">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 3h-2A1.6 1.6 0 0 0 3 4.7C3 13.1 10.9 21 19.3 21a1.6 1.6 0 0 0 1.7-1.6v-2a1.6 1.6 0 0 0-1.3-1.6l-2.6-.5a1.6 1.6 0 0 0-1.6.6l-.9 1.2a13 13 0 0 1-6.3-6.3l1.2-.9a1.6 1.6 0 0 0 .6-1.6l-.5-2.6A1.6 1.6 0 0 0 6.6 3Z"/></svg>
+      <span data-es="Llamar ahora">Call now</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="watermark" aria-hidden="true">Fe pública</div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="kicker">
+          <span class="rule" aria-hidden="true"></span>
+          <span class="eyebrow" data-es="Notario público comisionado · Athens, Georgia">Commissioned notary public · Athens, Georgia</span>
+        </div>
+        <h1 data-es="Firmado, sellado, <em>y cuando te quede bien.</em>">Signed, sealed,<br /><em>and on your schedule.</em></h1>
+        <p class="lede" data-es="Notaría móvil y traducción de documentos inglés ⇄ español en Athens y el noreste de Georgia. Voy a tu mesa, tu oficina, un cuarto de hospital o tu trabajo — de noche, los fines de semana y el mismo día.">Mobile notary and English ⇄ Spanish document translation across Athens and Northeast Georgia. I come to your kitchen table, your office, a hospital room or a job site — evenings, weekends and same-day.</p>
+        <div class="cta-row">
+          <a class="btn" href="tel:+17063630347">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 3h-2A1.6 1.6 0 0 0 3 4.7C3 13.1 10.9 21 19.3 21a1.6 1.6 0 0 0 1.7-1.6v-2a1.6 1.6 0 0 0-1.3-1.6l-2.6-.5a1.6 1.6 0 0 0-1.6.6l-.9 1.2a13 13 0 0 1-6.3-6.3l1.2-.9a1.6 1.6 0 0 0 .6-1.6l-.5-2.6A1.6 1.6 0 0 0 6.6 3Z"/></svg>
+            <span data-es="Llamar (706) 363-0347">Call (706) 363-0347</span>
+          </a>
+          <a class="btn ghost" href="sms:+17063630347" data-es="Mándame un texto">Text me the details</a>
+        </div>
+        <p class="cta-note"><span class="dot" aria-hidden="true"></span><span data-es="Se habla español · citas el mismo día por lo general">Se habla español · same-day appointments most days</span></p>
+      </div>
+
+      <aside class="hcard" aria-label="Contact card">
+        <div class="hcard-top">
+          <img class="face" src="latinaforever-assets/portrait.jpg" alt="Portrait of the notary at Latina Forever" />
+          <div>
+            <img class="lg" src="latinaforever-assets/logo.png" alt="Latina Forever" />
+            <div class="tag" data-es="Traducción y notaría · Inglés y español">Translation &amp; notary · English &amp; Spanish</div>
+          </div>
+        </div>
+        <div class="hcard-mid">
+          <div class="rating">
+            <span class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg>
+            </span>
+            <b>5.0</b>
+            <span data-es="25 reseñas en Google">25 Google reviews</span>
+          </div>
+          <a class="telbig" href="tel:+17063630347">(706) 363-0347</a>
+          <div class="micro" data-es="Textos primero · contesto rápido">Text first · answers fast</div>
+        </div>
+        <div class="hcard-foot">
+          <div class="row">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.6 2.1"/></svg>
+            <span data-es="Abierto 24 horas, 7 días">Open 24 hours, 7 days</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span data-es="340 Old Commerce Rd, Athens, GA">340 Old Commerce Rd, Athens, GA</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.6"/><path d="m3.6 6.4 8.4 6.4 8.4-6.4"/></svg>
+            <span>latinaforever007@gmail.com</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="creds">
+    <div class="wrap">
+      <div class="cred"><b data-es="Comisión">Commission</b><span data-es="Notario de Georgia">Georgia notary</span></div>
+      <div class="cred"><b data-es="Idiomas">Languages</b><span data-es="Inglés y español">English &amp; Español</span></div>
+      <div class="cred"><b data-es="Dónde">Where</b><span data-es="Voy a ti">I come to you</span></div>
+      <div class="cred"><b data-es="Reseñas">Reviews</b><span data-es="5.0 · 25 en Google">5.0 · 25 on Google</span></div>
+      <div class="cred"><b data-es="Horario">Hours</b><span data-es="24 horas">24 hours</span></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="sec-num">01 — <span data-es="Servicios">Services</span></span>
+          <h2 data-es="Lo que puedo sellar y firmar.">What I can put my seal on.</h2>
+        </div>
+        <p data-es="Un notario de Georgia certifica firmas, juramentos y declaraciones; no elige documentos ni da consejos legales. Esto es lo que la gente me pide más seguido.">A Georgia notary witnesses signatures, oaths and written statements — not which document you should use. This is what people call me for most.</p>
+      </div>
+
+      <div class="svc-list">
+        <article class="svc reveal">
+          <div class="no">01</div>
+          <div><h3 data-es="Reconocimientos (acknowledgments)">Acknowledgments</h3><div class="docs" data-es="Escrituras · Títulos · Poderes">Deeds · Titles · POA</div></div>
+          <p data-es="Escrituras de propiedad, traspasos de carro y poderes notariales. Firmas delante de mí; yo lleno el certificado y lo sello.">Property deeds, vehicle transfers and powers of attorney. You sign in front of me, I complete the certificate and stamp it.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="no">02</div>
+          <div><h3 data-es="Jurats y declaraciones juradas">Jurats &amp; sworn statements</h3><div class="docs" data-es="Affidavits · Verificaciones">Affidavits · Verifications</div></div>
+          <p data-es="Declaraciones de residencia, ingresos o cartas de verificación. Tomo el juramento, firmo y sello el jurat.">Residency and income statements, verification letters, sworn affidavits. I administer the oath, then sign and seal the jurat.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="no">03</div>
+          <div><h3 data-es="Juramentos y promesas">Oaths &amp; affirmations</h3><div class="docs" data-es="Empleo · Tutela">Employment · Guardianship</div></div>
+          <p data-es="Papeles de empleo, tutela, iglesias, clubes, entrenadores y voluntariado que necesitan que alguien jure o prometa.">Hiring paperwork, guardianship oaths, church and club offices, coaching and volunteer forms that need someone sworn in.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="no">04</div>
+          <div><h3 data-es="Testamentos y sucesiones">Wills &amp; estate documents</h3><div class="docs" data-es="Testamentos · Declaración de autenticidad">Wills · Self-proving affidavits</div></div>
+          <p data-es="Declaraciones de autenticidad y papeles de sucesión, con los testigos que pida tu abogado. Trae a todos los que firman.">Self-proving affidavits and estate paperwork, notarized with whatever witnesses your attorney requires. Bring everyone who signs.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="no">05</div>
+          <div><h3 data-es="Bienes raíces y préstamos">Real estate &amp; loan signings</h3><div class="docs" data-es="Cierres · Refinanciamiento">Closings · Refinance</div></div>
+          <p data-es="Paquetes de compra, venta y refinanciamiento, quitclaims y cierres coordinados con la compañía de título o el banco.">Buyer, seller and refinance packages, quitclaim deeds and closing documents coordinated with your title company or lender.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="no">06</div>
+          <div><h3 data-es="Hospitales y hogares de cuidado">Hospital &amp; care-home visits</h3><div class="docs" data-es="Cama · Asilos · Rehabilitación">Bedside · Nursing homes</div></div>
+          <p data-es="Firmas junto a la cama en hospitales, centros de rehabilitación y asilos de Athens, cuando salir no es realista.">Bedside signings in Athens hospitals, rehab centers and assisted living, for the times getting out isn't realistic.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="no">07</div>
+          <div><h3 data-es="Negocios y vehículos">Business &amp; vehicle paperwork</h3><div class="docs" data-es="Contratos · Títulos · Actas">Contracts · Titles · Resolutions</div></div>
+          <p data-es="Contratos, actas de corporación, facturas de venta y traspasos de título que no se aceptan sin sello.">Contracts, corporate resolutions, bills of sale and title transfers that won't be accepted without a seal on them.</p>
+        </article>
+        <article class="svc reveal">
+          <div class="no">08</div>
+          <div><h3 data-es="Citas en español">Appointments in Spanish</h3><div class="docs" data-es="Bilingüe · Traducción">Bilingual · Translation</div></div>
+          <p data-es="En español, sin prisa. Te explico qué estás firmando en el idioma en que piensas, y traduzco el documento si hace falta.">En español, sin prisa. What you're signing gets explained in the language you think in, and the document gets translated if it needs to be.</p>
+        </article>
+      </div>
+
+      <div class="also reveal">
+        <span class="micro" data-es="También">Also</span>
+        <span class="chip" data-es="Cartas de viaje para menores">Travel letters for minors</span>
+        <span class="chip" data-es="Poder médico">Medical powers of attorney</span>
+        <span class="chip" data-es="Cartas de invitación">Invitation letters</span>
+        <span class="chip" data-es="Declaraciones de soltería">Single-status affidavits</span>
+        <span class="chip" data-es="Cambio de nombre">Name-change petitions</span>
+        <span class="chip" data-es="Diplomas y récords">Diplomas &amp; transcripts</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="trans" id="translation">
+    <div class="wrap">
+      <div>
+        <span class="sec-num">02 — <span data-es="Traducción">Translation</span></span>
+        <h2 data-es="Dos idiomas, una sola cita.">Two languages,<br />one appointment.</h2>
+        <p class="lede" data-es="Su tarjeta lo dice claro: Servicios de traducción y notaría en inglés y español. Trae el documento en español a la oficina que lo pide en inglés — o al revés.">Her card says it plainly: <em>Servicios de traducción y notaría en inglés y español.</em> Bring the Spanish document to the English office that wants it — or the other way around.</p>
+        <div class="trans-note" data-es="<b>Traducir y notarizar no son lo mismo.</b> Algunas oficinas aceptan una traducción notariada, otras exigen traductor certificado y otras piden apostilla. Dime quién recibe el documento y te digo con honestidad qué necesita antes de que pagues.">
+          <b>Translating and notarizing aren't the same thing.</b> Some offices accept a notarized translation, some require a certified translator, and some want an apostille. Tell me who is receiving the document and I'll tell you honestly what it needs before you pay.
+        </div>
+      </div>
+      <div>
+        <ul class="dict">
+          <li><span class="en">Birth, marriage &amp; death certificates</span><span class="sep">⇄</span><span class="es">Actas de nacimiento, matrimonio y defunción</span></li>
+          <li><span class="en">Diplomas, transcripts &amp; school records</span><span class="sep">⇄</span><span class="es">Diplomas, récords y constancias de estudios</span></li>
+          <li><span class="en">Medical records &amp; insurance forms</span><span class="sep">⇄</span><span class="es">Récords médicos y formularios de seguro</span></li>
+          <li><span class="en">Court, police &amp; immigration paperwork</span><span class="sep">⇄</span><span class="es">Papeles de corte, policía y migración</span></li>
+          <li><span class="en">Contracts, letters &amp; business documents</span><span class="sep">⇄</span><span class="es">Contratos, cartas y documentos de negocio</span></li>
+          <li><span class="en">Letters to schools, banks &amp; landlords</span><span class="sep">⇄</span><span class="es">Cartas para escuelas, bancos y arrendadores</span></li>
+        </ul>
+        <p class="lede" style="margin-top:26px; font-size:15.5px" data-es="Si el documento tiene que ir sellado además de traducido, se hace en la misma visita: traducción, firma y sello, sin segunda cita.">If the document has to go out translated and sealed, it happens in the same visit: translation, signature and stamp, no second appointment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="finder">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="sec-num">03 — <span data-es="Antes de la cita">Before the visit</span></span>
+          <h2 data-es="¿Qué vas a firmar?">What are you signing?</h2>
+        </div>
+        <p data-es="Escoge el tipo de documento y te digo qué traer, cuánto tarda y qué suele salir mal. Es la misma pregunta que contesto por teléfono todos los días.">Pick the document type and I'll tell you what to bring, how long it takes and what usually goes wrong. It's the same question I answer on the phone every day.</p>
+      </div>
+      <div class="finder-grid">
+        <div class="picker" id="picker" role="group" aria-label="Document type"></div>
+        <div class="panel" aria-live="polite">
+          <h3 id="panelTitle">Deed, title or closing packet</h3>
+          <dl>
+            <div><dt data-es="Trae">Bring</dt><dd id="pBring"></dd></div>
+            <div><dt data-es="Calcula">Plan on</dt><dd id="pTime"></dd></div>
+            <div><dt data-es="Ojo con">Watch out for</dt><dd id="pWatch"></dd></div>
+          </dl>
+          <div class="foot"><span data-es="¿No estás seguro? Mándame una foto de la página de firma al">Not sure? Text a photo of the signature page to</span> <a href="sms:+17063630347" style="color:var(--navy)">(706) 363-0347</a>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="sec-num">04 — <span data-es="Cómo funciona">How it works</span></span>
+          <h2 data-es="Tres pasos, sin vueltas.">Three steps, no runaround.</h2>
+        </div>
+        <p data-es="La mayoría de las citas se arreglan con dos mensajes. Si tu caso es urgente, dilo en el primer texto y lo pongo primero.">Most appointments get arranged in two messages. If yours is urgent, say so in the first text and it goes to the front of the day.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="no">01</div>
+          <h3 data-es="Manda una foto de la página de firma">Send a photo of the signature page</h3>
+          <p data-es="Por texto o correo, la página que hay que firmar. Reviso cómo viene redactado el certificado y te aviso si hacen falta testigos.">Text or email the page that needs signing. I check the certificate wording and tell you whether witnesses are required.</p>
+        </div>
+        <div class="step reveal">
+          <div class="no">02</div>
+          <h3 data-es="Trae ID con foto, y no firmes todavía">Bring photo ID, and don't sign yet</h3>
+          <p data-es="Licencia, pasaporte o ID estatal vigente para cada persona que firma. El documento va en blanco hasta que estemos juntos: eso es lo que el notario está atestiguando.">A current license, passport or state ID for each signer. The document stays unsigned until we're together — that's the thing the notary is witnessing.</p>
+        </div>
+        <div class="step reveal">
+          <div class="no">03</div>
+          <h3 data-es="Escoge el lugar">Pick the place</h3>
+          <p data-es="Voy a tu casa, oficina o cuarto de hospital en Clarke y los condados alrededor, o nos vemos en la oficina de Old Commerce Rd. Las noches y los domingos son normales aquí.">I drive to your home, office or hospital room across Clarke and the neighboring counties, or we meet at the Old Commerce Rd office. Evenings and Sundays are normal here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="area" id="area">
+    <div class="wrap">
+      <div>
+        <span class="sec-num">05 — <span data-es="Área de servicio">Service area</span></span>
+        <h2 data-es="Athens primero, después los condados.">Athens first,<br />then out to the counties.</h2>
+        <p style="color:var(--slate); margin-top:20px; max-width:46ch" data-es="Citas móviles en Clarke, Oconee, Madison, Jackson, Barrow, Oglethorpe, Walton y Greene. Si estás fuera de ese círculo, llama e pregunta: una cotización de viaje toma un minuto.">Mobile appointments across Clarke, Oconee, Madison, Jackson, Barrow, Oglethorpe, Walton and Greene counties. Outside that ring? Call and ask — a travel quote takes a minute.</p>
+        <ul class="towns">
+          <li>Athens <span>· Clarke</span></li>
+          <li>Winterville <span>· Clarke</span></li>
+          <li>Hull <span>· Madison</span></li>
+          <li>Watkinsville <span>· Oconee</span></li>
+          <li>Bogart <span>· Oconee</span></li>
+          <li>Bishop <span>· Oconee</span></li>
+          <li>Statham <span>· Barrow</span></li>
+          <li>Winder <span>· Barrow</span></li>
+          <li>Jefferson <span>· Jackson</span></li>
+          <li>Commerce <span>· Jackson</span></li>
+          <li>Colbert <span>· Madison</span></li>
+          <li>Danielsville <span>· Madison</span></li>
+          <li>Monroe <span>· Walton</span></li>
+          <li>Greensboro <span>· Greene</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="mapwrap">
+          <iframe title="Map of Athens, Georgia and the surrounding counties" src="https://maps.google.com/maps?q=340%20Old%20Commerce%20Rd%2C%20Athens%2C%20GA%2030607&amp;z=10&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="mapmeta">
+          <span data-es="Base: 340 Old Commerce Rd, Athens, GA 30607 — visitas con cita">Base: 340 Old Commerce Rd, Athens, GA 30607 — visits by appointment</span>
+          <a href="https://maps.google.com/maps?q=340+Old+Commerce+Rd,+Athens,+GA+30607" target="_blank" rel="noopener" data-es="Abrir en Maps">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="rev-top">
+        <div class="reveal">
+          <span class="sec-num">06 — <span data-es="Reseñas">Reviews</span></span>
+          <div class="bignum">5.0<small data-es="25 reseñas en Google · ninguna por debajo de 5">25 Google reviews · none below five</small></div>
+          <p style="margin-top:24px; color:var(--slate); max-width:32ch" data-es="Copiadas tal cual de la ficha de Google. La gente escribe sobre lo mismo: rapidez, trato amable y que uno llega cuando dice que va a llegar.">Copied straight from the Google listing. People keep writing the same three things: fast, kind, and shows up when she says she will.</p>
+          <a class="btn ghost" style="margin-top:24px" href="https://www.google.com/maps/search/Latinaforever007+notary+Athens+GA" target="_blank" rel="noopener" data-es="Leer las 25 en Google">Read all 25 on Google</a>
+        </div>
+        <div class="rev-list">
+          <article class="rev reveal">
+            <blockquote>"I had a wonderful experience with her notary services. She was extremely professional, efficient, and kind. She responded to my calls and messages very quickly and was able to provide convenient mobile notary service right at my home."</blockquote>
+            <div class="who"><span>Patricia Munoz</span><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg></span><span class="src">Google</span></div>
+          </article>
+          <article class="rev reveal">
+            <blockquote>"I was traveling in Athens and needed a notary quickly at 8:30p on a weekday. She drove to meet me promptly. She was pleasant, understanding and efficient. I highly recommend her!"</blockquote>
+            <div class="who"><span>Lisa Cupid</span><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg></span><span class="src">Google</span></div>
+          </article>
+          <article class="rev reveal">
+            <blockquote>"Fast and friendly service! I have used their notary services for the last three years!"</blockquote>
+            <div class="who"><span>Kimberly Valencia</span><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg></span><span class="src">Google</span></div>
+          </article>
+          <article class="rev reveal">
+            <blockquote>"I needed some papers signed asap and she did everything possible to help me out! Professional and fast service, will keep using her services for future needs! Highly recommend"</blockquote>
+            <div class="who"><span>Alan Ignacio-Cortez</span><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7-6.2-3.5L5.8 21l1.4-7L2 9.4l7-.8z"/></svg></span><span class="src">Google</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <figure class="portrait reveal" style="margin:0">
+        <img src="latinaforever-assets/portrait.jpg" alt="The notary behind Latina Forever, photographed in Athens" />
+        <figcaption data-es="Foto de su propia página · la nueva sesión de fotos va aquí">Photo from her own page · the session shot goes here</figcaption>
+      </figure>
+      <div class="reveal">
+        <span class="sec-num">07 — <span data-es="Quién soy">Who you're calling</span></span>
+        <blockquote data-es="“Llama al 706-363-0347 para tu amiga notaria pública.”">"Call 706-363-0347 for your notary public friend."</blockquote>
+        <p data-es="Así lo dice su página, y así van las citas: sin fila en la corte, sin sala de espera, sin apuro por firmar algo que no entiendes.">That's how her page puts it, and that's how the appointments go: no courthouse counter, no waiting room, no rushing you through a signature you don't understand.</p>
+        <p data-es="Latina Forever es un servicio bilingüe de traducción y notaría con base en Old Commerce Rd, en Athens, disponible a cualquier hora. En Google aparece como negocio de veterano, de mujer, latino e indígena.">Latina Forever is a bilingual translation and notary service based on Old Commerce Rd in Athens, available around the clock. Google lists the business as veteran-owned, woman-owned, Latino-owned and Indigenous-owned.</p>
+        <p data-es="Llama en inglés o en español: las dos te dan la misma respuesta, y la misma persona llega a la cita.">Call in English or in Spanish — both get you the same answer, and the same person shows up to the appointment.</p>
+        <div class="own">
+          <span data-es="De veterano">Veteran-owned</span>
+          <span data-es="De mujer">Woman-owned</span>
+          <span data-es="Latino">Latino-owned</span>
+          <span data-es="Indígena">Indigenous-owned</span>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/latinaforever007/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>Instagram</a>
+          <a href="https://www.facebook.com/latinaforever007/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14.5 8.5h2.2V5.6h-2.4c-2.4 0-3.8 1.4-3.8 3.8v1.4H8.2v3h2.3V21h3.2v-7.2h2.3l.4-3h-2.7V9.6c0-.8.3-1.1 1-1.1Z"/></svg>Facebook</a>
+          <a href="https://www.tiktok.com/@latinaforever007" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M15 4v9.2a3.4 3.4 0 1 1-3.4-3.4h.5v2.9h-.5a.5.5 0 1 0 .5.5V4h2.9a4.4 4.4 0 0 0 3.5 3.4v2.9A7.2 7.2 0 0 1 15 9.3"/></svg>TikTok</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="sec-num">08 — <span data-es="Preguntas">Questions</span></span>
+          <h2 data-es="Lo que preguntan antes de la cita.">What people ask before they book.</h2>
+        </div>
+        <p data-es="Si tu pregunta no está aquí, mándala por texto. Contestar no cuesta nada y evita un viaje perdido.">If yours isn't here, text it over. Answering costs nothing and saves you a wasted drive.</p>
+      </div>
+      <div class="faq-grid">
+        <details open>
+          <summary data-es="¿Necesito cita?">Do I need an appointment?</summary>
+          <p data-es="Sí. Llama o escribe primero. La ficha dice abierto 24 horas, pero el servicio es móvil, así que la hora se confirma contigo.">Yes — call or text first. The listing says open 24 hours, but the service is mobile, so the time gets confirmed with you.</p>
+        </details>
+        <details>
+          <summary data-es="¿Qué identificación llevo?">What ID do I bring?</summary>
+          <p data-es="Identificación oficial con foto y vigente (licencia, pasaporte o ID estatal) para cada persona que firma, más quien vaya de testigo.">Current government photo ID — license, passport or state ID — for every signer, plus anyone signing as a witness.</p>
+        </details>
+        <details>
+          <summary data-es="¿Puedes notarizar un documento en español?">Can you notarize a document in Spanish?</summary>
+          <p data-es="Casi siempre sí. Soy bilingüe y reviso si la oficina que lo recibe necesita el certificado en inglés.">Usually, yes. I'm bilingual, and I check whether the office receiving it needs the certificate worded in English.</p>
+        </details>
+        <details>
+          <summary data-es="¿Certificas copias?">Can you certify a copy?</summary>
+          <p data-es="No. Los notarios de Georgia no certifican copias. Lo que sí puedo es notarizar tu firma en una declaración que diga que la copia es fiel, si la oficina que la recibe lo acepta.">No. Georgia notaries can't certify copies. What I can do is notarize your signature on an affidavit stating the copy is true, if the receiving office accepts that.</p>
+        </details>
+        <details>
+          <summary data-es="¿Puedo firmar antes de que llegues?">Can I sign before you arrive?</summary>
+          <p data-es="No. La firma tiene que pasar delante de mí, o el certificado no vale y vas a pagar dos veces.">No. The signature has to happen in front of me, or the certificate is worthless and you'll pay twice.</p>
+        </details>
+        <details>
+          <summary data-es="¿Me dices qué formulario usar?">Can you tell me which form to use?</summary>
+          <p data-es="Te explico qué estoy atestiguando, pero no qué debes firmar ni cómo redactarlo: eso es consejo legal y solo lo da un abogado.">I can explain what I'm witnessing, but not what you should sign or how to word it — that's legal advice, and only an attorney can give it.</p>
+        </details>
+        <details>
+          <summary data-es="¿Cuánto cuesta?">How much does it cost?</summary>
+          <p data-es="Georgia limita la tarifa notarial a $2 por acto (O.C.G.A. § 45-17-11). El viaje móvil y la traducción se cotizan aparte y por adelantado, antes de que salga.">Georgia caps the notarial fee itself at $2 per act (O.C.G.A. § 45-17-11). Mobile travel and translation are quoted separately, up front, before I drive out.</p>
+        </details>
+        <details>
+          <summary data-es="¿Vas a hospitales y asilos?">Do you go to hospitals and nursing homes?</summary>
+          <p data-es="Sí, siempre que la persona esté despierta, consciente y tenga identificación. Llama antes para coordinar con el lugar.">Yes, as long as the signer is awake, aware and has ID. Call ahead so the facility and I can coordinate.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <span class="sec-num" style="color:#C9A35A">09 — <span data-es="Contacto">Contact</span></span>
+        <h2 data-es="Mándame el documento. Yo pongo la hora.">Send me the document.<br />I'll bring the seal.</h2>
+        <p class="lede" data-es="Textos y llamadas al mismo número, a cualquier hora. Si es de noche, escribe: los mensajes se contestan más rápido que el teléfono.">Texts and calls go to the same number, at any hour. If it's late, text — messages get answered faster than the phone.</p>
+        <a class="bigtel" href="tel:+17063630347">(706) 363-0347</a>
+        <div class="note" data-es="Abierto 24 horas · 7 días · Se habla español">Open 24 hours · 7 days · Se habla español</div>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.6"/><path d="m3.6 6.4 8.4 6.4 8.4-6.4"/></svg><a href="mailto:latinaforever007@gmail.com">latinaforever007@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span data-es="340 Old Commerce Rd, Athens, GA 30607 — con cita previa">340 Old Commerce Rd, Athens, GA 30607 — by appointment</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 6.5h16M4 12h16M4 17.5h10"/></svg><span data-es="Citas móviles en Athens y condados cercanos · también en la oficina">Mobile appointments in Athens and nearby counties · office visits too</span></li>
+        </ul>
+      </div>
+      <form onsubmit="event.preventDefault(); var m=document.getElementById('formmsg'); m.style.color='#fff'; m.textContent=(document.documentElement.lang==='es'?'Esta página es una vista previa: el formulario no envía nada todavía. Llama o manda un texto al (706) 363-0347.':'This page is a preview — the form doesn\'t send anything yet. Call or text (706) 363-0347.');">
+        <h3 data-es="Pedir una cita">Request an appointment</h3>
+        <p class="hint" data-es="Tres datos y te contesto con el horario más pronto.">Three details and I'll come back with the soonest time.</p>
+        <div class="field">
+          <label for="n" data-es="Nombre">Name</label>
+          <input id="n" name="name" type="text" placeholder="Your name" data-es-ph="Tu nombre" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="p" data-es="Teléfono">Phone</label>
+          <input id="p" name="phone" type="tel" placeholder="(706) 000-0000" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="d" data-es="Qué hay que firmar">What needs signing</label>
+          <textarea id="d" name="docs" rows="3" placeholder="Deed, power of attorney, translation of a birth certificate…" data-es-ph="Escritura, poder, traducción de un acta de nacimiento…"></textarea>
+        </div>
+        <button class="btn" type="submit" data-es="Enviar solicitud">Send request</button>
+        <p class="preview-note" id="formmsg" data-es="Esta página es una vista previa: el formulario no envía nada todavía. Llama o manda un texto al (706) 363-0347.">This page is a preview — the form doesn't send anything yet. Call or text (706) 363-0347.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img src="latinaforever-assets/logo.png" alt="Latina Forever" />
+        <p class="blurb" data-es="Notaría móvil y traducción inglés ⇄ español en Athens, Georgia. Abierto 24 horas, siete días.">Mobile notary and English ⇄ Spanish translation in Athens, Georgia. Open 24 hours, seven days.</p>
+      </div>
+      <div>
+        <h4 data-es="Servicios">Services</h4>
+        <ul>
+          <li><a href="#services" data-es="Reconocimientos y jurats">Acknowledgments &amp; jurats</a></li>
+          <li><a href="#services" data-es="Poderes notariales">Powers of attorney</a></li>
+          <li><a href="#services" data-es="Testamentos y sucesiones">Wills &amp; estates</a></li>
+          <li><a href="#services" data-es="Bienes raíces y préstamos">Real estate &amp; loans</a></li>
+          <li><a href="#translation" data-es="Traducción de documentos">Document translation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Área">Service area</h4>
+        <ul>
+          <li>Athens · Clarke</li>
+          <li>Watkinsville · Oconee</li>
+          <li>Winder · Barrow</li>
+          <li>Jefferson · Jackson</li>
+          <li>Monroe · Walton</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-es="Contacto">Contact</h4>
+        <ul>
+          <li><a href="tel:+17063630347">(706) 363-0347</a></li>
+          <li><a href="mailto:latinaforever007@gmail.com">latinaforever007@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/latinaforever007/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/latinaforever007/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/@latinaforever007" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p data-es="© 2026 Latina Forever · 340 Old Commerce Rd, Athens, GA 30607. Un notario público no es abogado: no puede dar consejo legal, redactar documentos ni escoger formularios por ti.">© 2026 Latina Forever · 340 Old Commerce Rd, Athens, GA 30607. A notary public is not an attorney and cannot give legal advice, draft documents or choose forms for you.</p>
+      <p data-es="Vista previa de sitio web — hecha para revisión.">Website concept preview — built for review.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---------- bilingual toggle ----------
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-es]'));
+  els.forEach(function(el){ el.dataset.en = el.innerHTML; });
+  var phs = Array.prototype.slice.call(document.querySelectorAll('[data-es-ph]'));
+  phs.forEach(function(el){ el.dataset.enPh = el.getAttribute('placeholder') || ''; });
+
+  window.setLang = function(lang){
+    document.documentElement.lang = (lang === 'es') ? 'es' : 'en';
+    els.forEach(function(el){
+      el.innerHTML = (lang === 'es') ? el.dataset.es : el.dataset.en;
+    });
+    phs.forEach(function(el){
+      el.setAttribute('placeholder', (lang === 'es') ? el.dataset.esPh : el.dataset.enPh);
+    });
+    document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en');
+    document.getElementById('lang-es').setAttribute('aria-pressed', lang === 'es');
+    currentLang = lang;
+    render(currentPick);
+  };
+
+  // ---------- document finder ----------
+  var items = [
+    {
+      id:'deed',
+      en:{label:'Deed, title or closing packet', title:'Deed, title or closing packet',
+          bring:'Photo ID for every signer, the full packet unsigned, and the lender or title company contact if they are waiting on it.',
+          time:'25–40 minutes, more for a refinance package.',
+          watch:'Pages that need initials only — do not pre-sign the notary blocks. If a notary block gets missed, the whole packet goes back.'},
+      es:{label:'Escritura, título o paquete de cierre', title:'Escritura, título o paquete de cierre',
+          bring:'Identificación con foto de cada firmante, el paquete completo sin firmar y el contacto de la compañía de título o del banco.',
+          time:'25–40 minutos; más si es refinanciamiento.',
+          watch:'Las páginas que solo piden iniciales: no firmes antes los bloques del notario. Si se salta un sello, el paquete regresa completo.'}
+    },
+    {
+      id:'poa',
+      en:{label:'Power of attorney', title:'Power of attorney',
+          bring:'Photo ID, the POA unsigned, and the person giving the power (the principal) — even if the agent is the one arranging it.',
+          time:'10–15 minutes.',
+          watch:'The principal signs, not the agent. Georgia POAs usually also need witnesses — ask your attorney how many before I arrive.'},
+      es:{label:'Poder notarial', title:'Poder notarial',
+          bring:'Identificación con foto, el poder sin firmar y la persona que otorga el poder — aunque el apoderado sea quien lo arregla.',
+          time:'10–15 minutos.',
+          watch:'Firma quien otorga el poder, no el apoderado. Los poderes de Georgia suelen necesitar testigos: pregunta a tu abogado cuántos antes de que llegue.'}
+    },
+    {
+      id:'will',
+      en:{label:'Will or estate document', title:'Will or estate document',
+          bring:'The document, photo ID, and every witness your attorney named. A self-proving affidavit needs the witnesses in the room.',
+          time:'15–25 minutes.',
+          watch:'Wills need witnesses in Georgia, and witnesses cannot be people who inherit. Check the names on the document before we start.'},
+      es:{label:'Testamento o documento de sucesión', title:'Testamento o documento de sucesión',
+          bring:'El documento, identificación con foto y todos los testigos que nombró tu abogado. La declaración de autenticidad requiere testigos presentes.',
+          time:'15–25 minutos.',
+          watch:'En Georgia los testamentos necesitan testigos, y los testigos no pueden ser herederos. Revisa los nombres antes de empezar.'}
+    },
+    {
+      id:'affidavit',
+      en:{label:'Affidavit or sworn statement', title:'Affidavit or sworn statement',
+          bring:'Photo ID and the unsigned affidavit. If someone else prepared it, bring their contact in case the wording needs correcting.',
+          time:'10 minutes.',
+          watch:'Read it before you swear to it. I can only witness that you signed and swore — not that the contents are true.'},
+      es:{label:'Declaración jurada', title:'Declaración jurada',
+          bring:'Identificación con foto y la declaración sin firmar. Si otra persona la preparó, trae su contacto por si hay que corregir la redacción.',
+          time:'10 minutos.',
+          watch:'Léela antes de jurar. Yo solo atestiguo que firmaste y juraste, no que el contenido sea cierto.'}
+    },
+    {
+      id:'closing',
+      en:{label:'Loan or refinance signing', title:'Loan or refinance signing',
+          bring:'Photo ID, the closing package, and a phone that works — some lenders call to verify identity mid-signing.',
+          time:'45–60 minutes.',
+          watch:'Some packages include a first-payment letter that has to go out the same day. Tell me at booking so the appointment isn\'t rushed.'},
+      es:{label:'Firma de préstamo o refinanciamiento', title:'Firma de préstamo o refinanciamiento',
+          bring:'Identificación con foto, el paquete de cierre y un teléfono que funcione: algunos bancos llaman para verificar identidad.',
+          time:'45–60 minutos.',
+          watch:'Algunos paquetes incluyen una carta de primer pago que debe salir el mismo día. Avísame al agendar para no apurar la cita.'}
+    },
+    {
+      id:'travel',
+      en:{label:'Travel letter for a minor', title:'Travel letter for a minor',
+          bring:'Photo ID for the parent signing, the child\'s passport or birth certificate, and the letter unsigned.',
+          time:'10–15 minutes.',
+          watch:'If only one parent can sign, the letter should name the other parent and the travel dates. Airlines and border agents each want different wording — bring what they sent you.'},
+      es:{label:'Carta de viaje para un menor', title:'Carta de viaje para un menor',
+          bring:'Identificación del padre o madre que firma, pasaporte o acta de nacimiento del menor y la carta sin firmar.',
+          time:'10–15 minutos.',
+          watch:'Si solo firma un padre, la carta debe nombrar al otro y las fechas del viaje. Cada aerolínea pide redacción distinta: trae lo que te enviaron.'}
+    },
+    {
+      id:'translation',
+      en:{label:'Diploma, certificate or record', title:'Diploma, certificate or record',
+          bring:'The original document (or a clear scan), photo ID, and the name of the office that will receive it.',
+          time:'Usually ready the same day; notarized on the spot if needed.',
+          watch:'Ask the receiving office whether they accept a notarized translation, require a certified translator, or want an apostille. Those are three different things.'},
+      es:{label:'Diploma, acta o récord', title:'Diploma, acta o récord',
+          bring:'El documento original (o un escaneo claro), identificación con foto y el nombre de la oficina que lo va a recibir.',
+          time:'Normalmente el mismo día; notarizado en el momento si hace falta.',
+          watch:'Pregunta a la oficina si aceptan traducción notariada, exigen traductor certificado o piden apostilla. Son tres cosas distintas.'}
+    },
+    {
+      id:'facility',
+      en:{label:'Hospital or care-home signing', title:'Hospital or care-home signing',
+          bring:'Photo ID for the signer, the document, and the facility\'s visiting rules — some need a check-in name and a room number.',
+          time:'15–20 minutes once the signer is ready.',
+          watch:'The signer has to be awake, aware and able to say yes. Nurses cannot sign for them, and a power of attorney does not cover signing a will.'},
+      es:{label:'Firma en hospital o asilo', title:'Firma en hospital o asilo',
+          bring:'Identificación de quien firma, el documento y las reglas de visita del lugar: a veces piden nombre y número de cuarto.',
+          time:'15–20 minutos una vez que la persona está lista.',
+          watch:'La persona debe estar despierta, consciente y poder decir que sí. Una enfermera no puede firmar por ella, y un poder no cubre firmar un testamento.'}
+    }
+  ];
+
+  var currentLang = 'en';
+  var currentPick = 'deed';
+  var picker = document.getElementById('picker');
+
+  items.forEach(function(it){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'pick';
+    b.setAttribute('aria-pressed', it.id === currentPick ? 'true' : 'false');
+    b.dataset.id = it.id;
+    b.addEventListener('click', function(){ currentPick = it.id; render(it.id); });
+    picker.appendChild(b);
+  });
+
+  function render(id){
+    var it = items.filter(function(i){ return i.id === id; })[0] || items[0];
+    var t = it[currentLang] || it.en;
+    Array.prototype.forEach.call(picker.children, function(b){
+      b.textContent = (items.filter(function(i){return i.id===b.dataset.id;})[0])[currentLang].label;
+      b.setAttribute('aria-pressed', b.dataset.id === id ? 'true' : 'false');
+    });
+    document.getElementById('panelTitle').textContent = t.title;
+    document.getElementById('pBring').textContent = t.bring;
+    document.getElementById('pTime').textContent = t.time;
+    document.getElementById('pWatch').textContent = t.watch;
+  }
+  render(currentPick);
+
+  // ---------- reveal on scroll ----------
+  var rev = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+    rev.forEach(function(el){ io.observe(el); });
+  } else {
+    rev.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
