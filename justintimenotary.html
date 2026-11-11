@@ -122,17 +122,9 @@ select.fld{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns
 .seg input:checked+span{background:var(--navy);color:var(--white);border-color:var(--navy)}
 .seg input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.cal{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:14px}
-.cal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.cal-h b{font:400 22px/1 var(--disp);letter-spacing:.04em}
-.cal-h button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);border-radius:var(--r);cursor:pointer;font-size:18px}
-.cal-h button:disabled{opacity:.3;cursor:default}
-.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
-.cal-g span{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--mute);padding:6px 0}
-.cal-g button{aspect-ratio:1;min-height:40px;border:0;background:none;border-radius:var(--r);cursor:pointer;font-size:15px;font-weight:500;transition:background .15s}
-.cal-g button:hover:not(:disabled){background:var(--paper)}
-.cal-g button:disabled{color:rgba(14,34,64,.28);cursor:default}
-.cal-g button[aria-pressed=true]{background:var(--gold);color:var(--ink);font-weight:700}
+.row2>div{min-width:0}
+input[type=date].fld{min-width:0;-webkit-appearance:none;appearance:none;display:block}
+.row2+.row2,.step+.step{margin-top:20px}
 .stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:var(--r);background:var(--white);height:52px}
 .stepper button{width:52px;height:100%;border:0;background:none;font-size:22px;cursor:pointer}
 .stepper output{flex:1;text-align:center;font-weight:700}
@@ -211,6 +203,7 @@ select.fld{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns
   .hdr-call{padding:8px 12px;font-size:14px}
   .hdr-call .num{display:none}
   .cta .btn{width:100%}
+  .row2{grid-template-columns:minmax(0,1fr);gap:20px}
   .svc li,.creds li{grid-template-columns:36px minmax(0,1fr);gap:6px 12px}
   .rates .amt{font-size:38px}
   .facts{grid-template-columns:1fr}
@@ -311,7 +304,11 @@ select.fld{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns
       </div>
 
       <form class="widget rv" id="bk" novalidate>
-        <h3>Request a time</h3>
+        <h3>Book an appointment</h3>
+        <div class="step row2">
+          <div><label class="lbl" for="bn">Your name</label><input class="fld" id="bn" autocomplete="name" required></div>
+          <div><label class="lbl" for="bp">Phone</label><input class="fld" id="bp" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        </div>
         <div class="step">
           <label class="lbl" for="svc">What needs notarizing</label>
           <select class="fld" id="svc">
@@ -329,17 +326,17 @@ select.fld{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns
           </div>
           <input class="fld" id="zip" inputmode="numeric" maxlength="5" placeholder="Your ZIP code" aria-label="Your ZIP code" style="margin-top:8px" hidden>
         </div>
-        <div class="step">
-          <span class="lbl">Day</span>
-          <div class="cal">
-            <div class="cal-h"><button type="button" id="prev" aria-label="Previous month">‹</button><b id="calT" aria-live="polite"></b><button type="button" id="next" aria-label="Next month">›</button></div>
-            <div class="cal-g" id="calG"></div>
-          </div>
-        </div>
         <div class="step row2">
-          <div><label class="lbl" for="time">Time</label><select class="fld" id="time"></select></div>
-          <div><span class="lbl" id="stLbl">Stamps needed</span>
-            <div class="stepper" role="group" aria-labelledby="stLbl"><button type="button" id="minus" aria-label="Fewer stamps">−</button><output id="qty">1</output><button type="button" id="plus" aria-label="More stamps">+</button></div></div>
+          <div><label class="lbl" for="date">Preferred date</label><input class="fld" id="date" type="date" required></div>
+          <div><label class="lbl" for="time">Preferred time</label><select class="fld" id="time"></select></div>
+        </div>
+        <div class="step">
+          <span class="lbl" id="stLbl">Stamps needed</span>
+          <div class="stepper" role="group" aria-labelledby="stLbl"><button type="button" id="minus" aria-label="Fewer stamps">−</button><output id="qty">1</output><button type="button" id="plus" aria-label="More stamps">+</button></div>
+        </div>
+        <div class="step">
+          <label class="lbl" for="bnote">Anything Justin should know (optional)</label>
+          <textarea class="fld" id="bnote" style="min-height:84px"></textarea>
         </div>
         <div class="est" id="est" aria-live="polite"></div>
         <button class="btn btn-navy" type="submit">Text this request to Justin</button>
@@ -442,28 +439,11 @@ select.fld{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns
   status(); setInterval(status,60000);
 
   /* booking */
-  var MO=['January','February','March','April','May','June','July','August','September','October','November','December'];
   var today=new Date(); today.setHours(0,0,0,0);
-  var sel=new Date(today), view=new Date(today.getFullYear(),today.getMonth(),1), qty=1;
-  var last=new Date(today.getFullYear(),today.getMonth()+3,1);
-
-  function drawCal(){
-    $('#calT').textContent=MO[view.getMonth()]+' '+view.getFullYear();
-    var g=$('#calG'), h='';
-    ['S','M','T','W','T','F','S'].forEach(function(d){h+='<span>'+d+'</span>'});
-    for(var i=0;i<view.getDay();i++)h+='<i></i>';
-    var n=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
-    for(var d=1;d<=n;d++){
-      var dt=new Date(view.getFullYear(),view.getMonth(),d), past=dt<today, on=+dt===+sel;
-      h+='<button type="button" data-d="'+d+'"'+(past?' disabled':'')+' aria-pressed="'+on+'" aria-label="'+MO[view.getMonth()]+' '+d+'">'+d+'</button>';
-    }
-    g.innerHTML=h;
-    $('#prev').disabled=view<=new Date(today.getFullYear(),today.getMonth(),1);
-    $('#next').disabled=new Date(view.getFullYear(),view.getMonth()+1,1)>=last;
-  }
-  $('#calG').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;sel=new Date(view.getFullYear(),view.getMonth(),+b.dataset.d);drawCal();drawTimes();calc()});
-  $('#prev').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);drawCal()});
-  $('#next').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);drawCal()});
+  var sel=new Date(today), qty=1, dateEl=$('#date');
+  function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  dateEl.min=iso(today); dateEl.value=iso(today);
+  dateEl.addEventListener('change',function(){var p=dateEl.value.split('-');if(p.length===3){sel=new Date(+p[0],p[1]-1,+p[2]);drawTimes();calc()}});
 
   function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+':'+(mm<10?'0':'')+mm+' '+ap}
   function drawTimes(){
@@ -500,18 +480,21 @@ select.fld{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns
   $('#bk').addEventListener('submit',function(ev){
     ev.preventDefault();
     var s=state(), msg=$('#bkMsg');
+    var nm=$('#bn').value.trim(), ph=$('#bp').value.trim(), note=$('#bnote').value.trim();
+    if(!nm||!ph||!dateEl.value){msg.className='msg ok';msg.textContent='Please add your name, phone, and a date.';return}
+    if(sel<today){msg.className='msg ok';msg.textContent='That date has passed. Please pick today or later.';return}
     if(!s.hasTime){msg.className='msg ok';msg.textContent='No times are left today. Pick another day, or call 405-367-9510.';return}
     var day=sel.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
     var svcTxt=$('#svc').options[$('#svc').selectedIndex].text.toLowerCase();
     var zip=$('#zip').value.trim();
-    var body='Hi Justin, I would like to book a '+svcTxt+' on '+day+' at '+fmt(s.m)+'. '+
-      (s.mobile?'Please come to me'+(zip?' (ZIP '+zip+')':'')+'.':'I will come to 1325 Atalon Dr.')+' Stamps needed: '+qty+'.';
+    var body='Hi Justin, this is '+nm+' ('+ph+'). I would like to book a '+svcTxt+' on '+day+' at '+fmt(s.m)+'. '+
+      (s.mobile?'Please come to me'+(zip?' (ZIP '+zip+')':'')+'.':'I will come to 1325 Atalon Dr.')+' Stamps needed: '+qty+'.'+(note?' Note: '+note:'');
     msg.className='msg ok';
     msg.innerHTML='Request ready for <b>'+day+', '+fmt(s.m)+'</b>. If your texting app did not open, text or call <a href="tel:'+TEL+'">405-367-9510</a> with those details.';
     window.location.href='sms:'+TEL+'?&body='+encodeURIComponent(body);
   });
 
-  drawCal(); drawTimes(); calc();
+  drawTimes(); calc();
 
   /* contact form: honest preview */
   $('#cf').addEventListener('submit',function(ev){
