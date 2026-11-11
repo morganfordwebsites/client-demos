@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JustIn Time Notary OK | Mobile Notary in Moore, Oklahoma</title>
+<meta name="description" content="Mobile and onsite notary public in Moore, OK. Open 9 AM to 11 PM, seven days a week. Scheduled appointments $15, drive-ups from $20, after-hours $40. Call or text 405-367-9510.">
+<meta name="theme-color" content="#0E2240">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230E2240'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23C8A24A' stroke-width='3'/%3E%3Cpath d='M32 21v12l8 5' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E2240; --ink:#08152B; --paper:#F4F5F2; --white:#FFFFFF; --gold:#C8A24A; --mute:#566174;
+  --line:rgba(14,34,64,.14); --line-d:rgba(255,255,255,.16);
+  --r:4px; --pad:clamp(20px,5vw,72px); --sec:clamp(72px,10vw,144px);
+  --disp:"Bebas Neue","Arial Narrow",Impact,sans-serif; --body:Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font:400 17px/1.65 var(--body);color:var(--navy);background:var(--paper);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+.disp{font-family:var(--disp);font-weight:400;line-height:.95;letter-spacing:.005em;text-transform:uppercase}
+.kick{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.kick::before{content:"";width:28px;height:2px;background:var(--gold)}
+.mute{color:var(--mute)}
+
+.banner{background:var(--ink);color:rgba(255,255,255,.72);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 16px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:40;background:rgba(14,34,64,.97);color:var(--white);border-bottom:1px solid var(--line-d)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
+.mark{font-family:var(--disp);font-size:26px;letter-spacing:.04em;text-decoration:none;white-space:nowrap}
+.mark i{font-style:normal;color:var(--gold)}
+.nav{display:flex;gap:28px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.nav a{text-decoration:none;opacity:.78;padding:8px 0;transition:opacity .15s}
+.nav a:hover{opacity:1}
+.hdr-call{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:15px;border:1px solid var(--line-d);border-radius:var(--r);padding:10px 16px;white-space:nowrap;transition:border-color .15s,background .15s}
+.hdr-call:hover{border-color:var(--gold);background:rgba(255,255,255,.04)}
+.dot{width:8px;height:8px;border-radius:50%;background:#7c8798;flex:none}
+.dot.on{background:#4fc28a}.dot.late{background:var(--gold)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:var(--r);font-weight:700;font-size:16px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease-out,background .15s,border-color .15s}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#d6b25c;transform:translateY(-2px)}
+.btn-line{border-color:rgba(255,255,255,.4);color:var(--white)}
+.btn-line:hover{border-color:var(--white);transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--ink);transform:translateY(-2px)}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:var(--white);overflow:hidden}
+.hero::after{content:"NOTARY";position:absolute;right:-.04em;top:-.12em;font:400 clamp(220px,34vw,560px)/1 var(--disp);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);pointer-events:none;user-select:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(32px,5vw,88px);align-items:end;padding-top:clamp(56px,8vw,120px);padding-bottom:clamp(56px,8vw,112px)}
+.hero h1{font-size:clamp(50px,7.2vw,104px);margin:22px 0 26px;max-width:11.5em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{font-size:clamp(17px,1.5vw,20px);max-width:34em;color:rgba(255,255,255,.82)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero .fine{margin-top:22px;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.62)}
+
+.hcard{background:var(--white);color:var(--navy);border-radius:var(--r);padding:28px;box-shadow:0 24px 48px -24px rgba(0,0,0,.55)}
+.hcard-top{display:flex;gap:16px;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.seal{width:72px;height:72px;flex:none}
+.hcard-top b{font:400 26px/1 var(--disp);letter-spacing:.03em;display:block}
+.hcard-top span{font-size:13px;color:var(--mute)}
+.hcard .tel{display:block;font:400 clamp(40px,3.6vw,52px)/1 var(--disp);letter-spacing:.02em;text-decoration:none;margin:20px 0 6px}
+.hcard .tel:hover{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:6px;text-decoration-thickness:2px}
+.status{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500}
+.hcard dl{margin-top:20px;border-top:1px solid var(--line);font-size:14px}
+.hcard dl div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.hcard dl div:last-child{border-bottom:0;padding-bottom:0}
+.hcard dt{color:var(--mute)}
+.hcard dd{font-weight:700;text-align:right}
+
+/* sections */
+section{padding:var(--sec) 0}
+.h2{font-size:clamp(44px,5.4vw,80px);margin-top:18px}
+.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,6vw,104px);align-items:start}
+.split>.side{position:sticky;top:108px}
+.side p{margin-top:20px;max-width:26em;color:var(--mute)}
+
+/* services */
+.svc{border-top:2px solid var(--navy)}
+.svc li{list-style:none;display:grid;grid-template-columns:56px minmax(0,1fr);gap:8px 20px;padding:30px 0;border-bottom:1px solid var(--line)}
+.svc .n{font:400 22px/1.3 var(--disp);color:var(--mute);letter-spacing:.06em}
+.svc h3{font:400 clamp(30px,3vw,42px)/1 var(--disp);letter-spacing:.01em;text-transform:uppercase}
+.svc p{grid-column:2;max-width:38em;margin-top:6px}
+.svc .tags{grid-column:2;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+.svc li.lead{padding:36px 0}
+.svc li.lead h3{font-size:clamp(40px,4.4vw,64px)}
+
+/* pricing + booking */
+.book{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.book-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:start;margin-top:clamp(36px,5vw,64px)}
+.rates{border-top:2px solid var(--navy)}
+.rates li{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.rates b{font-weight:700;font-size:18px}
+.rates .amt{font:400 44px/1 var(--disp);letter-spacing:.01em;white-space:nowrap}
+.rates .amt small{font:700 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-right:6px}
+.rates span{grid-column:1/-1;font-size:15px;color:var(--mute)}
+.note{margin-top:22px;font-size:15px;padding-left:16px;border-left:2px solid var(--gold)}
+
+.widget{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3vw,36px)}
+.widget h3{font:400 30px/1 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.step{margin-top:26px}
+.lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.fld{width:100%;height:52px;padding:0 14px;border:1px solid var(--line);border-radius:var(--r);background:var(--white);font-size:16px}
+textarea.fld{height:auto;padding:14px;resize:vertical;min-height:110px}
+select.fld{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230E2240' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.fld:focus{outline:2px solid var(--navy);outline-offset:-1px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--white);font-size:14px;font-weight:500;transition:background .15s,color .15s}
+.seg input:checked+span{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.seg input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cal{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.cal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.cal-h b{font:400 22px/1 var(--disp);letter-spacing:.04em}
+.cal-h button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);border-radius:var(--r);cursor:pointer;font-size:18px}
+.cal-h button:disabled{opacity:.3;cursor:default}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.cal-g span{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--mute);padding:6px 0}
+.cal-g button{aspect-ratio:1;min-height:40px;border:0;background:none;border-radius:var(--r);cursor:pointer;font-size:15px;font-weight:500;transition:background .15s}
+.cal-g button:hover:not(:disabled){background:var(--paper)}
+.cal-g button:disabled{color:rgba(14,34,64,.28);cursor:default}
+.cal-g button[aria-pressed=true]{background:var(--gold);color:var(--ink);font-weight:700}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:var(--r);background:var(--white);height:52px}
+.stepper button{width:52px;height:100%;border:0;background:none;font-size:22px;cursor:pointer}
+.stepper output{flex:1;text-align:center;font-weight:700}
+.est{margin-top:26px;border-top:2px solid var(--navy);font-size:15px}
+.est div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.est .tot{border-bottom:0;align-items:baseline;padding-top:14px}
+.est .tot b{font:400 48px/1 var(--disp)}
+.est .tot b small{font:500 14px/1 var(--body);color:var(--mute);margin-left:8px}
+.widget .btn{width:100%;margin-top:18px}
+.msg{margin-top:14px;font-size:14px;color:var(--mute)}
+.msg.ok{color:var(--navy);padding:14px 16px;border-left:2px solid var(--gold);background:var(--white)}
+
+/* about */
+.about{background:var(--navy);color:var(--white)}
+.about .mute,.about .side p{color:rgba(255,255,255,.72)}
+.about-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,6vw,104px);align-items:start}
+.photo{aspect-ratio:4/5;border:1px solid var(--line-d);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 1px,transparent 1px 14px)}
+.photo b{font:400 120px/1 var(--disp);color:rgba(255,255,255,.2)}
+.photo span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.about p.big{font-size:clamp(19px,1.8vw,24px);line-height:1.5;margin-top:26px;max-width:30em}
+.creds{margin-top:44px;border-top:1px solid var(--line-d)}
+.creds li{list-style:none;display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:1px solid var(--line-d)}
+.creds .n{font:400 22px/1.3 var(--disp);color:var(--gold);letter-spacing:.06em}
+.creds b{display:block;font-size:17px}
+.creds span{font-size:15px;color:rgba(255,255,255,.7)}
+.src{margin-top:18px;font-size:13px;color:rgba(255,255,255,.55)}
+
+/* proof */
+.proof-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(32px,6vw,96px);align-items:end}
+.bignum{font:400 clamp(140px,20vw,280px)/.8 var(--disp);letter-spacing:-.01em}
+.proof-grid p{max-width:28em;margin-top:20px}
+.badge{border:1px dashed rgba(14,34,64,.35);border-radius:var(--r);padding:26px}
+.stars{display:flex;gap:6px;margin-bottom:14px}
+.stars svg{width:26px;height:26px;fill:none;stroke:var(--navy);stroke-width:1.5}
+.badge b{display:block;font-size:17px}
+.badge p{font-size:14px;color:var(--mute);margin-top:6px}
+
+/* footer */
+.ftr{background:var(--ink);color:var(--white);padding:var(--sec) 0 0}
+.ftr-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,6vw,96px)}
+.ftr .tel{font:400 clamp(60px,9vw,128px)/.9 var(--disp);text-decoration:none;display:inline-block;margin:18px 0 8px}
+.ftr .tel:hover{color:var(--gold)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;margin-top:40px;font-size:15px}
+.facts h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.facts p{color:rgba(255,255,255,.8)}
+.ftr form{border:1px solid var(--line-d);border-radius:var(--r);padding:clamp(20px,3vw,32px)}
+.ftr form h3{font:400 30px/1 var(--disp);text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+.ftr .lbl{color:rgba(255,255,255,.62);margin-top:18px}
+.ftr .fld{background:rgba(255,255,255,.06);border-color:var(--line-d);color:var(--white)}
+.ftr .fld:focus{outline-color:var(--gold)}
+.ftr form .btn{width:100%;margin-top:20px}
+.ftr .msg{color:rgba(255,255,255,.62)}
+.ftr .msg.ok{background:rgba(255,255,255,.06);color:var(--white)}
+.map{margin-top:clamp(48px,6vw,80px);height:300px;border:0;width:100%;filter:grayscale(1) contrast(1.05);display:block}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding:22px 0 26px;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.55)}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .4s ease-out,transform .4s ease-out}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .hero .wrap,.split,.book-grid,.about-grid,.proof-grid,.ftr-grid{grid-template-columns:minmax(0,1fr)}
+  .split>.side{position:static}
+  .photo{max-width:320px;aspect-ratio:1}
+  .hero::after{top:auto;bottom:-.1em}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .hdr .wrap{height:60px}
+  .mark{font-size:22px}
+  .hdr-call{padding:8px 12px;font-size:14px}
+  .hdr-call .num{display:none}
+  .cta .btn{width:100%}
+  .svc li,.creds li{grid-template-columns:36px minmax(0,1fr);gap:6px 12px}
+  .rates .amt{font-size:38px}
+  .facts{grid-template-columns:1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);border-top:1px solid var(--line-d);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a{display:flex;align-items:center;justify-content:center;height:64px;color:var(--white);text-decoration:none;font-weight:700;font-size:15px;border-right:1px solid var(--line-d)}
+  .mbar a:last-child{background:var(--gold);color:var(--ink);border:0}
+}
+</style>
+</head>
+<body>
+<div class="banner">Website concept preview</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="JustIn Time Notary OK, back to top">Just<i>In</i> Time Notary</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#services">Services</a><a href="#book">Pricing &amp; booking</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="hdr-call" href="tel:+14053679510"><span class="dot" data-dot></span><span>Call</span><span class="num">405-367-9510</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <p class="kick">Moore, Oklahoma · Cleveland County</p>
+      <h1 class="disp">Fast, reliable mobile notary services <em>delivered to your doorstep</em></h1>
+      <p class="sub">Professional loan signing, real estate documents, and general notarizations, available on your schedule.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#book">Schedule an appointment</a>
+        <a class="btn btn-line" href="tel:+14053679510">Call/Text now</a>
+      </div>
+      <p class="fine">Open every day, 9:00 AM to 11:00 PM. Scheduled appointments are $15.</p>
+    </div>
+    <aside class="hcard" aria-label="Contact card">
+      <div class="hcard-top">
+        <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
+          <defs><path id="arc" d="M50 50m-36 0a36 36 0 1 1 72 0a36 36 0 1 1-72 0"/></defs>
+          <circle cx="50" cy="50" r="48" fill="#0E2240"/><circle cx="50" cy="50" r="44" fill="none" stroke="#C8A24A" stroke-width="1"/>
+          <text fill="#fff" font-family="Montserrat,sans-serif" font-size="8.2" font-weight="700" letter-spacing="1.9"><textPath href="#arc">NOTARY PUBLIC · STATE OF OKLAHOMA · MOORE ·</textPath></text>
+          <circle cx="50" cy="50" r="24" fill="none" stroke="#C8A24A" stroke-width="1"/>
+          <path d="M50 37v14l9 6" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div><b>JustIn Time Notary OK</b><span>Justin Corley, Notary Public</span></div>
+      </div>
+      <a class="tel" href="tel:+14053679510">405-367-9510</a>
+      <p class="status"><span class="dot" data-dot></span><span data-status>Open daily, 9 AM to 11 PM</span></p>
+      <dl>
+        <div><dt>Hours</dt><dd>Mon to Sun, 9 AM to 11 PM</dd></div>
+        <div><dt>Drive-up</dt><dd>1325 Atalon Dr, Moore</dd></div>
+        <div><dt>Mobile</dt><dd>Travels to you</dd></div>
+        <div><dt>Owned by</dt><dd>A service-disabled veteran</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap split">
+    <div class="side rv">
+      <p class="kick">Services</p>
+      <h2 class="disp h2">What gets signed and stamped</h2>
+      <p>Bring the document, a valid government photo ID, and everyone who needs to sign. Leave the signature line blank until we meet.</p>
+    </div>
+    <ul class="svc">
+      <li class="lead rv"><span class="n">01</span><h3>Mobile notary &amp; document signing</h3>
+        <p>Drive up to Atalon Dr in Moore, or have the notary come to your home, office, or wherever the signer is. Scheduled, walk-in, and late-evening visits are all on the menu.</p>
+        <p class="tags">Affidavits · Acknowledgments · Sworn statements</p></li>
+      <li class="rv"><span class="n">02</span><h3>Loan &amp; real estate closings</h3>
+        <p>NNA certified signing agent with a dual-tray laser printer and a mobile scanner, so letter and legal pages print in order and scan-backs are handled on site.</p>
+        <p class="tags">Purchases · Refinances · Seller packages</p></li>
+      <li class="rv"><span class="n">03</span><h3>Estate planning &amp; powers of attorney</h3>
+        <p>Notarization for the documents your attorney or family has prepared. A notary can't draft them or give legal advice, but can make sure they are signed and sealed correctly.</p>
+        <p class="tags">Powers of attorney · Trust documents · Healthcare directives</p></li>
+      <li class="rv"><span class="n">04</span><h3>Remote / virtual notarization options</h3>
+        <p>Can't meet in person? Call or text to ask whether your document qualifies for a remote signing and how it would work.</p>
+        <p class="tags">Ask when you call</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kick">Pricing &amp; booking</p>
+      <h2 class="disp h2">Every fee, listed up front</h2>
+    </div>
+    <div class="book-grid">
+      <div class="rv">
+        <ul class="rates">
+          <li><b>Scheduled appointment</b><span class="amt">$15</span><span>$5 notary stamp + $10 appointment fee. Called in ahead of time.</span></li>
+          <li><b>Drive-up / walk-in</b><span class="amt"><small>from</small>$20</span><span>$5 notary stamp + $15 non-appointment fee. In-area, unscheduled.</span></li>
+          <li><b>Emergency / after-hours</b><span class="amt">$40</span><span>$5 notary stamp + $35 after-hours fee. 8:00 PM to 11:00 PM.</span></li>
+          <li><b>Mobile, the notary comes to you</b><span class="amt"><small>by distance</small></span><span>Travel rates vary by how far the drive is. Call ahead for yours.</span></li>
+        </ul>
+        <p class="note">No hidden fees. What's listed here is what you pay.</p>
+      </div>
+
+      <form class="widget rv" id="bk" novalidate>
+        <h3>Request a time</h3>
+        <div class="step">
+          <label class="lbl" for="svc">What needs notarizing</label>
+          <select class="fld" id="svc">
+            <option value="general">General notarization</option>
+            <option value="estate">Estate planning / power of attorney</option>
+            <option value="loan">Loan or real estate closing</option>
+            <option value="remote">Remote / virtual notarization</option>
+          </select>
+        </div>
+        <div class="step">
+          <span class="lbl" id="whereLbl">Where</span>
+          <div class="seg" role="radiogroup" aria-labelledby="whereLbl">
+            <label><input type="radio" name="where" value="onsite" checked><span>I'll come to Atalon Dr</span></label>
+            <label><input type="radio" name="where" value="mobile"><span>Come to me</span></label>
+          </div>
+          <input class="fld" id="zip" inputmode="numeric" maxlength="5" placeholder="Your ZIP code" aria-label="Your ZIP code" style="margin-top:8px" hidden>
+        </div>
+        <div class="step">
+          <span class="lbl">Day</span>
+          <div class="cal">
+            <div class="cal-h"><button type="button" id="prev" aria-label="Previous month">‹</button><b id="calT" aria-live="polite"></b><button type="button" id="next" aria-label="Next month">›</button></div>
+            <div class="cal-g" id="calG"></div>
+          </div>
+        </div>
+        <div class="step row2">
+          <div><label class="lbl" for="time">Time</label><select class="fld" id="time"></select></div>
+          <div><span class="lbl" id="stLbl">Stamps needed</span>
+            <div class="stepper" role="group" aria-labelledby="stLbl"><button type="button" id="minus" aria-label="Fewer stamps">−</button><output id="qty">1</output><button type="button" id="plus" aria-label="More stamps">+</button></div></div>
+        </div>
+        <div class="est" id="est" aria-live="polite"></div>
+        <button class="btn btn-navy" type="submit">Text this request to Justin</button>
+        <p class="msg" id="bkMsg">Opens a pre-written text on your phone. Your time is confirmed once Justin replies.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="photo rv" role="img" aria-label="Placeholder for a photo of Justin Corley"><b>JC</b><span>Justin's photo goes here</span></div>
+    <div class="rv">
+      <p class="kick">About the notary</p>
+      <h2 class="disp h2">Justin Corley, the notary who picks up at 10 PM</h2>
+      <p class="big">JustIn Time Notary OK is owned and run by Justin Wayne Corley out of Moore. One person answers the phone, shows up, checks the IDs, and stamps the page, any day of the week until 11 at night.</p>
+      <ul class="creds">
+        <li><span class="n">01</span><div><b>NNA certified</b><span>Certified through the National Notary Association for loan signings.</span></div></li>
+        <li><span class="n">02</span><div><b>$100,000 bond and E&amp;O insurance</b><span>Bonded, with errors and omissions coverage on file.</span></div></li>
+        <li><span class="n">03</span><div><b>Background checked, commission verified</b><span>ID, commission, insurance, and background report verified by Snapdocs.</span></div></li>
+        <li><span class="n">04</span><div><b>Veteran-owned</b><span>A service-disabled veteran-owned small business, registered on GovTribe.</span></div></li>
+      </ul>
+      <p class="src">Credentials as listed on Justin's public Snapdocs profile, November 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap proof-grid">
+    <div class="rv">
+      <p class="kick">Track record</p>
+      <div class="bignum" style="margin-top:28px">86</div>
+      <p><b>signings completed through Snapdocs</b>, the platform title and escrow companies use to hire signing agents. Counted on Justin's verified profile in November 2026.</p>
+    </div>
+    <div class="badge rv">
+      <div class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.600l6.300-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.600l6.300-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.600l6.300-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.600l6.300-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.600l6.300-.8z"/></svg>
+      </div>
+      <b>Review badge slot</b>
+      <p>The live star rating and customer reviews from Google or Trustpilot display here once the profile is connected. Nothing is shown until the reviews are real.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr" id="contact">
+  <div class="wrap ftr-grid">
+    <div>
+      <p class="kick">Call or text</p>
+      <a class="tel" href="tel:+14053679510">405-367-9510</a>
+      <p class="status" style="color:rgba(255,255,255,.8)"><span class="dot" data-dot></span><span data-status>Open daily, 9 AM to 11 PM</span></p>
+      <div class="facts">
+        <div><h4>Hours</h4><p>Monday to Sunday<br>9:00 AM to 11:00 PM<br>After-hours rate from 8:00 PM</p></div>
+        <div><h4>Drive-up address</h4><p>1325 Atalon Dr<br>Moore, OK 73160</p></div>
+        <div><h4>Service area</h4><p>Moore and Cleveland County. Mobile visits beyond that are quoted by distance.</p></div>
+        <div><h4>The business</h4><p>JustIn Time Notary OK LLC<br>Veteran-owned, service-disabled veteran-owned</p></div>
+      </div>
+    </div>
+    <form id="cf" novalidate>
+      <h3>Send a message</h3>
+      <p class="mute" style="font-size:14px;color:rgba(255,255,255,.62)">For anything that isn't urgent. If it's urgent, call.</p>
+      <label class="lbl" for="cn">Name</label><input class="fld" id="cn" autocomplete="name" required>
+      <label class="lbl" for="cp">Phone</label><input class="fld" id="cp" type="tel" autocomplete="tel" inputmode="tel" required>
+      <label class="lbl" for="cm">What do you need notarized?</label><textarea class="fld" id="cm" required></textarea>
+      <button class="btn btn-gold" type="submit">Send message</button>
+      <p class="msg" id="cfMsg" role="status"></p>
+    </form>
+  </div>
+  <iframe class="map" title="Map of 1325 Atalon Dr, Moore, Oklahoma" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1325+Atalon+Dr,+Moore,+OK+73160&z=13&output=embed"></iframe>
+  <div class="wrap legal"><span>© 2026 JustIn Time Notary OK LLC · Moore, Oklahoma</span><span>A notary public is not an attorney and cannot give legal advice.</span></div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+14053679510">Call</a><a href="sms:+14053679510">Text</a><a href="#book">Book a time</a>
+</nav>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var $=function(s){return document.querySelector(s)}, TEL='+14053679510';
+
+  /* reveal once */
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in')});
+
+  /* live open status, Central time */
+  function status(){
+    var h;
+    try{h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour:'numeric',hour12:false}).format(new Date()),10)%24}catch(e){return}
+    var t,c;
+    if(h>=9&&h<20){t='Open now until 11 PM';c='on'}
+    else if(h>=20&&h<23){t='Open now, after-hours rate until 11 PM';c='late'}
+    else{t='Closed now, opens 9 AM';c=''}
+    document.querySelectorAll('[data-status]').forEach(function(e){e.textContent=t});
+    document.querySelectorAll('[data-dot]').forEach(function(e){e.className='dot '+c});
+  }
+  status(); setInterval(status,60000);
+
+  /* booking */
+  var MO=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var today=new Date(); today.setHours(0,0,0,0);
+  var sel=new Date(today), view=new Date(today.getFullYear(),today.getMonth(),1), qty=1;
+  var last=new Date(today.getFullYear(),today.getMonth()+3,1);
+
+  function drawCal(){
+    $('#calT').textContent=MO[view.getMonth()]+' '+view.getFullYear();
+    var g=$('#calG'), h='';
+    ['S','M','T','W','T','F','S'].forEach(function(d){h+='<span>'+d+'</span>'});
+    for(var i=0;i<view.getDay();i++)h+='<i></i>';
+    var n=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(var d=1;d<=n;d++){
+      var dt=new Date(view.getFullYear(),view.getMonth(),d), past=dt<today, on=+dt===+sel;
+      h+='<button type="button" data-d="'+d+'"'+(past?' disabled':'')+' aria-pressed="'+on+'" aria-label="'+MO[view.getMonth()]+' '+d+'">'+d+'</button>';
+    }
+    g.innerHTML=h;
+    $('#prev').disabled=view<=new Date(today.getFullYear(),today.getMonth(),1);
+    $('#next').disabled=new Date(view.getFullYear(),view.getMonth()+1,1)>=last;
+  }
+  $('#calG').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;sel=new Date(view.getFullYear(),view.getMonth(),+b.dataset.d);drawCal();drawTimes();calc()});
+  $('#prev').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);drawCal()});
+  $('#next').addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);drawCal()});
+
+  function fmt(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'PM':'AM';h=h%12||12;return h+':'+(mm<10?'0':'')+mm+' '+ap}
+  function drawTimes(){
+    var t=$('#time'), keep=t.value, h='', now=new Date(), isToday=+sel===+today, min=isToday?now.getHours()*60+now.getMinutes()+30:0;
+    for(var m=540;m<=1350;m+=30){ if(m<min)continue; h+='<option value="'+m+'">'+fmt(m)+(m>=1200?' (after-hours)':'')+'</option>'; }
+    if(!h)h='<option value="">No times left today</option>';
+    t.innerHTML=h;
+    if(keep&&t.querySelector('option[value="'+keep+'"]'))t.value=keep;
+  }
+
+  function state(){
+    var m=+$('#time').value, where=document.querySelector('input[name=where]:checked').value, svc=$('#svc').value;
+    return {m:m,late:m>=1200,mobile:where==='mobile',svc:svc,quote:svc==='loan'||svc==='remote',hasTime:$('#time').value!==''};
+  }
+  function calc(){
+    var s=state(), e=$('#est'), h='';
+    $('#zip').hidden=!s.mobile;
+    if(s.quote){
+      h='<div><span>'+(s.svc==='loan'?'Loan and real estate signings':'Remote notarizations')+'</span><span>Quoted by phone</span></div>'+
+        '<div class="tot"><span>Estimate</span><b>Call<small>405-367-9510</small></b></div>';
+    } else {
+      var fee=s.late?35:10, tot=5*qty+fee;
+      h='<div><span>Notary stamp'+(qty>1?' × '+qty:'')+'</span><span>$'+(5*qty)+'</span></div>'+
+        '<div><span>'+(s.late?'After-hours fee (8 to 11 PM)':'Appointment fee')+'</span><span>$'+fee+'</span></div>'+
+        (s.mobile?'<div><span>Travel to you</span><span>Quoted by distance</span></div>':'')+
+        '<div class="tot"><span>Estimate</span><b>$'+tot+(s.mobile?'<small>+ travel</small>':'')+'</b></div>';
+    }
+    e.innerHTML=h;
+  }
+  $('#bk').addEventListener('change',calc);
+  $('#plus').addEventListener('click',function(){if(qty<20){qty++;$('#qty').textContent=qty;calc()}});
+  $('#minus').addEventListener('click',function(){if(qty>1){qty--;$('#qty').textContent=qty;calc()}});
+
+  $('#bk').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var s=state(), msg=$('#bkMsg');
+    if(!s.hasTime){msg.className='msg ok';msg.textContent='No times are left today. Pick another day, or call 405-367-9510.';return}
+    var day=sel.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+    var svcTxt=$('#svc').options[$('#svc').selectedIndex].text.toLowerCase();
+    var zip=$('#zip').value.trim();
+    var body='Hi Justin, I would like to book a '+svcTxt+' on '+day+' at '+fmt(s.m)+'. '+
+      (s.mobile?'Please come to me'+(zip?' (ZIP '+zip+')':'')+'.':'I will come to 1325 Atalon Dr.')+' Stamps needed: '+qty+'.';
+    msg.className='msg ok';
+    msg.innerHTML='Request ready for <b>'+day+', '+fmt(s.m)+'</b>. If your texting app did not open, text or call <a href="tel:'+TEL+'">405-367-9510</a> with those details.';
+    window.location.href='sms:'+TEL+'?&body='+encodeURIComponent(body);
+  });
+
+  drawCal(); drawTimes(); calc();
+
+  /* contact form: honest preview */
+  $('#cf').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var m=$('#cfMsg'), ok=$('#cn').value.trim()&&$('#cp').value.trim()&&$('#cm').value.trim();
+    m.className='msg ok';
+    m.innerHTML=ok?'This page is a concept preview, so the message was not sent. To reach Justin now, call or text <a href="tel:'+TEL+'">405-367-9510</a>.':'Please fill in your name, phone, and what you need notarized.';
+  });
+})();
+</script>
+</body>
+</html>
