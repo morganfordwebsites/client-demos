@@ -181,6 +181,22 @@ input[type=date].fld{min-width:0;-webkit-appearance:none;appearance:none;display
 .map{margin-top:clamp(48px,6vw,80px);height:300px;border:0;width:100%;filter:grayscale(1) contrast(1.05);display:block}
 .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding:22px 0 26px;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.55)}
 
+
+/* confirmation popup */
+.pop{border:0;border-radius:var(--r);padding:clamp(24px,4vw,40px);width:100%;max-width:min(460px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;margin:auto;color:var(--navy);background:var(--white);box-shadow:0 24px 48px -24px rgba(0,0,0,.55)}
+.pop::backdrop{background:rgba(8,21,43,.72)}
+.pop[open]{animation:pop .22s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(12px)}}
+.pop svg{width:56px;height:56px;margin-bottom:18px}
+.pop h3{font:400 clamp(40px,6vw,52px)/1 var(--disp);text-transform:uppercase;letter-spacing:.01em;overflow-wrap:anywhere}
+.pop p{margin-top:12px}
+.pop dl{margin-top:20px;border-top:2px solid var(--navy);font-size:15px}
+.pop dl div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.pop dt{color:var(--mute)}.pop dd{font-weight:700;text-align:right}
+.pop .small{font-size:14px;color:var(--mute)}
+.pop .btn{width:100%;margin-top:22px}
+@media (prefers-reduced-motion:reduce){.pop[open]{animation:none}}
+
 /* mobile bar */
 .mbar{display:none}
 
@@ -413,6 +429,19 @@ input[type=date].fld{min-width:0;-webkit-appearance:none;appearance:none;display
   <a href="tel:+14053679510">Call</a><a href="sms:+14053679510">Text</a><a href="#book">Book a time</a>
 </nav>
 
+<dialog class="pop" id="pop" aria-labelledby="popT">
+  <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="#0E2240"/><circle cx="28" cy="28" r="23" fill="none" stroke="#C8A24A"/><path d="M18 29l7 7 14-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <h3 id="popT">Thanks, <span id="popN"></span>!</h3>
+  <p>Your request is ready to go. Just hit send on the text that opened and Justin will reply to confirm your time.</p>
+  <dl>
+    <div><dt>When</dt><dd id="popW"></dd></div>
+    <div><dt>Where</dt><dd id="popL"></dd></div>
+    <div><dt>Estimate</dt><dd id="popE"></dd></div>
+  </dl>
+  <p class="small">Text didn't open? <a id="popS" href="sms:+14053679510">Tap here to text Justin</a>, or call <a href="tel:+14053679510">405-367-9510</a>.</p>
+  <button class="btn btn-navy" type="button" id="popX">Got it</button>
+</dialog>
+
 <script>
 (function(){
   document.documentElement.classList.add('js');
@@ -491,8 +520,19 @@ input[type=date].fld{min-width:0;-webkit-appearance:none;appearance:none;display
       (s.mobile?'Please come to me'+(zip?' (ZIP '+zip+')':'')+'.':'I will come to 1325 Atalon Dr.')+' Stamps needed: '+qty+'.'+(note?' Note: '+note:'');
     msg.className='msg ok';
     msg.innerHTML='Request ready for <b>'+day+', '+fmt(s.m)+'</b>. If your texting app did not open, text or call <a href="tel:'+TEL+'">405-367-9510</a> with those details.';
-    window.location.href='sms:'+TEL+'?&body='+encodeURIComponent(body);
+    var link='sms:'+TEL+'?&body='+encodeURIComponent(body), pop=$('#pop'), tot=document.querySelector('#est .tot b');
+    $('#popN').textContent=nm.split(/\s+/)[0];
+    $('#popW').textContent=day+', '+fmt(s.m);
+    $('#popL').textContent=s.mobile?'Justin comes to you'+(zip?' ('+zip+')':''):'1325 Atalon Dr, Moore';
+    $('#popE').textContent=s.quote?'Quoted by phone':tot.firstChild.textContent+(s.mobile?' + travel':'');
+    $('#popS').href=link;
+    if(pop.showModal){if(!pop.open)pop.showModal();$('#popX').focus()}
+    window.location.href=link;
   });
+
+  $('#popX').addEventListener('click',function(){$('#pop').close()});
+  $('#pop').addEventListener('click',function(e){if(e.target===this)this.close()});
+  $('#pop').addEventListener('close',function(){$('#bk button[type=submit]').focus()});
 
   drawTimes(); calc();
 
