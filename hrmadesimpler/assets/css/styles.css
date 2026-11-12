@@ -1442,3 +1442,25 @@ blockquote.pull .mark { color: var(--teal); }
   .portrait-figure { height: auto; }
   .portrait-img { flex: none; aspect-ratio: 4 / 5; min-height: 0; }
 }
+
+/* ---------- 29. form delivery states ---------- */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-status.is-error { color: #B4462F; }
+.form-done {
+  border: 1px solid rgba(53, 161, 175, 0.35);
+  background: linear-gradient(180deg, rgba(53, 161, 175, 0.07), rgba(53, 161, 175, 0.02));
+  border-radius: var(--radius);
+  padding: 1.75rem 1.6rem 1.5rem;
+}
+.form-done .eyebrow { color: var(--teal-ink); }
+.form-done h3 {
+  font-family: var(--font-text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+}
+.form-done p { font-size: 0.9375rem; line-height: 1.65; color: var(--ink-70); margin-bottom: 1rem; max-width: 46ch; }
+.form-done:focus { outline: none; }
+.form-done:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
