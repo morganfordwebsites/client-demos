@@ -1,0 +1,43 @@
+# HR Made Simpler
+
+> Human resources consulting, recruitment and career counseling for ministries, non-profits and small businesses, run by Jordana Coppola, SPHR, SHRM-SCP, PMQ, with more than 28 years of HR, operations and administrative experience.
+
+HR Made Simpler LLC is a one-person consultancy. The promise is in the name: take HR and administrative work off the client's desk, and make the complex simpler. Services are priced at reasonable rates, typically 30 to 40 percent below the industry average, and every engagement opens with a free initial consultation and a detailed written quote.
+
+## Who it serves
+
+- Ministries: churches, camps and parachurch organizations, where volunteers work alongside staff and a board needs straight answers.
+- Non-profits: funded, audited and under-resourced organizations that need personnel files, benefits, payroll and policy up to what funders and auditors expect.
+- Small businesses: owner-run companies without an HR department, or with one person carrying it part time.
+- Individuals: people who need career counseling or a resume reviewed, usually because the next move matters.
+
+## Services
+
+- [Recruitment, end to end](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/services.html#recruitment): sourcing, screening, interviewing and offer support, with attention to culture fit.
+- [HR consulting and audit](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/services.html#consulting): a 360-degree review of HR and administrative functions, with priorities and fixes.
+- [Employee handbook and policy](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/services.html#handbook): handbooks, policies and procedures that hold up to scrutiny.
+- [Speaking and leadership training](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/services.html#speaking): sessions on HR, administration and managing people.
+- [Career counseling and resume review](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/services.html#career): for individuals, including which environments fit and which do not.
+
+## Key facts
+
+- Owner: Jordana Coppola. Certifications: SPHR, SHRM-SCP, PMQ.
+- Experience: more than 28 years in HR, operations and administration.
+- Pricing: typically 30 to 40 percent below the industry average; free initial consultation, then a detailed written quote before any work begins.
+- Engagement types: a project, a retainer, a single audit, or monthly support.
+- Clients include Enviropest, PCO Central, Custom Cart Solutions, Gerrard Excavating, WinGs Ministries.
+- Media: Jordana appeared on AACS Today to talk about making HR simpler for ministries (https://www.buzzsprout.com/955942/episodes/16179721).
+
+## Contact
+
+- Phone: 970-556-5336 (tel:+19705565336)
+- Email: hrmadesimpler@outlook.com
+- Contact page with form: https://morganfordwebsites.github.io/client-demos/hrmadesimpler/contact.html
+
+## Pages
+
+- [Home](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/): positioning, who it is for, services overview, credentials, testimonials, FAQ.
+- [About](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/about.html): Jordana Coppola, the practice, credentials and the mission statement.
+- [Services](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/services.html): the five service lines in detail.
+- [Testimonials](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/testimonials.html): six client references in full.
+- [Contact](https://morganfordwebsites.github.io/client-demos/hrmadesimpler/contact.html): phone, email, enquiry form and the questions that come up before the first call.
