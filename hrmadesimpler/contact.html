@@ -26,7 +26,7 @@
 <link rel="icon" href="assets/img/icon-64.png" sizes="64x64" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/icon-180.png">
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/styles.css?v=10">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -225,7 +225,11 @@
         <h2 style="font-size:var(--step-3);margin-bottom:.5rem">Request a consultation</h2>
         <p style="font-size:.9375rem;color:var(--ink-70);margin-bottom:1.75rem">A few details are enough to start. You will get a reply from Jordana directly.</p>
 
-        <form data-contact-form novalidate>
+        <div class="hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <form data-contact-form data-endpoint="https://superagent-b14003f9.base44.app/functions/hrConsultation" action="mailto:hrmadesimpler@outlook.com" method="post" enctype="text/plain" novalidate>
           <div class="field-row">
             <div class="field">
               <label for="name">Name</label>
@@ -260,9 +264,18 @@
           <button class="btn" type="submit" style="width:100%;justify-content:center">Send the request
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
-          <p class="form-note">This form opens your own email app with the message composed and addressed to hrmadesimpler@outlook.com, so nothing is stored on this website. Prefer to write directly? Email or call using the details opposite.</p>
+          <p class="form-note">Your request goes straight to Jordana, and you get a copy by email. We keep a note of it so nothing is lost. Prefer to write directly? Email or call using the details opposite.</p>
           <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
+
+        <div class="form-done" data-form-success hidden tabindex="-1">
+          <p class="eyebrow"><span class="num">&#10003;</span> Request received</p>
+          <h3>Thank you. Jordana has your note.</h3>
+          <p>She replies to every request herself, usually within one business day, and a copy of what you sent is on its way to your inbox.</p>
+          <p style="margin-bottom:0"><a class="arrow-link" href="services.html">See what she does while you wait
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></p>
+        </div>
       </div>
 
       <div class="contact-aside">
@@ -370,7 +383,7 @@
 </footer>
 
 
-<script src="assets/js/site.js?v=7" defer></script>
+<script src="assets/js/site.js?v=8" defer></script>
 
 <div class="mcta" aria-label="Quick contact">
   <a class="mcta-call" href="tel:+19705565336">Call</a>
