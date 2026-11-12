@@ -155,37 +155,93 @@
     if (d.id && window.location.hash === '#' + d.id) d.open = true;
   });
 
-  /* ---- contact form -> composes a real email (no backend needed) ---- */
+  /* ---- contact form: posts to the HR Made Simpler endpoint, which emails
+     the client a branded copy and the site owner a notification ---- */
   var form = document.querySelector('[data-contact-form]');
   if (form) {
     var status = form.querySelector('[data-form-status]');
+    var submitBtn = form.querySelector('[type="submit"]');
+    var btnHTML = submitBtn ? submitBtn.innerHTML : '';
+    var done = document.querySelector('[data-form-success]');
+    var endpoint = form.getAttribute('data-endpoint') || '';
+
+    var values = function () {
+      var get = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ''; };
+      return {
+        name: get('name'),
+        organisation: get('organisation'),
+        email: get('email'),
+        topic: get('topic'),
+        message: get('message'),
+        website: get('website')
+      };
+    };
+
+    // fallback: hand the same message to the visitor's own mail app
+    var openMailApp = function (d) {
+      var subject = 'Enquiry from ' + d.name + (d.organisation ? ' - ' + d.organisation : '') + (d.topic ? ' (' + d.topic + ')' : '');
+      var body = 'Name: ' + d.name + '\n'
+        + 'Organisation: ' + (d.organisation || '-') + '\n'
+        + 'Email: ' + d.email + '\n'
+        + 'Looking for: ' + (d.topic || '-') + '\n\n'
+        + d.message + '\n';
+      window.location.href = 'mailto:hrmadesimpler@outlook.com?subject='
+        + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    };
+
+    var say = function (msg, isError) {
+      if (!status) return;
+      status.textContent = msg;
+      status.classList.toggle('is-error', !!isError);
+    };
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
 
-      var get = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ''; };
-      var name = get('name');
-      var org = get('organisation');
-      var email = get('email');
-      var topic = get('topic');
-      var message = get('message');
+      var d = values();
+      say('Sending your request\u2026', false);
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending\u2026'; }
 
-      var subject = 'Enquiry from ' + name + (org ? ' — ' + org : '') + (topic ? ' (' + topic + ')' : '');
-      var body = 'Name: ' + name + '\n'
-        + 'Organisation: ' + (org || '—') + '\n'
-        + 'Email: ' + email + '\n'
-        + 'Looking for: ' + (topic || '—') + '\n\n'
-        + message + '\n';
+      var restore = function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = btnHTML; }
+      };
 
-      var href = 'mailto:hrmadesimpler@outlook.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body);
-
-      window.location.href = href;
-
-      if (status) {
-        status.textContent = 'Opening your email app with this message addressed to HR Made Simpler. If nothing happens, email hrmadesimpler@outlook.com or call 970-556-5336.';
-      }
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(d)
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (res) {
+          if (res && res.ok && res.delivered) {
+            if (done) {
+              form.hidden = true;
+              done.hidden = false;
+              say('', false);
+              if (done.focus) done.focus();
+            } else {
+              say('Thank you. Jordana has your request and will reply within one business day.', false);
+            }
+            form.reset();
+            return;
+          }
+          if (res && res.ok && res.saved) {
+            say('Your request is saved. Opening your email app so a copy goes straight to Jordana.', false);
+            openMailApp(d);
+            return;
+          }
+          if (res && res.fields) {
+            say(Object.keys(res.fields).map(function (k) { return res.fields[k]; }).join(' '), true);
+            return;
+          }
+          throw new Error('send failed');
+        })
+        .catch(function () {
+          say('We could not reach the server just then, so your email app is opening with the message ready. You can also call 970-556-5336.', true);
+          openMailApp(d);
+        })
+        .then(restore);
     });
   }
 })();
