@@ -76,6 +76,7 @@ ul,ol{padding:0;list-style:none}
 .sec{padding-block:clamp(64px,8vw,128px)}
 .sec-sm{padding-block:clamp(44px,5vw,72px)}
 .rule{height:1px;background:var(--line);border:0}
+[id]{scroll-margin-top:96px}
 .sec-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.4vw,32px);align-items:end;margin-bottom:clamp(36px,5vw,64px)}
 .sec-head .label{grid-column:1/4}
 .sec-head .title{grid-column:4/10}
@@ -637,4 +638,12 @@ ul,ol{padding:0;list-style:none}
   content:"No contract \00B7  300+ operators";
   display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--muted);margin-bottom:12px;
+}
+
+/* numbered next steps */
+.next-steps{counter-reset:n;margin-top:2px}
+.next-steps li{counter-increment:n;font-size:13.5px;color:var(--body);padding:6px 0 6px 26px;position:relative}
+.next-steps li::before{
+  content:counter(n,decimal-leading-zero);position:absolute;left:0;top:7px;
+  font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--accent);
 }
