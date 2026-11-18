@@ -247,7 +247,7 @@ ul,ol{padding:0;list-style:none}
 .product-copy{grid-column:1/5;position:sticky;top:110px}
 .product-copy h2{margin-bottom:22px}
 .product-copy p{max-width:34ch;color:rgba(244,241,234,.72)}
-.tabs{display:flex;flex-wrap:wrap;gap:4px;margin-top:32px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:32px;max-width:340px}
 .tab{
   background:transparent;border:1px solid rgba(244,241,234,.22);color:rgba(244,241,234,.72);
   padding:9px 13px;border-radius:4px;font-size:11.5px;font-weight:600;letter-spacing:.06em;
