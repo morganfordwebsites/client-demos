@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Features | Tank Track</title>
-<meta name="description" content="Dispatch, customer records, field operations, reminders, invoicing and compliance reporting in one system built for tank service businesses.">
-<meta name="theme-color" content="#0F1D23">
+<meta name="description" content="User management, content, subscriptions, payments, analytics and support in one app.">
+<meta name="theme-color" content="#00205A">
 <meta property="og:title" content="Features | Tank Track">
-<meta property="og:description" content="Dispatch, customer records, field operations, reminders, invoicing and compliance reporting in one system built for tank service businesses.">
+<meta property="og:description" content="User management, content, subscriptions, payments, analytics and support in one app.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tank Track">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1D23'/%3E%3Crect x='8.75' y='7.75' width='14.5' height='16.5' rx='5' stroke='%23F4F1EA' stroke-width='1.5' fill='none'/%3E%3Cpath d='M8.75 17h14.5v2.25a5 5 0 0 1-5 5h-4.5a5 5 0 0 1-5-5z' fill='%230A6689'/%3E%3C/svg%3E">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -26,25 +26,18 @@
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="Tank Track home">
-      <svg class="brand-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <rect x="4.75" y="5.25" width="18.5" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
-        <path d="M4.75 17h18.5" stroke="currentColor" stroke-width="1.6"/>
-        <path d="M4.75 17h18.5v.9a5.5 5.5 0 0 1-5.5 5.5h-7.5a5.5 5.5 0 0 1-5.5-5.5z" fill="currentColor"/>
-        <path d="M10.5 5.25V3.6M17.5 5.25V3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      </svg>
+      <img class="brand-logo" src="assets/logo.svg" alt="" width="46" height="46">
       <span class="brand-name">Tank Track</span>
     </a>
     <nav class="nav" aria-label="Primary">
-          <a href="features.html" aria-current="page">Features</a>
-          <a href="how-it-works.html">How it works</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="features.html" aria-current="page">Features</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
-      <a class="login-link" href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a>
-      <a class="btn btn-primary btn-sm" href="contact.html">Get a demo</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">Get in touch</a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span>
       </button>
@@ -52,298 +45,214 @@
   </div>
   <div class="mobile-nav" id="mobileNav">
     <ul>
-            <li><a href="features.html" aria-current="page">Features</a></li>
-            <li><a href="how-it-works.html">How it works</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" aria-current="page">Features</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="wrap" style="padding-bottom:20px"><a class="btn btn-primary" href="contact.html">Get a demo</a></div>
+    <div class="wrap" style="padding-bottom:20px"><a class="btn btn-primary" href="contact.html">Get in touch</a></div>
   </div>
 </header>
 <main id="main">
 <section class="page-hero">
-  <div class="wrap">
-    <div class="page-hero-grid">
-      <div class="copy">
-        <p class="label kicker">Features</p>
-        <h1 class="display h1" style="font-size:clamp(40px,5.6vw,76px)">Everything the office and the truck need to agree on.</h1>
-        <p class="lead">One system for the schedule, the property history, the work order, the manifest and the money. No syncing, no double entry, no calling the shop to ask what happened at the last visit.</p>
-      </div>
-      <div class="side">
-        <a class="btn btn-primary" href="contact.html">Get a demo</a>
-      </div>
+  <div class="wrap page-hero-grid">
+    <div class="label"><span class="kicker">Features</span></div>
+    <div class="page-hero-copy">
+      <h1 class="display">Everything in one app.</h1>
+      <p class="lead">Tank Track brings fuel management, content, subscriptions, payments, analytics and support together. Here is what each part does.</p>
+    </div>
+    <div class="side">
+      <span class="kicker">Six features</span>
+      <a class="btn btn-ghost btn-sm" href="#users">Start with user management</a>
     </div>
   </div>
 </section>
 
-<section class="sec-sm">
-  <div class="wrap">
-    <div class="cap-index">
-      <a href="#dispatch"><span class="n">01</span>Scheduling and dispatch</a>
-      <a href="#records"><span class="n">02</span>Customer and site records</a>
-      <a href="#field"><span class="n">03</span>Field operations</a>
-      <a href="#reminders"><span class="n">04</span>Automatic reminders</a>
-      <a href="#billing"><span class="n">05</span>Billing and digital payments</a>
-      <a href="#compliance"><span class="n">06</span>Compliance and reporting</a>
-      <a href="#checklists"><span class="n">07</span>Custom checklists</a>
-      <a href="#support"><span class="n">08</span>Support and unlimited everything</a>
+<section class="wrap">
+  <div class="detail" id="users">
+    <div class="detail-copy">
+      <span class="kicker">01 / User management</span>
+      <h2 class="display h2">Full control over every account.</h2>
+      <p>Manage user accounts, profiles and access from one place. Edit details, disable an account or reset a password without leaving the app.</p>
+      <p>Administrators see the whole picture. Users see what they need. Access follows the role you give, not a separate spreadsheet kept somewhere else.</p>
+      <ul class="point-list">
+        <li><span class="i">1</span><span><span class="t">Roles and access</span><span class="d">Decide who can view, edit and manage.</span></span></li>
+        <li><span class="i">2</span><span><span class="t">Profile edits</span><span class="d">Keep names, contact details and vehicles current.</span></span></li>
+        <li><span class="i">3</span><span><span class="t">Password resets</span><span class="d">Resolve access problems without a support ticket.</span></span></li>
+      </ul>
+    </div>
+    <div class="detail-visual">
+      <div class="panel">
+        <div class="panel-head"><div><span class="sub">Users</span><span class="ttl">Team access</span></div><span class="sample">Sample data</span></div>
+        <div class="panel-body">
+          <div class="ui-table">
+            <div class="ui-tr ui-th"><span>Name</span><span>Role</span><span>Status</span></div>
+            <div class="ui-tr"><span class="ui-user"><i>JM</i>Jordan Miller</span><span>Admin</span><span class="chip chip-on">Active</span></div>
+            <div class="ui-tr"><span class="ui-user"><i>AC</i>Alex Chen</span><span>Manager</span><span class="chip chip-on">Active</span></div>
+            <div class="ui-tr"><span class="ui-user"><i>SR</i>Sam Rivera</span><span>Driver</span><span class="chip chip-on">Active</span></div>
+            <div class="ui-tr"><span class="ui-user"><i>MP</i>Mia Patel</span><span>Viewer</span><span class="chip chip-warn">Invited</span></div>
+          </div>
+          <div class="summary-grid" style="margin-top:14px">
+            <div><span class="k">Active users</span><b>3 of 4</b></div>
+            <div><span class="k">Admins</span><b>1</b></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<section class="sec" style="padding-top:0">
-  <div class="wrap">
-
-    <div class="detail" id="dispatch" data-reveal>
-      <div class="copy">
-        <span class="n">01 / Dispatch</span>
-        <h2 class="display">The day is a board, not a group text.</h2>
-        <p>See every truck, every stop and every open job in one view. Move a stop to another truck when the day changes, and the driver sees it on their phone.</p>
-        <ul>
-          <li>Day, week and route views</li>
-          <li>Unassigned jobs waiting for a truck</li>
-          <li>Access notes, gate codes and site hazards on the stop</li>
-          <li>Live status from the field: on the way, on site, done</li>
-        </ul>
+  <div class="detail flip" id="content">
+    <div class="detail-copy">
+      <span class="kicker">02 / Content management</span>
+      <h2 class="display h2">Answers, where people look for them.</h2>
+      <p>Manage and publish FAQs, tutorials and support articles inside the app. Keep the help center current so users can solve the small things without waiting for a reply.</p>
+      <p>When a process changes, update the article once. Everyone sees the same answer the next time they open it.</p>
+      <ul class="point-list">
+        <li><span class="i">1</span><span><span class="t">FAQs</span><span class="d">Short answers to the questions that come up most.</span></span></li>
+        <li><span class="i">2</span><span><span class="t">Tutorials</span><span class="d">Walk through fuel entries, trips, reports and payments.</span></span></li>
+        <li><span class="i">3</span><span><span class="t">Support articles</span><span class="d">Keep policies and account guidance in one place.</span></span></li>
+      </ul>
+    </div>
+    <div class="detail-visual">
+      <div class="panel">
+        <div class="panel-head"><div><span class="sub">Content</span><span class="ttl">Help center</span></div><span class="sample">Sample data</span></div>
+        <div class="panel-body">
+          <div class="art-row"><span class="art-ico"></span><div class="art-c"><strong>How to log your first fill-up</strong><small>Tutorial · 3 min read</small></div><span class="chip chip-on">Live</span></div>
+          <div class="art-row"><span class="art-ico"></span><div class="art-c"><strong>Understanding your fuel report</strong><small>Guide · 5 min read</small></div><span class="chip chip-on">Live</span></div>
+          <div class="art-row"><span class="art-ico"></span><div class="art-c"><strong>Manage or cancel a subscription</strong><small>FAQ · 2 min read</small></div><span class="chip chip-on">Live</span></div>
+          <div class="art-row"><span class="art-ico"></span><div class="art-c"><strong>Adding a second vehicle</strong><small>Draft · edited today</small></div><span class="chip chip-warn">Draft</span></div>
+        </div>
       </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Dispatch &middot; Tue 14 Apr</span><span class="chip chip-next">3 trucks</span></div>
-          <div class="mock-body">
-            <div class="mock-title"><h3>Route 12</h3><span class="mono">Truck 1 &middot; 4 stops</span></div>
-            <div class="reminders">
-              <div class="reminder"><div class="d">08:00<small>Stop 1</small></div><div class="w">Pine Ridge<small>1,250 gal &middot; riser at side yard</small></div><span class="chip chip-done">Done</span></div>
-              <div class="reminder"><div class="d">10:20<small>Stop 2</small></div><div class="w">Property 4821<small>1,000 gal &middot; quote lid repair</small></div><span class="chip chip-next">On site</span></div>
-              <div class="reminder"><div class="d">13:15<small>Stop 3</small></div><div class="w">Property 3390<small>900 gal &middot; dog in yard</small></div><span class="chip chip-plain">Next</span></div>
-              <div class="reminder"><div class="d">15:30<small>Stop 4</small></div><div class="w">Property 7712<small>Pump out &middot; tenant on site</small></div><span class="chip chip-plain">Queued</span></div>
+    </div>
+  </div>
+
+  <div class="detail" id="subscriptions">
+    <div class="detail-copy">
+      <span class="kicker">03 / Subscription management</span>
+      <h2 class="display h2">Know where every plan stands.</h2>
+      <p>Keep track of subscriptions, monitor payment statuses and handle subscription questions with the full history in front of you.</p>
+      <p>Renewal dates, plan changes and cancellations are visible in the app, so a question about a charge does not need a search through email.</p>
+      <ul class="point-list">
+        <li><span class="i">1</span><span><span class="t">Plan status</span><span class="d">Active, paused or cancelled, in one view.</span></span></li>
+        <li><span class="i">2</span><span><span class="t">Renewals</span><span class="d">See the next charge before it happens.</span></span></li>
+        <li><span class="i">3</span><span><span class="t">Changes</span><span class="d">Upgrade, downgrade or cancel from the account.</span></span></li>
+      </ul>
+    </div>
+    <div class="detail-visual">
+      <div class="panel">
+        <div class="panel-head"><div><span class="sub">Account</span><span class="ttl">Subscription</span></div><span class="sample">Sample data</span></div>
+        <div class="panel-body">
+          <div class="sub-card">
+            <span class="k">Current plan</span>
+            <div class="plan">Tank Track Pro</div>
+            <div class="price">Monthly · renews 12 December 2026</div>
+            <div class="sub-meta">
+              <div><span class="k">Status</span><b>Active</b></div>
+              <div><span class="k">Payment</span><b>Visa ···· 4242</b></div>
             </div>
+            <div class="sub-actions"><span class="ui-btn">Manage plan</span><span class="ui-btn">Cancel</span></div>
+          </div>
+          <div class="pay-row"><span class="pay-ico">V</span><div class="pay-c"><strong>Next invoice</strong><small>12 Dec 2026</small></div><span class="pay-amt">$9.99<small>Monthly</small></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail flip" id="payments">
+    <div class="detail-copy">
+      <span class="kicker">04 / Payment management</span>
+      <h2 class="display h2">Every payment, in one history.</h2>
+      <p>Monitor payment transactions, access payment history and resolve payment queries efficiently. Card details stay with the payment provider; Tank Track keeps the record.</p>
+      <p>If a receipt is missing or a charge looks wrong, the answer is usually one screen away.</p>
+      <ul class="point-list">
+        <li><span class="i">1</span><span><span class="t">Transaction history</span><span class="d">Fuel, subscriptions and renewals in one list.</span></span></li>
+        <li><span class="i">2</span><span><span class="t">Receipts</span><span class="d">Open the record for any payment.</span></span></li>
+        <li><span class="i">3</span><span><span class="t">Status</span><span class="d">Paid, pending or refunded, clearly marked.</span></span></li>
+      </ul>
+    </div>
+    <div class="detail-visual">
+      <div class="panel">
+        <div class="panel-head"><div><span class="sub">Payments</span><span class="ttl">Recent activity</span></div><span class="sample">Sample data</span></div>
+        <div class="panel-body">
+          <div class="pay-row"><span class="pay-ico">A</span><div class="pay-c"><strong>Amoco Gas</strong><small>Today, 9:12 · Fuel</small></div><span class="pay-amt">$42.80<small>Paid</small></span></div>
+          <div class="pay-row"><span class="pay-ico">S</span><div class="pay-c"><strong>Shell</strong><small>12 Nov · Fuel</small></div><span class="pay-amt">$38.10<small>Paid</small></span></div>
+          <div class="pay-row"><span class="pay-ico">P</span><div class="pay-c"><strong>Pilot</strong><small>04 Nov · Fuel</small></div><span class="pay-amt">$51.20<small>Paid</small></span></div>
+          <div class="pay-row"><span class="pay-ico">T</span><div class="pay-c"><strong>Tank Track Pro</strong><small>12 Oct · Subscription</small></div><span class="pay-amt">$9.99<small>Paid</small></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail" id="analytics">
+    <div class="detail-copy">
+      <span class="kicker">05 / Analytics and reports</span>
+      <h2 class="display h2">Numbers that explain your month.</h2>
+      <p>Fuel entries, trip logs, mileage and efficiency become reports you can read at a glance. See what you spent, how far you went and where the money went.</p>
+      <p>Reports are estimates based on the data you and your devices provide. They are there to make the month clearer, not to replace your own records.</p>
+      <ul class="point-list">
+        <li><span class="i">1</span><span><span class="t">Fuel spend</span><span class="d">Month by month, with the average price you paid.</span></span></li>
+        <li><span class="i">2</span><span><span class="t">Mileage and efficiency</span><span class="d">Distance, mpg and cost per mile.</span></span></li>
+        <li><span class="i">3</span><span><span class="t">Monthly reports</span><span class="d">A clean summary you can read in a minute.</span></span></li>
+      </ul>
+    </div>
+    <div class="detail-visual">
+      <div class="panel">
+        <div class="panel-head"><div><span class="sub">Analytics</span><span class="ttl">October report</span></div><span class="sample">Sample data</span></div>
+        <div class="panel-body">
+          <div class="kpis">
+            <div class="kpi"><span class="k">Spend</span><b>$486.20</b></div>
+            <div class="kpi"><span class="k">Efficiency</span><b>28.6 mpg</b></div>
+            <div class="kpi"><span class="k">Distance</span><b>1,284 mi</b></div>
+          </div>
+          <div class="chart" style="height:104px" aria-hidden="true">
+            <i style="height:34%"></i><i style="height:52%"></i><i style="height:41%"></i><i style="height:64%"></i><i style="height:49%"></i><i style="height:73%"></i><i class="on" style="height:91%"></i><i style="height:57%"></i><i style="height:46%"></i><i style="height:69%"></i><i style="height:54%"></i><i style="height:63%"></i>
+          </div>
+          <div class="summary-grid">
+            <div><span class="k">Cost per mile</span><b>$0.38</b></div>
+            <div><span class="k">Fill-ups</span><b>12</b></div>
+            <div><span class="k">Best week</span><b>31.2 mpg</b></div>
+            <div><span class="k">Average price</span><b>$3.44 / gal</b></div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="detail flip" id="records" data-reveal>
-      <div class="copy">
-        <span class="n">02 / Records</span>
-        <h2 class="display">One property record that answers the phone for you.</h2>
-        <p>Every address keeps its contacts, tank details, equipment, service history, photos and balance together. Whoever picks up the phone can answer without hunting through a filing cabinet.</p>
-        <ul>
-          <li>Contacts and billing details for every site</li>
-          <li>Tank size, riser and equipment notes</li>
-          <li>Full service and payment history</li>
-          <li>Search by address, name or phone</li>
-        </ul>
-      </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Customer record</span><span class="chip chip-plain">4821 Cedar Ln</span></div>
-          <div class="mock-body">
-            <div class="wo-head">
-              <div><div class="field-label">Property</div><div class="field-val">4821 Cedar Ln<small>Owner since 2019 &middot; billing by email</small></div></div>
-              <div><div class="field-label">Tank</div><div class="field-val">1,000 gal concrete<small>Riser at side yard &middot; lid cracked</small></div></div>
-            </div>
-            <div class="reminders">
-              <div class="reminder"><div class="d">26<small>mo</small></div><div class="w">Since last pump out<small>Cycle: 24 months</small></div><span class="chip chip-due">Due</span></div>
-              <div class="reminder"><div class="d">$0</div><div class="w">Balance<small>Last invoice paid 14 Apr</small></div><span class="chip chip-done">Current</span></div>
-              <div class="reminder"><div class="d">3</div><div class="w">Open follow-ups<small>Lid quote &middot; outlet baffle &middot; riser height</small></div><span class="chip chip-plain">View</span></div>
-            </div>
-          </div>
+  <div class="detail flip" id="support">
+    <div class="detail-copy">
+      <span class="kicker">06 / User support</span>
+      <h2 class="display h2">Help that stays in the app.</h2>
+      <p>Support tickets and in-app messages sit beside your account, so a question does not get lost in an inbox. Our team is here every step of the way.</p>
+      <p>Start with the help center. If the answer is not there, open a ticket and keep the conversation with the account it belongs to.</p>
+      <ul class="point-list">
+        <li><span class="i">1</span><span><span class="t">Support tickets</span><span class="d">Open, track and resolve in one thread.</span></span></li>
+        <li><span class="i">2</span><span><span class="t">In-app messages</span><span class="d">Ask without leaving the screen you are on.</span></span></li>
+        <li><span class="i">3</span><span><span class="t">Help center</span><span class="d">Answers for the questions that come up most.</span></span></li>
+      </ul>
+    </div>
+    <div class="detail-visual">
+      <div class="panel">
+        <div class="panel-head"><div><span class="sub">Support</span><span class="ttl">Your tickets</span></div><span class="sample">Sample data</span></div>
+        <div class="panel-body">
+          <div class="ticket"><span class="ticket-dot"></span><div class="ticket-c"><strong>Question about my renewal date</strong><small>Opened 2 hours ago</small></div><span class="chip chip-blue">Open</span></div>
+          <div class="ticket"><span class="ticket-dot" style="background:var(--green)"></span><div class="ticket-c"><strong>Receipt for the October payment</strong><small>Resolved yesterday</small></div><span class="chip chip-on">Resolved</span></div>
+          <div class="ticket"><span class="ticket-dot" style="background:var(--green)"></span><div class="ticket-c"><strong>How do I add a second vehicle?</strong><small>Resolved 3 days ago</small></div><span class="chip chip-on">Resolved</span></div>
         </div>
       </div>
     </div>
-
-    <div class="detail" id="field" data-reveal>
-      <div class="copy">
-        <span class="n">03 / Field</span>
-        <h2 class="display">The driver gets the whole story before the gate.</h2>
-        <p>Work orders carry the tank size, the access notes, the last visit and the checklist. Drivers capture gallons, photos, signatures and notes on the phone, even where the signal is thin.</p>
-        <ul>
-          <li>Work orders on any phone or tablet</li>
-          <li>Photos, signatures and time stamps</li>
-          <li>Field notes that start a quote</li>
-          <li>Same information in the office, instantly</li>
-        </ul>
-      </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Work order 8841</span><span class="chip chip-done">Signed</span></div>
-          <div class="mock-body">
-            <div class="mock-title"><h3>Pump out, 1,000 gal</h3><span class="mono">Truck 1 &middot; Stop 2</span></div>
-            <div class="checklist">
-              <div class="check done"><i></i>Locate tank and riser<span class="v">08:52</span></div>
-              <div class="check done"><i></i>Pump out, record gallons<span class="v">09:14</span></div>
-              <div class="check done"><i></i>Inspect baffles and outlet<span class="v">09:22</span></div>
-              <div class="check done"><i></i>Photo: lid and site<span class="v">09:24</span></div>
-              <div class="check"><i></i>Cracked lid at riser, quote replacement<span class="v">Note</span></div>
-            </div>
-            <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><span class="chip chip-next">Quote started</span><span class="chip chip-plain">Customer notified</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="detail flip" id="reminders" data-reveal>
-      <div class="copy">
-        <span class="n">04 / Reminders</span>
-        <h2 class="display">The next job is booked before the truck gets back.</h2>
-        <p>Tank Track watches the service cycle and sends the reminder by text and email. When the customer replies, the job lands on the board with the tank details already filled in.</p>
-        <ul>
-          <li>Text and email reminders on your schedule</li>
-          <li>Reminders for your team when service is due</li>
-          <li>Work orders created automatically from a yes</li>
-          <li>Batch email for accounts receivable</li>
-        </ul>
-      </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Reminders &middot; next 14 days</span><span class="chip chip-plain">Automatic</span></div>
-          <div class="mock-body">
-            <div class="reminders">
-              <div class="reminder"><div class="d">18<small>Apr</small></div><div class="w">Property 4821<small>Pump out due &middot; 1,000 gal</small></div><span class="chip chip-next">Text sent</span></div>
-              <div class="reminder"><div class="d">21<small>Apr</small></div><div class="w">Property 3390<small>Customer replied yes</small></div><span class="chip chip-done">Booked</span></div>
-              <div class="reminder"><div class="d">24<small>Apr</small></div><div class="w">Property 5140<small>Grease trap &middot; 90 day cycle</small></div><span class="chip chip-plain">Email sent</span></div>
-              <div class="reminder"><div class="d">02<small>May</small></div><div class="w">Event site 88<small>6 units &middot; pickup window</small></div><span class="chip chip-plain">Queued</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="detail" id="billing" data-reveal>
-      <div class="copy">
-        <span class="n">05 / Billing</span>
-        <h2 class="display">Invoices that get paid in the driveway.</h2>
-        <p>Send the invoice by text or email while the hose is still out, and take a card on the spot. Payments post to the customer record, so the office is not reconciling receipts on Friday night.</p>
-        <ul>
-          <li>Invoice by text or email</li>
-          <li>Card payments in the field</li>
-          <li>Batch reminders for open balances</li>
-          <li>Checklists printed on the invoice</li>
-        </ul>
-      </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Invoice 5502</span><span class="chip chip-done">Paid</span></div>
-          <div class="mock-body">
-            <div class="mock-title"><h3>$385.00</h3><span class="mono">14 Apr 2026</span></div>
-            <div class="checklist">
-              <div class="check done"><i></i>Pump out, 1,000 gal<span class="v">$325.00</span></div>
-              <div class="check done"><i></i>Riser inspection<span class="v">$60.00</span></div>
-              <div class="check done"><i></i>Card payment, on site<span class="v">$385.00</span></div>
-            </div>
-            <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><span class="chip chip-done">Receipt sent</span><span class="chip chip-plain">Deposit 15 Apr</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="detail flip" id="compliance" data-reveal>
-      <div class="copy">
-        <span class="n">06 / Compliance</span>
-        <h2 class="display">Audit ready without a Sunday in the office.</h2>
-        <p>Manifests build themselves as work is completed: where you pumped, how many gallons, where it went and who signed. Reports are ready when the county or the state asks.</p>
-        <ul>
-          <li>Waste manifests created automatically</li>
-          <li>Gallons, site and disposal facility recorded</li>
-          <li>Manifest reports ready for inspection</li>
-          <li>Clean records for grease trap inspections</li>
-        </ul>
-      </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Manifest 2041</span><span class="chip chip-done">Signed</span></div>
-          <div class="mock-body">
-            <div class="manifest">
-              <div class="manifest-head"><div><h4>Waste manifest</h4><span class="mono">Auto-created 14:32</span></div><div class="mono">State report ready</div></div>
-              <div class="manifest-rows">
-                <div><span>Generator</span><strong>4821 Cedar Ln</strong></div>
-                <div><span>Date</span><strong>14 Apr 2026</strong></div>
-                <div><span>Transporter</span><strong>Truck 1</strong></div>
-                <div><span>Gallons</span><strong class="num">1,000</strong></div>
-                <div><span>Facility</span><strong>County plant</strong></div>
-                <div><span>Ticket</span><strong class="num">2041-0414</strong></div>
-              </div>
-              <div class="stamp">Copy sent to customer</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="detail" id="checklists" data-reveal>
-      <div class="copy">
-        <span class="n">07 / Checklists</span>
-        <h2 class="display">Your standard, on every job, every time.</h2>
-        <p>Build the checklist once for pump outs, inspections, repairs or portable service. New drivers follow the same steps as the ones who have been doing this for twenty years.</p>
-        <ul>
-          <li>Custom checklists per service type</li>
-          <li>Required steps and photos</li>
-          <li>Printed on the invoice for the customer</li>
-          <li>Consistent records across every truck</li>
-        </ul>
-      </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Checklist builder</span><span class="chip chip-plain">Pump out</span></div>
-          <div class="mock-body">
-            <div class="checklist">
-              <div class="check done"><i></i>Locate tank and riser<span class="v">Required</span></div>
-              <div class="check done"><i></i>Pump out, record gallons<span class="v">Required</span></div>
-              <div class="check done"><i></i>Inspect baffles and outlet<span class="v">Required</span></div>
-              <div class="check done"><i></i>Photo: lid and site<span class="v">Photo</span></div>
-              <div class="check done"><i></i>Note anything that needs a quote<span class="v">Optional</span></div>
-            </div>
-            <p class="small" style="margin-top:14px">Shown on the invoice, in this order.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="detail flip" id="support" data-reveal>
-      <div class="copy">
-        <span class="n">08 / Support</span>
-        <h2 class="display">A person answers, and nothing is metered.</h2>
-        <p>Tank Track is priced per truck, not per seat. Add the whole office, every driver and every seasonal hire. Support is a phone call or a ticket, not a chatbot maze.</p>
-        <ul>
-          <li>Unlimited users, tanks and storage</li>
-          <li>Premium support on every plan</li>
-          <li>Live onboarding and training included</li>
-          <li>Feature requests read by the people who build it</li>
-        </ul>
-      </div>
-      <div class="visual">
-        <div class="mock">
-          <div class="mock-bar"><span class="mono">Your plan</span><span class="chip chip-done">All included</span></div>
-          <div class="mock-body">
-            <div class="reminders">
-              <div class="reminder"><div class="d">&infin;</div><div class="w">Users<small>Office, drivers, seasonal</small></div><span class="chip chip-done">Included</span></div>
-              <div class="reminder"><div class="d">&infin;</div><div class="w">Tanks and properties<small>No record limits</small></div><span class="chip chip-done">Included</span></div>
-              <div class="reminder"><div class="d">&infin;</div><div class="w">Photo and document storage<small>Work order photos, manifests</small></div><span class="chip chip-done">Included</span></div>
-              <div class="reminder"><div class="d">1:1</div><div class="w">Support<small>Phone, email, real people</small></div><span class="chip chip-next">Premium</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <section class="cta">
-  <div class="wrap">
-    <div class="cta-grid">
-      <div class="cta-copy" data-reveal>
-        <p class="kicker" style="color:rgba(244,241,234,.55);margin-bottom:18px">Next step</p>
-        <h2 class="display h2">Walk through it with your own jobs.</h2>
-        <p>Bring a route, a grease trap schedule or a portable order. We will put it on the board and show you the invoice that comes out the other side.</p>
-      </div>
-      <div class="cta-actions" data-reveal>
-        <a class="btn btn-primary" href="contact.html">Book a walkthrough</a>
-        <a class="btn btn-ghost" href="pricing.html">See pricing</a>
-      </div>
+  <div class="wrap cta-grid">
+    <div class="cta-copy">
+      <h2 class="display h2">See it for yourself.</h2>
+      <p>Questions about a feature, a subscription or a payment? Send a note and we will get back to you.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light" href="contact.html">Get in touch</a>
+      <a class="btn btn-on-dark" href="how-it-works.html">How it works</a>
     </div>
   </div>
 </section>
@@ -352,20 +261,15 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="Tank Track home">
-          <svg class="brand-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <rect x="4.75" y="5.25" width="18.5" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M4.75 17h18.5" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M4.75 17h18.5v.9a5.5 5.5 0 0 1-5.5 5.5h-7.5a5.5 5.5 0 0 1-5.5-5.5z" fill="currentColor"/>
-            <path d="M10.5 5.25V3.6M17.5 5.25V3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
+        <a class="brand brand-footer" href="index.html" aria-label="Tank Track home">
+          <span class="footer-logo"><img src="assets/logo.svg" alt="" width="44" height="44"></span>
           <span class="brand-name">Tank Track</span>
         </a>
-        <p>Software for septic, grease trap and portable restroom operators. Built in Concord, New Hampshire.</p>
+        <p>Fuel management, subscriptions, payments and reports in one simple, beautiful app.</p>
         <div class="contact">
-          <span>20 Foundry St, Concord, NH 03301</span>
-          <a href="tel:+18338265875">(833) 826-5875</a>
-          <a href="mailto:support@tanktrack.com">support@tanktrack.com</a>
+          <span>Washington, DC</span>
+          <a href="mailto:info@tanktrack.app">info@tanktrack.app</a>
+          <a href="mailto:support@tanktrack.app">support@tanktrack.app</a>
         </div>
       </div>
       <div class="footer-col">
@@ -373,45 +277,44 @@
         <ul>
           <li><a href="features.html">Features</a></li>
           <li><a href="how-it-works.html">How it works</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Request a quote</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://tank-track.com/blog/" target="_blank" rel="noopener">Blog</a></li>
-          <li><a href="https://status.tanktrack.com/" target="_blank" rel="noopener">Service status</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="https://tanktrack.app" target="_blank" rel="noopener">Current site</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="https://tank-track.com/tank-track-faqs/" target="_blank" rel="noopener">FAQs</a></li>
-          <li><a href="https://tank-track.com/tank-track-vs-other-software-comparison-guide/" target="_blank" rel="noopener">Comparison guide</a></li>
-          <li><a href="https://tank-track.com/septic-regulations-by-state/" target="_blank" rel="noopener">State septic rules</a></li>
-          <li><a href="https://tank-track.com/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></li>
-          <li><a href="https://tank-track.com/tank-track-terms/" target="_blank" rel="noopener">Terms of use</a></li>
-        </ul>
+      <div class="footer-col footer-news">
+        <h4>Subscribe to our newsletter</h4>
+        <p class="footer-note">One email when Tank Track lands in the stores.</p>
+        <form class="newsletter" data-preview-form>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <button class="btn btn-light btn-sm" type="submit">Subscribe</button>
+        </form>
+        <p class="form-note" data-form-note role="status"></p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Tank Track, LLC. All rights reserved.</span>
+      <span>&copy; 2026 Tank Track. All rights reserved.</span>
       <span class="legal">
-        <a href="https://tank-track.com/privacy-policy/" target="_blank" rel="noopener">Privacy</a>
-        <a href="https://tank-track.com/tank-track-terms/" target="_blank" rel="noopener">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <span>Concept redesign, not an official site</span>
       </span>
     </div>
   </div>
 </footer>
 <div class="mobile-cta">
-  <a class="btn btn-primary" href="contact.html">Get a demo</a>
-  <a class="btn btn-ghost call" href="tel:+18338265875" aria-label="Call Tank Track">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  <a class="btn btn-primary" href="contact.html">Get in touch</a>
+  <a class="btn btn-ghost mail" href="mailto:info@tanktrack.app" aria-label="Email Tank Track">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
   </a>
 </div>
 <script src="assets/app.js" defer></script>
