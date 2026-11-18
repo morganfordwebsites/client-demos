@@ -631,3 +631,10 @@ ul,ol{padding:0;list-style:none}
   .mobile-cta .call{flex:0 0 auto;width:46px;padding:0;font-size:0}
   .mobile-cta .call svg{width:17px;height:17px}
 }
+
+/* inner page hero side note */
+.page-hero-grid .side::before{
+  content:"No contract \00B7  300+ operators";
+  display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:12px;
+}
