@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing | Tank Track</title>
+<meta name="description" content="$180 per month for your first truck, $150 for each additional truck. Unlimited tanks, users and storage. No contract.">
+<meta name="theme-color" content="#0F1D23">
+<meta property="og:title" content="Pricing | Tank Track">
+<meta property="og:description" content="$180 per month for your first truck, $150 for each additional truck. Unlimited tanks, users and storage. No contract.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tank Track">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1D23'/%3E%3Crect x='8.75' y='7.75' width='14.5' height='16.5' rx='5' stroke='%23F4F1EA' stroke-width='1.5' fill='none'/%3E%3Cpath d='M8.75 17h14.5v2.25a5 5 0 0 1-5 5h-4.5a5 5 0 0 1-5-5z' fill='%230A6689'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main" style="position:absolute;left:-9999px;top:0;background:#fff;padding:10px 16px;z-index:99" onfocus="this.style.left='12px';this.style.top='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
+<div class="preview-bar">
+  <span class="dot" aria-hidden="true"></span>
+  <span>Concept redesign preview</span>
+  <a href="https://tanktrack.app" target="_blank" rel="noopener">View current site</a>
+</div>
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Tank Track home">
+      <svg class="brand-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="4.75" y="5.25" width="18.5" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M4.75 17h18.5" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M4.75 17h18.5v.9a5.5 5.5 0 0 1-5.5 5.5h-7.5a5.5 5.5 0 0 1-5.5-5.5z" fill="currentColor"/>
+        <path d="M10.5 5.25V3.6M17.5 5.25V3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Tank Track</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="pricing.html" aria-current="page">Pricing</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="login-link" href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">Get a demo</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a></li>
+    </ul>
+    <div class="wrap" style="padding-bottom:20px"><a class="btn btn-primary" href="contact.html">Get a demo</a></div>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-grid">
+      <div class="copy">
+        <p class="label kicker">Pricing</p>
+        <h1 class="display h1" style="font-size:clamp(40px,5.6vw,76px)">Priced per truck. Not per seat, tank or report.</h1>
+        <p class="lead">$180 a month for your first truck, $150 a month for every truck after that. Unlimited users, unlimited tanks, unlimited storage and support included. No contract.</p>
+      </div>
+      <div class="side">
+        <a class="btn btn-primary" href="contact.html">Get a demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="pricing">
+      <div class="price-card" id="truckCalc" data-reveal>
+        <div class="top">
+          <span class="mono">Your fleet</span>
+          <div class="seg" role="group" aria-label="Billing period">
+            <button type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
+            <button type="button" data-billing="annual" aria-pressed="false">Annual &minus;10%</button>
+          </div>
+        </div>
+        <div class="truck-row">
+          <span class="lbl">Trucks in service</span>
+          <div class="truck-ctrl">
+            <button type="button" id="truckMinus" aria-label="One fewer truck">&minus;</button>
+            <span class="val num" id="truckVal">1</span>
+            <button type="button" id="truckPlus" aria-label="One more truck">+</button>
+          </div>
+        </div>
+        <input class="range" type="range" id="truckRange" min="1" max="25" value="1" step="1" aria-label="Number of trucks">
+        <div class="price-total">
+          <div class="amt">$<span id="priceAmt">180</span></div>
+          <div class="per" id="pricePer">per month, billed monthly<br>cancel any time</div>
+        </div>
+        <p class="price-note" id="priceNote">First truck $180. Every truck after that is $150. No setup fee, no contract, unlimited users and tanks.</p>
+        <a class="btn btn-primary" href="contact.html" style="width:100%;margin-top:18px">Get a demo</a>
+      </div>
+
+      <div class="price-includes" data-reveal>
+        <p class="kicker" style="margin-bottom:18px">What every plan includes</p>
+        <ul class="includes">
+          <li>Unlimited users</li>
+          <li>Unlimited tanks</li>
+          <li>Unlimited storage</li>
+          <li>Data import and cleanup</li>
+          <li>Live onboarding sessions</li>
+          <li>Premium support</li>
+          <li>Automatic service reminders</li>
+          <li>Digital payments</li>
+          <li>Waste manifests and reports</li>
+          <li>Custom checklists</li>
+        </ul>
+
+        <p class="kicker" style="margin:32px 0 10px">Quick math, monthly</p>
+        <ul class="fact-list">
+          <li><span>1 truck</span><span class="num">$180 / month</span></li>
+          <li><span>3 trucks</span><span class="num">$480 / month</span></li>
+          <li><span>5 trucks</span><span class="num">$780 / month</span></li>
+          <li><span>10 trucks</span><span class="num">$1,530 / month</span></li>
+        </ul>
+        <p class="small" style="margin-top:16px;max-width:42ch">Annual billing takes 10% off those numbers. Either way, no contract.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="kicker label">What you do not pay for</p>
+      <h2 class="display h2 title">The invoice should not need a second invoice.</h2>
+    </div>
+    <div class="features">
+      <article class="feature" data-reveal><span class="n">01</span><div><h3>No setup fee</h3><p>Data export, cleanup, import and training sessions are part of onboarding, not a line item.</p></div></article>
+      <article class="feature" data-reveal><span class="n">02</span><div><h3>No per user charge</h3><p>Put the whole office and every driver on it. Seasonal hires do not change the bill.</p></div></article>
+      <article class="feature" data-reveal><span class="n">03</span><div><h3>No storage meter</h3><p>Work order photos, signatures and manifests do not count against a limit.</p></div></article>
+      <article class="feature" data-reveal><span class="n">04</span><div><h3>No contract</h3><p>Month to month, or annual at 10% off. Cancel whenever, and we export your data.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="split">
+      <div class="col-4" data-reveal>
+        <p class="kicker">Pricing questions</p>
+        <h2 class="display h3" style="margin-top:16px">Asked and answered.</h2>
+        <p class="small" style="margin-top:14px;max-width:28ch">Need a number for a specific fleet? Call and we will work it out on the phone.</p>
+      </div>
+      <div class="col-7">
+        <div class="faq">
+          <details data-reveal><summary>What counts as a truck?<span class="plus" aria-hidden="true"></span></summary><div class="a">A truck is a service vehicle running routes in Tank Track. The first one is $180 a month and each additional truck is $150 a month.</div></details>
+          <details data-reveal><summary>How does annual billing work?<span class="plus" aria-hidden="true"></span></summary><div class="a">Annual billing takes 10% off the monthly rate and is paid once a year. There is still no contract, and the plan is still priced per truck.</div></details>
+          <details data-reveal><summary>Is there a setup or onboarding fee?<span class="plus" aria-hidden="true"></span></summary><div class="a">No. Data export, cleanup, import and the live training sessions are included.</div></details>
+          <details data-reveal><summary>Do you charge extra for users or storage?<span class="plus" aria-hidden="true"></span></summary><div class="a">No. Users, tanks and storage are unlimited on every plan.</div></details>
+          <details data-reveal><summary>Do you offer a free trial?<span class="plus" aria-hidden="true"></span></summary><div class="a">No. Instead we do a live walkthrough with your own routes and data, so you can see how it behaves on your business before you commit.</div></details>
+          <details data-reveal><summary>What if we add or drop a truck?<span class="plus" aria-hidden="true"></span></summary><div class="a">Pricing follows the trucks you are running. Tell us when the fleet changes and the plan is adjusted from there. No long term commitment either way.</div></details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div class="cta-copy" data-reveal>
+        <p class="kicker" style="color:rgba(244,241,234,.55);margin-bottom:18px">Next step</p>
+        <h2 class="display h2">Know the number before the demo ends.</h2>
+        <p>Tell us your truck count and what you are running on now. We will show you the board and give you the monthly figure, with no surprises attached.</p>
+      </div>
+      <div class="cta-actions" data-reveal>
+        <a class="btn btn-primary" href="contact.html">Book a walkthrough</a>
+        <a class="btn btn-ghost" href="tel:+18338265875">Call (833) 826-5875</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Tank Track home">
+          <svg class="brand-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect x="4.75" y="5.25" width="18.5" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.75 17h18.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M4.75 17h18.5v.9a5.5 5.5 0 0 1-5.5 5.5h-7.5a5.5 5.5 0 0 1-5.5-5.5z" fill="currentColor"/>
+            <path d="M10.5 5.25V3.6M17.5 5.25V3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">Tank Track</span>
+        </a>
+        <p>Software for septic, grease trap and portable restroom operators. Built in Concord, New Hampshire.</p>
+        <div class="contact">
+          <span>20 Foundry St, Concord, NH 03301</span>
+          <a href="tel:+18338265875">(833) 826-5875</a>
+          <a href="mailto:support@tanktrack.com">support@tanktrack.com</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://tank-track.com/blog/" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://status.tanktrack.com/" target="_blank" rel="noopener">Service status</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://tank-track.com/tank-track-faqs/" target="_blank" rel="noopener">FAQs</a></li>
+          <li><a href="https://tank-track.com/tank-track-vs-other-software-comparison-guide/" target="_blank" rel="noopener">Comparison guide</a></li>
+          <li><a href="https://tank-track.com/septic-regulations-by-state/" target="_blank" rel="noopener">State septic rules</a></li>
+          <li><a href="https://tank-track.com/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></li>
+          <li><a href="https://tank-track.com/tank-track-terms/" target="_blank" rel="noopener">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Tank Track, LLC. All rights reserved.</span>
+      <span class="legal">
+        <a href="https://tank-track.com/privacy-policy/" target="_blank" rel="noopener">Privacy</a>
+        <a href="https://tank-track.com/tank-track-terms/" target="_blank" rel="noopener">Terms</a>
+        <span>Concept redesign, not an official site</span>
+      </span>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
