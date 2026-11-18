@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How it works | Tank Track</title>
-<meta name="description" content="We export and clean your data, train your team in live sessions and get you booking jobs. No setup fee, no contract.">
-<meta name="theme-color" content="#0F1D23">
+<meta name="description" content="Download Tank Track, sign up for your account and start managing fuel, trips, payments and reports.">
+<meta name="theme-color" content="#00205A">
 <meta property="og:title" content="How it works | Tank Track">
-<meta property="og:description" content="We export and clean your data, train your team in live sessions and get you booking jobs. No setup fee, no contract.">
+<meta property="og:description" content="Download Tank Track, sign up for your account and start managing fuel, trips, payments and reports.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tank Track">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1D23'/%3E%3Crect x='8.75' y='7.75' width='14.5' height='16.5' rx='5' stroke='%23F4F1EA' stroke-width='1.5' fill='none'/%3E%3Cpath d='M8.75 17h14.5v2.25a5 5 0 0 1-5 5h-4.5a5 5 0 0 1-5-5z' fill='%230A6689'/%3E%3C/svg%3E">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -26,25 +26,18 @@
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="Tank Track home">
-      <svg class="brand-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <rect x="4.75" y="5.25" width="18.5" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
-        <path d="M4.75 17h18.5" stroke="currentColor" stroke-width="1.6"/>
-        <path d="M4.75 17h18.5v.9a5.5 5.5 0 0 1-5.5 5.5h-7.5a5.5 5.5 0 0 1-5.5-5.5z" fill="currentColor"/>
-        <path d="M10.5 5.25V3.6M17.5 5.25V3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      </svg>
+      <img class="brand-logo" src="assets/logo.svg" alt="" width="46" height="46">
       <span class="brand-name">Tank Track</span>
     </a>
     <nav class="nav" aria-label="Primary">
-          <a href="features.html">Features</a>
-          <a href="how-it-works.html" aria-current="page">How it works</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html" aria-current="page">How it works</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions">
-      <a class="login-link" href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a>
-      <a class="btn btn-primary btn-sm" href="contact.html">Get a demo</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">Get in touch</a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span>
       </button>
@@ -52,104 +45,137 @@
   </div>
   <div class="mobile-nav" id="mobileNav">
     <ul>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="how-it-works.html" aria-current="page">How it works</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="how-it-works.html" aria-current="page">How it works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="wrap" style="padding-bottom:20px"><a class="btn btn-primary" href="contact.html">Get a demo</a></div>
+    <div class="wrap" style="padding-bottom:20px"><a class="btn btn-primary" href="contact.html">Get in touch</a></div>
   </div>
 </header>
 <main id="main">
 <section class="page-hero">
-  <div class="wrap">
-    <div class="page-hero-grid">
-      <div class="copy">
-        <p class="label kicker">How it works</p>
-        <h1 class="display h1" style="font-size:clamp(40px,5.6vw,76px)">From your old system to a booked Tuesday.</h1>
-        <p class="lead">Most operators are running on paper, a spreadsheet and a memory. Switching takes one to two weeks, and we do the part everyone dreads: the data.</p>
-      </div>
-      <div class="side">
-        <a class="btn btn-primary" href="contact.html">Start a switch</a>
-      </div>
+  <div class="wrap page-hero-grid">
+    <div class="label"><span class="kicker">How it works</span></div>
+    <div class="page-hero-copy">
+      <h1 class="display">Embrace a new level of convenience.</h1>
+      <p class="lead">From download to your first report, Tank Track keeps the steps short. Here is the whole path.</p>
+    </div>
+    <div class="side">
+      <span class="kicker">Coming soon</span>
+      <a class="btn btn-ghost btn-sm" href="#updates">Get launch updates</a>
     </div>
   </div>
 </section>
 
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <p class="kicker label">01 / Onboarding</p>
-      <h2 class="display h2 title">Three steps, and none of them are yours to build.</h2>
-      <p class="aside">Included in the price. No setup fee, no contract.</p>
+    <div class="sec-head">
+      <div class="label"><span class="kicker">The path</span></div>
+      <div class="title"><h2 class="display h2">Three steps, then you are driving.</h2></div>
+      <div class="aside">No long setup, no training week. The app is built to be understood on the first open.</div>
     </div>
     <div class="steps">
-      <article class="step" data-reveal><div class="n">01</div><h3>Export and clean</h3><p>If your data lives in another system, we help export it. Then we clean it: duplicate properties, missing tank sizes, old balances, bad phone numbers. You review the result before it goes live.</p><div class="meta">Step one</div></article>
-      <article class="step" data-reveal><div class="n">02</div><h3>Live training</h3><p>One to four sessions with the office and the drivers. We configure your services, service cycles, invoice layout and reminders together, using your real jobs, not a demo file.</p><div class="meta">Step two</div></article>
-      <article class="step" data-reveal><div class="n">03</div><h3>Launch</h3><p>You start booking in Tank Track. The old system stays readable while the team gets comfortable. When you are ready, we help you turn it off.</p><div class="meta">Step three</div></article>
-    </div>
-  </div>
-</section>
-
-<section class="sec" style="padding-top:0">
-  <div class="wrap">
-    <div class="split">
-      <div class="col-4" data-reveal>
-        <p class="kicker">02 / What moves over</p>
-        <h2 class="display h3" style="margin-top:16px">The history you already earned.</h2>
-        <p class="small" style="margin-top:14px;max-width:30ch">If it is in your current system, ask us to bring it. Most of it can come across.</p>
+      <div class="step">
+        <div class="n">Step 01</div>
+        <h3 class="display h3">Download the app</h3>
+        <p>Tank Track is coming soon to the App Store and Google Play. Install it on the phone you already carry, with no extra hardware.</p>
       </div>
-      <div class="col-7" data-reveal>
-        <ul class="fact-list">
-          <li><span>Customers and contacts</span><span>Names, phones, emails, billing</span></li>
-          <li><span>Properties and sites</span><span>Addresses, access notes, gate codes</span></li>
-          <li><span>Tanks and equipment</span><span>Size, material, riser, last service</span></li>
-          <li><span>Service history</span><span>Dates, gallons, work performed</span></li>
-          <li><span>Open balances</span><span>Invoices and credits</span></li>
-          <li><span>Service cycles</span><span>Who is due, and when</span></li>
-        </ul>
-        <p class="small" style="margin-top:18px">We do not charge for the import, the cleanup or the training sessions.</p>
+      <div class="step">
+        <div class="n">Step 02</div>
+        <h3 class="display h3">Sign up for your account</h3>
+        <p>Add your name, email and vehicle or fleet details. Your account is ready in a few minutes, and your data stays tied to it.</p>
+      </div>
+      <div class="step">
+        <div class="n">Step 03</div>
+        <h3 class="display h3">Enjoy using Tank Track</h3>
+        <p>Log fuel, track trips, review efficiency and manage your subscription from one place. The monthly report builds itself.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <p class="kicker label">03 / A day on the board</p>
-      <h2 class="display h2 title">Tuesday, from the first stop to the last receipt.</h2>
+<section class="band sec" id="updates">
+  <div class="wrap cta-grid">
+    <div class="cta-copy">
+      <span class="kicker" style="color:var(--light);display:block;margin-bottom:14px">Coming soon on</span>
+      <h2 class="display h2">Be there on launch day.</h2>
+      <p>Tank Track is coming to the App Store and Google Play. Leave your email and we will send one note when it is ready.</p>
+      <div class="store-row">
+        <span class="store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.7 12.6c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.6 0-1.6-.8-2.7-.8-1.4 0-2.7.8-3.4 2.1-1.5 2.6-.4 6.4 1 8.5.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-3.7zM14.6 6.4c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.6.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span><small>Download on the</small><b>App Store</b></span></span>
+        <span class="store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.6v16.8L19.4 12 5 3.6z"/></svg><span><small>Get it on</small><b>Google Play</b></span></span>
+      </div>
     </div>
-    <div class="timeline">
-      <div class="tl-item" data-reveal><div class="time">06:40</div><div class="what">Office opens the board</div><div class="note">Two jobs came in overnight from service reminders. Both are already on Thursday with the tank details attached.</div><div class="sys">Reminders</div></div>
-      <div class="tl-item" data-reveal><div class="time">07:15</div><div class="what">Truck 1 leaves</div><div class="note">Four stops, each with the property history, the access note and the last pump date. No printed route sheet.</div><div class="sys">Dispatch</div></div>
-      <div class="tl-item" data-reveal><div class="time">09:24</div><div class="what">Driver records the job</div><div class="note">1,000 gallons logged, lid photographed, a replacement quote started from the driveway before the hose is rolled up.</div><div class="sys">Field</div></div>
-      <div class="tl-item" data-reveal><div class="time">11:05</div><div class="what">Grease interceptor cleaned</div><div class="note">The manifest builds itself and a copy goes to the restaurant, ready for their inspector.</div><div class="sys">Compliance</div></div>
-      <div class="tl-item" data-reveal><div class="time">14:32</div><div class="what">Payment taken on site</div><div class="note">Card processed in the driveway. The receipt is sent, the balance clears and the invoice closes.</div><div class="sys">Billing</div></div>
-      <div class="tl-item" data-reveal><div class="time">16:50</div><div class="what">Office clears the open items</div><div class="note">Two quotes are open and one customer asked for a different day. Both handled without a single phone call to the field.</div><div class="sys">Follow-ups</div></div>
+    <div class="cta-actions">
+      <form class="newsletter" data-preview-form>
+        <label class="sr-only" for="howEmail">Email address</label>
+        <input id="howEmail" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+        <button class="btn btn-light btn-sm" type="submit">Notify me</button>
+      </form>
+      <p class="form-note" data-form-note role="status"></p>
     </div>
   </div>
 </section>
 
 <section class="sec">
   <div class="wrap">
-    <div class="split">
-      <div class="col-4" data-reveal>
-        <p class="kicker">04 / Questions</p>
-        <h2 class="display h3" style="margin-top:16px">The things operators ask first.</h2>
-        <p class="small" style="margin-top:14px;max-width:28ch">Still stuck on something? Call (833) 826-5875 and a person will answer.</p>
+    <div class="sec-head">
+      <div class="label"><span class="kicker">While you wait</span></div>
+      <div class="title"><h2 class="display h2">Connecting you: we're here for you every step of the way.</h2></div>
+      <div class="aside">Support, tutorials and the features that open up with a subscription.</div>
+    </div>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="n">01</div>
+        <h3>Connecting you</h3>
+        <p>We are here for you every step of the way. Send a support ticket or an in-app message and keep the conversation with the account it belongs to.</p>
+        <div class="tags"><span>Tickets</span><span>Messages</span><span>Email</span></div>
       </div>
-      <div class="col-7">
-        <div class="faq">
-          <details data-reveal><summary>Do we have to enter every customer ourselves?<span class="plus" aria-hidden="true"></span></summary><div class="a">No. We export and clean your existing data and import it for you. You review it before anything goes live.</div></details>
-          <details data-reveal><summary>How long does setup take?<span class="plus" aria-hidden="true"></span></summary><div class="a">Onboarding runs through one to four live sessions. How long it takes depends on how clean your current data is, not on how many trucks you run.</div></details>
-          <details data-reveal><summary>Do drivers need special equipment?<span class="plus" aria-hidden="true"></span></summary><div class="a">Work orders, customer details and signatures live on the phone or tablet, so drivers are not carrying paper into the yard.</div></details>
-          <details data-reveal><summary>Do you charge per user?<span class="plus" aria-hidden="true"></span></summary><div class="a">No. Pricing is per truck. Add the whole office, every driver and every seasonal hire at no extra cost.</div></details>
-          <details data-reveal><summary>Is there a free trial?<span class="plus" aria-hidden="true"></span></summary><div class="a">Tank Track does not offer a free trial. We do a live walkthrough with your own jobs instead, so you can judge it on your routes rather than a demo file.</div></details>
-          <details data-reveal><summary>What happens if we want to leave?<span class="plus" aria-hidden="true"></span></summary><div class="a">There is no contract. Cancel and we will export your data for you. We would rather earn the renewal than trap you in one.</div></details>
+      <div class="feat">
+        <div class="n">02</div>
+        <h3>Get access to unique features</h3>
+        <p>Unlock the full potential of Tank Track. A subscription opens the analytics, reports and content tools, and you can manage the plan inside the app.</p>
+        <div class="tags"><span>Analytics</span><span>Reports</span><span>Content</span></div>
+      </div>
+      <div class="feat">
+        <div class="n">03</div>
+        <h3>Watch a quick tutorial</h3>
+        <p>Learn the ropes in no time. Short tutorials walk through fuel entries, trips, reports and payments, and the help center keeps them together.</p>
+        <div class="tags"><span>Guides</span><span>Walkthroughs</span><span>Help center</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--paper-2);border-block:1px solid var(--line)">
+  <div class="wrap split">
+    <div class="split-copy">
+      <span class="kicker">From day one</span>
+      <h2 class="display h2">What you can do from the first open.</h2>
+      <p>The first screen is useful before you have entered much at all. The rest fills in as you drive.</p>
+      <ul class="point-list">
+        <li><span class="i">1</span><span><span class="t">See your tank level and range</span><span class="d">A clear starting point for the day.</span></span></li>
+        <li><span class="i">2</span><span><span class="t">Find nearby fuel</span><span class="d">Stations, distance and price in one list.</span></span></li>
+        <li><span class="i">3</span><span><span class="t">Log a fill-up</span><span class="d">Gallons, price and station, recorded in seconds.</span></span></li>
+        <li><span class="i">4</span><span><span class="t">Track a trip</span><span class="d">Distance and efficiency add up on their own.</span></span></li>
+        <li><span class="i">5</span><span><span class="t">Read your report</span><span class="d">Spend, mileage and cost per mile for the month.</span></span></li>
+        <li><span class="i">6</span><span><span class="t">Manage your plan</span><span class="d">Subscription and payment details in the account.</span></span></li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="panel">
+        <div class="panel-head"><div><span class="sub">Account</span><span class="ttl">Your first week</span></div><span class="sample">Sample data</span></div>
+        <div class="panel-body">
+          <div class="summary-top">
+            <div><span class="k">Setup progress</span><strong class="big">3 of 4</strong></div>
+            <span class="delta">75%</span>
+          </div>
+          <div class="p-meter" style="background:var(--paper-3);height:8px"><i style="width:75%;background:var(--accent)"></i></div>
+          <div class="art-row" style="margin-top:14px"><span class="art-ico"></span><div class="art-c"><strong>Profile complete</strong><small>Name, email and photo</small></div><span class="chip chip-on">Done</span></div>
+          <div class="art-row"><span class="art-ico"></span><div class="art-c"><strong>Vehicle added</strong><small>Make, model and tank size</small></div><span class="chip chip-on">Done</span></div>
+          <div class="art-row"><span class="art-ico"></span><div class="art-c"><strong>First fill-up logged</strong><small>Amoco Gas · 12.4 gal</small></div><span class="chip chip-on">Done</span></div>
+          <div class="art-row"><span class="art-ico"></span><div class="art-c"><strong>Connect a payment method</strong><small>For the subscription</small></div><span class="chip chip-warn">Next</span></div>
         </div>
       </div>
     </div>
@@ -157,17 +183,14 @@
 </section>
 
 <section class="cta">
-  <div class="wrap">
-    <div class="cta-grid">
-      <div class="cta-copy" data-reveal>
-        <p class="kicker" style="color:rgba(244,241,234,.55);margin-bottom:18px">Next step</p>
-        <h2 class="display h2">Bring the mess. We have moved it before.</h2>
-        <p>Spreadsheets, an old desktop system, a filing cabinet. Tell us what you are running on and we will tell you exactly what the switch looks like.</p>
-      </div>
-      <div class="cta-actions" data-reveal>
-        <a class="btn btn-primary" href="contact.html">Talk to us</a>
-        <a class="btn btn-ghost" href="tel:+18338265875">Call (833) 826-5875</a>
-      </div>
+  <div class="wrap cta-grid">
+    <div class="cta-copy">
+      <h2 class="display h2">Questions before launch?</h2>
+      <p>Ask about the app, a subscription or a payment. We will get back to you.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-light" href="contact.html">Get in touch</a>
+      <a class="btn btn-on-dark" href="features.html">See the features</a>
     </div>
   </div>
 </section>
@@ -176,20 +199,15 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="Tank Track home">
-          <svg class="brand-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <rect x="4.75" y="5.25" width="18.5" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M4.75 17h18.5" stroke="currentColor" stroke-width="1.6"/>
-            <path d="M4.75 17h18.5v.9a5.5 5.5 0 0 1-5.5 5.5h-7.5a5.5 5.5 0 0 1-5.5-5.5z" fill="currentColor"/>
-            <path d="M10.5 5.25V3.6M17.5 5.25V3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
+        <a class="brand brand-footer" href="index.html" aria-label="Tank Track home">
+          <span class="footer-logo"><img src="assets/logo.svg" alt="" width="44" height="44"></span>
           <span class="brand-name">Tank Track</span>
         </a>
-        <p>Software for septic, grease trap and portable restroom operators. Built in Concord, New Hampshire.</p>
+        <p>Fuel management, subscriptions, payments and reports in one simple, beautiful app.</p>
         <div class="contact">
-          <span>20 Foundry St, Concord, NH 03301</span>
-          <a href="tel:+18338265875">(833) 826-5875</a>
-          <a href="mailto:support@tanktrack.com">support@tanktrack.com</a>
+          <span>Washington, DC</span>
+          <a href="mailto:info@tanktrack.app">info@tanktrack.app</a>
+          <a href="mailto:support@tanktrack.app">support@tanktrack.app</a>
         </div>
       </div>
       <div class="footer-col">
@@ -197,45 +215,44 @@
         <ul>
           <li><a href="features.html">Features</a></li>
           <li><a href="how-it-works.html">How it works</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="https://app.tanktrack.com" target="_blank" rel="noopener">Log in</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Request a quote</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://tank-track.com/blog/" target="_blank" rel="noopener">Blog</a></li>
-          <li><a href="https://status.tanktrack.com/" target="_blank" rel="noopener">Service status</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="https://tanktrack.app" target="_blank" rel="noopener">Current site</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="https://tank-track.com/tank-track-faqs/" target="_blank" rel="noopener">FAQs</a></li>
-          <li><a href="https://tank-track.com/tank-track-vs-other-software-comparison-guide/" target="_blank" rel="noopener">Comparison guide</a></li>
-          <li><a href="https://tank-track.com/septic-regulations-by-state/" target="_blank" rel="noopener">State septic rules</a></li>
-          <li><a href="https://tank-track.com/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></li>
-          <li><a href="https://tank-track.com/tank-track-terms/" target="_blank" rel="noopener">Terms of use</a></li>
-        </ul>
+      <div class="footer-col footer-news">
+        <h4>Subscribe to our newsletter</h4>
+        <p class="footer-note">One email when Tank Track lands in the stores.</p>
+        <form class="newsletter" data-preview-form>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <button class="btn btn-light btn-sm" type="submit">Subscribe</button>
+        </form>
+        <p class="form-note" data-form-note role="status"></p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Tank Track, LLC. All rights reserved.</span>
+      <span>&copy; 2026 Tank Track. All rights reserved.</span>
       <span class="legal">
-        <a href="https://tank-track.com/privacy-policy/" target="_blank" rel="noopener">Privacy</a>
-        <a href="https://tank-track.com/tank-track-terms/" target="_blank" rel="noopener">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <span>Concept redesign, not an official site</span>
       </span>
     </div>
   </div>
 </footer>
 <div class="mobile-cta">
-  <a class="btn btn-primary" href="contact.html">Get a demo</a>
-  <a class="btn btn-ghost call" href="tel:+18338265875" aria-label="Call Tank Track">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  <a class="btn btn-primary" href="contact.html">Get in touch</a>
+  <a class="btn btn-ghost mail" href="mailto:info@tanktrack.app" aria-label="Email Tank Track">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
   </a>
 </div>
 <script src="assets/app.js" defer></script>
