@@ -59,7 +59,8 @@
         });
         tab.setAttribute("aria-selected", "true");
         tab.setAttribute("tabindex", "0");
-        group.querySelectorAll("[data-panel]").forEach(function (panel) {
+        var scope = group.closest(".product") || document;
+        scope.querySelectorAll("[data-panel]").forEach(function (panel) {
           panel.hidden = panel.getAttribute("data-panel") !== tab.getAttribute("data-tab");
         });
       });
