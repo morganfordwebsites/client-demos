@@ -427,7 +427,7 @@ ul,ol{padding:0;list-style:none}
 .page-hero .lead{margin-top:24px;max-width:52ch}
 .page-hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.4vw,32px);align-items:end}
 .page-hero-grid .copy{grid-column:1/8}
-.page-hero-grid .side{grid-column:9/13;justify-self:end;text-align:right}
+.page-hero-grid .side{grid-column:9/13;justify-self:end;text-align:right;border-top:1px solid var(--line);padding-top:14px;min-width:220px}
 
 /* ---------- capability index ---------- */
 .cap-index{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(32px,5vw,72px);border-top:1px solid var(--line)}
