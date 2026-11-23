@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G&amp;S Enterprises — Certified Home Inspections · Fort Smith, Arkansas</title>
+<meta name="description" content="Gordon St Onge, InterNACHI Certified Professional Inspector. Residential and commercial home inspections in Fort Smith and the Arkansas River Valley. Radon, mold, septic, well, sewer scope, thermal imaging. Call (505) 514-2593.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2324333a'/%3E%3Ctext x='32' y='41' font-family='Arial Narrow,Arial' font-weight='700' font-size='24' fill='%23f4f1e9' text-anchor='middle'%3EG%26S%3C/text%3E%3Crect x='14' y='48' width='36' height='3' fill='%23c14a1d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14191a;
+  --iron:#24333a;
+  --iron-2:#1b262b;
+  --paper:#f4f1e9;
+  --paper-2:#ebe6da;
+  --line:#d9d2c2;
+  --rust:#c14a1d;
+  --sage:#78836f;
+  --muted:#5b635f;
+  --r:2px;
+  --max:1140px;
+  --pad:clamp(20px,4.6vw,44px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Barlow',system-ui,-apple-system,sans-serif;
+  background:var(--paper);color:var(--ink);
+  font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.display{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;line-height:1.02;letter-spacing:-.012em}
+.eyebrow{
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);
+  display:flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--rust);flex:none}
+.mono{
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum";
+  letter-spacing:.06em;
+}
+
+/* ---------- preview banner ---------- */
+.preview{
+  background:var(--ink);color:#cfc9ba;
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  text-align:center;padding:9px 14px;font-weight:600;
+}
+.preview b{color:#f4f1e9}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:80;background:rgba(244,241,233,.94);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.top .in{display:flex;align-items:center;gap:24px;max-width:var(--max);margin:0 auto;padding:12px var(--pad)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.seal{
+  width:40px;height:40px;flex:none;background:var(--iron);color:var(--paper);
+  display:grid;place-items:center;border-radius:var(--r);
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:19px;letter-spacing:.02em;
+  position:relative;overflow:hidden;
+}
+.seal::after{content:"";position:absolute;left:7px;right:7px;bottom:6px;height:2px;background:var(--rust)}
+.brand-txt{display:flex;flex-direction:column;line-height:1.12}
+.brand-name{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:21px;letter-spacing:.01em}
+.brand-sub{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:1px}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{
+  font-size:14px;font-weight:500;text-decoration:none;color:var(--ink);
+  padding:5px 0;border-bottom:2px solid transparent;transition:border-color .16s,color .16s;
+}
+.nav a:hover{border-color:var(--rust);color:var(--rust)}
+.tel-btn{
+  flex:none;display:inline-flex;align-items:center;gap:9px;
+  background:var(--rust);color:#fff;text-decoration:none;
+  font-weight:600;font-size:14.5px;padding:11px 18px;border-radius:var(--r);
+  transition:background .16s,transform .16s;
+}
+.tel-btn:hover{background:#a63c14;transform:translateY(-1px)}
+.tel-btn svg{width:14px;height:14px;fill:#fff;flex:none}
+.tel-btn:focus-visible,.btn:focus-visible,.nav a:focus-visible,.brand:focus-visible,
+.slot:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{
+  outline:3px solid var(--rust);outline-offset:3px;
+}
+@media(max-width:900px){.nav{display:none}.top .in{gap:14px}.tel-btn{margin-left:auto;padding:10px 14px;font-size:13.5px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--iron);color:var(--paper);overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(720px 420px at 82% 8%,rgba(193,74,29,.20),transparent 70%),
+    linear-gradient(168deg,#1b262b 0%,#24333a 58%,#2b3c43 100%);
+}
+.hero .grid-lines{
+  position:absolute;inset:0;opacity:.16;pointer-events:none;
+  background-image:linear-gradient(to right,rgba(244,241,233,.5) 1px,transparent 1px),
+                   linear-gradient(to bottom,rgba(244,241,233,.5) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(circle at 30% 30%,#000 0%,transparent 78%);
+  -webkit-mask-image:radial-gradient(circle at 30% 30%,#000 0%,transparent 78%);
+}
+.hero .mark{
+  position:absolute;right:-3%;bottom:-14%;
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;
+  font-size:clamp(200px,40vw,520px);line-height:.8;letter-spacing:-.02em;
+  color:rgba(244,241,233,.045);user-select:none;pointer-events:none;white-space:nowrap;
+}
+.hero .in{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);
+  gap:clamp(32px,5vw,72px);align-items:end;
+  padding:clamp(56px,8vw,96px) var(--pad) clamp(56px,7vw,84px);
+  max-width:var(--max);margin:0 auto;
+}
+.hero .eyebrow{color:#e9a184}
+.hero .eyebrow::before{background:#e9a184}
+.hero h1{
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;
+  font-size:clamp(46px,7.6vw,92px);line-height:.96;letter-spacing:-.018em;
+  margin:20px 0 0;max-width:15ch;
+}
+.hero h1 em{
+  font-style:normal;display:block;
+  color:#e9a184;
+}
+.hero h1 em::after{content:"";display:block;width:72px;height:3px;background:var(--rust);margin-top:16px}
+.hero .lede{
+  margin:22px 0 0;font-size:clamp(16px,1.7vw,18.5px);line-height:1.66;
+  color:rgba(244,241,233,.78);max-width:52ch;
+}
+.hero .lede strong{color:var(--paper);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:var(--r);
+  transition:background .18s ease,transform .18s ease,border-color .18s ease;
+}
+.btn-primary{background:var(--rust);color:#fff}
+.btn-primary:hover{background:#a63c14;transform:translateY(-2px)}
+.btn-outline{border:1.5px solid rgba(244,241,233,.42);color:var(--paper)}
+.btn-outline:hover{border-color:var(--paper);background:rgba(244,241,233,.08);transform:translateY(-2px)}
+.btn svg{width:15px;height:15px;fill:currentColor;flex:none}
+
+/* hero card */
+.hcard{
+  background:var(--paper);color:var(--ink);border-radius:var(--r);
+  padding:26px 26px 22px;position:relative;
+  box-shadow:0 26px 60px -22px rgba(0,0,0,.55);
+  border-top:4px solid var(--rust);
+}
+.hcard-top{display:flex;align-items:center;gap:13px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.hcard .seal{width:46px;height:46px;font-size:22px}
+.hcard-biz{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:24px;line-height:1.05}
+.hcard-tag{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:3px}
+.hcard-label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:18px 0 2px}
+.hcard-tel{
+  display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;
+  font-size:clamp(28px,3.4vw,36px);line-height:1.1;letter-spacing:.005em;
+  text-decoration:none;color:var(--iron);transition:color .16s;
+}
+.hcard-tel:hover{color:var(--rust)}
+.hcard-rows{margin-top:16px;border-top:1px solid var(--line)}
+.hcard-row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.hcard-row dt{color:var(--muted);font-weight:500}
+.hcard-row dd{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:880px){
+  .hero .in{grid-template-columns:1fr;align-items:start}
+  .hero h1{max-width:100%}
+  .hero .mark{font-size:clamp(180px,52vw,320px);bottom:-8%}
+}
+
+/* ---------- credential strip ---------- */
+.strip{background:var(--ink);color:var(--paper)}
+.strip .in{
+  max-width:var(--max);margin:0 auto;padding:0 var(--pad);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.strip .cell{
+  padding:20px 18px;border-left:1px solid rgba(244,241,233,.13);
+  display:flex;flex-direction:column;gap:2px;
+}
+.strip .cell:first-child{border-left:0;padding-left:0}
+.strip .k{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:#8d9a96;font-weight:600}
+.strip .v{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:600;font-size:19px;letter-spacing:.01em;line-height:1.15}
+.strip .v small{font-size:13px;font-weight:500;color:#b8c0bb;letter-spacing:.04em}
+@media(max-width:820px){
+  .strip .in{grid-template-columns:1fr 1fr}
+  .strip .cell{padding:16px 14px;border-top:1px solid rgba(244,241,233,.13)}
+  .strip .cell:nth-child(odd){border-left:0;padding-left:0}
+  .strip .cell:nth-child(-n+2){border-top:0}
+}
+
+/* ---------- generic section ---------- */
+section{position:relative}
+.sec{padding:clamp(56px,8vw,104px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(30px,4vw,52px)}
+.sec-head h2{
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;
+  font-size:clamp(34px,4.6vw,56px);line-height:1.02;letter-spacing:-.012em;margin-top:16px;
+}
+.sec-head p{color:var(--muted);font-size:16.5px;max-width:56ch;padding-bottom:6px}
+@media(max-width:780px){.sec-head{grid-template-columns:1fr;align-items:start;gap:16px}}
+
+/* ---------- numbered rows (what we check) ---------- */
+.checks{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rows{border-top:1px solid var(--line)}
+.row{
+  display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.5fr);
+  gap:clamp(12px,2.4vw,34px);align-items:baseline;
+  padding:22px 0;border-bottom:1px solid var(--line);
+  transition:background .18s ease;
+}
+.row:hover{background:rgba(255,255,255,.5)}
+.row .num{
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:600;font-size:15px;
+  color:var(--rust);letter-spacing:.08em;font-variant-numeric:tabular-nums;
+}
+.row h3{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:clamp(21px,2.4vw,27px);letter-spacing:.005em;line-height:1.14}
+.row p{color:var(--muted);font-size:15.5px;line-height:1.6}
+@media(max-width:720px){
+  .row{grid-template-columns:44px 1fr;gap:8px 14px;padding:18px 0}
+  .row p{grid-column:2}
+}
+
+/* ---------- specialty ---------- */
+.spec-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+}
+.spec{
+  background:var(--paper);padding:24px 22px 26px;
+  display:flex;flex-direction:column;gap:8px;
+  transition:background .18s ease;
+}
+.spec:hover{background:#fffdf7}
+.spec .sp-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.spec h3{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:22px;letter-spacing:.005em;line-height:1.12}
+.spec .badge{
+  font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;
+  color:var(--sage);border:1px solid rgba(120,131,111,.5);padding:3px 7px;border-radius:var(--r);
+  flex:none;
+}
+.spec p{font-size:14.5px;color:var(--muted);line-height:1.58}
+
+/* ---------- thermal feature ---------- */
+.thermal{background:var(--iron);color:var(--paper);overflow:hidden}
+.thermal .in{
+  max-width:var(--max);margin:0 auto;padding:clamp(56px,8vw,100px) var(--pad);
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(30px,5vw,68px);align-items:center;
+}
+.thermal h2{
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;
+  font-size:clamp(34px,4.4vw,54px);line-height:1.02;letter-spacing:-.012em;margin-top:16px;
+}
+.thermal p{color:rgba(244,241,233,.76);margin-top:18px;max-width:50ch;font-size:16.5px}
+.thermal .eyebrow{color:#e9a184}.thermal .eyebrow::before{background:#e9a184}
+.t-facts{margin-top:28px;display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(244,241,233,.18)}
+.t-fact{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(244,241,233,.18);font-size:15px;color:rgba(244,241,233,.86)}
+.t-fact b{font-family:'Barlow Condensed',Impact,sans-serif;color:#e9a184;font-size:14px;letter-spacing:.1em;flex:none;font-weight:600}
+.t-shot{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid rgba(244,241,233,.2)}
+.t-shot img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+.t-cap{
+  position:absolute;left:0;right:0;bottom:0;padding:12px 14px;
+  background:linear-gradient(to top,rgba(20,25,26,.9),transparent);
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d6dcd8;font-weight:600;
+}
+@media(max-width:840px){.thermal .in{grid-template-columns:1fr}}
+
+/* ---------- service area ---------- */
+.area-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(30px,4.6vw,60px);align-items:start}
+.area-list{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;border-top:1px solid var(--line);margin-top:8px}
+.area-list li{list-style:none;padding:11px 0;border-bottom:1px solid var(--line);font-size:15.5px;display:flex;justify-content:space-between;gap:10px}
+.area-list li span{color:var(--muted);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;flex:none;padding-top:2px}
+.area-note{margin-top:22px;font-size:14.5px;color:var(--muted);border-left:3px solid var(--rust);padding-left:14px;max-width:52ch}
+.map{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--paper-2)}
+.map iframe{width:100%;height:330px;border:0;display:block;filter:grayscale(.34) contrast(1.03)}
+.map-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 14px;background:var(--iron);color:var(--paper);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.map-bar span:last-child{color:#9faba7;letter-spacing:.06em}
+@media(max-width:840px){.area-grid{grid-template-columns:1fr}}
+
+/* ---------- booking picker ---------- */
+.book{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.picker{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);
+}
+.picker-main{padding:clamp(22px,3vw,34px)}
+.picker-side{border-left:1px solid var(--line);background:#fffdf7;padding:clamp(22px,3vw,34px);display:flex;flex-direction:column}
+.pick-step + .pick-step{margin-top:26px}
+.pick-label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;
+  background:transparent;border:1px solid var(--line);color:var(--ink);
+  padding:9px 14px;border-radius:var(--r);cursor:pointer;
+  transition:border-color .15s,background .15s,color .15s;
+}
+.chip:hover{border-color:var(--sage)}
+.chip[aria-pressed="true"]{background:var(--iron);border-color:var(--iron);color:var(--paper);font-weight:600}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(72px,1fr));gap:8px}
+.slot{
+  background:transparent;border:1px solid var(--line);border-radius:var(--r);
+  padding:10px 6px;cursor:pointer;text-align:center;transition:border-color .15s,background .15s,color .15s;
+  font-family:'Barlow',sans-serif;
+}
+.slot:hover{border-color:var(--sage)}
+.slot .d{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.slot .n{display:block;font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:24px;line-height:1.1;margin-top:2px}
+.slot[aria-pressed="true"]{background:var(--rust);border-color:var(--rust);color:#fff}
+.slot[aria-pressed="true"] .d{color:rgba(255,255,255,.82)}
+.sum-title{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.sum-biz{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:26px;line-height:1.1;margin-top:8px}
+.sum-line{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:9px}
+.sum-item{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.sum-item dt{color:var(--muted);font-weight:500}
+.sum-item dd{font-weight:600;text-align:right}
+.sum-empty{color:var(--muted);font-size:14px;margin-top:14px;line-height:1.55}
+.sum-go{
+  margin-top:auto;padding-top:22px;
+}
+.sum-go .btn{width:100%;justify-content:center}
+.sum-honest{margin-top:12px;font-size:11.5px;color:var(--muted);line-height:1.5}
+@media(max-width:820px){.picker{grid-template-columns:1fr}.picker-side{border-left:0;border-top:1px solid var(--line)}}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,64px);align-items:start}
+.about h2{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,54px);line-height:1.02;letter-spacing:-.012em;margin-top:16px}
+.about p{color:var(--muted);font-size:16.5px;margin-top:16px}
+.about p strong{color:var(--ink);font-weight:600}
+.pull{
+  border-left:3px solid var(--rust);padding:4px 0 4px 18px;margin-top:26px;
+  font-family:'Barlow Condensed',Impact,sans-serif;font-weight:600;font-size:22px;line-height:1.32;color:var(--iron);
+}
+.spec-table{border-top:1px solid var(--line);margin-top:6px}
+.spec-table div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.spec-table dt{color:var(--muted)}
+.spec-table dd{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:840px){.about-grid{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--iron);color:var(--paper)}
+.contact .in{
+  max-width:var(--max);margin:0 auto;padding:clamp(56px,8vw,100px) var(--pad);
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,68px);align-items:start;
+}
+.contact h2{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;font-size:clamp(34px,4.6vw,56px);line-height:1.02;letter-spacing:-.012em;margin-top:16px}
+.contact .eyebrow{color:#e9a184}.contact .eyebrow::before{background:#e9a184}
+.contact p{color:rgba(244,241,233,.76);margin-top:16px;max-width:46ch}
+.c-tel{
+  display:inline-block;font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;
+  font-size:clamp(34px,4.6vw,52px);line-height:1.06;color:var(--paper);text-decoration:none;
+  margin-top:26px;border-bottom:3px solid var(--rust);padding-bottom:4px;transition:color .16s;
+}
+.c-tel:hover{color:#e9a184}
+.c-meta{margin-top:26px;border-top:1px solid rgba(244,241,233,.18);max-width:400px}
+.c-meta div{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid rgba(244,241,233,.18);font-size:14px}
+.c-meta dt{color:#9faba7}
+.c-meta dd{font-weight:600;text-align:right}
+form{background:var(--paper);color:var(--ink);border-radius:var(--r);padding:clamp(22px,3vw,32px);border-top:4px solid var(--rust)}
+.field + .field{margin-top:16px}
+label{display:block;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
+input,textarea,select{
+  width:100%;font-family:'Barlow',sans-serif;font-size:15.5px;color:var(--ink);
+  background:#fffdf7;border:1px solid var(--line);border-radius:var(--r);
+  padding:12px 13px;transition:border-color .15s,box-shadow .15s;
+}
+input:focus,textarea:focus{border-color:var(--rust);box-shadow:0 0 0 3px rgba(193,74,29,.13);outline:none}
+textarea{resize:vertical;min-height:104px;line-height:1.55}
+form .btn{margin-top:18px;width:100%;justify-content:center;border:0;cursor:pointer;font-family:'Barlow',sans-serif}
+.form-note{font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:12px}
+.form-ok{
+  margin-top:14px;font-size:13.5px;color:var(--iron);background:#e8edE4;
+  border-left:3px solid var(--sage);padding:10px 12px;display:none;
+}
+.form-ok.on{display:block}
+@media(max-width:840px){.contact .in{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#a8b1ad;font-size:14px}
+.f-in{
+  max-width:var(--max);margin:0 auto;padding:clamp(40px,5vw,60px) var(--pad) 28px;
+  display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(24px,4vw,48px);
+}
+.f-brand .brand-name{color:var(--paper);font-size:23px}
+.f-brand .brand-sub{color:#7d8783}
+.f-brand p{margin-top:14px;max-width:34ch;line-height:1.6;color:#8d9793;font-size:13.5px}
+.f-h{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#7d8783;font-weight:700;margin-bottom:12px}
+.f-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+.f-list a{text-decoration:none;color:#a8b1ad;transition:color .15s}
+.f-list a:hover{color:var(--paper)}
+.f-bottom{
+  max-width:var(--max);margin:0 auto;padding:16px var(--pad) 34px;
+  border-top:1px solid rgba(244,241,233,.13);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
+  font-size:12px;color:#78827e;letter-spacing:.02em;
+}
+@media(max-width:780px){.f-in{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
+
+/* ---------- mobile sticky call ---------- */
+.mcall{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:90;
+  background:var(--rust);color:#fff;text-decoration:none;
+  padding:14px 18px;align-items:center;justify-content:center;gap:10px;
+  font-weight:600;font-size:15.5px;box-shadow:0 -6px 22px rgba(0,0,0,.18);
+}
+.mcall svg{width:16px;height:16px;fill:#fff}
+@media(max-width:720px){
+  .mcall{display:flex}
+  body{padding-bottom:56px}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease-out,transform .5s ease-out}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="preview">Website concept preview · <b>G&amp;S Enterprises</b> · Fort Smith, Arkansas</div>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#top">
+      <span class="seal">G&amp;S</span>
+      <span class="brand-txt">
+        <span class="brand-name">G&amp;S Enterprises</span>
+        <span class="brand-sub">Certified Home Inspections</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#checks">What we check</a>
+      <a href="#specialty">Specialty</a>
+      <a href="#area">Service area</a>
+      <a href="#about">About Gordon</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tel-btn" href="tel:+15055142593">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.5 20 4 13.5 4 5.4c0-.6.4-1 1-1h3.1c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-1.9 1.9z"/></svg>
+      (505) 514-2593
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="mark" aria-hidden="true">G&amp;S</div>
+    <div class="in">
+      <div>
+        <div class="eyebrow">InterNACHI® Certified Professional Inspector</div>
+        <h1>Every system checked.<em>Every finding written down.</em></h1>
+        <p class="lede">Gordon St Onge inspects homes across <strong>Fort Smith and the Arkansas River Valley</strong> — roof to foundation, with photos, thermal imaging and a written report you can take straight to the negotiating table.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+15055142593">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.5 20 4 13.5 4 5.4c0-.6.4-1 1-1h3.1c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-1.9 1.9z"/></svg>
+            Call or text Gordon
+          </a>
+          <a class="btn btn-outline" href="#checks">See what we check</a>
+        </div>
+      </div>
+
+      <aside class="hcard">
+        <div class="hcard-top">
+          <span class="seal">G&amp;S</span>
+          <div>
+            <div class="hcard-biz">G&amp;S Enterprises</div>
+            <div class="hcard-tag">Fort Smith, Arkansas</div>
+          </div>
+        </div>
+        <div class="hcard-label">Call or text</div>
+        <a class="hcard-tel mono" href="tel:+15055142593">(505) 514-2593</a>
+        <dl class="hcard-rows">
+          <div class="hcard-row"><dt>Inspector</dt><dd>Gordon St Onge</dd></div>
+          <div class="hcard-row"><dt>Certification</dt><dd>InterNACHI® CPI</dd></div>
+          <div class="hcard-row"><dt>InterNACHI ID</dt><dd class="mono">NACHI26080408</dd></div>
+          <div class="hcard-row"><dt>Scheduling</dt><dd>Inspections by appointment</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CREDENTIAL STRIP -->
+  <section class="strip" aria-label="Credentials">
+    <div class="in">
+      <div class="cell"><span class="k">Certified by</span><span class="v">InterNACHI® <small>CPI</small></span></div>
+      <div class="cell"><span class="k">Honor guarantee</span><span class="v">$25,000 <small>backed</small></span></div>
+      <div class="cell"><span class="k">Based in</span><span class="v">Fort Smith <small>AR</small></span></div>
+      <div class="cell"><span class="k">Specialty services</span><span class="v">13 <small>beyond general</small></span></div>
+    </div>
+  </section>
+
+  <!-- WHAT WE CHECK -->
+  <section class="checks sec" id="checks">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow">The general inspection</div>
+          <h2>Eight systems.<br>One written record.</h2>
+        </div>
+        <p>A standard inspection walks the whole house in a fixed order, so nothing gets skipped and nothing gets guessed at. Each finding below goes into the report with a photo and a note on why it matters.</p>
+      </div>
+
+      <div class="rows">
+        <article class="row rv">
+          <div class="num">01</div>
+          <h3>Roof &amp; attic</h3>
+          <p>Shingle condition, flashing, valleys, decking, attic ventilation and insulation depth — the places a leak starts long before it shows up on a ceiling.</p>
+        </article>
+        <article class="row rv">
+          <div class="num">02</div>
+          <h3>Structure &amp; foundation</h3>
+          <p>Slab and footings, framing, piers, crawlspace, and the grading and drainage that decide whether water stays outside the house.</p>
+        </article>
+        <article class="row rv">
+          <div class="num">03</div>
+          <h3>Electrical</h3>
+          <p>Service drop and meter, panel and breakers, wiring methods, grounding, and GFCI/AFCI protection where the code expects it.</p>
+        </article>
+        <article class="row rv">
+          <div class="num">04</div>
+          <h3>Plumbing</h3>
+          <p>Supply lines, drains and vents, water heater and its relief valve, fixtures, and the shutoffs you'll want to know about on move-in day.</p>
+        </article>
+        <article class="row rv">
+          <div class="num">05</div>
+          <h3>Heating &amp; cooling</h3>
+          <p>Furnace or air handler, condenser, ductwork, flue, condensate handling, and the age and service history of the equipment.</p>
+        </article>
+        <article class="row rv">
+          <div class="num">06</div>
+          <h3>Exterior</h3>
+          <p>Siding, trim, windows and doors, decks and railings, driveways, walkways, and the drainage that ties them together.</p>
+        </article>
+        <article class="row rv">
+          <div class="num">07</div>
+          <h3>Interior</h3>
+          <p>Walls, ceilings, floors, stairs and handrails, interior doors, and any evidence of past moisture or movement.</p>
+        </article>
+        <article class="row rv">
+          <div class="num">08</div>
+          <h3>Site &amp; grounds</h3>
+          <p>Grading against the foundation, downspout discharge, retaining walls, fences, and outbuildings on the property.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALTY -->
+  <section class="sec" id="specialty">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow">Beyond the general report</div>
+          <h2>Thirteen specialty<br>inspections.</h2>
+        </div>
+        <p>Some problems don't show up in a visual walkthrough. G&amp;S Enterprises offers the add-on services that test for them directly, so a question about radon or a septic field gets answered before closing rather than after.</p>
+      </div>
+
+      <div class="spec-grid rv">
+        <div class="spec"><div class="sp-top"><h3>Radon testing</h3><span class="badge">Test</span></div><p>Short-term measurement of radon gas, the leading cause of lung cancer among non-smokers and invisible without a test.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Mold inspection</h3><span class="badge">Test</span></div><p>Moisture mapping and sampling to separate a surface stain from a growth problem worth pricing into the deal.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Septic system</h3><span class="badge">Test</span></div><p>Tank, baffles and drain field reviewed on rural properties outside city sewer.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Sewer line scope</h3><span class="badge">Camera</span></div><p>Camera run through the lateral to find root intrusion, bellies, offsets and cracked pipe underground.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Well inspection</h3><span class="badge">Test</span></div><p>Pressure, equipment and water quality for homes on a private well.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Thermal imaging</h3><span class="badge">Infrared</span></div><p>Infrared camera work that reads temperature differences: moisture intrusion, missing insulation, overheating components.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Chimney inspection</h3><span class="badge">Visual</span></div><p>Firebox, damper, flue and cap, with creosote and clearance concerns called out.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Pools &amp; spas</h3><span class="badge">Visual</span></div><p>Shell, pumps, filters, heaters, bonding and the safety features around the water.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Lead testing</h3><span class="badge">Test</span></div><p>Paint and surface testing for older housing stock, where lead risk is highest.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Meth testing</h3><span class="badge">Test</span></div><p>Residue screening for a property with a rental or manufacturing history.</p></div>
+        <div class="spec"><div class="sp-top"><h3>New construction</h3><span class="badge">Phased</span></div><p>Pre-drywall and final walkthroughs on a build, while corrections are still the builder's cost.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Commercial</h3><span class="badge">Property</span></div><p>Light commercial buildings inspected on the same documented basis as a house.</p></div>
+        <div class="spec"><div class="sp-top"><h3>Annual inspections</h3><span class="badge">Ongoing</span></div><p>A yearly walkthrough for owners who'd rather catch a small failure before it becomes a claim.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THERMAL FEATURE -->
+  <section class="thermal">
+    <div class="in">
+      <div class="rv">
+        <div class="eyebrow">Thermal imaging</div>
+        <h2>The wall tells you<br>what the eye can't.</h2>
+        <p>An infrared camera doesn't see through drywall — it reads surface temperature. A wet patch, a missing batt of insulation or a hot breaker reads several degrees off from everything around it, and that difference shows up as a shape on screen.</p>
+        <div class="t-facts">
+          <div class="t-fact"><b>01</b><span>Moisture intrusion behind ceilings, around windows and at roof penetrations</span></div>
+          <div class="t-fact"><b>02</b><span>Gaps in insulation and the air leaks that drive a winter power bill</span></div>
+          <div class="t-fact"><b>03</b><span>Overheating breakers, connections and equipment before they fail</span></div>
+        </div>
+      </div>
+      <figure class="t-shot rv">
+        <img src="img/thermal.jpg" width="1024" height="1024" alt="Infrared image of a two-storey house exterior showing heat loss around windows and roof edges" loading="lazy" decoding="async">
+        <figcaption class="t-cap">Infrared read · heat loss at window and roof edges</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="sec" id="area">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow">Service area</div>
+          <h2>The River Valley<br>and across the line.</h2>
+        </div>
+        <p>G&amp;S Enterprises is based in Fort Smith. Most inspections are within a half hour of town, and the eastern Oklahoma towns along the border are a normal week, not a special trip.</p>
+      </div>
+
+      <div class="area-grid">
+        <div class="rv">
+          <ul class="area-list">
+            <li>Fort Smith <span>AR</span></li>
+            <li>Van Buren <span>AR</span></li>
+            <li>Barling <span>AR</span></li>
+            <li>Alma <span>AR</span></li>
+            <li>Lavaca <span>AR</span></li>
+            <li>Greenwood <span>AR</span></li>
+            <li>Charleston <span>AR</span></li>
+            <li>Ozark <span>AR</span></li>
+            <li>Sallisaw <span>OK</span></li>
+            <li>Poteau <span>OK</span></li>
+            <li>Muldrow <span>OK</span></li>
+            <li>Roland <span>OK</span></li>
+          </ul>
+          <p class="area-note">Outside this list? Call with the address. Travel is quoted up front so there's no surprise on the invoice.</p>
+        </div>
+        <div class="map rv">
+          <div class="map-bar"><span>Fort Smith, Sebastian County</span><span>35.3859° N, 94.3985° W</span></div>
+          <iframe title="Map of Fort Smith, Arkansas" src="https://www.openstreetmap.org/export/embed.html?bbox=-94.51%2C35.31%2C-94.29%2C35.45&amp;layer=mapnik&amp;marker=35.3859%2C-94.3985" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING PICKER -->
+  <section class="book sec" id="book">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow">Pick a slot</div>
+          <h2>Tell us what<br>you're buying.</h2>
+        </div>
+        <p>Choose the inspection you need and a day that works. The summary on the right fills in as you go, then drops the details into the request form.</p>
+      </div>
+
+      <div class="picker rv">
+        <div class="picker-main">
+          <div class="pick-step">
+            <span class="pick-label">01 · Inspection type</span>
+            <div class="chips" id="chipsType" role="group" aria-label="Inspection type">
+              <button class="chip" type="button" aria-pressed="true" data-v="General home inspection">General home</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="New construction inspection">New construction</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Commercial building inspection">Commercial</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Annual maintenance inspection">Annual</button>
+            </div>
+          </div>
+
+          <div class="pick-step">
+            <span class="pick-label">02 · Add-ons</span>
+            <div class="chips" id="chipsAdd" role="group" aria-label="Add-on services">
+              <button class="chip" type="button" aria-pressed="false" data-v="Radon testing">Radon</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Mold inspection">Mold</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Sewer line scope">Sewer scope</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Well inspection">Well</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Septic system inspection">Septic</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Thermal imaging">Thermal</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Chimney inspection">Chimney</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Pool and spa inspection">Pool / spa</button>
+            </div>
+          </div>
+
+          <div class="pick-step">
+            <span class="pick-label">03 · Preferred day</span>
+            <div class="days" id="days" role="group" aria-label="Preferred day"></div>
+          </div>
+
+          <div class="pick-step">
+            <span class="pick-label">04 · Time window</span>
+            <div class="chips" id="chipsTime" role="group" aria-label="Time window">
+              <button class="chip" type="button" aria-pressed="true" data-v="Morning, 8am–11am">Morning</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Midday, 11am–2pm">Midday</button>
+              <button class="chip" type="button" aria-pressed="false" data-v="Afternoon, 2pm–5pm">Afternoon</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="picker-side">
+          <span class="sum-title">Your request</span>
+          <div class="sum-biz">G&amp;S Enterprises</div>
+          <dl class="sum-line" id="sumLine"></dl>
+          <p class="sum-empty" id="sumEmpty">Nothing selected yet — start with the inspection type.</p>
+          <div class="sum-go">
+            <a class="btn btn-primary" href="#contact" id="sumGo">Use this in the request form</a>
+            <p class="sum-honest">Pricing depends on square footage, foundation type and distance, so Gordon quotes it on the phone. This picker is part of the design preview and doesn't book anything.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="rv">
+          <div class="eyebrow">About</div>
+          <h2>Gordon St Onge</h2>
+          <p><strong>G&amp;S Enterprises</strong> is Gordon's inspection business, run out of Fort Smith. He's a Certified Professional Inspector through the International Association of Certified Home Inspectors — the credential most agents in this part of Arkansas recognise on sight.</p>
+          <p>That certification comes with a standards-of-practice manual and a code of ethics, which is the part that matters to a buyer: the inspection follows a defined scope and the report tells you what was found, not what sounds reassuring.</p>
+          <p class="pull">"An inspection is worth what it saves you at the table. That's the whole job."</p>
+        </div>
+        <div class="rv">
+          <dl class="spec-table">
+            <div><dt>Business</dt><dd>G&amp;S Enterprises</dd></div>
+            <div><dt>Inspector</dt><dd>Gordon St Onge</dd></div>
+            <div><dt>Certification</dt><dd>InterNACHI® Certified Professional Inspector</dd></div>
+            <div><dt>InterNACHI ID</dt><dd class="mono">NACHI26080408</dd></div>
+            <div><dt>Honor guarantee</dt><dd>$25,000, backed by InterNACHI®</dd></div>
+            <div><dt>Based in</dt><dd>Fort Smith, Arkansas</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+15055142593" style="text-decoration:none">(505) 514-2593</a></dd></div>
+            <div><dt>Specialty services</dt><dd>Radon · Mold · Septic · Well · Sewer · Thermal · Meth · Lead · Chimney · Pool/spa · Commercial · New construction · Annual</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="in">
+      <div class="rv">
+        <div class="eyebrow">Get on the schedule</div>
+        <h2>Call with the address.<br>We'll take it from there.</h2>
+        <p>Most inspections get booked on the first call. Have the address, the square footage and your closing date handy and it takes about five minutes.</p>
+        <a class="c-tel mono" href="tel:+15055142593">(505) 514-2593</a>
+        <dl class="c-meta">
+          <div><dt>Business</dt><dd>G&amp;S Enterprises</dd></div>
+          <div><dt>Inspector</dt><dd>Gordon St Onge</dd></div>
+          <div><dt>Location</dt><dd>Fort Smith, Arkansas</dd></div>
+          <div><dt>Scheduling</dt><dd>By appointment</dd></div>
+        </dl>
+      </div>
+
+      <form id="reqForm" novalidate class="rv">
+        <div class="field">
+          <label for="fname">Your name</label>
+          <input id="fname" name="name" type="text" autocomplete="name" placeholder="First and last">
+        </div>
+        <div class="field">
+          <label for="fphone">Phone</label>
+          <input id="fphone" name="phone" type="tel" autocomplete="tel" placeholder="(479) 000-0000">
+        </div>
+        <div class="field">
+          <label for="fmsg">Property address &amp; what you're buying</label>
+          <textarea id="fmsg" name="message" placeholder="Address, square footage, and anything you already know about the house."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send request to Gordon</button>
+        <p class="form-note">This form is part of a website concept preview. Submitting won't send anything — to reach Gordon today, call or text <a href="tel:+15055142593" style="color:#c14a1d;font-weight:600">(505) 514-2593</a>.</p>
+        <p class="form-ok" id="formOk" role="status">Looks good — in the live version this would reach Gordon directly. For now, the fastest route is the phone number above.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="f-in">
+    <div class="f-brand">
+      <a class="brand" href="#top" style="text-decoration:none">
+        <span class="seal">G&amp;S</span>
+        <span class="brand-txt">
+          <span class="brand-name">G&amp;S Enterprises</span>
+          <span class="brand-sub">Certified Home Inspections</span>
+        </span>
+      </a>
+      <p>Home and light commercial inspections in Fort Smith, the Arkansas River Valley and eastern Oklahoma. InterNACHI® Certified Professional Inspector.</p>
+    </div>
+    <div>
+      <div class="f-h">Services</div>
+      <ul class="f-list">
+        <li><a href="#checks">General home inspection</a></li>
+        <li><a href="#specialty">Radon &amp; mold testing</a></li>
+        <li><a href="#specialty">Septic, well &amp; sewer scope</a></li>
+        <li><a href="#specialty">Thermal imaging</a></li>
+        <li><a href="#specialty">New construction &amp; commercial</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-h">Contact</div>
+      <ul class="f-list">
+        <li><a href="tel:+15055142593">(505) 514-2593</a></li>
+        <li>Fort Smith, AR</li>
+        <li>InterNACHI ID NACHI26080408</li>
+        <li><a href="#book">Request a slot</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2026 G&amp;S Enterprises · Fort Smith, Arkansas</span>
+    <span>Website concept preview</span>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+15055142593">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.5 20 4 13.5 4 5.4c0-.6.4-1 1-1h3.1c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-1.9 1.9z"/></svg>
+  Call Gordon · (505) 514-2593
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- reveal ---------- */
+  var rvs = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else {
+    rvs.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- picker ---------- */
+  var state = { type:'General home inspection', addons:[], day:'', time:'Morning, 8am–11am' };
+  var daysWrap = document.getElementById('days');
+  var sumLine  = document.getElementById('sumLine');
+  var sumEmpty = document.getElementById('sumEmpty');
+  var fmsg     = document.getElementById('fmsg');
+
+  /* build next 6 weekdays */
+  var dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var monNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var built = 0, d = new Date();
+  while(built < 6){
+    d.setDate(d.getDate() + 1);
+    if(d.getDay() === 0) continue;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'slot';
+    btn.setAttribute('aria-pressed','false');
+    var iso = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    btn.dataset.v = dayNames[d.getDay()] + ', ' + monNames[d.getMonth()] + ' ' + d.getDate();
+    btn.dataset.iso = iso;
+    btn.innerHTML = '<span class="d">' + dayNames[d.getDay()] + '</span><span class="n">' + d.getDate() + '</span>';
+    btn.setAttribute('aria-label', btn.dataset.v);
+    daysWrap.appendChild(btn);
+    built++;
+  }
+
+  function press(group, btn, multi){
+    var items = group.querySelectorAll('.chip, .slot');
+    if(multi){
+      btn.setAttribute('aria-pressed', btn.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    } else {
+      items.forEach(function(i){ i.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+    }
+  }
+
+  function readAddons(){
+    var out = [];
+    document.querySelectorAll('#chipsAdd .chip').forEach(function(c){
+      if(c.getAttribute('aria-pressed') === 'true') out.push(c.dataset.v);
+    });
+    return out;
+  }
+
+  function render(){
+    sumLine.innerHTML = '';
+    var rows = [];
+    rows.push(['Inspection', state.type]);
+    if(state.addons.length) rows.push(['Add-ons', state.addons.join(' · ')]);
+    if(state.day) rows.push(['Day', state.day]);
+    rows.push(['Window', state.time]);
+
+    rows.forEach(function(r){
+      var div = document.createElement('div');
+      div.className = 'sum-item';
+      var dt = document.createElement('dt'); dt.textContent = r[0];
+      var dd = document.createElement('dd'); dd.textContent = r[1];
+      div.appendChild(dt); div.appendChild(dd);
+      sumLine.appendChild(div);
+    });
+
+    sumEmpty.style.display = state.day ? 'none' : 'block';
+    sumEmpty.textContent = state.day ? '' : 'Pick a day and the summary is ready to send.';
+  }
+
+  document.getElementById('chipsType').addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    press(this, b, false); state.type = b.dataset.v; render();
+  });
+
+  document.getElementById('chipsAdd').addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    press(this, b, true); state.addons = readAddons(); render();
+  });
+
+  document.getElementById('chipsTime').addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    press(this, b, false); state.time = b.dataset.v; render();
+  });
+
+  daysWrap.addEventListener('click', function(e){
+    var b = e.target.closest('.slot'); if(!b) return;
+    press(this, b, false); state.day = b.dataset.v; render();
+  });
+
+  document.getElementById('sumGo').addEventListener('click', function(){
+    var lines = [state.type];
+    if(state.addons.length) lines.push('Add-ons: ' + state.addons.join(', '));
+    if(state.day) lines.push('Preferred day: ' + state.day + ' (' + state.time + ')');
+    fmsg.value = lines.join('\n') + '\n\nAddress: ';
+    setTimeout(function(){ fmsg.focus(); }, 320);
+  });
+
+  render();
+
+  /* ---------- form ---------- */
+  document.getElementById('reqForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('formOk').classList.add('on');
+  });
+})();
+</script>
+</body>
+</html>
