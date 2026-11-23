@@ -14,12 +14,12 @@
 :root{
   --ink:#15171b;
   --ink2:#1d2128;
-  --stone:#f2f0ea;
-  --stone2:#e8e4da;
+  --stone:#f1f0ec;
+  --stone2:#e7e5df;
   --seal:#8e3129;
   --graphite:#43474e;
   --line:rgba(21,23,27,.16);
-  --line-d:rgba(242,240,234,.18);
+  --line-d:rgba(241,240,236,.18);
   --cream:#efe9dd;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -52,7 +52,7 @@ h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;line-heigh
 /* ---------- header ---------- */
 header{
   position:sticky;top:0;z-index:60;
-  background:rgba(242,240,234,.96);
+  background:rgba(241,240,236,.96);
   border-bottom:1px solid var(--line);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px 28px;max-width:1180px;margin:0 auto}
@@ -85,7 +85,7 @@ header{
 }
 .hero .grid-lines{
   position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(90deg,rgba(242,240,234,.055) 1px,transparent 1px);
+  background-image:linear-gradient(90deg,rgba(241,240,236,.055) 1px,transparent 1px);
   background-size:25% 100%;
 }
 .hgrid{
@@ -101,7 +101,7 @@ header{
 }
 .hero h1 em{font-style:italic;color:#d9a892}
 .hero .lede{
-  margin:28px 0 34px;font-size:18px;line-height:1.62;font-weight:300;
+  margin:28px 0 34px;font-size:19px;line-height:1.62;font-weight:300;
   color:#cfc7bb;max-width:56ch;
 }
 .hero .lede b{font-weight:500;color:#f2ece2}
@@ -114,9 +114,9 @@ header{
 .btn svg{width:16px;height:16px}
 .btn-solid{background:var(--stone);color:var(--ink)}
 .btn-solid:hover{background:#fff;transform:translateY(-2px)}
-.btn-line{border:1px solid rgba(242,240,234,.34);color:#efe9dd}
+.btn-line{border:1px solid rgba(241,240,236,.34);color:#efe9dd}
 .btn-line:hover{border-color:#d9a892;color:#fff;transform:translateY(-2px)}
-.hero .note{margin-top:22px;font-size:13px;letter-spacing:.02em;color:#a49c92}
+.hero .note{margin-top:22px;font-size:14px;letter-spacing:.02em;color:#a49c92}
 
 /* commission card */
 .hcard{
@@ -132,7 +132,7 @@ header{
 }
 .hcard .tel{
   display:block;text-align:center;font-family:'Instrument Serif',Georgia,serif;
-  font-size:30px;margin-top:18px;color:var(--ink);
+  font-size:32px;margin-top:18px;color:var(--ink);
   transition:color .18s ease;
 }
 .hcard .tel:hover{color:var(--seal)}
@@ -143,12 +143,12 @@ header{
 }
 .hcard .open i{width:6px;height:6px;border-radius:50%;background:var(--seal);display:block}
 .hcard dl{margin-top:18px;padding-top:16px;border-top:1px solid rgba(21,23,27,.18)}
-.hcard dl div{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:13px}
+.hcard dl div{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:14px}
 .hcard dt{color:var(--graphite)}
 .hcard dd{font-weight:600;text-align:right}
 
 /* record strip */
-.strip{border-top:1px solid var(--line-d);background:rgba(0,0,0,.18)}
+.strip{position:relative;z-index:2;border-top:1px solid var(--line-d);background:rgba(0,0,0,.18)}
 .records{display:grid;grid-template-columns:repeat(4,1fr)}
 .rec{padding:26px 22px;border-left:1px solid var(--line-d)}
 .rec:first-child{border-left:0;padding-left:0}
@@ -159,7 +159,7 @@ header{
 /* ---------- sections ---------- */
 section{padding:88px 0}
 .sec-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:end;margin-bottom:52px}
-.sec-head h2{font-size:clamp(32px,4vw,48px);line-height:1.03;max-width:20ch}
+.sec-head h2{font-size:48px;line-height:1.03;max-width:20ch}
 .sec-head p{color:var(--graphite);font-size:17px;max-width:46ch;justify-self:end;padding-bottom:6px}
 .sec-head .label{display:block;margin-bottom:14px}
 
@@ -186,7 +186,7 @@ section{padding:88px 0}
   padding:12px 0;border-bottom:1px solid var(--line-d);font-size:15px;color:#ded7cc;
 }
 .feature li svg{width:16px;height:16px;color:#d9a892;margin-top:4px}
-.feature .foot{margin-top:22px;font-size:13px;color:#a49c92;margin-bottom:0}
+.feature .foot{margin-top:22px;font-size:14px;color:#a49c92;margin-bottom:0}
 
 /* promises */
 .promises{background:var(--stone2);border-top:1px solid rgba(21,23,27,.12);border-bottom:1px solid rgba(21,23,27,.12)}
@@ -207,7 +207,7 @@ section{padding:88px 0}
   background:linear-gradient(90deg,rgba(17,19,24,.94) 0%,rgba(17,19,24,.8) 46%,rgba(17,19,24,.2) 100%);
 }
 .band blockquote{
-  font-family:'Instrument Serif',Georgia,serif;font-size:clamp(26px,3.2vw,40px);
+  font-family:'Instrument Serif',Georgia,serif;font-size:38px;
   line-height:1.24;color:#f7f2e8;max-width:22ch;
 }
 .band .attr{
@@ -215,8 +215,8 @@ section{padding:88px 0}
   color:#d9a892;font-weight:600;
 }
 .band .credit{
-  position:absolute;right:18px;bottom:12px;font-size:12px;
-  color:rgba(242,240,234,.6);letter-spacing:.02em;
+  position:absolute;right:18px;bottom:12px;font-size:13px;
+  color:rgba(241,240,236,.6);letter-spacing:.02em;
 }
 .band .credit a{text-decoration:underline;text-underline-offset:2px}
 
@@ -230,7 +230,7 @@ section{padding:88px 0}
 .record .k{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--graphite);font-weight:600;padding-top:3px}
 .record .v{font-size:16px;line-height:1.5}
 .record .v b{font-weight:600}
-.about-copy h2{font-size:clamp(32px,3.8vw,46px);line-height:1.05;margin-bottom:22px}
+.about-copy h2{font-size:48px;line-height:1.05;margin-bottom:22px}
 .about-copy p{font-size:17px;color:#2f333a;margin-bottom:18px;max-width:54ch}
 .about-copy .sig{
   margin-top:26px;padding-top:18px;border-top:1px solid var(--line);
@@ -283,17 +283,18 @@ section{padding:88px 0}
 }
 .townphoto figcaption a{text-decoration:underline;text-underline-offset:2px}
 .mapbox{background:var(--stone2);margin-top:18px}
-.mapbox iframe{width:100%;height:320px;border:0;filter:saturate(.5) contrast(1.03)}
+.mapbox img{width:100%;height:320px;object-fit:cover;filter:saturate(.9)}
+
 .mapcap{
   display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
-  padding:14px 16px;border-top:1px solid var(--line);font-size:13px;color:var(--graphite);
+  padding:14px 16px;border-top:1px solid var(--line);font-size:14px;color:var(--graphite);
 }
 .mapcap a{color:var(--seal);font-weight:600;text-decoration:underline;text-underline-offset:2px}
 
 /* request builder */
 .request{background:var(--ink);color:var(--cream);padding:84px 0}
 .request .label{color:#d9a892}
-.request h2{font-size:clamp(32px,4vw,48px);color:#f7f2e8;max-width:22ch;margin:14px 0 16px;line-height:1.05}
+.request h2{font-size:48px;color:#f7f2e8;max-width:22ch;margin:14px 0 16px;line-height:1.05}
 .request .intro{color:#b8b1a7;max-width:52ch;font-size:17px;margin-bottom:44px}
 .builder{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line-d)}
 .field{padding:24px 26px 26px 0;border-right:1px solid var(--line-d)}
@@ -304,7 +305,7 @@ section{padding:88px 0}
 }
 .field select{
   width:100%;background-color:transparent;color:#f2ece2;border:0;
-  border-bottom:1px solid rgba(242,240,234,.3);padding:8px 26px 10px 0;
+  border-bottom:1px solid rgba(241,240,236,.3);padding:8px 26px 10px 0;
   font-size:17px;font-family:'Public Sans',sans-serif;appearance:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23d9a892' stroke-width='1.6'/%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:right 2px center;background-size:11px;
@@ -316,14 +317,14 @@ section{padding:88px 0}
   margin-top:40px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;
   background:rgba(255,255,255,.05);border-radius:4px;padding:26px 28px;
 }
-.summary .txt{font-size:13px;color:#a49c92;letter-spacing:.02em}
+.summary .txt{font-size:14px;color:#a49c92;letter-spacing:.02em}
 .summary .txt strong{
   display:block;font-family:'Instrument Serif',Georgia,serif;font-size:22px;
   color:#f7f2e8;font-weight:400;margin-top:8px;line-height:1.3;
 }
 .summary .acts{display:flex;gap:10px;flex-wrap:wrap}
 .summary .btn-solid{padding:13px 22px;font-size:15px}
-.disclaim{margin-top:18px;font-size:13px;color:#948d83}
+.disclaim{margin-top:18px;font-size:14px;color:#948d83}
 
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
@@ -333,7 +334,7 @@ section{padding:88px 0}
 .cblock .v{font-size:19px;font-family:'Instrument Serif',Georgia,serif}
 .cblock .v a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(142,49,41,.45)}
 .cblock .v a:hover{color:var(--seal)}
-.cblock .s{font-size:14px;color:var(--graphite);margin-top:4px}
+.cblock .s{font-size:15px;color:var(--graphite);margin-top:4px}
 .cblock .s a{text-decoration:underline;text-underline-offset:2px}
 form{background:#fbf9f3;border-top:2px solid var(--seal);padding:32px}
 form h3{font-size:26px;margin-bottom:6px}
@@ -351,14 +352,14 @@ form button{
   padding:14px;font-weight:600;font-size:16px;margin-top:6px;transition:background .2s ease,transform .2s ease;
 }
 form button:hover{background:var(--seal);transform:translateY(-2px)}
-.formnote{margin-top:14px;font-size:13px;color:var(--graphite);line-height:1.55}
+.formnote{margin-top:14px;font-size:14px;color:var(--graphite);line-height:1.55}
 .formnote b{color:var(--seal);font-weight:600}
 .fmsg{display:none;margin-top:16px;padding:14px 16px;border-left:2px solid var(--seal);background:rgba(142,49,41,.07);font-size:15px;line-height:1.55}
 .fmsg.show{display:block}
 
 /* closing */
 .closing{border-top:1px solid var(--line);padding:72px 0;text-align:center}
-.closing h2{font-size:clamp(30px,4.2vw,54px);max-width:24ch;margin:0 auto 18px;line-height:1.05}
+.closing h2{font-size:48px;max-width:24ch;margin:0 auto 18px;line-height:1.05}
 .closing p{color:var(--graphite);max-width:46ch;margin:0 auto 30px;font-size:17px}
 .closing .btn-solid{background:var(--ink);color:var(--stone)}
 .closing .btn-solid:hover{background:var(--seal);color:#fff}
@@ -368,13 +369,13 @@ footer{background:var(--ink);color:#b3aca2;padding:52px 0 30px;font-size:14px}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid var(--line-d)}
 .fbrand{display:flex;align-items:flex-start;gap:12px}
 .fbrand .mark{width:44px;height:44px;flex:0 0 44px;color:#c98a7c}
-.fbrand .nm{font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:#f2ece2;line-height:1.15}
-.fbrand .ad{font-size:13px;margin-top:8px;line-height:1.6}
+.fbrand .nm{font-family:'Instrument Serif',Georgia,serif;font-size:19px;color:#f2ece2;line-height:1.15}
+.fbrand .ad{font-size:14px;margin-top:8px;line-height:1.6}
 .fcol .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#948d83;font-weight:600;margin-bottom:12px}
-.fcol a{display:block;font-size:14px;margin-bottom:8px;color:#c6bfb4}
+.fcol a{display:block;font-size:15px;margin-bottom:8px;color:#c6bfb4}
 .fcol a:hover{color:#d9a892}
-.fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:13px;color:#948d83}
-.fcredits{padding-top:14px;font-size:12px;color:#7d766d;line-height:1.6;max-width:80ch}
+.fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:14px;color:#948d83}
+.fcredits{padding-top:14px;font-size:13px;color:#7d766d;line-height:1.6;max-width:80ch}
 .fcredits a{text-decoration:underline;text-underline-offset:2px}
 
 /* sticky mobile bar */
@@ -422,7 +423,6 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
   .callbtn span{display:none}
   .hero{padding-top:52px}
   .hero h1{font-size:clamp(40px,11vw,54px)}
-  .hero .lede{font-size:16.5px}
   .hero .note{font-size:13px}
   .hcard{padding:26px 20px 22px}
   .ctas .btn{flex:1 1 100%;justify-content:center}
@@ -435,11 +435,15 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
   .rfeat blockquote{font-size:22px}
   .record .row{grid-template-columns:1fr;gap:4px}
   .townphoto img{height:190px}
+  .mapbox img{height:240px}
   .closing{padding:56px 0 76px}
+  .sec-head h2,.about-copy h2,.request h2,.closing h2,.area-grid h2,.contact-grid h2{font-size:30px}
+  .band blockquote{font-size:22px}
+  .hero .lede{font-size:17px}
   body{padding-bottom:66px}
   .mbar{
     display:grid;grid-template-columns:1fr 1fr;gap:1px;position:fixed;left:0;right:0;bottom:0;z-index:70;
-    background:rgba(21,23,27,.4);border-top:1px solid rgba(242,240,234,.22);
+    background:rgba(21,23,27,.4);border-top:1px solid rgba(241,240,236,.22);
   }
   .mbar a{
     display:flex;align-items:center;justify-content:center;gap:8px;
@@ -755,7 +759,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
       <div class="area-grid">
         <div class="rv">
           <span class="label" style="display:block;margin-bottom:16px">Where he travels</span>
-          <h2 style="font-size:clamp(30px,3.6vw,44px);line-height:1.06;margin-bottom:18px">Based in Montgomery. On the road across the Fox Valley.</h2>
+          <h2 style="font-size:48px;line-height:1.06;margin-bottom:18px">Based in Montgomery. On the road across the Fox Valley.</h2>
           <p style="color:#31353c;max-width:48ch">Appointments happen where the signer is: a kitchen table, a hospital room, a title office, a shop floor. If you are not sure whether your address is in range, call and ask. The answer takes ten seconds.</p>
           <div class="towns">
             <span class="town">Montgomery</span>
@@ -784,16 +788,15 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
               <a href="https://commons.wikimedia.org/wiki/File:Montgomery_Illinois_Village_Hall_front_view.JPG" target="_blank" rel="noopener">Photo: Mythicmeadows, CC BY 3.0</a>
             </figcaption>
           </figure>
-          <div class="mapbox">
-            <iframe
-              title="Map showing Wright-Way Notary Service at 2467 Prairie Crossing Dr, Montgomery, Illinois"
-              src="https://maps.google.com/maps?q=2467%20Prairie%20Crossing%20Dr%2C%20Montgomery%2C%20IL%2060538&z=12&output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="mapcap">
+          <figure class="mapbox">
+            <a href="https://maps.google.com/maps?q=2467+Prairie+Crossing+Dr,+Montgomery,+IL+60538" target="_blank" rel="noopener" aria-label="Open the address in Google Maps">
+              <img src="img/wrightway-map.jpg" width="920" height="440" alt="Street map of Montgomery, Illinois, with a marker on Prairie Crossing Drive" loading="lazy" decoding="async">
+            </a>
+            <figcaption class="mapcap">
               <span>2467 Prairie Crossing Dr, Montgomery, IL 60538</span>
               <a href="https://maps.google.com/maps?q=2467+Prairie+Crossing+Dr,+Montgomery,+IL+60538" target="_blank" rel="noopener">Get directions</a>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -864,7 +867,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
       <div class="contact-grid">
         <div class="rv">
           <span class="label" style="display:block;margin-bottom:16px">Reach him</span>
-          <h2 style="font-size:clamp(30px,3.6vw,44px);line-height:1.06;margin-bottom:10px">One number, all hours.</h2>
+          <h2 style="font-size:48px;line-height:1.06;margin-bottom:10px">One number, all hours.</h2>
           <p style="color:#31353c;margin-bottom:26px;max-width:44ch">Text is fine and often fastest. For same-day work, call and say the deadline out loud.</p>
 
           <div class="cblock">
@@ -953,7 +956,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
       <span>© 2026 Wright-Way Notary Service L.L.C. · Commissioned Illinois notary public</span>
       <span>Website concept preview</span>
     </div>
-    <p class="fcredits">Photography in this concept: “Legal Contract &amp; Signature, Warm Tones” by Blogtrepreneur, CC BY 2.0, and “Montgomery Illinois Village Hall front view” by Mythicmeadows, CC BY 3.0, both via Wikimedia Commons.</p>
+    <p class="fcredits">Photography and map in this concept: map data © OpenStreetMap contributors; “Legal Contract &amp; Signature, Warm Tones” by Blogtrepreneur, CC BY 2.0, and “Montgomery Illinois Village Hall front view” by Mythicmeadows, CC BY 3.0, both via Wikimedia Commons.</p>
   </div>
 </footer>
 
