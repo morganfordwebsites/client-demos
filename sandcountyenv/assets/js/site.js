@@ -1,43 +1,32 @@
 (function(){
   "use strict";
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if(reduce || !('IntersectionObserver' in window)){
-    for(var i=0;i<items.length;i++) items[i].classList.add('in');
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    },{threshold:0.1, rootMargin:'0px 0px -50px 0px'});
-    for(var j=0;j<items.length;j++) io.observe(items[j]);
-  }
 
-  var tabs = document.querySelectorAll('.rx-tab');
-  var panels = document.querySelectorAll('.rx-panel');
-  for(var t=0;t<tabs.length;t++){
-    tabs[t].addEventListener('click', function(){
-      for(var k=0;k<tabs.length;k++) tabs[k].setAttribute('aria-pressed','false');
-      this.setAttribute('aria-pressed','true');
-      for(var m=0;m<panels.length;m++) panels[m].hidden = (panels[m].id !== 'rx-' + this.dataset.rx);
+  var toggle = document.querySelector('.menu-toggle');
+  var mobile = document.getElementById('mobile-nav');
+  if(toggle && mobile){
+    toggle.addEventListener('click', function(){
+      var open = mobile.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    var links = mobile.querySelectorAll('a');
+    for(var i=0;i<links.length;i++){
+      links[i].addEventListener('click', function(){
+        mobile.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      });
+    }
   }
 
   var chips = document.querySelectorAll('.chip[data-filter]');
   var cards = document.querySelectorAll('#proj-grid .proj');
-  var count = document.getElementById('proj-count');
   for(var c=0;c<chips.length;c++){
     chips[c].addEventListener('click', function(){
       var f = this.dataset.filter;
       for(var k=0;k<chips.length;k++) chips[k].setAttribute('aria-pressed','false');
       this.setAttribute('aria-pressed','true');
-      var shown = 0;
       for(var n=0;n<cards.length;n++){
-        var show = (f === 'all' || cards[n].dataset.cat === f);
-        cards[n].hidden = !show;
-        if(show) shown++;
+        cards[n].hidden = !(f === 'all' || cards[n].dataset.cat === f);
       }
-      if(count) count.textContent = shown + (shown === 1 ? ' project' : ' projects');
     });
   }
 
@@ -49,8 +38,8 @@
       var name = document.getElementById('f-name').value.trim();
       var email = document.getElementById('f-email').value.trim();
       if(!name || !email){
-        status.textContent = 'Add a name and an email so we know who is asking.';
-        status.style.color = '#F0C9A0';
+        status.style.color = '#B4471F';
+        status.textContent = 'Please add a name and an email.';
         return;
       }
       status.style.color = '';
@@ -58,11 +47,16 @@
     });
   }
 
-  var mnav = document.querySelector('.mnav');
-  if(mnav){
-    var links = mnav.querySelectorAll('a');
-    for(var l=0;l<links.length;l++){
-      links[l].addEventListener('click', function(){ mnav.removeAttribute('open'); });
-    }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if(!reduce && 'IntersectionObserver' in window && items.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    },{threshold:0.04, rootMargin:'0px 0px -30px 0px'});
+    for(var j=0;j<items.length;j++) io.observe(items[j]);
+  } else {
+    for(var m=0;m<items.length;m++) items[m].classList.add('in');
   }
 })();
