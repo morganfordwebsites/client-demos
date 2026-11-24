@@ -17,6 +17,60 @@
     }
   }
 
+
+
+  function positionMega(item){
+    var m=item.querySelector('.mega');
+    if(!m) return;
+    m.style.left='50%'; m.style.transform='translateX(-50%)';
+    var vw=document.documentElement.clientWidth;
+    var r=m.getBoundingClientRect();
+    if(r.width===0) return;
+    var desired = r.left;
+    if(r.right > vw-16) desired = vw-16-r.width;
+    if(desired < 16) desired = 16;
+    var itemRect=item.getBoundingClientRect();
+    m.style.left=(desired-itemRect.left)+'px';
+    m.style.transform='none';
+  }
+  var navItems = document.querySelectorAll('.nav-item.has-mega');
+  function closeAll(except){
+    for(var i=0;i<navItems.length;i++){
+      if(navItems[i]!==except){
+        navItems[i].classList.remove('open');
+        var b=navItems[i].querySelector('.nav-link');
+        if(b) b.setAttribute('aria-expanded','false');
+      }
+    }
+  }
+  for(var i=0;i<navItems.length;i++){
+    (function(item){
+      var btn=item.querySelector('.nav-link');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        positionMega(item);
+        var open=item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open?'true':'false');
+        closeAll(item);
+      });
+      item.addEventListener('mouseenter', function(){
+        btn.setAttribute('aria-expanded','true');
+        positionMega(item);
+      });
+      window.addEventListener('resize', function(){ if(item.classList.contains('open')) positionMega(item); });
+      item.addEventListener('mouseleave', function(){
+        if(!item.classList.contains('open')) btn.setAttribute('aria-expanded','false');
+      });
+    })(navItems[i]);
+  }
+  document.addEventListener('click', function(e){
+    if(!e.target.closest || !e.target.closest('.nav-item')) closeAll(null);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeAll(null);
+  });
+
   var chips = document.querySelectorAll('.chip[data-filter]');
   var cards = document.querySelectorAll('#proj-grid .proj');
   for(var c=0;c<chips.length;c++){
