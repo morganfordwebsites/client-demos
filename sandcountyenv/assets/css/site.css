@@ -311,11 +311,10 @@
     .brand-txt i{font-size:9px;letter-spacing:.1em;margin-top:2px}
     .mono{width:34px;height:34px;font-size:9px}
     .mnav summary{padding:.5rem .6rem;font-size:10px}
-    .hero h1{font-size:clamp(2.9rem,12.4vw,3.5rem)}
     .preview .wrap{padding:.5rem 20px}
     .section{padding:var(--sp-7) 0}
     .hero .wrap{padding-top:var(--sp-6);padding-bottom:var(--sp-8)}
-    .hero h1{font-size:clamp(2.35rem,10vw,3.1rem);max-width:none}
+    .hero h1{font-size:clamp(2.7rem,11.8vw,3.4rem);max-width:none}
     .hero .lede{font-size:16px}
     .hcard .tel{font-size:1.75rem}
     .facts{padding-top:calc(var(--sp-6) + 40px)}
