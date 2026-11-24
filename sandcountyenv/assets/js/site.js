@@ -48,6 +48,7 @@
       var btn=item.querySelector('.nav-link');
       if(!btn) return;
       btn.addEventListener('click', function(e){
+        if(window.matchMedia('(hover: hover)').matches) return;   // desktop: follow the link
         e.preventDefault();
         positionMega(item);
         var open=item.classList.toggle('open');
