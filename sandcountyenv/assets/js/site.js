@@ -60,7 +60,10 @@
       });
       window.addEventListener('resize', function(){ if(item.classList.contains('open')) positionMega(item); });
       item.addEventListener('mouseleave', function(){
-        if(!item.classList.contains('open')) btn.setAttribute('aria-expanded','false');
+        clearTimeout(item._t);
+        item._t = setTimeout(function(){
+          if(!item.classList.contains('open')) btn.setAttribute('aria-expanded','false');
+        }, 220);
       });
     })(navItems[i]);
   }
