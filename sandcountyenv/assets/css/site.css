@@ -68,6 +68,7 @@ nav.main a[aria-current="page"]{color:var(--navy);border-bottom-color:var(--navy
 .menu-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:4px;
   padding:.55rem .8rem;font:inherit;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;align-items:center;gap:.45rem}
 .menu-toggle svg{width:16px;height:16px}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:#fff}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.35rem;border-radius:4px;
@@ -302,7 +303,7 @@ nav.main a[aria-current="page"]{color:var(--navy);border-bottom-color:var(--navy
 /* ---------- nav: mega menu + dropdown ---------- */
 .nav-item{position:relative;display:flex;align-items:center}
 .nav-link{appearance:none;background:none;border:0;border-bottom:2px solid transparent;padding:.4rem 0;
-  font-family:inherit;font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;
+  font-family:inherit;font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;text-decoration:none;
   display:inline-flex;align-items:center;gap:.35rem}
 .nav-link:hover{color:var(--navy);border-bottom-color:var(--green)}
 .nav-item.open .nav-link{color:var(--navy);border-bottom-color:var(--navy)}
