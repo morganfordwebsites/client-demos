@@ -265,9 +265,11 @@ section{position:relative}
 .thermal{background:var(--iron);color:var(--paper);overflow:hidden}
 .thermal .in{
   max-width:var(--max);margin:0 auto;padding:clamp(56px,8vw,100px) var(--pad);
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  display:flex;flex-wrap:wrap;
   gap:clamp(30px,5vw,68px);align-items:center;
 }
+.thermal .in > .t-copy{flex:1 1 340px;min-width:0}
+.thermal .in > .t-shot{flex:0 1 44%;min-width:280px}
 .thermal h2{
   font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;
   font-size:clamp(34px,4.4vw,54px);line-height:1.02;letter-spacing:-.012em;margin-top:16px;
@@ -277,14 +279,14 @@ section{position:relative}
 .t-facts{margin-top:28px;display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(244,241,233,.18)}
 .t-fact{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(244,241,233,.18);font-size:15px;color:rgba(244,241,233,.86)}
 .t-fact b{font-family:'Barlow Condensed',Impact,sans-serif;color:#e9a184;font-size:14px;letter-spacing:.1em;flex:none;font-weight:600}
-.t-shot{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid rgba(244,241,233,.2);align-self:center}
-.t-shot img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center}
+.t-shot{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid rgba(244,241,233,.2);margin:0}
+.t-shot img{display:block;width:100%;height:auto}
 .t-cap{
   position:absolute;left:0;right:0;bottom:0;padding:12px 14px;
   background:linear-gradient(to top,rgba(20,25,26,.9),transparent);
   font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d6dcd8;font-weight:600;
 }
-@media(max-width:840px){.thermal .in{grid-template-columns:1fr}}
+@media(max-width:840px){.thermal .in > .t-shot{flex:1 1 100%;min-width:0}}
 
 /* ---------- service area ---------- */
 .area-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(30px,4.6vw,60px);align-items:start}
@@ -604,7 +606,7 @@ footer{background:var(--ink);color:#a8b1ad;font-size:14px}
   <!-- THERMAL FEATURE -->
   <section class="thermal">
     <div class="in">
-      <div class="rv">
+      <div class="rv t-copy">
         <div class="eyebrow">Thermal imaging</div>
         <h2>The wall tells you<br>what the eye can't.</h2>
         <p>An infrared camera doesn't see through drywall — it reads surface temperature. A wet patch, a missing batt of insulation or a hot breaker reads several degrees off from everything around it, and that difference shows up as a shape on screen.</p>
