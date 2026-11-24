@@ -37,14 +37,14 @@ button{font:inherit;cursor:pointer}
 .serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em}
 h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.015em}
 .label{
-  font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  font-size:13px;letter-spacing:.2em;text-transform:uppercase;
   font-weight:600;color:var(--seal);
 }
 
 /* ---------- preview banner ---------- */
 .preview{
   background:var(--ink);color:var(--cream);text-align:center;
-  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  font-size:13px;letter-spacing:.18em;text-transform:uppercase;
   padding:9px 16px;font-weight:600;
 }
 .preview span{color:#c99a86}
@@ -59,7 +59,7 @@ header{
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
 .brand .mark{width:40px;height:40px;flex:0 0 40px;color:var(--seal)}
 .brand .nm{font-family:'Instrument Serif',Georgia,serif;font-size:19px;line-height:1.05;letter-spacing:-.01em;display:block}
-.brand .sub{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);margin-top:3px;font-weight:600;display:block}
+.brand .sub{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);margin-top:3px;font-weight:600;display:block}
 .nlinks{display:flex;gap:28px;align-items:center}
 .nlinks a{font-size:15px;font-weight:500;color:#2f333a;position:relative;padding:4px 0;transition:color .18s ease}
 .nlinks a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--seal);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
@@ -94,7 +94,7 @@ header{
 }
 .kicker{display:flex;align-items:center;gap:12px;margin-bottom:26px}
 .kicker .ln{width:38px;height:1px;background:var(--seal);flex:0 0 38px}
-.kicker span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#d8c9b8}
+.kicker span{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#d8c9b8}
 .hero h1{
   font-size:clamp(46px,7.2vw,88px);line-height:.96;color:#f7f2e8;
   max-width:15ch;
@@ -127,7 +127,7 @@ header{
 .hcard .seal{width:74px;height:74px;color:var(--seal);margin:0 auto 16px}
 .hcard h2{font-size:19px;text-align:center;line-height:1.2}
 .hcard .tag{
-  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);
   text-align:center;margin-top:8px;font-weight:600;
 }
 .hcard .tel{
@@ -154,12 +154,14 @@ header{
 .rec:first-child{border-left:0;padding-left:0}
 .rec .n{font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1;color:#f7f2e8}
 .rec .n small{font-size:17px}
-.rec .l{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:#a49c92;margin-top:9px;font-weight:600;line-height:1.45}
+.rec .l{font-size:13px;letter-spacing:.11em;text-transform:uppercase;color:#a49c92;margin-top:9px;font-weight:600;line-height:1.45}
 
 /* ---------- sections ---------- */
 section{padding:88px 0}
+section[id]{scroll-margin-top:78px}
 .sec-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:end;margin-bottom:52px}
 .sec-head h2{font-size:48px;line-height:1.03;max-width:20ch}
+.h2-sm{font-size:48px;line-height:1.06;margin-bottom:18px}
 .sec-head p{color:var(--graphite);font-size:17px;max-width:46ch;justify-self:end;padding-bottom:6px}
 .sec-head .label{display:block;margin-bottom:14px}
 
@@ -211,7 +213,7 @@ section{padding:88px 0}
   line-height:1.24;color:#f7f2e8;max-width:22ch;
 }
 .band .attr{
-  margin-top:20px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  margin-top:20px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;
   color:#d9a892;font-weight:600;
 }
 .band .credit{
@@ -227,7 +229,7 @@ section{padding:88px 0}
   display:grid;grid-template-columns:38% 1fr;gap:16px;
   padding:16px 0;border-bottom:1px solid var(--line);
 }
-.record .k{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--graphite);font-weight:600;padding-top:3px}
+.record .k{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--graphite);font-weight:600;padding-top:3px}
 .record .v{font-size:16px;line-height:1.5}
 .record .v b{font-weight:600}
 .about-copy h2{font-size:48px;line-height:1.05;margin-bottom:22px}
@@ -237,7 +239,7 @@ section{padding:88px 0}
   font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:var(--ink);
 }
 .about-copy .sig span{
-  display:block;font-family:'Public Sans',sans-serif;font-size:12px;
+  display:block;font-family:'Public Sans',sans-serif;font-size:13px;
   letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);
   margin-top:6px;font-weight:600;
 }
@@ -254,11 +256,11 @@ section{padding:88px 0}
 .rfeat blockquote{font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.36;color:#f2ece2}
 .rfeat .who{margin-top:24px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .rfeat .who b{font-weight:600;font-size:15px;color:#f7f2e8}
-.rfeat .who span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a49c92}
+.rfeat .who span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#a49c92}
 .rstack{display:grid;gap:26px}
 .rmini{background:rgba(255,255,255,.04);border-radius:4px;padding:26px 26px 22px}
 .rmini blockquote{font-size:16px;line-height:1.62;color:#ded7cc}
-.rmini .who{margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a49c92}
+.rmini .who{margin-top:16px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#a49c92}
 .rmini .who b{color:#e9e2d7;font-weight:600}
 .rrow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:26px;border-top:1px solid var(--line-d)}
 .rrow .rmini{background:none;border-radius:0;border-left:1px solid var(--line-d);padding:26px 26px 0}
@@ -300,7 +302,7 @@ section{padding:88px 0}
 .field{padding:24px 26px 26px 0;border-right:1px solid var(--line-d)}
 .field:last-child{border-right:0;padding-right:0}
 .field label{
-  display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;
   color:#a49c92;font-weight:600;margin-bottom:12px;
 }
 .field select{
@@ -330,17 +332,17 @@ section{padding:88px 0}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .cblock{padding:20px 0;border-bottom:1px solid var(--line)}
 .cblock:first-of-type{border-top:1px solid var(--ink)}
-.cblock .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);font-weight:600;margin-bottom:7px}
+.cblock .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);font-weight:600;margin-bottom:7px}
 .cblock .v{font-size:19px;font-family:'Instrument Serif',Georgia,serif}
 .cblock .v a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(142,49,41,.45)}
 .cblock .v a:hover{color:var(--seal)}
 .cblock .s{font-size:15px;color:var(--graphite);margin-top:4px}
 .cblock .s a{text-decoration:underline;text-underline-offset:2px}
-form{background:#fbf9f3;border-top:2px solid var(--seal);padding:32px}
+form{background:#f8f7f3;border-top:2px solid var(--seal);padding:32px}
 form h3{font-size:26px;margin-bottom:6px}
 form .fsub{font-size:15px;color:var(--graphite);margin-bottom:22px}
 .frow{margin-bottom:16px}
-.frow label{display:block;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--graphite);font-weight:600;margin-bottom:7px}
+.frow label{display:block;font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--graphite);font-weight:600;margin-bottom:7px}
 .frow input,.frow textarea{
   width:100%;border:1px solid rgba(21,23,27,.24);border-radius:2px;background:#fff;
   padding:12px 14px;font-family:'Public Sans',sans-serif;font-size:16px;color:var(--ink);
@@ -371,7 +373,7 @@ footer{background:var(--ink);color:#b3aca2;padding:52px 0 30px;font-size:14px}
 .fbrand .mark{width:44px;height:44px;flex:0 0 44px;color:#c98a7c}
 .fbrand .nm{font-family:'Instrument Serif',Georgia,serif;font-size:19px;color:#f2ece2;line-height:1.15}
 .fbrand .ad{font-size:14px;margin-top:8px;line-height:1.6}
-.fcol .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#948d83;font-weight:600;margin-bottom:12px}
+.fcol .k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#948d83;font-weight:600;margin-bottom:12px}
 .fcol a{display:block;font-size:15px;margin-bottom:8px;color:#c6bfb4}
 .fcol a:hover{color:#d9a892}
 .fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:14px;color:#948d83}
@@ -380,10 +382,6 @@ footer{background:var(--ink);color:#b3aca2;padding:52px 0 30px;font-size:14px}
 
 /* sticky mobile bar */
 .mbar{display:none}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease-out,transform .5s ease-out}
-.rv.in{opacity:1;transform:none}
 
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{
   outline:2px solid var(--seal);outline-offset:3px;
@@ -418,7 +416,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
   .wrap{padding:0 20px}
   .nav{padding:11px 20px}
   .brand .nm{font-size:17px}
-  .brand .sub{font-size:12px;letter-spacing:.1em}
+  .brand .sub{font-size:13px;letter-spacing:.1em}
   .callbtn{padding:10px 14px;font-size:14px}
   .callbtn span{display:none}
   .hero{padding-top:52px}
@@ -437,7 +435,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
   .townphoto img{height:190px}
   .mapbox img{height:240px}
   .closing{padding:56px 0 76px}
-  .sec-head h2,.about-copy h2,.request h2,.closing h2,.area-grid h2,.contact-grid h2{font-size:30px}
+  .sec-head h2,.about-copy h2,.request h2,.closing h2,.h2-sm{font-size:30px}
   .band blockquote{font-size:22px}
   .hero .lede{font-size:17px}
   body{padding-bottom:66px}
@@ -455,7 +453,6 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .rv{opacity:1;transform:none;transition:none}
   *{animation:none!important;transition:none!important}
 }
 </style>
@@ -759,7 +756,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
       <div class="area-grid">
         <div class="rv">
           <span class="label" style="display:block;margin-bottom:16px">Where he travels</span>
-          <h2 style="font-size:48px;line-height:1.06;margin-bottom:18px">Based in Montgomery. On the road across the Fox Valley.</h2>
+          <h2 class="h2-sm">Based in Montgomery. On the road across the Fox Valley.</h2>
           <p style="color:#31353c;max-width:48ch">Appointments happen where the signer is: a kitchen table, a hospital room, a title office, a shop floor. If you are not sure whether your address is in range, call and ask. The answer takes ten seconds.</p>
           <div class="towns">
             <span class="town">Montgomery</span>
@@ -867,7 +864,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
       <div class="contact-grid">
         <div class="rv">
           <span class="label" style="display:block;margin-bottom:16px">Reach him</span>
-          <h2 style="font-size:48px;line-height:1.06;margin-bottom:10px">One number, all hours.</h2>
+          <h2 class="h2-sm">One number, all hours.</h2>
           <p style="color:#31353c;margin-bottom:26px;max-width:44ch">Text is fine and often fastest. For same-day work, call and say the deadline out loud.</p>
 
           <div class="cblock">
@@ -973,20 +970,6 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 
 <script>
 (function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  var items = document.querySelectorAll('.rv');
-  if (!reduce && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {rootMargin:'0px 0px -8% 0px', threshold:0.12});
-    items.forEach(function(el){ io.observe(el); });
-  } else {
-    items.forEach(function(el){ el.classList.add('in'); });
-  }
-
   var doc = document.getElementById('doc');
   var place = document.getElementById('place');
   var when = document.getElementById('when');
