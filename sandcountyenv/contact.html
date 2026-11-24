@@ -104,47 +104,108 @@
   <div class="wrap">
     <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</p>
     <h1>Contact</h1>
-    <p>Send the site address and, if you know it, the contaminant. We will tell you what the file needs and whether a plant-based remedy fits it.</p>
+    <p>Send the site address and, if you know it, what is in the ground. We will tell you what the file needs and whether a plant-based remedy fits it.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
+    <div class="quick">
+      <a href="tel:+17152061360">
+        <span class="q-label">Call</span>
+        <span class="q-value">715.206.1360</span>
+        <span class="q-note">Main office, Rosholt</span>
+      </a>
+      <a href="mailto:rosholtoffice@sandcountyenv.com">
+        <span class="q-label">Email</span>
+        <span class="q-value">rosholtoffice@sandcountyenv.com</span>
+        <span class="q-note">Proposals, projects and general enquiries</span>
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=262+West+Forest+Street+Rosholt+WI+54473" target="_blank" rel="noopener">
+        <span class="q-label">Visit</span>
+        <span class="q-value">262 West Forest Street</span>
+        <span class="q-note">Rosholt, Wisconsin</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" style="padding-top:0">
+  <div class="wrap">
     <div class="contact-grid">
-      <div>
-        <h2 style="font-size:1.35rem;margin-bottom:1rem">Main office</h2>
-        <ul class="contact-list">
-          <li><a href="tel:+17152061360">715.206.1360</a><span>Telephone</span></li>
-          <li><a href="mailto:rosholtoffice@sandcountyenv.com">rosholtoffice@sandcountyenv.com</a><span>Email</span></li>
-          <li><a href="https://www.google.com/maps/place/Sand+County+Environmental+Inc/data=!4m7!3m6!1s0x8801b7eed9a96deb:0xe28760d411eab399!8m2!3d44.6344124!4d-89.3142649!16s%2Fg%2F11tp2v497x" target="_blank" rel="noopener">262 W Forest St, Rosholt, WI</a><span>Address</span></li>
-          <li>P.O. Box 342, Rosholt, WI 54473<span>Postal</span></li>
-        </ul>
-        <p style="margin-top:1.5rem;font-size:14.5px;color:var(--muted)">For project work in the north, the Rhinelander office is usually closer: <a href="tel:+17153651818">715.365.1818</a>.</p>
-      </div>
       <form class="form-card" id="site-form" novalidate>
-        <div class="field">
-          <label for="f-name">Name</label>
-          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name">
+        <h2>Send a project enquiry</h2>
+        <p class="form-intro">The more of this you can fill in, the faster we can tell you what the site needs.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Company or municipality">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
+          </div>
         </div>
         <div class="field">
-          <label for="f-email">Email</label>
-          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com">
+          <label for="f-topic">What do you need?</label>
+          <select id="f-topic" name="topic">
+            <option>Phytoremediation feasibility</option>
+            <option>Landfill or solid waste</option>
+            <option>Agricultural-chemical facility</option>
+            <option>Stormwater or wastewater</option>
+            <option>Wetland delineation or restoration</option>
+            <option>Environmental site assessment</option>
+            <option>Stack testing or ERT data entry</option>
+            <option>Something else</option>
+          </select>
         </div>
         <div class="field">
-          <label for="f-issue">Site address and issue</label>
-          <textarea id="f-issue" name="issue" rows="3" placeholder="Street address, city, and what you are dealing with"></textarea>
+          <label for="f-issue">Site address and what you are dealing with</label>
+          <textarea id="f-issue" name="issue" rows="4" placeholder="Street address, city, and the contaminant or issue if you know it"></textarea>
         </div>
         <button type="submit">Send enquiry</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         <p class="form-note">This is a concept preview, so the form is not connected. On the live site it would route to rosholtoffice@sandcountyenv.com.</p>
       </form>
+
+      <div>
+        <div class="office-panel">
+          <span class="tag">Main office</span>
+          <h2>Rosholt, Wisconsin</h2>
+          <p>262 West Forest Street<br>P.O. Box 342<br>Rosholt, WI 54473</p>
+          <div class="panel-lines">
+            <a href="tel:+17152061360">715.206.1360</a>
+            <a href="mailto:rosholtoffice@sandcountyenv.com">rosholtoffice@sandcountyenv.com</a>
+          </div>
+          <a class="panel-link" href="https://www.google.com/maps/search/?api=1&amp;query=262+West+Forest+Street+Rosholt+WI+54473" target="_blank" rel="noopener">Directions</a>
+        </div>
+        <div class="panel-note">
+          <h3>Other offices</h3>
+          <ul class="panel-list">
+            <li><b>Rhinelander</b><a href="tel:+17153651818">715.365.1818</a></li>
+            <li><b>Plymouth</b><a href="tel:+17152061360">715.206.1360</a></li>
+            <li><b>Johnson Creek</b><a href="tel:+19202123103">920.212.3103</a></li>
+          </ul>
+          <p>Not sure who to ask for? Start with the main office and we will point you to the right person.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section soft">
+<section class="section">
   <div class="wrap">
-    <div class="section-head"><h2>Offices</h2></div>
+    <div class="section-head"><h2>Offices</h2><p>Four offices in Wisconsin. Each has its own phone line and inbox.</p></div>
     <div class="off-grid">
       <figure class="map">
         <svg viewBox="0 0 260 278" role="img" aria-label="Map of Wisconsin showing the four office locations: Rhinelander, Rosholt, Plymouth and Johnson Creek">
