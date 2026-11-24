@@ -90,6 +90,17 @@ a{color:inherit}
   outline:3px solid var(--rust);outline-offset:3px;
 }
 @media(max-width:900px){.nav{display:none}.top .in{gap:14px}.tel-btn{margin-left:auto;padding:10px 14px;font-size:13.5px}}
+@media(max-width:620px){
+  .brand{gap:9px;min-width:0}
+  .brand-name{font-size:18px;white-space:nowrap}
+  .brand-sub{font-size:9px;letter-spacing:.1em}
+  .seal{width:34px;height:34px;font-size:16px}
+  .seal::after{left:6px;right:6px;bottom:5px}
+  .tel-btn{margin-left:auto;padding:9px 11px;font-size:12.5px;gap:6px;flex:none}
+  .tel-btn svg{width:12px;height:12px}
+  .top .in{padding:10px 16px;gap:10px}
+  .preview{font-size:10px;letter-spacing:.1em;padding:8px 10px}
+}
 
 /* ---------- hero ---------- */
 .hero{position:relative;background:var(--iron);color:var(--paper);overflow:hidden}
