@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mold Inspection, Testing &amp; Consulting — Western Wisconsin &amp; the Twin Cities | Valley Mold Services</title>
+<meta name="description" content="NORMI-certified mold inspection, mycotoxin testing, and remediation consulting for homeowners in western Wisconsin and the Twin Cities metro. Whole-home inspections run 3 to 7 hours.">
+<meta name="theme-color" content="#0A4F5A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Valley Mold Services — mold inspection, testing &amp; consulting in western Wisconsin">
+<meta property="og:description" content="NORMI-certified whole-home mold inspections with thermal imaging, moisture readings and AIHA-accredited lab testing. New Richmond, WI and the Twin Cities metro.">
+<meta property="og:image" content="valley-mold/valley-mold-joist.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A4F5A'/%3E%3Cpath d='M7 9l9 15 9-15' fill='none' stroke='%23F4F3EE' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F3EE;
+    --ink:#0F1B1D;
+    --teal:#0A4F5A;
+    --deep:#062E35;
+    --tint:#E4E8E3;
+    --muted:#586765;
+
+    --s1:12px; --s2:20px; --s3:32px; --s4:56px; --s5:88px; --s6:140px;
+    --r:4px;
+    --shadow:0 18px 40px -28px rgba(6,46,53,.55), 0 2px 6px -3px rgba(6,46,53,.25);
+    --maxw:1180px;
+    --pad:clamp(20px,5vw,40px);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block}
+  a{color:inherit}
+  h1,h2,h3{margin:0; font-family:Newsreader,Georgia,serif; font-weight:400; letter-spacing:-.02em}
+  p{margin:0}
+  ::selection{background:#0A4F5A; color:#F4F3EE}
+  :focus-visible{outline:2px solid var(--teal); outline-offset:3px; border-radius:2px}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--pad)}
+  .label{
+    font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--muted); font-weight:500;
+  }
+  .skip{position:absolute; left:-9999px; top:0; background:var(--ink); color:var(--paper); padding:12px 18px; z-index:99}
+  .skip:focus{left:12px; top:12px}
+
+  /* ---------- preview bar ---------- */
+  .preview{
+    background:var(--ink); color:#EDEDE6;
+    font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    padding:9px var(--pad); text-align:center;
+  }
+  .preview b{font-weight:600; letter-spacing:.14em}
+  .preview span{color:#8FA5A3; letter-spacing:.08em; text-transform:none; font-size:12px}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(244,243,238,.94);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid rgba(15,27,29,.12);
+  }
+  .bar{display:flex; align-items:center; gap:28px; min-height:74px}
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none; margin-right:auto}
+  .brand img{height:46px; width:auto}
+  .brand .name{font-family:Newsreader,serif; font-size:19px; line-height:1.05; letter-spacing:-.01em}
+  .brand .name small{display:block; font-family:"IBM Plex Sans",sans-serif; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:5px}
+  nav.main{display:flex; gap:26px; font-size:14px}
+  nav.main a{text-decoration:none; color:#26383A; padding:4px 0; border-bottom:1px solid transparent; transition:border-color .2s ease-out,color .2s ease-out}
+  nav.main a:hover{border-bottom-color:var(--teal); color:var(--ink)}
+  .callbtn{
+    display:flex; flex-direction:column; align-items:flex-end; text-decoration:none;
+    background:var(--teal); color:var(--paper); padding:9px 18px; border-radius:var(--r);
+    transition:transform .2s ease-out, background .2s ease-out;
+  }
+  .callbtn:hover{transform:translateY(-2px); background:var(--deep)}
+  .callbtn small{font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; opacity:.8}
+  .callbtn strong{font-size:16px; font-weight:500; letter-spacing:.01em}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative; overflow:hidden; color:var(--paper);
+    background:
+      radial-gradient(120% 90% at 82% 8%, #11707E 0%, rgba(17,112,126,0) 58%),
+      radial-gradient(90% 80% at 6% 96%, #0E616E 0%, rgba(14,97,110,0) 60%),
+      linear-gradient(168deg, #0A4F5A 0%, #073B44 46%, #062E35 100%);
+  }
+  .hero .wm{
+    position:absolute; right:-2vw; bottom:-6vw; margin:0;
+    font-family:Newsreader,serif; font-size:clamp(120px,25vw,400px); line-height:.75;
+    letter-spacing:-.045em; color:rgba(244,243,238,.055); user-select:none; pointer-events:none;
+    white-space:nowrap;
+  }
+  .hero .grid{
+    position:relative; display:grid; grid-template-columns:1.12fr .88fr;
+    gap:clamp(32px,5vw,72px); align-items:center;
+    padding:clamp(48px,7vw,96px) var(--pad) clamp(56px,8vw,104px);
+  }
+  .kicker{font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#BFD3D0; margin-bottom:26px}
+  .kicker b{color:#E7EEEA; font-weight:500}
+  h1{
+    font-size:clamp(42px,6.4vw,92px); line-height:.94; letter-spacing:-.035em;
+    margin-bottom:26px; max-width:14ch;
+  }
+  h1 em{font-style:italic; color:#BBD3CE; display:block}
+  .hero p.lede{font-size:clamp(16px,1.35vw,19px); line-height:1.62; color:#D3E1DD; max-width:44ch}
+  .hero p.lede strong{color:#F4F3EE; font-weight:500}
+  .actions{display:flex; flex-wrap:wrap; align-items:center; gap:12px 24px; margin-top:34px}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+    background:var(--paper); color:var(--ink); font-size:15px; font-weight:500;
+    padding:14px 24px; border-radius:var(--r);
+    transition:transform .2s ease-out, background .2s ease-out;
+  }
+  .btn:hover{transform:translateY(-2px); background:#fff}
+  .btn.ghost{background:transparent; color:var(--paper); border:1px solid rgba(244,243,238,.4); font-weight:400}
+  .btn.ghost:hover{background:rgba(244,243,238,.1); border-color:rgba(244,243,238,.7)}
+  .arrow{transition:transform .2s ease-out}
+  a:hover .arrow{transform:translateX(4px)}
+
+  /* hcard */
+  .hcard{
+    background:var(--paper); color:var(--ink); border-radius:var(--r);
+    padding:26px 26px 22px; box-shadow:var(--shadow);
+    max-width:352px; justify-self:end; width:100%;
+    transform:translateY(6px);
+  }
+  .hcard .top{display:flex; align-items:center; gap:14px; padding-bottom:18px; border-bottom:1px solid rgba(15,27,29,.14)}
+  .hcard .top img{height:52px; width:auto; flex:none}
+  .hcard .top .n{font-family:Newsreader,serif; font-size:19px; line-height:1.1}
+  .hcard .top .n span{display:block; font-family:"IBM Plex Sans",sans-serif; font-size:9.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-top:6px; line-height:1.5}
+  .hcard .tel{display:block; text-decoration:none; margin:18px 0 2px}
+  .hcard .tel small{display:block; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:6px}
+  .hcard .tel strong{font-family:Newsreader,serif; font-weight:400; font-size:31px; letter-spacing:-.02em; line-height:1; border-bottom:1px solid rgba(10,79,90,.35); padding-bottom:4px; transition:border-color .2s ease-out}
+  .hcard .tel:hover strong{border-bottom-color:var(--teal)}
+  .hcard dl{margin:18px 0 0; display:grid; gap:9px; font-size:13px; line-height:1.5}
+  .hcard dl div{display:flex; gap:10px; align-items:baseline}
+  .hcard dt{color:var(--muted); font-size:10px; letter-spacing:.12em; text-transform:uppercase; flex:none; width:62px}
+  .hcard dd{margin:0}
+
+  .strip{border-top:1px solid rgba(244,243,238,.18); background:rgba(6,46,53,.35)}
+  .strip .wrap{display:flex; flex-wrap:wrap; gap:10px 40px; padding:16px var(--pad); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BFD3D0}
+  .strip span b{color:#E7EEEA; font-weight:500}
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(64px,8vw,112px) 0}
+  .sec-head{display:grid; grid-template-columns:180px 1fr; gap:24px 48px; align-items:start; margin-bottom:clamp(36px,4vw,56px)}
+  .sec-head h2{font-size:clamp(30px,4.2vw,52px); line-height:1.03; letter-spacing:-.03em; max-width:22ch}
+  .sec-head h2 em{font-style:italic; color:var(--teal)}
+  .sec-head .note{grid-column:2; font-size:15px; color:var(--muted); max-width:52ch; margin-top:-8px}
+
+  .rows{border-bottom:1px solid rgba(15,27,29,.14)}
+  .row{
+    display:grid; grid-template-columns:70px 1fr 1.15fr; gap:20px 40px;
+    padding:26px 0; border-top:1px solid rgba(15,27,29,.14); align-items:start;
+  }
+  .row .num{font-size:12px; letter-spacing:.14em; color:var(--muted); padding-top:5px}
+  .row h3{font-size:22px; line-height:1.2; letter-spacing:-.015em}
+  .row p{font-size:15.5px; line-height:1.62; color:#2C3D3F; max-width:46ch}
+
+  /* inspections */
+  .insp{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,4vw,64px)}
+  .feat{background:var(--tint); border-radius:var(--r); padding:clamp(26px,3vw,40px); display:flex; flex-direction:column}
+  .feat .tag{font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--teal); margin-bottom:auto}
+  .feat h3{font-size:clamp(26px,3vw,36px); line-height:1.06; margin:22px 0 14px; letter-spacing:-.025em}
+  .feat p{font-size:15.5px; color:#2C3D3F; line-height:1.62}
+  .feat .specs{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+  .chip{font-size:12px; border:1px solid rgba(10,79,90,.3); color:var(--teal); padding:5px 11px; border-radius:100px; background:rgba(255,255,255,.5)}
+  .stack{border-bottom:1px solid rgba(15,27,29,.14)}
+  .stack article{padding:24px 0; border-top:1px solid rgba(15,27,29,.14)}
+  .stack h3{font-size:21px; line-height:1.2; margin-bottom:8px}
+  .stack p{font-size:15px; color:#2C3D3F; line-height:1.6; max-width:44ch}
+  .fine{font-size:13px; color:var(--muted); margin-top:26px; line-height:1.55}
+
+  /* dark block */
+  .dark{background:linear-gradient(172deg,#0A4F5A,#062E35); color:var(--paper); position:relative; overflow:hidden}
+  .dark .sec-head h2{color:var(--paper)}
+  .dark .sec-head h2 em{color:#9FC2BC}
+  .dark .label{color:#A6C2BF}
+  .dark .sec-head .note{color:#C6D8D4}
+  .dark .rows{border-bottom-color:rgba(244,243,238,.18)}
+  .dark .row{border-top-color:rgba(244,243,238,.18)}
+  .dark .row .num{color:#A6C2BF}
+  .dark .row p{color:#C6D8D4}
+  .dark .row h3{color:var(--paper)}
+  .dark .cert{
+    margin-top:clamp(36px,4vw,52px); padding-top:26px; border-top:1px solid rgba(244,243,238,.18);
+    display:grid; grid-template-columns:180px 1fr; gap:24px 48px; font-size:14.5px; color:#C6D8D4; line-height:1.65;
+  }
+  .dark .cert strong{color:var(--paper); font-weight:500}
+
+  /* remote + pricing */
+  .remote{display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px)}
+  .remote ul{list-style:none; margin:0; padding:0; font-size:15.5px; line-height:1.5}
+  .remote ul li{padding:11px 0 11px 26px; border-top:1px solid rgba(15,27,29,.12); position:relative; color:#2C3D3F}
+  .remote ul li:last-child{border-bottom:1px solid rgba(15,27,29,.12)}
+  .remote ul li::before{content:""; position:absolute; left:2px; top:20px; width:7px; height:7px; border:1px solid var(--teal); border-radius:50%}
+  .prices{border-bottom:1px solid rgba(15,27,29,.14)}
+  .prow{display:flex; align-items:baseline; justify-content:space-between; gap:20px; padding:18px 0; border-top:1px solid rgba(15,27,29,.14); text-decoration:none; transition:padding-left .2s ease-out}
+  .prow:hover{padding-left:6px}
+  .prow .t{font-size:15.5px; line-height:1.35}
+  .prow .t small{display:block; font-size:12.5px; color:var(--muted); margin-top:3px}
+  .prow .p{font-family:Newsreader,serif; font-size:24px; letter-spacing:-.02em; white-space:nowrap}
+  .prow .p.free{font-size:14px; font-family:"IBM Plex Sans",sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--teal)}
+  .prices .cap{font-size:12.5px; color:var(--muted); margin-top:18px; line-height:1.55}
+
+  /* story */
+  .story{display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(28px,5vw,72px); align-items:start}
+  .story aside{
+    border:1px solid rgba(15,27,29,.16); border-radius:var(--r);
+    padding:clamp(24px,2.6vw,34px); background:#FBFAF6; position:sticky; top:96px;
+  }
+  .story aside .k{font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--teal); margin-bottom:16px}
+  .story aside ol{list-style:none; margin:0; padding:0; counter-reset:s}
+  .story aside li{
+    counter-increment:s; position:relative; padding:11px 0 11px 30px;
+    font-size:14.5px; line-height:1.5; color:#2C3D3F; border-top:1px solid rgba(15,27,29,.1);
+  }
+  .story aside li:first-child{border-top:0; padding-top:2px}
+  .story aside li::before{
+    content:counter(s,decimal-leading-zero); position:absolute; left:0; top:12px;
+    font-size:10.5px; letter-spacing:.1em; color:var(--muted);
+  }
+  .story aside li:first-child::before{top:3px}
+  .story .body p{font-size:16px; line-height:1.68; color:#22333A; margin-bottom:18px; max-width:56ch}
+  .story .body p:first-of-type{font-size:18.5px; color:var(--ink); line-height:1.6}
+  .pull{
+    font-family:Newsreader,serif; font-size:clamp(24px,3.1vw,34px); line-height:1.16;
+    letter-spacing:-.025em; color:var(--teal); margin:34px 0; padding-left:22px;
+    border-left:2px solid var(--teal); max-width:26ch;
+  }
+  .story .sig{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:24px}
+
+  /* area */
+  .area{display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(32px,5vw,64px); align-items:start}
+  .checker{background:var(--tint); border-radius:var(--r); padding:clamp(22px,2.6vw,30px); margin-top:26px}
+  .checker label{display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:10px}
+  .cfield{display:flex; gap:8px}
+  .cfield input{
+    flex:1; min-width:0; font:inherit; font-size:16px; color:var(--ink);
+    background:var(--paper); border:1px solid rgba(15,27,29,.22); border-radius:var(--r);
+    padding:13px 14px;
+  }
+  .cfield input::placeholder{color:#8A9795}
+  .cfield button{
+    font:inherit; font-size:14px; font-weight:500; color:var(--paper); background:var(--teal);
+    border:1px solid var(--teal); border-radius:var(--r); padding:13px 20px; cursor:pointer;
+    transition:background .2s ease-out;
+  }
+  .cfield button:hover{background:var(--deep)}
+  .result{margin-top:16px; font-size:14.5px; line-height:1.6; color:#22333A; min-height:0}
+  .result b{font-weight:600}
+  .result .yes{color:var(--teal); font-weight:600}
+  .result .no{color:#7A4A2A; font-weight:600}
+  .counties{display:grid; grid-template-columns:1fr 1fr; gap:22px 28px}
+  .county{border-top:1px solid rgba(15,27,29,.16); padding-top:12px}
+  .county h4{margin:0 0 6px; font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--teal); font-weight:500}
+  .county p{font-size:14px; line-height:1.6; color:#2C3D3F}
+  .mapwrap{margin-top:30px; border-radius:var(--r); overflow:hidden; border:1px solid rgba(15,27,29,.16); background:var(--tint)}
+  .mapwrap iframe{display:block; width:100%; height:230px; border:0; filter:grayscale(1) contrast(1.02)}
+  .mapwrap .cap{font-size:12px; color:var(--muted); padding:9px 12px; background:var(--paper); border-top:1px solid rgba(15,27,29,.12)}
+
+  /* contact */
+  .contact{background:var(--paper); border-top:1px solid rgba(15,27,29,.14)}
+  .cgrid{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(32px,5vw,72px); align-items:start}
+  form{display:grid; gap:16px}
+  .frow{display:grid; gap:6px}
+  .frow label{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+  .frow input,.frow textarea{
+    font:inherit; font-size:16px; color:var(--ink); background:#FBFAF6;
+    border:1px solid rgba(15,27,29,.22); border-radius:var(--r); padding:13px 14px; width:100%;
+  }
+  .frow textarea{min-height:110px; resize:vertical}
+  form button{
+    justify-self:start; font:inherit; font-size:15px; font-weight:500; color:var(--paper);
+    background:var(--teal); border:1px solid var(--teal); border-radius:var(--r);
+    padding:14px 26px; cursor:pointer; transition:background .2s ease-out,transform .2s ease-out;
+  }
+  form button:hover{background:var(--deep); transform:translateY(-2px)}
+  .honest{font-size:13px; color:var(--muted); line-height:1.6; border-left:2px solid rgba(10,79,90,.35); padding-left:14px}
+  .details dl{margin:0; display:grid; gap:0}
+  .details dl div{padding:18px 0; border-top:1px solid rgba(15,27,29,.14)}
+  .details dt{font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-bottom:6px}
+  .details dd{margin:0; font-size:16.5px; line-height:1.5}
+  .details dd a{text-decoration:none; border-bottom:1px solid rgba(10,79,90,.35); padding-bottom:1px}
+  .details dd a:hover{border-bottom-color:var(--teal)}
+  .details .big{font-family:Newsreader,serif; font-size:28px; letter-spacing:-.02em}
+  .socials{display:flex; gap:14px; margin-top:22px; align-items:center}
+  .socials a{
+    width:40px; height:40px; display:grid; place-items:center; border:1px solid rgba(15,27,29,.2);
+    border-radius:var(--r); transition:background .2s ease-out,border-color .2s ease-out,transform .2s ease-out;
+  }
+  .socials a:hover{background:var(--tint); border-color:var(--teal); transform:translateY(-2px)}
+  .socials svg{width:17px; height:17px; fill:var(--teal)}
+
+
+  /* faq */
+  .faq{background:var(--tint); border-top:1px solid rgba(15,27,29,.14)}
+  .faq .fq{display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(28px,4vw,56px); border-top:1px solid rgba(15,27,29,.14)}
+  .faq details{border-bottom:1px solid rgba(15,27,29,.14); padding:12px 0}
+  .faq summary{
+    padding:8px 0; list-style:none; cursor:pointer; display:flex; gap:16px; align-items:baseline;
+    font-family:Newsreader,serif; font-size:19px; line-height:1.3; letter-spacing:-.01em;
+    transition:color .2s ease-out;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+"; margin-left:auto; font-family:"IBM Plex Sans",sans-serif; font-size:18px; color:var(--teal); flex:none; transition:transform .2s ease-out}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq summary:hover{color:var(--teal)}
+  .faq details p{font-size:15px; line-height:1.62; color:#2C3D3F; margin:12px 0 0; max-width:52ch}
+  @media (max-width:820px){ .faq .fq{grid-template-columns:1fr} }
+
+  /* footer */
+  footer.site{background:#0B1416; color:#B9C6C4; padding:clamp(48px,6vw,76px) 0 30px; font-size:14px}
+  .fgrid{display:grid; grid-template-columns:1.3fr .7fr .7fr 1fr; gap:32px; padding-bottom:36px; border-bottom:1px solid rgba(244,243,238,.14)}
+  footer .fbrand img{height:52px; width:auto; opacity:.95; margin-bottom:14px}
+  footer h5{margin:0 0 12px; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#7F9492; font-weight:500}
+  footer ul{list-style:none; margin:0; padding:0; display:grid; gap:9px}
+  footer a{text-decoration:none; color:#C9D5D3}
+  footer a:hover{color:#fff; text-decoration:underline; text-underline-offset:3px}
+  footer .tagline{font-family:Newsreader,serif; font-size:19px; line-height:1.35; color:#DCE5E3; max-width:24ch}
+  .fbottom{display:flex; flex-wrap:wrap; gap:10px 28px; justify-content:space-between; padding-top:22px; font-size:12px; color:#7F9492}
+  .fbottom span{letter-spacing:.02em}
+
+  /* mobile sticky cta */
+  .mcall{display:none}
+
+  /* reveal */
+  [data-reveal]{opacity:0; transform:translateY(10px); transition:opacity .5s ease-out, transform .5s ease-out}
+  [data-reveal].in{opacity:1; transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation:none!important; transition:none!important}
+    [data-reveal]{opacity:1; transform:none}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:980px){
+    nav.main{display:none}
+    .hero .grid{grid-template-columns:1fr; gap:40px}
+    .hcard{justify-self:start; max-width:420px; transform:none}
+    .sec-head{grid-template-columns:1fr}
+    .sec-head .note{grid-column:1; margin-top:0}
+    .row{grid-template-columns:56px 1fr; gap:8px 20px}
+    .row p{grid-column:2}
+    .insp,.remote,.story,.area,.cgrid{grid-template-columns:1fr}
+    .story aside{position:static}
+    .dark .cert{grid-template-columns:1fr; gap:14px}
+    .fgrid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .bar{min-height:64px; gap:12px}
+    .brand img{height:40px}
+    .brand .name{font-size:17px}
+    .callbtn{padding:8px 14px}
+    .callbtn small{display:none}
+    .callbtn strong{font-size:14px}
+    .hero .wm{font-size:44vw; bottom:-4vw; opacity:.9}
+    .strip .wrap{gap:6px 18px; font-size:11px; padding:14px var(--pad)}
+    .row{grid-template-columns:1fr; gap:6px; padding:22px 0}
+    .row p{grid-column:1}
+    .row .num{padding-top:0}
+    .counties{grid-template-columns:1fr}
+    .cfield{flex-direction:column}
+    .cfield button{width:100%}
+    .fgrid{grid-template-columns:1fr; gap:26px}
+    footer.site{padding-bottom:88px}
+    .mcall{
+      display:flex; position:fixed; left:0; right:0; bottom:0; z-index:50;
+      gap:10px; padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+      background:rgba(244,243,238,.96); border-top:1px solid rgba(15,27,29,.16);
+      backdrop-filter:blur(8px);
+    }
+    .mcall a{
+      flex:1; text-align:center; text-decoration:none; font-size:14px; font-weight:500;
+      padding:13px 10px; border-radius:var(--r);
+    }
+    .mcall .a{background:var(--teal); color:var(--paper)}
+    .mcall .b{border:1px solid rgba(15,27,29,.25); color:var(--ink)}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="preview"><b>Website concept preview</b> &nbsp;·&nbsp; <span>Design draft for Valley Mold Services. Not the live site.</span></div>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Valley Mold Services, home">
+      <img src="valley-mold/valley-mold-logo.png" alt="Valley Mold Services logo" width="397" height="400">
+      <span class="name">Valley Mold Services<small>New Richmond, Wisconsin</small></span>
+    </a>
+    <nav class="main" aria-label="Primary">
+      <a href="#inspection">Inspection</a>
+      <a href="#remediation">Remediation consulting</a>
+      <a href="#remote">Remote consulting</a>
+      <a href="#contents">Cleaning &amp; contents</a>
+      <a href="#story">Our story</a>
+      <a href="#area">Service area</a>
+    </nav>
+    <a class="callbtn" href="tel:+19523937087">
+      <small>Call or text</small>
+      <strong>952-393-7087</strong>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0">
+  <p class="wm" aria-hidden="true">SPORES</p>
+  <div class="wrap grid">
+    <div>
+      <p class="kicker"><b>NORMI-certified</b> mold inspection &amp; consulting · Western Wisconsin + Twin Cities</p>
+      <h1>Mold you can see <em>is the small part.</em></h1>
+      <p class="lede">We inspect the whole house, image the walls, read the moisture, and test for mold and mycotoxins at an <strong>AIHA-accredited lab</strong>. Then we tell you what to do next, in what order, and what to hand your remediator.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Request an inspection <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="#remote">Talk to us remotely</a>
+      </div>
+    </div>
+
+    <aside class="hcard" aria-label="Contact card">
+      <div class="top">
+        <img src="valley-mold/valley-mold-logo.png" alt="" width="397" height="400">
+        <div class="n">Valley Mold Services, LLC<span>Certified Mold Inspector &amp; Remediator</span></div>
+      </div>
+      <a class="tel" href="tel:+19523937087">
+        <small>Call or text</small>
+        <strong>952-393-7087</strong>
+      </a>
+      <dl>
+        <div><dt>Base</dt><dd>New Richmond, WI</dd></div>
+        <div><dt>Booking</dt><dd>Inspections by appointment</dd></div>
+        <div><dt>Lab</dt><dd>AIHA-accredited analysis</dd></div>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="strip">
+    <div class="wrap">
+      <span><b>NORMI</b> certified inspector &amp; remediator</span>
+      <span><b>Thermal</b> imaging + moisture readings</span>
+      <span><b>7</b> Wisconsin counties</span>
+      <span><b>Twin Cities</b> metro</span>
+      <span><b>5.0</b> on Google reviews</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">The difference</p>
+      <h2>A walkthrough won't find the mold <em>behind the rim joist.</em></h2>
+      <p class="note">Mold is a moisture problem first. So we measure the moisture, look inside the wall, and only then test what's actually growing. Whole-home inspections run three to seven hours with one or two inspectors, because the part that affects your health is the part nobody opened.</p>
+    </div>
+
+    <div class="rows">
+      <div class="row" data-reveal>
+        <div class="num">01</div>
+        <h3>Thermal imaging</h3>
+        <p>We scan ceilings, rim joists, and wall cavities with a thermal camera for temperature differences that mean moisture, not just visible growth.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">02</div>
+        <h3>Moisture readings</h3>
+        <p>Pin and pinless meters at every suspect area, so we know whether a wall is wet right now or was wet last spring and never dried out.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">03</div>
+        <h3>Mold and mycotoxin testing</h3>
+        <p>Samples are analyzed by an AIHA-accredited lab. Mycotoxin testing goes past a spore count when someone in the house is already sick.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">04</div>
+        <h3>A written plan, in order</h3>
+        <p>Findings, photos, and prioritized next steps: what to fix, what to clean, what to leave alone, and what to verify before containment comes down.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSPECTION TYPES -->
+<section id="inspection" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">Inspection services</p>
+      <h2>Three ways to get your house <em>actually looked at.</em></h2>
+    </div>
+
+    <div class="insp">
+      <div class="feat" data-reveal>
+        <p class="tag">Attic to crawlspace</p>
+        <h3>Whole-home mold inspection</h3>
+        <p>Attic to crawlspace. Every bathroom, every rim joist, the mechanical room, the windows that sweat, and the basement corner you avoid. Visual inspection plus thermal imaging and moisture readings, with samples taken where the numbers say they should be.</p>
+        <div class="specs">
+          <span class="chip">3–7 hours</span>
+          <span class="chip">1–2 inspectors</span>
+          <span class="chip">Lab samples as needed</span>
+        </div>
+      </div>
+
+      <div class="stack">
+        <article data-reveal>
+          <h3>Spot-check inspection</h3>
+          <p>A limited-scope inspection for one known event: rain coming in at a window, a toilet or tub overflow, or a spot you already suspect.</p>
+        </article>
+        <article data-reveal>
+          <h3>Pre-purchase inspection</h3>
+          <p>Before you sign, on new construction or an older home. The mold and water-damage look that a general home inspection doesn't cover.</p>
+        </article>
+        <article data-reveal>
+          <h3>Inspection intake call</h3>
+          <p>A short pre-inspection conversation so we scope the visit before we book it, and so you're not paying for rooms that don't need looking at.</p>
+        </article>
+      </div>
+    </div>
+    <p class="fine" data-reveal>Inspection price and duration depend on the size and details of the home. Call or text <a href="tel:+19523937087" style="color:var(--teal)">952-393-7087</a> with the address and what you're seeing, and you'll get a number before anything is scheduled.</p>
+  </div>
+</section>
+
+<!-- REMEDIATION (dark) -->
+<section class="dark" id="remediation">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">Remediation consulting</p>
+      <h2>We don't do remediation. <em>We make sure yours is done right.</em></h2>
+      <p class="note">Valley Mold Services doesn't swing hammers or set containment. We write the protocol, coach you through the options, and stay on your side of the table while the work happens.</p>
+    </div>
+
+    <div class="rows">
+      <div class="row" data-reveal>
+        <div class="num">01</div>
+        <h3>Custom remediation protocol</h3>
+        <p>A written protocol built for your house and your situation, to industry and NORMI standards. Hand it to your remediation company, or use it to guide your own work.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">02</div>
+        <h3>Post-remediation verification</h3>
+        <p>After the work is finished but before containment comes down, we come back, inspect the remediated areas, and test to confirm the job actually worked.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">03</div>
+        <h3>Advocate during remediation</h3>
+        <p>We help you choose a remediation company, answer your questions as they come up, and hold the crew to the standards and the protocol in writing.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">04</div>
+        <h3>DIY remediation coaching</h3>
+        <p>Some situations are appropriate to handle yourself. We'll tell you honestly whether yours is one of them, and if it is, give you detailed, customized steps.</p>
+      </div>
+    </div>
+
+    <div class="cert" data-reveal>
+      <p class="label">Certification</p>
+      <p>Wisconsin and Minnesota don't require mold licensing. Ours is voluntary: our primary inspector is certified by <strong>NORMI</strong> (National Organization of Remediators and Mold Inspectors) as both a <strong>mold inspector</strong> and a <strong>mold remediator</strong>, one of the three certifying bodies recognized by every state that does require it. We chose NORMI because it acknowledges the health effects of mold, which is the whole reason this business exists.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REMOTE + PRICING -->
+<section id="remote">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">Remote consulting</p>
+      <h2>You don't have to live here to get <em>a straight answer.</em></h2>
+      <p class="note">Video calls, photos, and your paperwork. Same standards, anywhere.</p>
+    </div>
+
+    <div class="remote">
+      <div data-reveal>
+        <ul>
+          <li>What to do first when you find mold, or when a leak just happened</li>
+          <li>Reading your lab results and interpreting your inspection report</li>
+          <li>A second opinion on someone else's findings and quote</li>
+          <li>A remediation protocol built to industry and NORMI standards</li>
+          <li>Finding and vetting local inspectors and remediation companies</li>
+          <li>Whether your situation is appropriate for DIY remediation</li>
+          <li>Finding a health-conscious realtor for your next house</li>
+          <li>Finding a mold-conscious public insurance adjuster</li>
+        </ul>
+      </div>
+
+      <div data-reveal>
+        <div class="prices">
+          <a class="prow" href="#contact">
+            <span class="t">Initial call <small>General questions and which service fits your situation</small></span>
+            <span class="p free">Call</span>
+          </a>
+          <a class="prow" href="#contact">
+            <span class="t">Virtual consultation, 30 minutes <small>Personalized Q&amp;A for non-inspection clients</small></span>
+            <span class="p">$50</span>
+          </a>
+          <a class="prow" href="#contact">
+            <span class="t">Virtual consultation, 60 minutes <small>Same, with time to walk through reports and photos</small></span>
+            <span class="p">$90</span>
+          </a>
+        </div>
+        <p class="cap">Published rates for virtual consultations. The initial call has no published rate, so ask when you book. If you've already had an inspection and want a second opinion on the report, the 60-minute call is usually the one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENTS -->
+<section id="contents" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">Small particle cleaning &amp; contents</p>
+      <h2>After the mold is gone, <em>the dust is still in the house.</em></h2>
+      <p class="note">Spores and mycotoxins travel. Cleaning the remediated room isn't the same as cleaning the rest of the home, and some of what's in the closet can be saved while some of it shouldn't be.</p>
+    </div>
+
+    <div class="rows">
+      <div class="row" data-reveal>
+        <div class="num">01</div>
+        <h3>Onsite cleaning, local</h3>
+        <p>We come to the house, train you and your cleaning crew, and kick the process off with you. Or we do the cleaning ourselves, if you'd rather.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">02</div>
+        <h3>Remote cleaning guidance</h3>
+        <p>Detailed, personalized direction over video calls, using your videos and photos, for clients outside our inspection area.</p>
+      </div>
+      <div class="row" data-reveal>
+        <div class="num">03</div>
+        <h3>Contents: keep or let go</h3>
+        <p>Item by item recommendations for mold-affected belongings: what to discard, what to keep, and exactly how to clean what stays. In person locally, by video anywhere else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" style="padding-top:0">
+  <div class="wrap story">
+
+
+    <div class="body" data-reveal>
+      <p class="label" style="margin-bottom:18px">Our story</p>
+      <p>This business started in 2017, a few months after we moved into a new-construction house and learned the floor joists had been recalled. The coating on them was off-gassing formaldehyde at extreme levels.</p>
+      <p>The remediation that followed was botched in a dozen ways. Containment and negative air pressure weren't maintained, the house dropped below freezing mid-job, and the plumbing froze while the ducts were disconnected. Formaldehyde dust went up through the ductwork and settled two stories up in the bedrooms.</p>
+      <p>A few years later, house hunting again, we put an offer on a home with a moldy attic: black sheathing, mushrooms growing, insulation gone crunchy. We walked away. The next house passed its inspection with nothing notable reported, and turned out to have mold at the rim joists, a toilet, a sink, several showers, a jetted tub, the mechanical room, and the windows.</p>
+      <p class="pull">Mold has cost our family a lot of money and a lot of health. It didn't have to.</p>
+      <p>What we learned is that the standards exist, and that somebody has to insist they're followed. Nobody cares about the health of your home more than you do. We've been through more than five inspections, several remediations, and the recovery after. We do this work so you don't have to learn it the way we did.</p>
+      <p class="sig">Valley Mold Services, LLC · New Richmond, Wisconsin</p>
+    </div>
+
+    <aside data-reveal>
+      <p class="k">What we've been through</p>
+      <ol>
+        <li>A floor-joist recall on a brand-new house in 2017, and the botched remediation that followed it.</li>
+        <li>More than five inspections on one home, including one with a mold dog trained to find it.</li>
+        <li>Several remediations: some that worked, some that had to be redone.</li>
+        <li>A second house that passed its general inspection and still had mold at the rim joists, a toilet, several showers, a jetted tub, the mechanical room and the windows.</li>
+        <li>Detox, health recovery, and the prevention measures that came after.</li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section id="area" class="dark">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">Service area</p>
+      <h2>Western Wisconsin, and across the river <em>into the metro.</em></h2>
+      <p class="note">Inspections are local. Consulting isn't, so if you're outside the map, remote consulting still works.</p>
+    </div>
+
+    <div class="area">
+      <div data-reveal>
+        <div class="checker">
+          <label for="city">Check your town</label>
+          <div class="cfield">
+            <input id="city" list="towns" type="text" placeholder="Start typing a city, e.g. Hudson" autocomplete="off">
+            <button type="button" id="check">Check</button>
+          </div>
+          <datalist id="towns">
+            <option value="Boyceville"><option value="Knapp"><option value="Menomonie">
+            <option value="Eau Claire"><option value="Chippewa Falls">
+            <option value="Ellsworth"><option value="Prescott"><option value="River Falls">
+            <option value="Osceola"><option value="Saint Croix Falls"><option value="Star Prairie">
+            <option value="Pepin">
+            <option value="Baldwin"><option value="Glenwood City"><option value="Hammond">
+            <option value="Hudson"><option value="New Richmond"><option value="Roberts">
+            <option value="Somerset"><option value="Woodville">
+            <option value="Lake Elmo"><option value="Mahtomedi"><option value="Oakdale">
+            <option value="Stillwater"><option value="Woodbury">
+            <option value="Hastings"><option value="Burnsville"><option value="Lakeville">
+            <option value="Apple Valley"><option value="Eagan">
+            <option value="Little Canada"><option value="Maplewood"><option value="North St. Paul">
+          </datalist>
+          <div class="result" id="result" role="status" aria-live="polite"></div>
+        </div>
+        <div class="mapwrap">
+          <iframe title="Map of New Richmond, Wisconsin" src="https://www.openstreetmap.org/export/embed.html?bbox=-92.6200%2C45.0800%2C-92.4500%2C45.1700&amp;layer=mapnik&amp;marker=45.1230%2C-92.5366" loading="lazy" referrerpolicy="no-referrer"></iframe>
+          <p class="cap">Based in New Richmond, Wisconsin · PO Box 251, New Richmond, WI 54017</p>
+        </div>
+      </div>
+
+      <div class="counties" data-reveal>
+        <div class="county"><h4>Dunn County, WI</h4><p>Boyceville, Knapp, Menomonie</p></div>
+        <div class="county"><h4>Eau Claire County, WI</h4><p>Eau Claire</p></div>
+        <div class="county"><h4>Chippewa County, WI</h4><p>Chippewa Falls</p></div>
+        <div class="county"><h4>Pierce County, WI</h4><p>Ellsworth, Prescott, River Falls</p></div>
+        <div class="county"><h4>Polk County, WI</h4><p>Osceola, Saint Croix Falls, Star Prairie</p></div>
+        <div class="county"><h4>Pepin County, WI</h4><p>Pepin</p></div>
+        <div class="county"><h4>St. Croix County, WI</h4><p>Baldwin, Glenwood City, Hammond, Hudson, New Richmond, Roberts, Somerset, Woodville</p></div>
+        <div class="county"><h4>Washington County, MN</h4><p>Lake Elmo, Mahtomedi, Oakdale, Stillwater, Woodbury</p></div>
+        <div class="county"><h4>Dakota County, MN</h4><p>Hastings, Burnsville, Lakeville, Apple Valley, Eagan</p></div>
+        <div class="county"><h4>Ramsey County, MN</h4><p>Little Canada, Maplewood, North St. Paul</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="questions">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">Straight answers</p>
+      <h2>The questions people ask <em>before they call.</em></h2>
+      <p class="note">If yours isn't here, ask it on the phone. There's no charge for the initial conversation, and no script.</p>
+    </div>
+    <div class="fq">
+      <details data-reveal>
+        <summary>Do you do the remediation work yourself?</summary>
+        <p>No. We're NORMI-certified as a remediator so we can read the standard properly, but we don't perform the physical work. We write your protocol, help you choose a company, and come back to verify the job before containment comes down.</p>
+      </details>
+      <details data-reveal>
+        <summary>What does a whole-home inspection cost?</summary>
+        <p>It depends on the size and details of the house. Call or text with the address and what you're seeing, and you'll get a number and a time estimate before anything is booked.</p>
+      </details>
+      <details data-reveal>
+        <summary>Do you work in Minnesota?</summary>
+        <p>Yes. Western Wisconsin is home base, and inspections cross into the Twin Cities metro: Washington, Dakota and Ramsey counties, including Stillwater, Woodbury, Hastings, Eagan and Maplewood.</p>
+      </details>
+      <details data-reveal>
+        <summary>What is mycotoxin testing for?</summary>
+        <p>Samples are analyzed by an AIHA-accredited lab. A spore count tells you what's airborne; mycotoxin testing goes further, which matters when someone in the house is already reacting to it.</p>
+      </details>
+      <details data-reveal>
+        <summary>Can I handle the remediation myself?</summary>
+        <p>Sometimes. Certain situations are appropriate for DIY. We'll tell you honestly whether yours is one of them, and if it is, give you detailed, customized steps instead of a sales pitch.</p>
+      </details>
+      <details data-reveal>
+        <summary>I already had an inspection. Can you review it?</summary>
+        <p>Yes. Report reviews, second opinions, and interpreting lab results are what the remote consultations are for. Bring the report, the photos and the quote.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="label">Contact</p>
+      <h2>Tell us what you're <em>looking at.</em></h2>
+      <p class="note">Photos help. A phone call helps more. If you're mid-crisis with a leak, call or text rather than filling anything in.</p>
+    </div>
+
+    <div class="cgrid">
+      <form data-reveal novalidate>
+        <div class="frow">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="First and last">
+        </div>
+        <div class="frow">
+          <label for="f-phone">Phone or email</label>
+          <input id="f-phone" name="contact" type="text" autocomplete="tel" placeholder="Whichever you answer">
+        </div>
+        <div class="frow">
+          <label for="f-city">City, state</label>
+          <input id="f-city" name="city" type="text" autocomplete="address-level2" placeholder="Hudson, WI">
+        </div>
+        <div class="frow">
+          <label for="f-msg">What's going on?</label>
+          <textarea id="f-msg" name="message" placeholder="Where you're seeing it, how long it's been there, and whether anyone in the house is reacting to it."></textarea>
+        </div>
+        <button type="submit">Send request</button>
+        <p class="honest" id="formnote">This form is a preview and doesn't send yet. To reach Valley Mold Services today, call or text <a href="tel:+19523937087" style="color:var(--teal)">952-393-7087</a> or email <a href="mailto:contact@valleymoldservices.com" style="color:var(--teal)">contact@valleymoldservices.com</a>.</p>
+      </form>
+
+      <div class="details" data-reveal>
+        <dl>
+          <div>
+            <dt>Call or text</dt>
+            <dd><a class="big" href="tel:+19523937087">952-393-7087</a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:contact@valleymoldservices.com">contact@valleymoldservices.com</a></dd>
+          </div>
+          <div>
+            <dt>Mailing address</dt>
+            <dd>PO Box 251<br>New Richmond, WI 54017</dd>
+          </div>
+          <div>
+            <dt>Scheduling</dt>
+            <dd>Inspections by appointment, 3 to 7 hours on site. Virtual consultations most weekdays.</dd>
+          </div>
+        </dl>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=61580427127183" aria-label="Valley Mold Services on Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3V14h2.8v8z"/></svg>
+          </a>
+          <a href="mailto:contact@valleymoldservices.com" aria-label="Email Valley Mold Services">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1zm1.6 2L12 13l7.4-5.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <img src="valley-mold/valley-mold-logo.png" alt="Valley Mold Services" width="397" height="400" loading="lazy">
+        <p class="tagline">Safe air. Healthy home. Mold handled right.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#inspection">Mold inspection</a></li>
+          <li><a href="#remediation">Remediation consulting</a></li>
+          <li><a href="#remote">Remote consulting</a></li>
+          <li><a href="#contents">Cleaning &amp; contents</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#story">Our story</a></li>
+          <li><a href="#area">Service area</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.valleymoldservices.com/disclaimers-terms-conditions" target="_blank" rel="noopener">Terms &amp; disclaimers</a></li>
+          <li><a href="https://www.valleymoldservices.com/blank-1" target="_blank" rel="noopener">Accessibility statement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Reach us</h5>
+        <ul>
+          <li><a href="tel:+19523937087">952-393-7087</a></li>
+          <li><a href="mailto:contact@valleymoldservices.com">contact@valleymoldservices.com</a></li>
+          <li>PO Box 251<br>New Richmond, WI 54017</li>
+          <li><a href="https://www.facebook.com/profile.php?id=61580427127183" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© 2026 Valley Mold Services, LLC. All rights reserved.</span>
+      <span>Website concept preview · not the live site</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mcall">
+  <a class="a" href="tel:+19523937087">Call or text 952-393-7087</a>
+  <a class="b" href="#contact">Request a visit</a>
+</div>
+
+<script>
+(function(){
+  // reveal on scroll, once
+  var els = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // service-area checker
+  var TOWNS = {
+    "boyceville":"Dunn County, Wisconsin","knapp":"Dunn County, Wisconsin","menomonie":"Dunn County, Wisconsin",
+    "eau claire":"Eau Claire County, Wisconsin","chippewa falls":"Chippewa County, Wisconsin",
+    "ellsworth":"Pierce County, Wisconsin","prescott":"Pierce County, Wisconsin","river falls":"Pierce County, Wisconsin",
+    "osceola":"Polk County, Wisconsin","saint croix falls":"Polk County, Wisconsin","st croix falls":"Polk County, Wisconsin","star prairie":"Polk County, Wisconsin",
+    "pepin":"Pepin County, Wisconsin",
+    "baldwin":"St. Croix County, Wisconsin","glenwood city":"St. Croix County, Wisconsin","hammond":"St. Croix County, Wisconsin",
+    "hudson":"St. Croix County, Wisconsin","new richmond":"St. Croix County, Wisconsin","roberts":"St. Croix County, Wisconsin",
+    "somerset":"St. Croix County, Wisconsin","woodville":"St. Croix County, Wisconsin",
+    "lake elmo":"Washington County, Minnesota","mahtomedi":"Washington County, Minnesota","oakdale":"Washington County, Minnesota",
+    "stillwater":"Washington County, Minnesota","woodbury":"Washington County, Minnesota",
+    "hastings":"Dakota County, Minnesota","burnsville":"Dakota County, Minnesota","lakeville":"Dakota County, Minnesota",
+    "apple valley":"Dakota County, Minnesota","eagan":"Dakota County, Minnesota",
+    "little canada":"Ramsey County, Minnesota","maplewood":"Ramsey County, Minnesota","north st. paul":"Ramsey County, Minnesota","north saint paul":"Ramsey County, Minnesota"
+  };
+
+  var input = document.getElementById('city');
+  var btn = document.getElementById('check');
+  var out = document.getElementById('result');
+
+  function titleCase(s){
+    return s.replace(/\s+/g,' ').trim().replace(/\w\S*/g, function(w){
+      return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    });
+  }
+
+  function check(){
+    var raw = (input.value || '').replace(/,.*$/,'').trim();
+    if (!raw) { out.innerHTML = 'Type a city first, or call or text <b>952-393-7087</b>.'; return; }
+    var key = raw.toLowerCase().replace(/\./g,'').replace(/\s+/g,' ');
+    var county = TOWNS[key];
+    if (!county) {
+      // loose contains match
+      var hit = Object.keys(TOWNS).filter(function(k){ return k.indexOf(key) === 0 || key.indexOf(k) === 0; })[0];
+      if (hit) { county = TOWNS[hit]; raw = titleCase(hit); }
+    }
+    if (county) {
+      out.innerHTML = '<span class="yes">Yes.</span> ' + titleCase(raw) + ' is in ' + county + ', inside our inspection area. Call or text <b>952-393-7087</b> with the address and we\'ll scope the visit.';
+    } else {
+      out.innerHTML = '<span class="no">Not on our inspection route.</span> We don\'t have an inspector in ' + titleCase(raw) + ' yet, but remote mold consulting works anywhere: video calls, lab review, a second opinion, and a written remediation protocol. <a href="#remote" style="color:#0A4F5A">See remote consulting →</a>';
+    }
+  }
+
+  btn.addEventListener('click', check);
+  input.addEventListener('keydown', function(e){ if (e.key === 'Enter') { e.preventDefault(); check(); } });
+
+  // form is a preview: say so, don't pretend
+  var form = document.querySelector('form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('formnote').innerHTML = 'Nothing was sent, this is a design preview. Call or text <a href="tel:+19523937087" style="color:var(--teal)">952-393-7087</a> or email <a href="mailto:contact@valleymoldservices.com" style="color:var(--teal)">contact@valleymoldservices.com</a>.';
+  });
+})();
+</script>
+</body>
+</html>
