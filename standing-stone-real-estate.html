@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Standing Stone Real Estate | Jose, Realtor &amp; Notary Public</title>
+<meta name="description" content="Standing Stone Real Estate. Jose, Realtor and Notary Public. Browse office listings, search all available properties, or request a showing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231f2b27'/%3E%3Cpath d='M18 46V30l14-12 14 12v16z' fill='none' stroke='%23d9a679' stroke-width='4' stroke-linejoin='round'/%3E%3Crect x='28' y='34' width='8' height='12' fill='%23d9a679'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#f3eee4;      /* limestone ground */
+  --paper:#fbf8f2;     /* raised surface */
+  --ink:#1b1f1d;       /* off-black text */
+  --pine:#1f2b27;      /* deep slate-pine */
+  --moss:#5d6b63;      /* muted text */
+  --rust:#b5532d;      /* the one accent */
+  --line:rgba(27,31,29,.14);
+  --r:6px;
+  --s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px;--s6:104px;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);font-size:17px;line-height:1.62;color:var(--ink);background:var(--bone);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--rust)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.04;letter-spacing:-.015em}
+h2{font-size:clamp(34px,4.6vw,60px)}
+h3{font-size:24px;line-height:1.2}
+.lede{font-size:19px;color:var(--moss);max-width:56ch}
+
+/* concept banner */
+.concept{background:var(--ink);color:#e9e3d6;text-align:center;font-size:12.5px;letter-spacing:.06em;padding:8px 12px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:var(--r);border:1px solid transparent;font-weight:600;font-size:15px;text-decoration:none;transition:transform .18s ease-out,background .18s,color .18s,border-color .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn-rust{background:var(--rust);color:#fff}
+.btn-rust:hover{background:#9c4523}
+.btn-line{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn-dark{background:var(--pine);color:#fff}
+.btn-dark:hover{background:#121a17}
+.btn-ghost{border-color:var(--line);background:transparent}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn svg{width:16px;height:16px;flex:none}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(243,238,228,.94);backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mk{width:38px;height:38px;border-radius:8px;background:var(--pine);display:grid;place-items:center}
+.brand .mk svg{width:22px;height:22px}
+.brand b{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:-.01em;line-height:1.05;display:block}
+.brand small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+nav.main{display:flex;gap:26px;font-size:14.5px;font-weight:500}
+nav.main a{text-decoration:none;color:var(--ink);opacity:.8;padding:6px 0;border-bottom:1px solid transparent;transition:opacity .15s,border-color .15s}
+nav.main a:hover{opacity:1;border-color:var(--rust)}
+.top .cta{display:flex;gap:10px;align-items:center}
+.top .btn{padding:10px 16px;font-size:14px}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:var(--r);width:42px;height:42px;align-items:center;justify-content:center}
+.burger svg{width:20px;height:20px}
+
+/* hero */
+.hero{position:relative;background:var(--pine);color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/sse-hero.jpg) center 40%/cover;opacity:.34;z-index:-3}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#1f2b27 8%,rgba(31,43,39,.86) 46%,rgba(31,43,39,.35) 100%);z-index:-2}
+.hero .water{position:absolute;right:-1vw;bottom:-5vw;font-family:var(--serif);font-weight:600;font-size:clamp(120px,24vw,360px);line-height:.8;color:rgba(255,255,255,.045);letter-spacing:-.04em;z-index:-1;pointer-events:none;white-space:nowrap}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--s5);align-items:center;padding:var(--s6) 0 var(--s6)}
+.hero .kicker{color:#e3a77c;display:flex;align-items:center;gap:12px;margin-bottom:var(--s3)}
+.hero .kicker::before{content:"";width:34px;height:1px;background:currentColor}
+.hero h1{font-size:clamp(46px,7.2vw,100px);line-height:.98;letter-spacing:-.025em;margin-bottom:var(--s3)}
+.hero h1 em{font-style:italic;color:#e3a77c;font-weight:400}
+.hero p.sub{font-size:19px;color:rgba(255,255,255,.78);max-width:46ch;margin-bottom:var(--s4)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hcard{background:var(--bone);color:var(--ink);border-radius:10px;padding:30px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);position:relative}
+.hcard .seal{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--rust);display:grid;place-items:center;margin-bottom:18px;position:relative}
+.hcard .seal::before{content:"";position:absolute;inset:5px;border-radius:50%;border:1px dashed rgba(181,83,45,.6)}
+.hcard .seal svg{width:26px;height:26px}
+.hcard .nm{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.1}
+.hcard .tg{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);margin:6px 0 20px}
+.hcard hr{border:0;border-top:1px solid var(--line);margin:0 0 18px}
+.hcard .row{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:7px 0;border-bottom:1px dotted var(--line)}
+.hcard .row span:first-child{color:var(--moss)}
+.hcard .tel{display:block;font-family:var(--serif);font-size:31px;font-weight:500;margin:20px 0 4px;text-decoration:none}
+.hcard .tel:hover{color:var(--rust)}
+.hcard .note{font-size:12px;color:var(--moss)}
+
+/* ribbon search */
+.ribbon{background:var(--rust);color:#fff}
+.ribbon .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;flex-wrap:wrap}
+.ribbon p{font-family:var(--serif);font-size:22px;line-height:1.25}
+.ribbon p small{display:block;font-family:var(--sans);font-size:13.5px;opacity:.85;margin-top:2px}
+.ribbon .btn{background:#fff;color:var(--rust)}
+.ribbon .btn:hover{background:var(--pine);color:#fff}
+
+section{padding:var(--s6) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s4);margin-bottom:var(--s5);flex-wrap:wrap}
+.sec-head h2{margin-top:14px;max-width:16ch}
+
+/* listings */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:9px 16px;border:1px solid var(--line);border-radius:99px;background:transparent;font-size:14px;font-weight:500;transition:all .15s}
+.chip:hover{border-color:var(--ink)}
+.chip.on{background:var(--pine);color:#fff;border-color:var(--pine)}
+.lgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:28px}
+.lcard{grid-column:span 4;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease-out,box-shadow .2s;cursor:pointer;text-align:left;padding:0}
+.lcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px -18px rgba(27,31,29,.35)}
+.lcard.feat{grid-column:span 8;flex-direction:row}
+.lcard.feat .ph{flex:1.35;aspect-ratio:auto;min-height:340px}
+.lcard.feat .bd{flex:1;justify-content:center}
+.lcard .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:#cfc8b8}
+.lcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease-out}
+.lcard:hover .ph img{transform:scale(1.04)}
+.tag{position:absolute;left:14px;top:14px;background:var(--pine);color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:3px}
+.tag.pending{background:var(--rust)}
+.lcard .bd{padding:22px 24px 24px;display:flex;flex-direction:column;gap:6px}
+.price{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-.01em}
+.lcard.feat .price{font-size:44px}
+.addr{font-size:15px;color:var(--moss)}
+.facts{display:flex;gap:18px;font-size:14px;margin-top:10px;padding-top:12px;border-top:1px solid var(--line)}
+.facts b{font-weight:600}
+.sample-note{margin-top:30px;font-size:13px;color:var(--moss);display:flex;gap:10px;align-items:center}
+.sample-note::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rust);flex:none}
+.empty{grid-column:1/-1;padding:48px;text-align:center;color:var(--moss);border:1px dashed var(--line);border-radius:var(--r)}
+
+/* about */
+.about{background:var(--paper);border-block:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--s5);align-items:start}
+.portrait{position:relative;aspect-ratio:4/5;background:var(--pine);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;color:#fff;isolation:isolate}
+.portrait::before{content:"JO";position:absolute;right:-10px;top:-30px;font-family:var(--serif);font-weight:600;font-size:270px;line-height:1;color:rgba(255,255,255,.06);z-index:-1}
+.portrait .ph-note{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#e3a77c;margin-bottom:8px}
+.portrait p{font-family:var(--serif);font-size:24px;line-height:1.25}
+.about h2{margin:14px 0 var(--s3)}
+.about p{color:#3b423f;margin-bottom:var(--s2);max-width:58ch}
+.creds{margin-top:var(--s4);border-top:1px solid var(--ink)}
+.cred{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.cred i{font-family:var(--serif);font-style:normal;color:var(--rust);font-size:15px}
+.cred b{font-family:var(--serif);font-weight:500;font-size:21px;display:block}
+.cred span{font-size:14.5px;color:var(--moss)}
+
+/* services */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.svc>div{padding:var(--s5) var(--s4)}
+.svc>div:first-child{background:var(--paper);border-right:1px solid var(--ink)}
+.svc>div:last-child{background:var(--pine);color:#fff}
+.svc h3{font-size:36px;margin:12px 0 var(--s3)}
+.svc .kicker{color:var(--rust)}
+.svc>div:last-child .kicker{color:#e3a77c}
+.svc ol{list-style:none;counter-reset:n;margin-bottom:var(--s4)}
+.svc li{counter-increment:n;display:grid;grid-template-columns:38px 1fr;padding:14px 0;border-top:1px solid var(--line);font-size:16px}
+.svc>div:last-child li{border-color:rgba(255,255,255,.18)}
+.svc li::before{content:"0" counter(n);font-family:var(--serif);color:var(--rust);font-size:14px;padding-top:2px}
+.svc>div:last-child li::before{color:#e3a77c}
+.svc li b{font-weight:600;display:block}
+.svc li span{font-size:14.5px;color:var(--moss)}
+.svc>div:last-child li span{color:rgba(255,255,255,.65)}
+
+/* notary */
+.notary{background:var(--bone);padding:var(--s5) 0}
+.notary .box{display:grid;grid-template-columns:auto 1fr auto;gap:var(--s4);align-items:center;padding:var(--s4);border:1px solid var(--ink);border-radius:var(--r);background:var(--paper)}
+.notary .stamp{width:92px;height:92px;border-radius:50%;border:2px solid var(--rust);display:grid;place-items:center;text-align:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);font-weight:600;line-height:1.3;transform:rotate(-8deg);outline:1px solid var(--rust);outline-offset:-8px}
+.notary h3{font-size:28px;margin-bottom:6px}
+.notary p{color:var(--moss);max-width:60ch;font-size:16px}
+
+/* mls block */
+.mls{background:var(--pine);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.mls::before{content:"SEARCH";position:absolute;left:-2vw;bottom:-4vw;font-family:var(--serif);font-weight:600;font-size:clamp(100px,20vw,300px);color:rgba(255,255,255,.04);line-height:.8;z-index:-1}
+.mls .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s5);align-items:center}
+.mls h2{margin:14px 0 var(--s3)}
+.mls h2 em{font-style:italic;color:#e3a77c;font-weight:400}
+.mls p{color:rgba(255,255,255,.75);max-width:50ch;margin-bottom:var(--s3)}
+.mls .fine{font-size:13px;color:rgba(255,255,255,.55);margin-top:var(--s3)}
+.mls .kicker{color:#e3a77c}
+.mockbar{border:1px solid rgba(255,255,255,.22);border-radius:10px;overflow:hidden;background:rgba(0,0,0,.18)}
+.mockbar .bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.14);align-items:center;font-size:12px;color:rgba(255,255,255,.6)}
+.mockbar .bar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25)}
+.mockbar .bar span{margin-left:10px;flex:1;background:rgba(255,255,255,.08);padding:4px 10px;border-radius:99px}
+.mockbody{padding:24px;display:grid;gap:12px}
+.mockbody .f{height:44px;border:1px solid rgba(255,255,255,.2);border-radius:6px;display:flex;align-items:center;padding:0 14px;font-size:14px;color:rgba(255,255,255,.6)}
+.mockbody .g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mockbody .res{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.mockbody .res div{aspect-ratio:1;background:rgba(255,255,255,.07);border-radius:6px}
+
+/* forms */
+.formsec{background:var(--paper);border-top:1px solid var(--line)}
+.formsec .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--s5)}
+.formsec h2{margin:14px 0 var(--s3)}
+.cinfo{margin-top:var(--s4);border-top:1px solid var(--ink)}
+.cinfo div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.cinfo span{color:var(--moss)}
+.cinfo a{text-decoration:none;font-weight:600}
+.cinfo a:hover{color:var(--rust)}
+.tabs{display:flex;border-bottom:1px solid var(--ink);margin-bottom:var(--s4);flex-wrap:wrap}
+.tab{background:none;border:0;padding:14px 20px;font-weight:600;font-size:15px;color:var(--moss);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected=true]{color:var(--ink);border-bottom-color:var(--rust)}
+form.f{display:grid;gap:18px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{font-size:13px;font-weight:600;letter-spacing:.02em;display:block;margin-bottom:6px}
+label small{font-weight:400;color:var(--moss)}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid rgba(27,31,29,.3);border-radius:var(--r);background:#fff;color:var(--ink);transition:border-color .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rust);box-shadow:0 0 0 3px rgba(181,83,45,.15)}
+textarea{min-height:110px;resize:vertical}
+.fine{font-size:13px;color:var(--moss)}
+.ok{display:none;padding:22px;border:1px solid var(--pine);border-left:5px solid var(--pine);background:#eef2ee;border-radius:var(--r)}
+.ok b{font-family:var(--serif);font-size:22px;font-weight:500;display:block;margin-bottom:4px}
+.ok.show{display:block}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.step{padding:28px 24px 0 0}
+.step i{font-family:var(--serif);font-style:normal;font-size:56px;color:var(--rust);line-height:1;display:block;margin-bottom:14px}
+.step p{font-size:15.5px;color:var(--moss)}
+.step b{font-family:var(--serif);font-weight:500;font-size:22px;display:block;margin-bottom:6px}
+
+/* footer */
+footer{background:var(--ink);color:#d8d2c4;padding:var(--s5) 0 var(--s3)}
+footer .g{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:var(--s4);padding-bottom:var(--s4);border-bottom:1px solid rgba(255,255,255,.14)}
+footer h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e3a77c;margin-bottom:14px;font-weight:600}
+footer a{display:block;text-decoration:none;padding:4px 0;font-size:15px;color:#d8d2c4}
+footer a:hover{color:#fff}
+footer .bn{font-family:var(--serif);font-size:26px;color:#fff;margin-bottom:10px}
+footer p{font-size:14.5px;max-width:34ch;color:#a9a496}
+footer .soc{display:flex;gap:10px;margin-top:16px}
+footer .soc a{width:38px;height:38px;border:1px solid rgba(255,255,255,.22);border-radius:50%;display:grid;place-items:center;padding:0}
+footer .soc svg{width:16px;height:16px}
+.legal{display:flex;justify-content:space-between;gap:20px;padding-top:var(--s3);font-size:12.5px;color:#8a8678;flex-wrap:wrap}
+.eho{display:flex;align-items:center;gap:8px}
+
+/* modal / drawer */
+.ov{position:fixed;inset:0;background:rgba(17,22,20,.6);z-index:80;display:none;align-items:center;justify-content:center;padding:20px}
+.ov.on{display:flex}
+.modal{background:var(--bone);border-radius:10px;width:min(920px,100%);max-height:92vh;overflow:auto;position:relative;animation:pop .22s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.modal .x{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);display:grid;place-items:center;z-index:2;font-size:22px;line-height:1}
+.modal .mi{display:grid;grid-template-columns:1.1fr 1fr}
+.modal .mi .ph{min-height:420px;background:#cfc8b8}
+.modal .mi .ph img{width:100%;height:100%;object-fit:cover}
+.modal .mb{padding:36px 32px}
+.modal .price{font-size:42px;margin:6px 0 2px}
+.modal .desc{margin:16px 0;color:#3b423f;font-size:16px}
+.modal .facts{margin-bottom:22px}
+.modal .acts{display:flex;gap:10px;flex-wrap:wrap}
+
+/* admin */
+.admin{position:fixed;right:0;top:0;bottom:0;width:min(520px,100%);background:var(--paper);z-index:90;transform:translateX(100%);transition:transform .28s ease-out;display:flex;flex-direction:column;border-left:1px solid var(--ink)}
+.admin.on{transform:none}
+.admin header{padding:20px 24px;background:var(--pine);color:#fff;display:flex;justify-content:space-between;align-items:center}
+.admin header b{font-family:var(--serif);font-size:22px;font-weight:500}
+.admin header small{display:block;font-size:12px;opacity:.7;letter-spacing:.06em}
+.admin header button{background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:var(--r);padding:8px 14px;font-size:14px}
+.admin .body{padding:24px;overflow:auto;flex:1}
+.admin .lg{display:none;padding:40px 24px}
+.admin.locked .lg{display:block}
+.admin.locked .body{display:none}
+.arow{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.arow img{width:64px;height:48px;object-fit:cover;border-radius:4px}
+.arow b{display:block;font-size:15px}
+.arow span{font-size:13px;color:var(--moss)}
+.arow .bt{display:flex;gap:6px}
+.arow button{border:1px solid var(--line);background:#fff;border-radius:4px;padding:6px 10px;font-size:13px}
+.arow button:hover{border-color:var(--ink)}
+.arow button.del:hover{border-color:var(--rust);color:var(--rust)}
+.admin h4{font-family:var(--serif);font-weight:500;font-size:20px;margin:26px 0 12px}
+.admin .tabsa{display:flex;gap:8px;margin-bottom:18px}
+.leadrow{padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.leadrow b{display:inline-block;margin-right:8px}
+.leadrow em{font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--pine);color:#fff;padding:2px 7px;border-radius:3px;margin-right:6px}
+.adminfab{position:fixed;left:18px;bottom:18px;z-index:60;background:var(--ink);color:#fff;border:0;border-radius:99px;padding:11px 18px;font-size:13px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.adminfab:hover{background:var(--rust)}
+
+/* sticky mobile CTA */
+.mcta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--rust);color:#fff;text-align:center;padding:15px;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease-out,transform .5s ease-out}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:980px){
+  nav.main{display:none}
+  .burger{display:inline-flex}
+  nav.main.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--bone);padding:18px 4vw 24px;border-bottom:1px solid var(--line);gap:4px}
+  nav.main.open a{padding:12px 0;font-size:17px}
+  .top .cta .btn-ghost{display:none}
+  .hero .wrap,.about .wrap,.mls .wrap,.formsec .wrap{grid-template-columns:1fr}
+  .hero .wrap{padding:var(--s5) 0}
+  .lcard,.lcard.feat{grid-column:span 12}
+  .lcard.feat{flex-direction:column}
+  .lcard.feat .ph{min-height:0;aspect-ratio:4/3}
+  .svc{grid-template-columns:1fr}
+  .svc>div:first-child{border-right:0;border-bottom:1px solid var(--ink)}
+  .svc>div{padding:var(--s4) var(--s3)}
+  .steps{grid-template-columns:1fr 1fr}
+  footer .g{grid-template-columns:1fr 1fr}
+  .notary .box{grid-template-columns:1fr;text-align:left}
+  .modal .mi{grid-template-columns:1fr}
+  .modal .mi .ph{min-height:240px}
+  section{padding:var(--s5) 0}
+}
+@media (max-width:600px){
+  body{font-size:16px;padding-bottom:54px}
+  .mcta{display:block}
+  .top .cta .btn-rust{display:none}
+  .hero h1{font-size:46px}
+  .fr{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  footer .g{grid-template-columns:1fr}
+  .ribbon p{font-size:19px}
+  .adminfab{bottom:70px}
+  .sec-head h2{max-width:none}
+  .tab{padding:12px 12px;font-size:14px}
+  .hcard .tel{font-size:27px}
+}
+</style>
+</head>
+<body>
+
+<div class="concept">Website concept preview. Sample listings and contact details are placeholders until Jose supplies his own.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Standing Stone Real Estate, home">
+      <span class="mk"><svg viewBox="0 0 64 64" fill="none"><path d="M12 50V30L32 12l20 18v20z" stroke="#d9a679" stroke-width="4" stroke-linejoin="round"/><rect x="27" y="34" width="10" height="16" fill="#d9a679"/></svg></span>
+      <span><b>Standing Stone</b><small>Real Estate</small></span>
+    </a>
+    <nav class="main" id="nav" aria-label="Primary">
+      <a href="#listings">Office Listings</a>
+      <a href="#services">Buy &amp; Sell</a>
+      <a href="#about">About Jose</a>
+      <a href="#notary">Notary</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn-ghost" href="#contact" data-tab="view">Request a Showing</a>
+      <a class="btn btn-rust mls-link" href="#mls-note" data-mls>Search All Properties
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h8v8M13 3 3 13"/></svg></a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="water" aria-hidden="true">Stone</div>
+  <div class="wrap">
+    <div>
+      <div class="kicker">Realtor &nbsp;/&nbsp; Notary Public</div>
+      <h1>Real estate, <em>handled</em> by one person who answers.</h1>
+      <p class="sub">Standing Stone Real Estate is Jose: his own listings, a direct line to every available property, and one person to call whether you are buying, selling, or just asking.</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="#mls-note" data-mls>Search All Available Properties
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h8v8M13 3 3 13"/></svg></a>
+        <a class="btn btn-line" href="#listings">See Jose's Listings</a>
+      </div>
+    </div>
+    <aside class="hcard" aria-label="Contact card">
+      <div class="seal"><svg viewBox="0 0 64 64" fill="none"><path d="M12 50V30L32 12l20 18v20z" stroke="#b5532d" stroke-width="4" stroke-linejoin="round"/><rect x="27" y="34" width="10" height="16" fill="#b5532d"/></svg></div>
+      <div class="nm">Jose</div>
+      <div class="tg">Standing Stone Real Estate</div>
+      <hr>
+      <div class="row"><span>Licensed as</span><span>Realtor</span></div>
+      <div class="row"><span>Also</span><span>Notary Public</span></div>
+      <div class="row"><span>Serves</span><span>Buyers &amp; sellers</span></div>
+      <a class="tel" href="tel:+15555550142">(555) 555-0142</a>
+      <div class="note">Placeholder number for the preview. Real phone, hours and service area to come from Jose.</div>
+    </aside>
+  </div>
+</div>
+
+<!-- persistent search ribbon -->
+<div class="ribbon">
+  <div class="wrap">
+    <p>Looking beyond Jose's listings?<small>Search every available property through the MLS public search.</small></p>
+    <a class="btn" href="#mls-note" data-mls>Search All Available Properties
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h8v8M13 3 3 13"/></svg></a>
+  </div>
+</div>
+
+<!-- LISTINGS -->
+<section id="listings">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="kicker">Office listings</div>
+        <h2>Homes Jose is selling right now.</h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filter listings">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="Active">Active</button>
+        <button class="chip" data-f="Pending">Pending</button>
+        <button class="chip" data-f="Under $400k">Under $400k</button>
+      </div>
+    </div>
+    <div class="lgrid" id="lgrid"></div>
+    <div class="sample-note">Sample listings shown for the preview. Jose adds, edits and removes his own from the admin panel (bottom left).</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="kicker">Buyers and sellers</div>
+        <h2>Two sides of the same handshake.</h2>
+      </div>
+      <p class="lede">Jose represents individual buyers and sellers. No team handoffs, no marketplace of agents.</p>
+    </div>
+    <div class="svc rv">
+      <div>
+        <div class="kicker">If you are buying</div>
+        <h3>Find it, see it, close on it.</h3>
+        <ol>
+          <li><div><b>Search every available property</b><span>Jose points you to the full MLS public search, then helps you narrow it down.</span></div></li>
+          <li><div><b>Showings on your schedule</b><span>Send a viewing request for any home and Jose confirms the time personally.</span></div></li>
+          <li><div><b>Offer and negotiation guidance</b><span>Straight talk on price, terms and what to ask for.</span></div></li>
+          <li><div><b>Through to closing</b><span>One person from first showing to the signing table.</span></div></li>
+        </ol>
+        <a class="btn btn-dark" href="#contact" data-tab="buyer">Start as a buyer</a>
+      </div>
+      <div>
+        <div class="kicker">If you are selling</div>
+        <h3>Price it right, show it well.</h3>
+        <ol>
+          <li><div><b>Home value consultation</b><span>A conversation about what your home should list for, with no pressure.</span></div></li>
+          <li><div><b>Listing and presentation</b><span>Your home goes on Jose's office listings with photos and a full description.</span></div></li>
+          <li><div><b>Showings and offers</b><span>Jose handles inquiries, tours and the back and forth.</span></div></li>
+          <li><div><b>Closing, notarized in-house</b><span>As a Notary Public, Jose can notarize documents himself.</span></div></li>
+        </ol>
+        <a class="btn btn-rust" href="#contact" data-tab="seller">Talk to Jose about selling</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="portrait rv">
+      <div class="ph-note">Photo of Jose goes here</div>
+      <p>One agent. One name on the sign. One number to call.</p>
+    </div>
+    <div class="rv">
+      <div class="kicker">About Jose</div>
+      <h2>An individual agent, not an agency machine.</h2>
+      <p>Jose is a Realtor and a Notary Public, and Standing Stone Real Estate is his own practice. The site is built around that: his listings, his contact details, and a clear route to search the wider market.</p>
+      <p>Jose will add his own biography, years in the business and service area here. Nothing on this page is claimed until he supplies it.</p>
+      <div class="creds">
+        <div class="cred"><i>01</i><div><b>Realtor</b><span>Represents buyers and sellers one on one.</span></div></div>
+        <div class="cred"><i>02</i><div><b>Notary Public</b><span>Notarizes documents, with a call-to-contact for appointments.</span></div></div>
+        <div class="cred"><i>03</i><div><b>Own office listings</b><span>Homes listed directly through Standing Stone Real Estate.</span></div></div>
+        <div class="cred"><i>04</i><div><b>Direct access to MLS search</b><span>One button to every available property.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTARY -->
+<div class="notary" id="notary">
+  <div class="wrap">
+    <div class="box rv">
+      <div class="stamp">Notary<br>Public</div>
+      <div>
+        <h3>Need something notarized?</h3>
+        <p>Jose is also a Notary Public. Call or message to ask about notarizing a document. Appointments are arranged by phone.</p>
+      </div>
+      <a class="btn btn-dark" href="tel:+15555550142">Call to arrange</a>
+    </div>
+  </div>
+</div>
+
+<!-- MLS -->
+<section class="mls" id="mls">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Every available property</div>
+      <h2>Search the <em>whole</em> market, not just one office.</h2>
+      <p>Jose's own listings are above. For everything else on the market, one button opens the MLS public search, with its own filters, photos and results.</p>
+      <a class="btn btn-rust" href="#mls-note" data-mls>Search All Available Properties
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h8v8M13 3 3 13"/></svg></a>
+      <p class="fine">Opens in a new tab. The final search address and coverage area are confirmed with Jose before launch.</p>
+    </div>
+    <div class="mockbar rv" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span>mls-public-search (provider URL to be confirmed)</span></div>
+      <div class="mockbody">
+        <div class="f">City, ZIP or address</div>
+        <div class="g"><div class="f">Price range</div><div class="f">Beds / Baths</div></div>
+        <div class="res"><div></div><div></div><div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORMS -->
+<section class="formsec" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Contact Jose</div>
+      <h2>Tell him what you need.</h2>
+      <p class="lede">Pick the form that fits. Every message goes straight to Jose.</p>
+      <div class="cinfo">
+        <div><span>Phone</span><a href="tel:+15555550142">(555) 555-0142</a></div>
+        <div><span>Email</span><a href="mailto:jose@example.com">jose@example.com</a></div>
+        <div><span>Office</span><b style="font-weight:500">Address to come</b></div>
+        <div><span>Hours</span><b style="font-weight:500">Hours to come</b></div>
+      </div>
+      <p class="fine" style="margin-top:14px">Contact details above are placeholders for the preview.</p>
+    </div>
+    <div class="rv">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-t="buyer">I want to buy</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="seller">I want to sell</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="view">Request a viewing</button>
+        <button class="tab" role="tab" aria-selected="false" data-t="general">Other question</button>
+      </div>
+
+      <form class="f" data-kind="Buyer" id="f-buyer">
+        <div class="fr"><div><label>Name</label><input name="name" required autocomplete="name"></div><div><label>Phone</label><input name="phone" type="tel" required autocomplete="tel"></div></div>
+        <div><label>Email</label><input name="email" type="email" required autocomplete="email"></div>
+        <div class="fr"><div><label>Budget range</label><select name="budget"><option>Under $300k</option><option>$300k to $500k</option><option>$500k to $750k</option><option>$750k and up</option><option>Not sure yet</option></select></div>
+        <div><label>Where do you want to buy?</label><input name="area" placeholder="City, neighbourhood or ZIP"></div></div>
+        <div><label>Anything Jose should know? <small>(optional)</small></label><textarea name="msg"></textarea></div>
+        <button class="btn btn-rust" type="submit">Send buyer inquiry</button>
+      </form>
+
+      <form class="f" data-kind="Seller" id="f-seller" hidden>
+        <div class="fr"><div><label>Name</label><input name="name" required autocomplete="name"></div><div><label>Phone</label><input name="phone" type="tel" required autocomplete="tel"></div></div>
+        <div><label>Email</label><input name="email" type="email" required autocomplete="email"></div>
+        <div><label>Property address</label><input name="address" required autocomplete="street-address"></div>
+        <div class="fr"><div><label>When are you thinking of selling?</label><select name="when"><option>As soon as possible</option><option>In 1 to 3 months</option><option>In 3 to 6 months</option><option>Just curious about value</option></select></div>
+        <div><label>Property type</label><select name="ptype"><option>Single family</option><option>Condo or townhome</option><option>Land</option><option>Other</option></select></div></div>
+        <div><label>Anything Jose should know? <small>(optional)</small></label><textarea name="msg"></textarea></div>
+        <button class="btn btn-rust" type="submit">Request a consultation</button>
+      </form>
+
+      <form class="f" data-kind="Viewing" id="f-view" hidden>
+        <div class="fr"><div><label>Name</label><input name="name" required autocomplete="name"></div><div><label>Phone</label><input name="phone" type="tel" required autocomplete="tel"></div></div>
+        <div><label>Email</label><input name="email" type="email" required autocomplete="email"></div>
+        <div><label>Property of interest</label><select name="property" id="vprop"></select></div>
+        <div class="fr"><div><label>Preferred date</label><input name="date" type="date" required></div><div><label>Preferred time</label><select name="time"><option>Morning</option><option>Midday</option><option>Afternoon</option><option>Evening</option></select></div></div>
+        <div><label>Message <small>(optional)</small></label><textarea name="msg"></textarea></div>
+        <button class="btn btn-rust" type="submit">Request this viewing</button>
+        <p class="fine">This is a request, not a booking. Jose will contact you to confirm the time.</p>
+      </form>
+
+      <form class="f" data-kind="General" id="f-general" hidden>
+        <div class="fr"><div><label>Name</label><input name="name" required autocomplete="name"></div><div><label>Email</label><input name="email" type="email" required autocomplete="email"></div></div>
+        <div><label>Phone <small>(optional)</small></label><input name="phone" type="tel" autocomplete="tel"></div>
+        <div><label>Your question</label><textarea name="msg" required></textarea></div>
+        <button class="btn btn-rust" type="submit">Send message</button>
+      </form>
+
+      <div class="ok" id="ok" role="status" aria-live="polite"><b>Thank you. Jose has your request.</b><span id="okmsg"></span></div>
+      <p class="fine" style="margin-top:16px">Preview only: submitting here does not send email. In the finished site, every form is delivered to the address Jose chooses, and also saved as a lead in his admin panel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head rv"><div><div class="kicker">How it works</div><h2>From first message to keys.</h2></div></div>
+    <div class="steps rv">
+      <div class="step"><i>1</i><b>Reach out</b><p>Send a buyer, seller or viewing request, or call Jose directly.</p></div>
+      <div class="step"><i>2</i><b>Talk it through</b><p>Jose follows up personally to learn what you need.</p></div>
+      <div class="step"><i>3</i><b>See or list</b><p>Tour homes, or get your own listed with Standing Stone.</p></div>
+      <div class="step"><i>4</i><b>Close</b><p>Paperwork handled, with notary service available in-house.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="g">
+      <div>
+        <div class="bn">Standing Stone</div>
+        <p>Real Estate. Jose, Realtor and Notary Public.</p>
+        <div class="soc" aria-label="Social links (to be supplied)">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.7.2-1 1.1-1H17V2h-2.6C11.4 2 10 3.7 10 6.2V8H7.5v3.5H10V22h4V11.5h2.8L17.3 8z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 8.5h3.5V20H4.5zM6.2 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 8.5h3.3v1.6c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.2 2.4 4.2 5.5V20h-3.5v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V20H10z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><a href="#listings">Office listings</a><a href="#services">Buy &amp; sell</a><a href="#about">About Jose</a><a href="#process">How it works</a></div>
+      <div><h4>Search</h4><a href="#mls-note" data-mls>Search all properties</a><a href="#contact" data-tab="view">Request a viewing</a><a href="#notary">Notary service</a></div>
+      <div><h4>Contact</h4><a href="tel:+15555550142">(555) 555-0142</a><a href="mailto:jose@example.com">jose@example.com</a><a href="#contact">Address and hours to come</a></div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Standing Stone Real Estate. Concept preview with placeholder content.</span>
+      <span class="eho"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11 12 3l9 8M5 10v10h14V10M9 20v-6h6v6"/></svg>Equal Housing Opportunity</span>
+    </div>
+  </div>
+</footer>
+
+<a class="mcta" href="#mls-note" data-mls>Search All Available Properties</a>
+<button class="adminfab" id="adminfab">Jose's admin panel (demo)</button>
+
+<!-- listing modal -->
+<div class="ov" id="lov"><div class="modal" role="dialog" aria-modal="true" aria-label="Listing details"><button class="x" id="lclose" aria-label="Close">&times;</button><div class="mi" id="lbody"></div></div></div>
+
+<!-- MLS destination note -->
+<div class="ov" id="mov"><div class="modal" role="dialog" aria-modal="true" aria-label="MLS search link" style="width:min(560px,100%)"><button class="x" id="mclose" aria-label="Close">&times;</button>
+  <div class="mb" style="padding:40px 34px">
+    <div class="kicker">Link behaviour preview</div>
+    <h3 style="font-size:32px;margin:10px 0 14px">This button opens the MLS public search.</h3>
+    <p class="desc">On the live site it opens the search address Jose is authorized to use, in a new tab, from every page. For this preview there is no destination yet.</p>
+    <p class="fine" style="margin-bottom:20px">Still to confirm with Jose: the exact search URL or provider, the coverage area, and how leads from that search are routed.</p>
+    <button class="btn btn-dark" id="mok">Got it</button>
+  </div></div></div>
+
+<!-- admin -->
+<aside class="admin locked" id="admin" aria-label="Admin panel">
+  <header><div><b>Listing manager</b><small>Preview of Jose's admin area</small></div><button id="aclose">Close</button></header>
+  <div class="lg">
+    <h3 style="margin-bottom:10px">Admin sign in</h3>
+    <p class="fine" style="margin-bottom:20px">Demo only. Any password works.</p>
+    <form class="f" id="alogin"><div><label>Email</label><input value="jose@example.com" aria-label="Email"></div><div><label>Password</label><input type="password" value="demo" aria-label="Password"></div><button class="btn btn-dark" type="submit">Sign in</button></form>
+  </div>
+  <div class="body">
+    <div class="tabsa"><button class="chip on" data-a="l">Listings</button><button class="chip" data-a="n">Leads</button></div>
+    <div id="apl">
+      <h4 style="margin-top:0" id="ftitle">Add a listing</h4>
+      <form class="f" id="lform">
+        <input type="hidden" name="id">
+        <div><label>Street address</label><input name="addr" required></div>
+        <div class="fr"><div><label>Price</label><input name="price" type="number" min="0" required></div><div><label>Status</label><select name="status"><option>Active</option><option>Pending</option></select></div></div>
+        <div class="fr"><div><label>Beds</label><input name="beds" type="number" min="0"></div><div><label>Baths</label><input name="baths" type="number" min="0" step=".5"></div></div>
+        <div><label>Square feet</label><input name="sqft" type="number" min="0"></div>
+        <div><label>Photo</label>
+          <input type="file" accept="image/*" id="lphoto"></div>
+        <div><label>Description</label><textarea name="desc"></textarea></div>
+        <div style="display:flex;gap:10px"><button class="btn btn-rust" type="submit" id="fsave">Save listing</button><button class="btn btn-ghost" type="button" id="fcancel" hidden>Cancel edit</button></div>
+      </form>
+      <h4>Current listings</h4>
+      <div id="alist"></div>
+      <p class="fine" style="margin-top:16px">Changes show on the page instantly. Stored in this browser only for the preview.</p>
+    </div>
+    <div id="apn" hidden>
+      <h4 style="margin-top:0">Leads from the forms</h4>
+      <div id="leads"></div>
+    </div>
+  </div>
+</aside>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const money=n=>'$'+Number(n).toLocaleString('en-US');
+const KEY='ss_demo_listings_v1',LKEY='ss_demo_leads_v1';
+const seed=[
+ {id:'a1',addr:'412 Quarry Lane',price:489000,status:'Active',beds:4,baths:3,sqft:2410,img:'img/sse-l1.jpg',desc:'Wraparound porch, deep lot and a kitchen that opens to the back garden. Sample listing for the preview.'},
+ {id:'a2',addr:'18 Millstone Road',price:365000,status:'Active',beds:3,baths:2,sqft:1840,img:'img/sse-l2.jpg',desc:'Gabled cottage on a quiet street with a screened porch and a mature yard. Sample listing.'},
+ {id:'a3',addr:'903 Ridgeview Court',price:572000,status:'Pending',beds:4,baths:3.5,sqft:2980,img:'img/sse-l3.jpg',desc:'Brick family home with a three-car garage and a finished lower level. Sample listing.'},
+ {id:'a4',addr:'27 Cairn Hollow',price:398000,status:'Active',beds:3,baths:2,sqft:1620,img:'img/sse-l4.jpg',desc:'Craftsman details, vaulted living room and woods at the back fence. Sample listing.'},
+ {id:'a5',addr:'6 Fieldstone Way',price:329000,status:'Active',beds:2,baths:2,sqft:1280,img:'img/sse-int.jpg',desc:'Bright open living and dining, ideal for a first purchase. Sample listing.'}
+];
+let L=JSON.parse(localStorage.getItem(KEY)||'null')||seed;
+let leads=JSON.parse(localStorage.getItem(LKEY)||'[]');
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(L))}catch(e){}};
+const saveLeads=()=>{try{localStorage.setItem(LKEY,JSON.stringify(leads))}catch(e){}};
+let filter='all';
+const matches=l=>filter==='all'||(filter==='Under $400k'?l.price<400000:l.status===filter);
+
+function renderListings(){
+  const g=$('#lgrid');const arr=L.filter(matches);
+  if(!arr.length){g.innerHTML='<div class="empty">No listings match this filter right now. Check back soon, or search all available properties.</div>';}
+  else g.innerHTML=arr.map((l,i)=>`
+   <button class="lcard${i===0&&filter==='all'?' feat':''}" data-id="${l.id}" aria-label="${l.addr}, ${money(l.price)}">
+     <div class="ph"><img src="${l.img}" alt="${l.addr}" loading="lazy"><span class="tag ${l.status==='Pending'?'pending':''}">${l.status}</span></div>
+     <div class="bd"><div class="price">${money(l.price)}</div><div class="addr">${l.addr}</div>
+     <div class="facts"><span><b>${l.beds||'-'}</b> bd</span><span><b>${l.baths||'-'}</b> ba</span><span><b>${l.sqft?Number(l.sqft).toLocaleString():'-'}</b> sq ft</span></div></div>
+   </button>`).join('');
+  $$('.lcard').forEach(c=>c.onclick=()=>openL(c.dataset.id));
+  // viewing select
+  $('#vprop').innerHTML=L.map(l=>`<option>${l.addr}</option>`).join('')+'<option>A property from the MLS search</option><option>Not sure yet</option>';
+  renderAdminList();
+}
+function openL(id){
+  const l=L.find(x=>x.id===id);if(!l)return;
+  $('#lbody').innerHTML=`<div class="ph"><img src="${l.img}" alt="${l.addr}"></div>
+  <div class="mb"><span class="kicker">${l.status} listing</span><div class="price">${money(l.price)}</div><div class="addr">${l.addr}</div>
+  <p class="desc">${l.desc||''}</p>
+  <div class="facts"><span><b>${l.beds||'-'}</b> bd</span><span><b>${l.baths||'-'}</b> ba</span><span><b>${l.sqft?Number(l.sqft).toLocaleString():'-'}</b> sq ft</span></div>
+  <div class="acts"><button class="btn btn-rust" id="reqv">Request a viewing</button><a class="btn btn-ghost" href="tel:+15555550142">Call Jose</a></div></div>`;
+  $('#lov').classList.add('on');
+  $('#reqv').onclick=()=>{$('#lov').classList.remove('on');tab('view');$('#vprop').value=l.addr;$('#contact').scrollIntoView()};
+}
+$('#lclose').onclick=()=>$('#lov').classList.remove('on');
+$('#lov').onclick=e=>{if(e.target.id==='lov')$('#lov').classList.remove('on')};
+$$('.chip[data-f]').forEach(b=>b.onclick=()=>{filter=b.dataset.f;$$('.chip[data-f]').forEach(x=>x.classList.toggle('on',x===b));renderListings()});
+
+/* tabs */
+function tab(t){$$('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===t));
+  ['buyer','seller','view','general'].forEach(k=>{$('#f-'+k).hidden=k!==t});$('#ok').classList.remove('show')}
+$$('.tab').forEach(b=>b.onclick=()=>tab(b.dataset.t));
+$$('[data-tab]').forEach(a=>a.addEventListener('click',()=>tab(a.dataset.tab)));
+
+/* forms (preview: no email is sent) */
+$$('form.f[data-kind]').forEach(f=>f.addEventListener('submit',e=>{
+  e.preventDefault();const d=Object.fromEntries(new FormData(f));
+  leads.unshift({kind:f.dataset.kind,name:d.name,email:d.email,phone:d.phone||'',detail:d.property||d.address||d.area||d.msg||'',at:new Date().toLocaleString()});
+  saveLeads();renderLeads();
+  const m={Buyer:'Jose will reach out about your search.',Seller:'Jose will contact you to set up a consultation.',Viewing:'Jose will contact you to confirm the viewing time.',General:'Jose will reply to your message.'}[f.dataset.kind];
+  $('#okmsg').textContent=m;$('#ok').classList.add('show');f.reset();f.hidden=true;$('#ok').scrollIntoView({block:'center'})}));
+
+/* MLS */
+$$('[data-mls]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();$('#mov').classList.add('on')}));
+$('#mclose').onclick=$('#mok').onclick=()=>$('#mov').classList.remove('on');
+$('#mov').onclick=e=>{if(e.target.id==='mov')$('#mov').classList.remove('on')};
+
+/* nav */
+$('#burger').onclick=()=>{const o=$('#nav').classList.toggle('open');$('#burger').setAttribute('aria-expanded',o)};
+$$('#nav a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){$$('.ov').forEach(o=>o.classList.remove('on'));$('#admin').classList.remove('on')}});
+
+/* admin */
+const admin=$('#admin');
+$('#adminfab').onclick=()=>admin.classList.add('on');
+$('#aclose').onclick=()=>admin.classList.remove('on');
+$('#alogin').onsubmit=e=>{e.preventDefault();admin.classList.remove('locked')};
+$$('.chip[data-a]').forEach(b=>b.onclick=()=>{$$('.chip[data-a]').forEach(x=>x.classList.toggle('on',x===b));$('#apl').hidden=b.dataset.a!=='l';$('#apn').hidden=b.dataset.a!=='n'});
+let photoData=null;
+$('#lphoto').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');const w=900,s=Math.min(1,w/im.width);c.width=im.width*s;c.height=im.height*s;c.getContext('2d').drawImage(im,0,0,c.width,c.height);photoData=c.toDataURL('image/jpeg',.7)};im.src=r.result};r.readAsDataURL(f)};
+function resetForm(){$('#lform').reset();$('#lform [name=id]').value='';photoData=null;$('#ftitle').textContent='Add a listing';$('#fsave').textContent='Save listing';$('#fcancel').hidden=true}
+$('#fcancel').onclick=resetForm;
+$('#lform').onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));
+  const rec={addr:d.addr,price:+d.price,status:d.status,beds:+d.beds||0,baths:+d.baths||0,sqft:+d.sqft||0,desc:d.desc};
+  if(d.id){const l=L.find(x=>x.id===d.id);Object.assign(l,rec);if(photoData)l.img=photoData}
+  else L.unshift({id:'n'+Date.now(),img:photoData||'img/sse-l1.jpg',...rec});
+  save();resetForm();renderListings()};
+function renderAdminList(){
+  $('#alist').innerHTML=L.map(l=>`<div class="arow"><img src="${l.img}" alt=""><div><b>${l.addr}</b><span>${money(l.price)} &middot; ${l.status}</span></div><div class="bt"><button data-e="${l.id}">Edit</button><button class="del" data-d="${l.id}">Remove</button></div></div>`).join('')||'<p class="fine">No listings yet.</p>';
+  $$('[data-e]').forEach(b=>b.onclick=()=>{const l=L.find(x=>x.id===b.dataset.e),f=$('#lform');f.id.value=l.id;f.addr.value=l.addr;f.price.value=l.price;f.status.value=l.status;f.beds.value=l.beds;f.baths.value=l.baths;f.sqft.value=l.sqft;f.desc.value=l.desc||'';$('#ftitle').textContent='Edit listing';$('#fsave').textContent='Update listing';$('#fcancel').hidden=false;$('.admin .body').scrollTop=0});
+  $$('[data-d]').forEach(b=>b.onclick=()=>{if(confirm('Remove this listing from the site?')){L=L.filter(x=>x.id!==b.dataset.d);save();renderListings()}});
+}
+function renderLeads(){$('#leads').innerHTML=leads.length?leads.map(l=>`<div class="leadrow"><em>${l.kind}</em><b>${l.name||''}</b>${l.email||''} ${l.phone?'&middot; '+l.phone:''}<div class="fine">${l.detail} &middot; ${l.at}</div></div>`).join(''):'<p class="fine">No leads yet. Submit a form on the page and it appears here.</p>'}
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+
+renderListings();renderLeads();
+})();
+</script>
+</body>
+</html>
